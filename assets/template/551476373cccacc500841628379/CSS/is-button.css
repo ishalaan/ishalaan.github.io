@@ -1,0 +1,163 @@
+/* Red */
+.is-button-warning,
+.is-button-warning:visited,
+.is-button-warning:hover
+{
+	color:#ffffff;
+	background-color:#ca3f6c;
+}
+.is-button-warning:active{
+	background-color:#771b39;
+}
+
+.is-left-column .is-button-warning,
+.is-left-column .is-button-warning:visited,
+.is-left-column .is-button-warning:hover,
+.is-right-column .is-button-warning,
+.is-right-column .is-button-warning:visited,
+.is-right-column .is-button-warning:hover
+{
+	
+}
+.is-left-column .is-button-warning:active,
+.is-right-column .is-button-warning:active
+{
+	
+}
+
+/* Grey */
+.is-button-cancel,
+.is-button-cancel:visited,
+.is-button-cancel:hover
+{
+	color:#ffffff;
+	background-color:#929292;
+}
+.is-button-cancel:active{
+	background-color:#3c3c3c;
+}
+
+.is-left-column .is-button-cancel,
+.is-left-column .is-button-cancel:visited,
+.is-left-column .is-button-cancel:hover,
+.is-right-column .is-button-cancel,
+.is-right-column .is-button-cancel:visited,
+.is-right-column .is-button-cancel:hover
+{
+	
+}
+.is-left-column .is-button-cancel:active,
+.is-right-column .is-button-cancel:active
+{
+	
+}
+
+/* Blue */
+.is-button-primary,
+.is-button-primary:visited,
+.is-button-primary:hover
+{
+	box-sizing:border-box;
+	color:#ffffff;
+	background-color:#b3182b;
+	border-radius: 999px;
+	border:2px solid #b3182b;
+}
+.is-button-primary:active{
+	background-color:#7b101d;
+	border:2px solid #7b101d;
+}
+
+.is-left-column .is-button-primary,
+.is-left-column .is-button-primary:visited,
+.is-left-column .is-button-primary:hover,
+.is-right-column .is-button-primary,
+.is-right-column .is-button-primary:visited,
+.is-right-column .is-button-primary:hover
+{
+	
+}
+.is-left-column .is-button-primary:active,
+.is-right-column .is-button-primary:active
+{
+	
+}
+
+/* Green */
+.is-button-action,
+.is-button-action:visited,
+.is-button-action:hover
+{
+	color:#ffffff;
+	background-color:#3fca5d;
+}
+.is-button-action:active{
+	background-color:#1b772b;
+}
+
+.is-left-column .is-button-action,
+.is-left-column .is-button-action:visited,
+.is-left-column .is-button-action:hover,
+.is-right-column .is-button-action,
+.is-right-column .is-button-action:visited,
+.is-right-column .is-button-action:hover
+{
+	
+}
+.is-left-column .is-button-action:active,
+.is-right-column .is-button-action:active
+{
+	
+}
+
+/* Clear */
+.is-button-secondary,
+.is-button-secondary:visited,
+.is-button-secondary:hover
+{
+	box-sizing:border-box;
+	color:#ffffff;
+	background-color:rgba(226,39,61,0.08);
+	border-radius: 999px;
+	border:2px solid #b3182b;
+}
+.is-button-secondary:active{
+	color:#ffffff;
+	border:2px solid #7b101d;
+	background-color:rgba(226,39,61,0.08);
+}
+
+.is-left-column .is-button-secondary,
+.is-left-column .is-button-secondary:visited,
+.is-left-column .is-button-secondary:hover,
+.is-right-column .is-button-secondary,
+.is-right-column .is-button-secondary:visited,
+.is-right-column .is-button-secondary:hover
+{
+	
+}
+.is-left-column .is-button-secondary:active,
+.is-right-column .is-button-secondary:active
+{
+	
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

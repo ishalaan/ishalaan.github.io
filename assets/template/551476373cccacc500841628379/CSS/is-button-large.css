@@ -1,0 +1,109 @@
+.is-button-large,
+.is-button-large:hover,
+.is-button-large:focus,
+.is-button-large:visited
+{
+    display:block;
+    text-align:center;
+    vertical-align middle;
+    padding:12px 24px;
+    font-size:20px;
+    font-family:arial;
+    text-decoration:none;
+	max-width:210px;
+	margin:20px auto;
+	margin-bottom:0px;
+	line-height:52px;
+    background:#7caee6;
+    color:#ffffff;
+	border:none;
+}
+
+.is-button-large:hover,
+.is-button-large:focus
+{
+	filter:opacity(50%);
+}
+
+.is-button-large:before{
+    display:inline-block;
+    height:24px;
+    width:24px;
+    line-height:24px;
+    margin:0 4px -6px -4px;
+    position:relative;
+    top:0px;
+    left:0px;
+    background-size:100% 100%;
+}
+
+.is-button-large:active{
+    background:#771b39;
+	filter:opacity(100%);
+}
+
+/* Green */
+.is-button-large-green,
+.is-button-large-green:active,
+.is-button-large-green:visited
+{
+    background:#25d830;
+    color:#ffffff;
+	border:none;
+}
+
+.is-button-large-green:hover,
+.is-button-large-green:focus
+{
+    background:#2cff3a;
+    color:#ffffff;
+	border:none;
+	filter:opacity(100%);
+}
+
+.is-button-large-green:active{
+    background:#14731a;
+}
+
+/* blue */
+.is-button-large-blue,
+.is-button-large-blue:active,
+.is-button-large-blue:visited
+{
+    background:#A8C9E0;
+    color:#ffffff;
+	border:none;
+}
+
+.is-button-large-blue:hover,
+.is-button-large-blue:focus
+{
+    background:#C8E0F1;
+    color:#ffffff;
+	border:none;
+	filter:opacity(100%);
+}
+
+.is-button-large-blue:active{
+    background:#75AED6;
+}
+	
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

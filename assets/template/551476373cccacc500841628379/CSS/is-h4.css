@@ -1,0 +1,35 @@
+.is-h4{
+	
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-h4{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-h4{
+		
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-h4{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-h4{
+		
+	}
+}

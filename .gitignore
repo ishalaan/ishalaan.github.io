@@ -1,0 +1,6 @@
+.env
+git-pull.bat
+git-push.bat
+python-activate.bat
+python-freeze.bat
+python-install.bat

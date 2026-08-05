@@ -1,0 +1,272 @@
+.is-login-screen{
+	backdrop-filter: blur(16px);
+    -moz-backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: radial-gradient(circle at 50% 0%, rgba(179, 24, 43, 0.4), transparent 60%), rgba(19, 18, 21, 0.7) !important;
+}
+
+.is-login-screen .is-login-box{
+	-moz-box-shadow: 0 0 10px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+	box-shadow: 0 0 10px #000000;
+	border:2px solid #000000;
+	background:#131215;
+	border-radius:14px;
+}
+
+.is-login-screen .is-login-box .is-login-logo{
+	background-color:#ffffff !important;
+	background-image: url(../images/is-logo.png) !important;
+	border:none !important;
+	height:90px;
+}
+
+.is-login-screen .is-login-box .is-login-logo:hover{
+	filter:opacity(50%);
+}
+
+.is-login-screen .is-login-box label{
+	font-weight:normal;
+}
+
+.is-login-screen .is-login-box .is-login-email{
+
+}
+
+.is-login-screen .is-login-box .is-login-password{
+
+}
+
+.is-login-screen .is-login-box .is-button-primary{
+
+}
+
+.is-login-screen .is-login-box .is-button-secondary{
+
+}
+
+.is-login-screen .is-login-box .is-remember-me{
+
+}
+
+.is-login-screen .is-login-box .is-login-error{
+	background:#7caee6;
+	color:#ffffff;
+	padding:10px;
+	margin-bottom:20px;
+}
+
+.is-login-screen .is-login-box .is-forgot-link{
+
+}
+
+.is-login-screen .is-login-box .is-forgot-link a{
+
+}
+
+.is-login-screen .is-forgot-box{
+	-moz-box-shadow: 0 0 10px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+	box-shadow: 0 0 10px #000000;
+	border:2px solid #000000;
+	background:#131215;
+	border-radius:14px;
+}
+
+.is-login-screen .is-forgot-box .is-forgot-logo{
+	background-color:#ffffff !important;
+	background-image: url(../images/is-logo.png) !important;
+	border:none !important;
+	height:90px;
+}
+
+.is-login-screen .is-forgot-box .is-forgot-logo:hover{
+	filter:opacity(50%);
+}
+
+.is-login-screen .is-forgot-box label{
+
+}
+
+.is-login-screen .is-forgot-box .is-login-email{
+
+}
+
+.is-login-screen .is-forgot-box .is-button-primary{
+
+}
+
+.is-login-screen .is-forgot-box .is-button-secondary{
+
+}
+
+.is-login-screen .is-signup-box{
+	-moz-box-shadow: 0 0 10px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+	box-shadow: 0 0 10px #000000;
+	border:2px solid #000000;
+	background:#131215;
+	border-radius:14px;
+}
+
+.is-login-screen .is-signup-box .is-signup-logo{
+	background-color:#ffffff !important;
+	background-image: url(../images/is-logo.png) !important;
+	border:none !important;
+	height:90px;
+}
+
+.is-login-screen .is-signup-box .is-signup-logo:hover{
+	filter:opacity(50%);
+}
+
+.is-login-screen .is-signup-box label{
+
+}
+
+.is-login-screen .is-signup-box .is-signup-email{
+
+}
+
+.is-login-screen .is-signup-box .is-signup-username{
+
+}
+
+.is-login-screen .is-signup-box .is-signup-password{
+
+}
+
+.is-login-screen .is-signup-box .is-signup-password2{
+
+}
+
+.is-login-screen .is-signup-box .is-signup-namef{
+
+}
+
+.is-login-screen .is-signup-box .is-signup-namel{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType2{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType3{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType4{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType5{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType6{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType7{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType8{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType9{
+
+}
+
+.is-login-screen .is-signup-box .is-Page_AccountType10{
+
+}
+
+.is-login-screen .is-signup-box .is-button-primary{
+
+}
+
+.is-login-screen .is-signup-box .is-button-secondary{
+
+}
+
+.is-login-screen .is-signup-box .is-login-error{
+	background:#7caee6;
+	color:#ffffff;
+	padding:10px;
+	margin-bottom:20px;
+}
+																																																																																																													
+.is-logout-screen{
+	backdrop-filter: blur(16px);
+    -moz-backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: radial-gradient(circle at 50% 0%, rgba(179, 24, 43, 0.4), transparent 60%), rgba(19, 18, 21, 0.7) !important;
+}
+	
+.is-logout-screen .is-logout-box{
+	-moz-box-shadow: 0 0 10px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+	box-shadow: 0 0 10px #000000;
+	border:2px solid #000000;
+	background:#131215;
+	border-radius:14px;
+}
+
+.is-logout-screen .is-logout-box .is-logout-logo{
+	background-color:transparent !important;
+	background-image: url(../images/is-logo.png) !important;
+	border:none !important;
+	height:90px;
+}
+
+.is-logout-screen .is-logout-box .is-logout-logo:hover{
+	filter:opacity(50%);
+}
+
+.is-logout-screen .is-logout-box label{
+
+}
+
+.is-logout-screen .is-logout-box .is-button-primary{
+
+}
+
+.is-logout-screen .is-logout-box .is-button-secondary{
+
+}
+
+.is-login-screen .is-login-box input[type=button],.is-logout-screen .is-logout-box input[type=button],.is-login-screen .is-signup-box input[type=button],.is-login-screen .is-forgot-box input[type=button],.is-login-screen .is-login-box input[type=submit],.is-logout-screen .is-logout-box input[type=submit],.is-login-screen .is-signup-box input[type=submit],.is-login-screen .is-forgot-box input[type=submit]{
+	padding:12px 20px;
+}
+
+.is-login-screen .is-login-box .is-forgot-link a{
+	color:#ffffff;
+}
+
+.is-login-screen .is-login-box .is-forgot-link a:hover{
+	color:#eeeeee;
+	text-decoration:none;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

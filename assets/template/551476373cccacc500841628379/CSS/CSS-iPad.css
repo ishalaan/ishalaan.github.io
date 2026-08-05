@@ -1,0 +1,31 @@
+@media all and (max-width:1024px){
+	/* extra styles for iPad landscape*/
+
+	#is-middle{
+		min-height: 500px;
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-menu .is-notification-popup{
+		position:static;
+	}
+	
+	.is-menu .is-notification-popup .is-notification-popup-content{
+		right:10px;
+		left:10px;
+		top:10px;
+		min-width:0px;
+		max-width:unset;
+	}
+
+	.is-menu .is-notification-popup .is-notification-popup-content:after{
+		border:none;
+	}
+
+	.is-menu .is-menu-list .is-logo a{
+		width:250px;
+	}
+}

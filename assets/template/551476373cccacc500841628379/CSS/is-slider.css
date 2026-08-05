@@ -1,0 +1,46 @@
+.is-slider{
+	width:auto !important;
+	background:#000000 !important;
+	padding:0px !important;
+	border:none !important;
+}
+
+.is-slider > .fotorama div a{
+	display:block;
+	height:100%;
+	width:100%;
+	background:transparent;
+	position:absolute;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-slider{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-slider{
+		
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-slider{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-slider{
+		
+	}
+}

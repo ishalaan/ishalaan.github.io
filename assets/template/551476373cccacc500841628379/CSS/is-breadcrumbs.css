@@ -1,0 +1,69 @@
+.is-breadcrumbs{
+	line-height:20px;
+	min-height:0px;
+	color:#999999;
+	font-size:12px;
+	text-align:left;
+	background:rgba(206, 206, 206, 0.22);
+	margin:10px;
+	padding:10px;
+	-webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+	z-index:0;
+	-webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+	display:none;
+}
+
+.is-breadcrumbs span{
+	font-weight:normal;
+	color:#333333;
+	font-size:12px;
+	padding:0px 5px;
+}
+
+.is-breadcrumbs a{
+	font-weight:normal;
+	color:#666666;
+	font-size:12px;
+	padding:0px 5px;
+}
+
+.is-breadcrumbs a:hover{
+	text-decoration:none;
+	color:#333333;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-breadcrumbs{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-breadcrumbs{
+		
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-breadcrumbs{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-breadcrumbs{
+		
+	}
+}

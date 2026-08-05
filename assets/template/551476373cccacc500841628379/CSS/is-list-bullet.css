@@ -1,0 +1,82 @@
+.is-list-bullet{
+	border:none;
+	background:none;
+	padding:0px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	padding:0px;
+	margin:0px;
+	margin-top:20px;
+}
+
+.is-list-bullet li{
+	color:#333333;
+	margin:10px;
+	display:inline-block;
+	width:100%;
+}
+			
+.is-list-bullet li .is-list-bullet-title{
+	display:inline-block;
+    float:left;
+	text-align:left;
+	padding:10px;
+	font-size:16px;
+	font-style:normal;
+	font-weight:bold;
+	width:30%;
+	background:url(../images/is-list-bullet/is-list-bullet.png) left center no-repeat;
+	background-size:42px;
+	padding-left:56px;
+	color:#333333;
+}
+						
+.is-list-bullet li .is-list-bullet-description{
+	display:inline-block;
+    float:left;
+	text-align:left;
+	padding:10px;
+	font-size:16px;
+	font-style:normal;
+	line-height:21px;
+	font-weight:400;
+	width:60%;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+										
+	.is-list-bullet li{
+		width:auto;
+		clear:both;
+		display:block;
+	}
+	
+	.is-list-bullet li .is-list-bullet-title{
+		display:block;
+		width:auto;
+		clear:both;
+	}
+													
+	.is-list-bullet li .is-list-bullet-description{
+		display:block;
+		width:auto;
+		clear:both;
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

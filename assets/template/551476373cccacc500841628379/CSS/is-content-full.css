@@ -1,0 +1,35 @@
+.is-content-full{
+	
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-content-full{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-content-full{
+		
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-content-full{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-content-full{
+		
+	}
+}

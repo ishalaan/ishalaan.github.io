@@ -1,0 +1,157 @@
+.is-fader-container{
+	display:relative;
+	margin:10px;
+	margin-top:20px;
+	position:relative;
+	padding:0px;
+	overflow:hidden;
+	border:none;
+	webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.is-middle .is-fixed > .is-fader-container:first-child, 
+.is-middle .is-fixed > .is-right > .is-fader-container:first-child, 
+.is-middle .is-fixed > .is-left > .is-fader-container:first-child
+{
+	margin-top:10px;
+}
+
+.is-fader-container .is-fader{
+	position:relative;
+	list-style:none;
+	overflow:hidden;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+.is-fader-container .is-fader li{
+	-webkit-backface-visibility:hidden;
+	position:absolute;
+	display:none;
+	width:100%;
+	left:0;
+	top:0;
+}
+
+.is-fader-container .is-fader li:first-child{
+	position:relative;
+	display:block;
+	float:left;
+}
+
+.is-fader-container .is-fader img{
+	display:block;
+	height:auto;
+	float:left;
+	border:0;
+	width:100%;
+}
+
+.is-fader-container .next{
+	background-color:#cccccc;
+	background-image:url(../images/is-fader/is-fader-arrow-right.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:64%;
+	position:absolute;
+	right:0px;
+	top:50% !important;
+	-ms-transform:translateY(-50%);
+	transform:translateY(-50%);
+	z-index:2;
+	cursor:pointer;
+	opacity:0.5;
+	width:5vw;
+	max-width:50px;
+	min-width:20px;
+	height:15vw;
+	max-height:140px;
+	min-height:56px;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.is-fader-container .prev{
+	background-color:#cccccc;
+	background-image:url(../images/is-fader/is-fader-arrow-left.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:64%;
+	position:absolute;
+	left:0px;
+	top:50% !important;
+	-ms-transform:translateY(-50%);
+	transform:translateY(-50%);
+	z-index:2;
+	cursor:pointer;
+	opacity:0.5;
+	width:5vw;
+	max-width:50px;
+	min-width:20px;
+	height:15vw;
+	max-height:140px;
+	min-height:56px;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.is-fader-container .prev:hover,
+.is-fader-container .next:hover
+{
+	opacity:0.8;
+}
+
+.is-fader-container .is-fader-title{
+	position:absolute;
+	background:#45678e;
+	z-index:1;
+	padding:10px 20px;
+	left:50%;
+	top:25px;
+	-ms-transform:translateX(-50%);
+	transform:translateX(-50%);
+	color:#ffffff;
+	margin:0px;
+	font-size:min(3vw,24px);
+}
+	
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-fader-container .is-fader img{
+		width:100%;
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-fader-container .button,.is-fader-container .button2{
+		display:none;
+	}
+	
+	.is-fader-container .is-fader img{
+		width:100%;
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-fader-container .button,.is-fader-container .button2{
+		display:none;
+	}
+	
+	.is-fader-container .is-fader img{
+		width:100%;
+	}
+}

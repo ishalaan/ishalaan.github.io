@@ -1,0 +1,74 @@
+.is-list-grid{
+	padding:0px;
+	margin:10px;
+	margin-top:20px;
+	text-align:center;
+	color:#333333;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(426px,1fr));
+	grid-gap:10px;
+}
+
+.is-list-grid li{
+	display:inline-block;
+	background-position:20px 20px;
+	background-repeat:no-repeat;
+	background-size:64px;
+	padding-left:100px;
+	background-image:url(../images/is-list-grid/is-list-grid.png);
+}
+
+.is-list-grid li .is-list-grid-title{
+	text-align:left;
+	padding:10px;
+	font-size:16px;
+	font-weight:bold;
+	color:#333333;
+	font-family:'heading';
+}
+
+.is-list-grid li .is-list-grid-description{
+	text-align:left;
+	padding:10px;
+	font-size:14px;
+	padding-top:0px;
+	min-height:78px;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-list-grid{
+		display:block;
+	}
+	
+	.is-list-grid li{
+		float:none;
+		width:auto;
+		display:block;
+		min-height:0px;
+	}
+	
+	.is-list-grid li:not(:first-child){
+		margin-top:20px;
+	}
+
+	.is-list-grid li .is-list-grid-description{
+		min-height:0px;
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

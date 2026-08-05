@@ -1,0 +1,145 @@
+.is-prompt-container{
+	margin:0px;
+	margin-bottom:20px;
+}
+
+.is-prompt{
+	
+}
+
+.is-prompt .is-prompt-title{
+	
+}
+
+.is-prompt .is-prompt-title .is-prompt-close{
+	
+}
+
+.is-prompt .is-prompt-message{
+	display: none !important;
+}
+
+.is-prompt-image{
+	
+}
+
+.is-prompt .is-prompt-body{
+	
+}
+
+.is-prompt ul{
+	
+}
+
+.is-prompt li{
+	
+}
+
+.is-prompt .is-prompt-footer{
+	
+}
+
+.is-prompt .is-prompt-footer a{
+	
+}
+
+.is-prompt .is-prompt-footer a:hover,.is-prompt .is-prompt-footer a:active{
+	
+}
+	
+.is-prompt-popup{
+	
+}
+
+.is-prompt-popup .is-promp-body{
+	
+}
+
+.is-warning .is-prompt{
+	border-color:#da566e;
+}
+
+.is-warning .is-prompt-image{
+	
+}
+
+.is-warning .is-prompt .is-prompt-footer a{
+	
+}
+
+.is-caution .is-prompt{
+	
+}
+
+.is-caution .is-prompt-image{
+	
+}
+
+.is-caution .is-prompt .is-prompt-footer a{
+	
+}
+
+.is-success .is-prompt{
+	
+}
+
+.is-success .is-prompt-image{
+	
+}
+
+.is-success .is-prompt .is-prompt-footer a{
+	
+}
+
+.is-info .is-prompt{
+	
+}
+
+.is-info .is-prompt-image{
+	
+}
+
+.is-info .is-prompt .is-prompt-footer a{
+	
+}
+
+.is-middle .is-fixed > .is-prompt-container{
+	margin:0px;
+	margin-top:20px;
+	margin-right:20px;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+.is-middle .is-fixed .is-content-full > .is-prompt-container:last-child,
+.is-middle .is-fixed .is-content-right > .is-prompt-container:last-child,
+.is-middle .is-fixed .is-content-left > .is-prompt-container:last-child
+.is-middle .is-fixed .is-right-column > .is-prompt-container:last-child
+.is-middle .is-fixed .is-left-column > .is-prompt-container:last-child
+{
+	margin-bottom:0px;
+}
+
+.is-prompt-container.sdk-missing-demographics{
+	display:none;	
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

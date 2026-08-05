@@ -1,0 +1,40 @@
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-middle h3:not(.is-header-app){
+		font-size:16px;	
+	}
+
+	.is-menu .is-menu-list .is-menu-mobile{
+		backdrop-filter: blur(16px);
+		-moz-backdrop-filter: blur(16px);
+		-webkit-backdrop-filter: blur(16px);
+		background: radial-gradient(circle at 50% 0%, rgba(179, 24, 43, 0.4), transparent 60%), rgba(19, 18, 21, 0.7);
+	}
+
+	.is-menu .is-menu-list .is-menu-mobile li{
+        font-size:22px;
+	}
+
+	.is-menu .is-menu-list .is-menu-mobile li.is-menu-mobile-close{
+		background-color:#800000;
+		background-size:28px;
+		box-shadow:0 0 100px 40px rgba(0, 0, 0, 0.6)
+	}
+
+	.is-menu .is-menu-list .is-menu-mobile li.is-menu-mobile-close:hover{
+		filter:opacity(50%);
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+
+	.is-middle h3:not(.is-header-app){
+		font-size:14px;	
+	}
+
+	.is-menu .is-menu-list .is-logo a{
+		width:200px;
+	}
+}

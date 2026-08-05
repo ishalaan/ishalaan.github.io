@@ -1,0 +1,8 @@
+order deny,allow
+deny from all
+allow from 127.0.0.1
+
+<Files ~ "(.ico|.pdf|.flv|.jpg|.jpeg|.png|.gif|.swf|.mp3|.mp4|.mov|.wav|.woff)">
+Order allow,deny
+allow from all
+</Files>

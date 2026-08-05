@@ -1,0 +1,173 @@
+:root{
+    --bg: #0a0a0d;
+    --panel: #131215;
+    --panel-2: #17161a;
+    --line: rgba(255,255,255,0.08);
+    --red: #b3182b;
+    --red-bright: #e2273d;
+    --red-dim: #5c1019;
+    --text: #f3f2ef;
+    --muted: #96959d;
+    --muted-2: #5f5e66;
+}
+
+.is-cap-grid{
+    display:grid; 
+	grid-template-columns:repeat(4, 1fr);
+	gap:1px;
+    background: rgb(60 60 60);
+    border:2px solid rgb(60 60 60);
+    border-radius:14px;
+    overflow:hidden;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.is-cap-grid.is-cap-grid-2col{
+	grid-template-columns:repeat(2, 1fr);
+}
+
+.is-cap-grid.is-cap-grid-3col{
+	grid-template-columns:repeat(3, 1fr);
+}
+
+.is-cap-grid.is-cap-grid-3col-2col{
+	grid-template-columns:repeat(3, 1fr);
+}
+
+.is-cap-grid.is-cap-grid-4col-2col{
+	grid-template-columns:repeat(4, 1fr);
+}
+
+.is-cap-grid-gapped{
+	gap:10px !important;
+    background:transparent !important;
+    border:0px !important;
+    border-radius:none !important;
+}
+
+.is-cap-grid-gapped .is-cap-card{
+    border-radius:14px !important;
+    border:2px solid rgb(60 60 60) !important;
+}
+
+.is-cap-grid .is-cap-card{
+	background:#131215;
+    padding:32px 26px;
+    transition: background 0.2s ease;
+}
+
+.is-cap-grid a.is-cap-card:hover{
+	background:rgba(63, 20, 27, 1);
+	text-decoration:none;
+}
+
+.is-cap-grid .is-cap-card img{
+	filter: grayscale(70%);
+}
+
+.is-cap-grid a.is-cap-card:hover img{
+	filter: grayscale(70%);
+}
+
+.is-cap-grid .is-cap-card .is-cap-card-num{
+	font-size:14px;
+	color:var(--red-bright);
+    margin-bottom:18px;
+	display:block;
+}
+
+.is-cap-grid a.is-cap-card:hover .is-cap-card-num{
+	color:#ff7272;
+}
+
+.is-cap-grid .is-cap-card h3{
+	font-size:18px;
+	margin:0px !important;
+	margin-bottom:10px !important;	
+	padding:0px !important;
+	color:#ffffff;
+	font-weight:normal;
+	text-align:left;
+}
+
+.is-cap-grid .is-cap-card p{
+	font-size:14px;
+	color:var(--muted);
+	line-height:1.6;
+	margin:0px !important;
+}
+
+.is-cap-grid a.is-cap-card:hover p{
+	color:#cccccc;
+}
+
+.is-cap-grid .is-cap-card .is-cap-card-tags{
+	display:flex;
+	flex-wrap:wrap;
+	gap:8px;
+	margin-top:20px;
+	margin-bottom:0px;
+}
+ 
+.is-cap-grid .is-cap-card .is-cap-card-tags span{
+	font-size:10px;
+	color:var(--muted);
+	border:2px solid rgb(60 60 60);
+	padding:5px 10px;
+	border-radius:999px;
+	text-transform:uppercase;
+}
+
+.is-cap-grid .is-cap-card:hover .is-cap-card-tags span{
+	color:#999999;
+	border-color:#999999;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-cap-grid.is-cap-grid-4col-2col{
+		grid-template-columns:repeat(2,1fr);
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+    .is-cap-grid{
+		grid-template-columns:repeat(2,1fr);
+	}
+
+	.is-cap-grid.is-cap-grid-2col,
+	.is-cap-grid.is-cap-grid-3col
+	{
+		grid-template-columns:repeat(1,1fr);
+	}
+
+	.is-cap-grid.is-cap-grid-3col-2col{
+		grid-template-columns:repeat(2,1fr);
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+    .is-cap-grid{
+	
+	}
+}
+
+@media all and (max-width:614px){
+	/* extra styles for iPhone portrait*/
+	
+    .is-cap-grid{
+		grid-template-columns:repeat(1,1fr);
+	}
+
+	.is-cap-grid.is-cap-grid-3col-2col,
+	.is-cap-grid.is-cap-grid-4col-2col
+	{
+		grid-template-columns:repeat(1,1fr);
+	}
+}

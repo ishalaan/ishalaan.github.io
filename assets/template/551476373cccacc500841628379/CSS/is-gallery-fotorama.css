@@ -1,0 +1,51 @@
+.is-gallery-fotorama-container{
+	
+}
+
+.is-gallery-fotorama-container .is-gallery-fotorama .fotorama__nav--thumbs .fotorama__nav__frame{
+	padding:0px !important;
+	margin-right:10px !important;
+	margin-top:10px !important;
+}
+	
+.is-gallery-fotorama-container .is-gallery-fotorama .fotorama__thumb-border{
+	display:none !important;
+}
+	
+.is-gallery-fotorama-container .is-gallery-fotorama .fotorama__nav__frame.fotorama__active div{ 
+	width:60px !important;
+	height:60px !important;
+	border:solid 2px #00afea !important;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-gallery-fotorama{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-gallery-fotorama{
+		
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-gallery-fotorama{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-gallery-fotorama{
+		
+	}
+}

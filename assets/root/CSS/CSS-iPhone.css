@@ -1,0 +1,268 @@
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-menu .is-menu-list li
+	{
+		display:block !important;
+		float:none !important;
+	}
+
+	.is-menu .is-menu-list .is-menu-button-expand
+	{
+		display:block;
+	}
+	
+	.is-menu .is-menu-list .is-menu-mobile
+	{
+		display:none;
+		float:left;
+		width:100%;
+		position:fixed;
+		background:rgb(255 255 255 / 96%);
+		top:0px;
+		left:0px;
+		bottom:0px;
+		z-index:3;
+		text-align:center;
+		overflow-y:auto;
+		font-size:16px;
+	}
+	
+	.is-menu .is-menu-list .is-menu-mobile li .is-menu-popup
+	{
+		left:0px;
+		right:0px;
+	}
+	
+	.is-menu .is-menu-list .is-menu-mobile li
+	{
+		display:inline-block;
+		padding:15px;
+		margin:5px;
+		margin-right:20px;
+		margin-left:20px;
+	}
+	
+	.is-menu .is-menu-list .is-menu-mobile li:first-child
+	{
+		margin-top:80px;
+		margin-bottom:60px;
+	}
+	
+	.is-menu .is-menu-list .is-menu-mobile li.is-menu-mobile-close
+	{
+		display:block !important;
+	}
+	
+	.is-menu .is-menu-list .is-menu-mobile li.is-menu-mobile-close:hover
+	{
+		filter:opacity(50%);
+	}
+	
+	.is-menu .is-menu-list .is-logo
+	{
+		display:none !important;
+	}
+
+	.is-menu-snap .is-menu-list .is-logo
+	{
+		display:block !important;
+	}
+		
+	.is-middle .is-left-column .is-form-item .is-form-label, 
+	.is-middle .is-right-column .is-form-item .is-form-label, 
+	.is-middle .is-content-full .is-form-item .is-form-label, 
+	.is-middle .is-content-left .is-form-item .is-form-label, 
+	.is-middle .is-content-right .is-form-item .is-form-label
+	{
+		width:auto !important;
+		text-align:left !important;
+		padding-left:0px !important;
+		padding-right:0px !important;
+		padding-bottom:0px !important;
+		margin:0px !important;
+		text-align:left !important;
+	}
+	
+	.is-middle .is-left-column .is-form-item .is-form-field, 
+	.is-middle .is-right-column .is-form-item .is-form-field,
+	.is-middle .is-content-full .is-form-item .is-form-field,
+	.is-middle .is-content-left .is-form-item .is-form-field,
+	.is-middle .is-content-right .is-form-item .is-form-field
+	{
+		width:100% !important;
+	}
+	
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=text], 
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=date],
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=color],
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=number],
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=tel],
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=url],
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=search],
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=password], 
+	.is-middle .is-left-column .is-form-item .is-form-field input[type=email], 
+	.is-middle .is-left-column .is-form-item .is-form-field select, 
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=text], 
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=date],
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=color],
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=number],
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=tel],
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=url],
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=search],
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=password], 
+	.is-middle .is-right-column .is-form-item .is-form-field input[type=email], 
+	.is-middle .is-right-column .is-form-item .is-form-field select, 
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=text], 
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=date],
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=color],
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=number],
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=tel],
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=url],
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=search],
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=password], 
+	.is-middle .is-content-full .is-form-item .is-form-field input[type=email], 
+	.is-middle .is-content-full .is-form-item .is-form-field select, 
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=text], 
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=date],
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=color],
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=number],
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=tel],
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=url],
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=search],
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=password], 
+	.is-middle .is-content-left .is-form-item .is-form-field input[type=email], 
+	.is-middle .is-content-left .is-form-item .is-form-field select, 
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=text], 
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=date],
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=color],
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=number],
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=tel],
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=url],
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=search],
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=password],
+	.is-middle .is-content-right .is-form-item .is-form-field input[type=email],
+	.is-middle .is-content-right .is-form-item .is-form-field select
+	{
+		width:100% !important;
+	}
+	
+	.is-middle .is-left-column .is-form-item .is-form-field textarea, 
+	.is-middle .is-right-column .is-form-item .is-form-field textarea, 
+	.is-middle .is-content-full .is-form-item .is-form-field textarea, 
+	.is-middle .is-content-left .is-form-item .is-form-field textarea, 
+	.is-middle .is-content-right .is-form-item .is-form-field textarea
+	{
+		width:100% !important;
+	}
+	
+	.is-middle .is-left-column .submit,
+	.is-middle .is-right-column .submit,
+	.is-middle .is-content-full .submit,
+	.is-middle .is-content-left .submit,
+	.is-middle .is-content-right .submit
+	{
+		width:auto !important;
+		margin-bottom:0px !important;
+		margin-top:15px !important;
+	}
+	
+	.is-middle .is-left-column .submit input[type=submit],.is-middle .is-left-column .submit input[type=button],
+	.is-middle .is-right-column .submit input[type=submit],.is-middle .is-right-column .submit input[type=button],
+	.is-middle .is-content-full .submit input[type=submit],.is-middle .is-content-full .submit input[type=button],
+	.is-middle .is-content-left .submit input[type=submit],.is-middle .is-content-left .submit input[type=button],
+	.is-middle .is-content-right .submit input[type=submit],.is-middle .is-content-right .submit input[type=button]
+	{
+		width:100% !important;
+		margin:0px !important;
+		margin-top:4px !important;
+	}
+	
+	.is-footer .is-footer-list li
+	{
+		width:auto !important;
+		float:none !important;
+		clear:both !important;
+		display:block !important;		
+	}
+	
+	.is-login-screen
+	{
+		overflow:hidden !important;
+		overflow-y:auto !important;
+	}
+	
+	.is-login-screen .is-login-box
+	{
+		width:auto !important; 
+		margin:auto !important;
+  		position:absolute !important;
+  		top:20px !important; 
+		left:20px !important; 
+  		right:20px !important;
+	}
+	
+	.is-login-screen .is-forgot-box
+	{
+		width:auto !important; 
+		margin:auto !important;
+  		position:absolute !important;
+  		top:20px !important; 
+		left:20px !important; 
+  		right:20px !important;
+	}
+	
+	.is-login-screen .is-signup-box
+	{
+		width:auto !important; 
+		margin:auto !important;
+  		position:absolute !important;
+  		top:20px !important; 
+		left:20px !important; 
+  		right:20px !important;
+	}
+	
+	.is-logout-screen
+	{
+		overflow:hidden !important;
+		overflow-y:auto !important;
+	}
+	
+	.is-logout-screen .is-logout-box
+	{
+		width:auto !important; 
+		margin:auto !important;
+  		position:absolute !important;
+  		top:20px !important; 
+		left:20px !important; 
+  		right:20px !important;
+	}
+	
+	.is-prompt-popup
+	{
+		width:auto !important; 
+		left:20px !important;
+		right:20px !important;
+		margin:0px !important;
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-list-item .is-list-buttons
+	{
+		display:block !important;
+		float:none !important;
+		width:100% !important;
+		clear:both !important;
+	}
+	
+	.is-list-item .is-list-buttons *
+	{
+		display:block !important;
+		float:none !important;
+		clear:both !important;
+		margin-left:0px !important;
+	}
+}

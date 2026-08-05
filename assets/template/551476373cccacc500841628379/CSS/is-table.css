@@ -1,0 +1,148 @@
+.is-table-container{
+	background:#eeeeee;
+	border:none;
+	padding:5px;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+
+.is-table{
+	border-collapse: separate;
+	border-spacing: 0 8px;
+	background:transparent;
+	border:none;
+	margin:0px;
+}
+
+.is-table td,
+.is-table th
+{
+	font-size:14px;
+	vertical-align:top;
+	border:none;
+	padding:10px 17px;
+	text-align:left;
+	min-width:200px;
+	font-weight:normal;
+}
+
+.is-table th:not(.is-table-divider){
+	font-weight:normal;
+}
+
+.is-table td{
+	background:#232323;
+	color:#96959d;
+}
+
+.is-table tr:nth-child(even) td:not(.is-table-divider){
+	background:#2f2f2f;
+}
+
+.is-table th.is-table-divider,
+.is-table td.is-table-divider
+{
+	color:#000000;
+	font-weight:normal;
+	text-align:left;
+	text-shadow:0 1px 1px rgb(133 133 133 / 55%);
+	background-color:#373737;
+	background-image:-moz-linear-gradient(top, #717171, #373737);
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#717171), to(#373737));
+	background-image:-webkit-linear-gradient(top, #717171, #373737);
+	background-image:-o-linear-gradient(top, #717171, #373737);
+	background-image:linear-gradient(to bottom, #717171, #373737);
+	background-repeat:repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#717171', endColorstr='#373737', GradientType=0);
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+/* each row reads as its own rounded card */
+.is-table tr td:first-child,
+.is-table tr th:first-child {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.is-table tr td:last-child,
+.is-table tr th:last-child {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.is-table-container .is-table th{
+	cursor:pointer;
+}
+
+.is-table-container .is-table th:hover{
+	background:#000000;
+}
+
+.is-table input[type=text],
+.is-table input[type=text]:active,
+.is-table input[type=text]:hover,
+.is-table textarea,
+.is-table textarea:active,
+.is-table textarea:hover,
+.is-table select,
+.is-table select:active,
+.is-table select:hover,
+.is-table input[type=date],
+.is-table input[type=date]:active,
+.is-table input[type=date]:hover,
+.is-table input[type=color],
+.is-table input[type=color]:active,
+.is-table input[type=color]:hover,
+.is-table input[type=number],
+.is-table input[type=number]:active,
+.is-table input[type=number]:hover,
+.is-table input[type=tel],
+.is-table input[type=tel]:active,
+.is-table input[type=tel]:hover,
+.is-table input[type=url],
+.is-table input[type=url]:active,
+.is-table input[type=url]:hover,
+.is-table input[type=search],
+.is-table input[type=search]:active,
+.is-table input[type=search]:hover,
+.is-table input[type=password],
+.is-table input[type=password]:active,
+.is-table input[type=password]:hover,
+.is-table input[type=email],
+.is-table input[type=email]:active,
+.is-table input[type=email]:hover{
+	font-size:12px !important;
+}
+
+.is-table tr th a,
+.is-table tr td a,
+.is-table tr th a:active,
+.is-table tr td a:active,
+.is-table tr th a:visited,
+.is-table tr td a:visited
+{
+	color:#a81b0e;
+}
+
+.is-table tr th a:hover,
+.is-table tr td a:hover
+{
+	color:#e2273d;
+	text-decoration:none;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+}
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+}
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

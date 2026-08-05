@@ -1,0 +1,233 @@
+.is-list-split{
+	margin-top:20px;
+	margin-bottom:10px;
+	display:flex;
+}
+
+.is-list-split:first-child{
+	margin-top:10px;
+}
+
+.is-list-split-image{
+	width:532px;
+	float:left;
+	height:300px;
+	margin:10px;
+	margin-top:0px;
+	margin-bottom:0px;
+	background:none;
+	background-size:contain;
+	display:block;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+	background:transparent;
+}
+
+.is-list-split-text{
+	width:323px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	border:none;
+	border-left:12px solid #333333;
+	background:rgba(255, 255, 255, 0.7);
+	padding:20px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin:10px;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:14px;
+	color:#333333;
+	position:relative;
+	float:right;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+	flex-grow:100;
+}
+
+.is-list-split-text .is-list-split-title{
+	transform:translateX(-50%) translateY(-50%) rotate(-90deg);
+	position:absolute;
+    top:50%;
+    left:-5px;
+	letter-spacing:3px;
+	font-size:16px;
+	color:#ffffff;
+	font-weight:bold;
+	background:#333333;
+    padding:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	max-width:75%;
+	text-align:center;
+	text-transform:uppercase;
+	font-family:'heading';
+}
+
+.is-list-split-text p{
+	margin-top:12px;
+	margin-bottom:12px;
+	line-height:23px;
+}
+
+.is-list-split-text strong{
+	color:#cccccc;
+}
+
+.is-list-split-text p a{
+	
+}
+
+.is-list-split-links{
+	width:323px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	border:none;
+	border-left:12px solid #333333;
+	background:rgba(255, 255, 255, 0.7);
+	padding:20px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin:10px;
+	margin-top:20px;
+	margin-bottom:0px;
+	font-size:14px;
+	color:#333333;
+	position:relative;
+	float:right;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+	flex-grow:100;
+}
+
+.is-list-split-links .is-list-split-title{
+	transform:translateX(-50%) translateY(-50%) rotate(-90deg);
+	position:absolute;
+    top:50%;
+    left:-5px;
+	letter-spacing:3px;
+	font-size:16px;
+	color:#ffffff;
+	font-weight:bold;
+	background:#333333;
+    padding:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	max-width:75%;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+.is-list-split-links p{
+	margin-top:12px;
+	margin-bottom:12px;
+	line-height:23px;
+}
+
+.is-list-split-links p > a{
+	font-size:14px;
+	text-decoration:none;
+	margin-top:8px;
+	display:block;
+}
+
+.is-list-split-links p > a > span:first-child{
+	display:block;
+	border-bottom:3px solid #59709c;
+	font-weight:bold;
+	color:#a7c8df;
+}
+
+.is-list-split-links p > a > span:last-child{
+	display:block;
+	text-align:right;
+	color:#ffffff;
+}
+
+.is-list-split-links p > a > span:last-child span{
+	display:inline;
+	text-align:left;
+	float:left;	
+	border-bottom:none;
+	color:#cccccc;
+}
+	
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+
+	.is-list-split{
+		margin-top:20px;
+		display:block;
+	}
+	
+	.is-list-split-image{
+		width:auto;
+		float:none;
+		display:block;
+		height:auto;
+	}
+
+	.is-list-split-text{
+		width:auto;
+		display:block;
+		clear:both;
+		margin-top:35px;
+		float:none;
+		padding-top:15px;
+		padding-bottom:1px;
+	}
+
+	.is-list-split-text .is-list-split-title{
+		top:-15px;
+		left:10px;
+		transform:rotate(0deg);
+		font-size:14px;
+	}
+
+	.is-list-split-links{
+		width:auto;
+		display:block;
+		clear:both;
+		margin-top:20px;
+		float:none;
+		padding-top:1px;
+		padding-bottom:1px;
+		margin-left:20px;
+	}
+
+	.is-list-split-links .is-list-split-title{
+		font-size:14px;
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

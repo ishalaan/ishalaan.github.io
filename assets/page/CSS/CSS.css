@@ -1,0 +1,35 @@
+input[type=checkbox] + .ph-tick,
+input[type=radio] + .ph-tick
+{
+	width:23px;
+	height:18px;
+	background:#ebd3b0;
+	display:inline-block;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center center;
+	box-sizing:border-box;
+	-webkit-transition:unset;
+	-moz-transition:unset;
+	-o-transition:unset;
+	-ms-transition:unset;
+	transition:unset;
+}
+
+input[type=checkbox]:checked + .ph-tick,
+input[type=radio]:checked + .ph-tick
+{
+	width:23px;
+	height:18px;
+	background:transparent url(../images/ph-tick.png);
+	display:inline-block;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center center;
+	box-sizing:border-box;
+	-webkit-transition:unset;
+	-moz-transition:unset;
+	-o-transition:unset;
+	-ms-transition:unset;
+	transition:unset;
+}

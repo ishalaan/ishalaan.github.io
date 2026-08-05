@@ -1,0 +1,246 @@
+.is-middle h2.is-header-app{
+	background-image:url(../images/is-header-app/is-header-app.png);
+	background-position:10px center;
+	background-repeat:no-repeat;
+	background-size:contain !important;
+	padding-right:122px;
+	padding-left:68px;
+	padding-bottom:6px;
+	padding-top:6px;
+	margin-top:10px;
+	margin-bottom:10px;
+	overflow:hidden;
+	display:block;
+	height:38px;
+	width:unset;
+	text-shadow:none;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	text-align:left;
+	line-height:16px;
+	font-size:20px;
+	font-family:'heading';
+	font-weight:normal;
+	color:#333333;
+}
+	
+.is-middle h2.is-header-app span{
+	display:block;
+	margin-top:10px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	font-size:14px;
+	line-height:12px;
+	color:#999999;
+	padding-bottom:2px;
+}
+	
+.is-middle h3.is-header-app{
+    margin:0px auto !important;
+	margin-top:20px !important;
+    text-align:center;
+	background:green;
+    padding:10px;
+	padding-right:44px;
+    display:block;
+    width:200px;
+	position:relative;
+	text-shadow:none;
+	line-height:17px;
+    color:#ffffff;
+	font-size:14px;
+}
+
+.is-middle h2.is-header-app .is-add{
+	background:#ececec url(../images/is-add.png) center center no-repeat;
+	background-size:23px !important;
+	height:auto;
+    width:50px;
+    position:absolute;
+    right:10px;
+    top:0px;
+    bottom:0px;
+}
+
+.is-middle h3.is-header-app .is-add{
+	background:#ececec url(../images/is-add.png) center center no-repeat;
+	background-size:37% !important;
+	height:auto;
+    width:33px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    bottom:0px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.is-middle h2.is-header-app .is-add:hover,
+.is-middle h3.is-header-app .is-add:hover
+{
+	background-color:#dcdbdb;
+}
+
+.is-middle h2.is-header-app .is-edit{
+	background:#ececec url(../images/is-edit.png) center center no-repeat;
+	background-size:23px !important;
+	height:auto;
+    width:50px;
+    position:absolute;
+    right:70px;
+    top:0px;
+    bottom:0px;
+}
+
+.is-middle h3.is-header-app .is-edit{
+	background:#ececec url(../images/is-edit.png) center center no-repeat;
+	background-size:37% !important;
+	height:auto;
+    width:33px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    bottom:0px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.is-middle h2.is-header-app .is-edit:hover,
+.is-middle h3.is-header-app .is-edit:hover
+{
+	background-color:#dcdbdb;
+}
+
+.is-middle h2.is-header-app .is-delete{
+	background:#ececec url(../images/is-delete.png) center center no-repeat;
+	background-size:23px !important;
+	height:auto;
+    width:50px;
+    position:absolute;
+    right:10px;
+    top:0px;
+    bottom:0px;
+}
+
+.is-middle h3.is-header-app .is-delete{
+	background:#ececec url(../images/is-delete.png) center center no-repeat;
+	background-size:37% !important;
+	height:auto;
+    width:33px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    bottom:0px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.is-middle h2.is-header-app .is-delete:hover,
+.is-middle h3.is-header-app .is-delete:hover
+{
+	background-color:#dcdbdb;
+}
+
+.is-middle h2.is-header-app .is-back{
+	background:#ececec url(../images/is-back.png) center center no-repeat;
+	background-size:23px !important;
+	height:auto;
+    width:50px;
+    position:absolute;
+    right:10px;
+    top:0px;
+    bottom:0px;
+}
+
+.is-middle h3.is-header-app .is-back{
+	background:#ececec url(../images/is-back.png) center center no-repeat;
+	background-size:37% !important;
+	height:auto;
+    width:33px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    bottom:0px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.is-middle h2.is-header-app .is-back:hover,
+.is-middle h3.is-header-app .is-back:hover
+{
+	background-color:#dcdbdb;
+}
+
+.is-middle h2.is-header-app .is-details{
+	background:#ececec url(../images/is-info.png) center center no-repeat;
+	background-size:23px !important;
+	height:auto;
+    width:50px;
+    position:absolute;
+    right:64px;
+    top:0px;
+    bottom:0px;
+}
+
+.is-middle h3.is-header-app .is-details{
+	background:#ececec url(../images/is-info.png) center center no-repeat;
+	background-size:37% !important;
+	height:auto;
+    width:33px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    bottom:0px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.is-middle h2.is-header-app .is-details:hover,
+.is-middle h3.is-header-app .is-details:hover
+{
+	background-color:#dcdbdb;
+}
+
+.is-middle h2.is-header-app:first-child,
+.is-middle h3.is-header-app:first-child
+{
+	margin-top:10px;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-header-app{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-header-app{
+		
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-header-app{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-header-app{
+		
+	}
+}

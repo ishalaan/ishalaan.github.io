@@ -1,0 +1,130 @@
+.is-list-box{
+	border:none;
+	padding:0px;
+	margin-bottom:10px;
+	margin-top:0px;
+	text-align:center;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(309px,1fr));
+	grid-gap:0px;
+}
+
+.is-list-box li{
+	display:inline-block;
+	background:#ffffff;
+	margin:10px;
+	margin-top:80px;
+	margin-bottom:0px;
+	border-top:12px solid #eeeeee;
+	position:relative;
+	padding-top:70px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.is-list-box li .is-list-box-image{
+	background:#fbfbfb;
+	background-size:126%;
+	background-position:center center;
+	background-repeat:no-repeat;
+	border:none;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	padding:40px;
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:-70px;
+	right:0px;
+    left:0px;
+    margin:0px auto;
+	text-align:center;
+	box-shadow:0px 0px 0px 8px rgb(255 233 234 / 50%);
+}
+
+.is-list-box li .is-list-box-title{
+	text-align:center;
+	color:#999999;
+	font-size:28px;
+    line-height:100%;
+	text-transform:uppercase;
+	padding:10px;
+	font-family:'heading';
+}
+
+.is-list-box li .is-list-box-description{
+	text-align:center;
+	color:#333333;
+	background-color:#f5f5f5;
+	font-size:14px;
+	line-height:150%;
+	padding:10px;
+}
+
+.is-list-box li .is-list-box-description span{
+	display:block;
+	padding:5px;
+}
+
+.is-list-box li .is-list-box-description a{
+	
+}
+
+.is-list-box li .is-list-box-button{
+	display:block;
+	padding:10px;
+	background:#7caee6;
+	text-decoration:none;
+	font-size:14px;
+	color:#ffffff;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+.is-list-box li .is-list-box-button:hover{
+	filter:opacity(50%);
+}
+
+.is-list-box li .is-list-box-button:active{
+    background:#771b39;
+	filter:opacity(100%);
+}
+
+.is-list-box li *:last-child{
+	-webkit-border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-list-box{
+		display:block;
+	}
+	
+	.is-list-box li{
+		width:auto;
+		display:block;
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}

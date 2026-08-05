@@ -1,0 +1,122 @@
+.is-content-grid.is-list-grid-image .is-left-column,
+.is-content-grid.is-list-grid-image .is-left-column:hover,
+.is-content-grid.is-list-grid-image .is-left-column:visited,
+.is-content-grid.is-list-grid-image .is-right-column,
+.is-content-grid.is-list-grid-image .is-right-column:hover,
+.is-content-grid.is-list-grid-imahe .is-right-column:visited
+{
+	background-color:#ffffff;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	color:#333333;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	padding:10px;
+	border:none;
+	height:200px;
+	position:relative;
+}
+
+.is-content-grid.is-list-grid-image .is-left-column .is-title,
+.is-content-grid.is-list-grid-image .is-right-column .is-title
+{
+	font-size:18px;
+	line-height:24px;
+	font-weight:bold;
+	color:#333333;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	padding:10px;
+	margin-bottom:10px;
+	margin:0px;
+	position:absolute;
+	top:50%;
+	left:10px;
+	right:10px;
+	-ms-transform:translateY(-50%);
+	transform:translateY(-50%);
+	z-index:2;
+	font-family:'heading';
+}
+
+.is-content-grid.is-list-grid-image .is-left-column .is-title:after,
+.is-content-grid.is-list-grid-image .is-right-column .is-title:after
+{
+	content:"";
+	display:block;
+	margin:0 auto;
+	width:100px;
+	padding-top:20px;
+	border-bottom:3px solid #333333;
+}
+
+.is-content-grid.is-list-grid-image .is-left-column .is-title span,
+.is-content-grid.is-list-grid-image .is-right-column .is-title span
+{
+	font-size:14px;
+	line-height:16px;
+	font-weight:normal;
+	color:#333333;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	padding:10px;
+	margin:0px;
+	margin-bottom:10px;
+	margin:0;
+	font-family:'body';
+}
+
+.is-content-grid.is-list-grid-image .is-left-column .is-list-grid-image-backdrop,
+.is-content-grid.is-list-grid-image .is-right-column .is-list-grid-image-backdrop
+{
+	background-color:transparent;
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:1;
+	background-color:rgb(0,0,0,0.00);
+}
+
+.is-content-grid.is-list-grid-image .is-left-column:hover .is-list-grid-image-backdrop,
+.is-content-grid.is-list-grid-image .is-right-column:hover .is-list-grid-image-backdrop
+{
+	background-color:rgb(0,0,0,0.10);
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-content-grid{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-content-grid{
+		
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-content-grid{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-content-grid{
+		
+	}
+}

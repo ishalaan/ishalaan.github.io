@@ -1,0 +1,165 @@
+.is-gallery-container{
+	
+}
+
+.is-gallery{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	clear:both;
+}
+
+.is-gallery li{
+    list-style-type:none;
+	position:relative;
+	width:25%;
+	display:inline-block;
+	margin:0px !important;
+}
+
+.is-gallery li:after{
+	content:"";
+	display:block;
+	padding:0px;
+	padding-bottom:100%;
+}
+
+.is-gallery li > *{
+	position:absolute;
+	top:4px;
+	bottom:4px;
+	left:4px;
+	right:4px;
+	background-image:url(../images/is-gallery/is-gallery.png);
+	background-color:#f5f5f5;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+	border:1px solid #dddddd;
+}
+
+.is-gallery li > *:hover{
+	background-color:#f5f5f5;
+	opacity:70%;
+}
+
+.is-gallery li > * > span{
+	display:none;
+	position:absolute;
+	bottom:-1px;
+	right:-1px;
+	left:-1px;
+	padding:10px;
+	color:#ffffff;
+	background:#333333;
+	opacity:70%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.is-gallery li > *:hover > span{
+	display:block;	
+}
+
+.is-gallery li > *:hover > span:empty{
+	display:none;	
+}
+
+.is-gallery-popup{
+	position:fixed;
+	right:0px;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	background:rgba(0,0,0,0.5);
+	z-index:1000;
+}
+
+.is-gallery-popup .is-modal-container{
+	min-height:400px !important;
+	background-repeat:no-repeat !important;
+	background-position: center center !important;
+	background-size:contain;
+	background-color:transparent !important;
+	margin:0px !important;
+	max-width:100% !important;
+	height:100% !important;
+	width:100% !important;
+	padding:0px !important;
+	border:none !important;
+	-moz-box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	box-shadow:none !important;
+	cursor:pointer;
+	top:0px !important;
+	left:0px !important;
+	right:0px !important;
+	bottom:0px !important;
+}
+
+.is-gallery-popup .is-modal-body{
+	overflow:auto !important;
+	position:absolute !important;
+	top:0px !important;
+	right:0px !important;
+	left:0px !important;
+	bottom:0px !important;
+	max-height:unset !important;
+}
+
+.is-gallery-popup .is-modal-close{
+	display:none;
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+	.is-gallery{
+		
+	}
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+	.is-gallery li > *:hover > span{
+		display:none;	
+	}
+	
+	.is-gallery .is-modal-container{
+		position:unset !important;
+		margin:unset !important;
+		top:unset !important;
+		right:unset !important;
+		left:unset !important;
+		bottom:unset !important;
+		max-width:unset !important;
+	}
+
+	.is-gallery .is-modal-container .is-modal-body{
+	    position:unset !important;
+		top:unset !important;
+		right:unset !important;
+		bottom:unset !important;
+		left:unset !important;
+		max-height:unset !important;
+	}
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+	.is-gallery{
+		
+	}
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+	.is-gallery li{
+	    width:33.33%;
+	}
+}

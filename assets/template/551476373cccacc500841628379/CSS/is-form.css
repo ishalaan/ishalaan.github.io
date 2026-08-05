@@ -1,0 +1,319 @@
+input[type=text]:-moz-read-only,
+input[type=date]:-moz-read-only,
+input[type=color]:-moz-read-only,
+input[type=number]:-moz-read-only,
+input[type=tel]:-moz-read-only,
+input[type=url]:-moz-read-only,
+input[type=search]:-moz-read-only,
+input[type=password]:-moz-read-only,
+input[type=email]:-moz-read-only,
+textarea:-moz-read-only
+{
+	color:#999999;
+}
+
+input[type=text]:read-only,
+input[type=date]:read-only,
+input[type=color]:read-only,
+input[type=number]:read-only,
+input[type=tel]:read-only,
+input[type=url]:read-only,
+input[type=search]:read-only,
+input[type=password]:read-only,
+input[type=email]:read-only,
+textarea:read-only
+{
+	color:#999999;
+}
+
+input[type=text], 
+input[type=date],
+input[type=color],
+input[type=number],
+input[type=tel],
+input[type=url],
+input[type=search],
+input[type=password], 
+input[type=email], 
+select, 
+textarea
+{
+	color:#333333;
+	background-color:#f5f5f5;
+	border-color:#f5f5f5;
+}
+
+input[type=date]{
+	background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAbdJREFUeNrsVTmOwkAQbBtzB6zEEzYjJ0BC2ohL/IEjQLyCf5DyCmJziggQhyDYnASxMYeGqRaDEHjZsQOSpaVRyZa7q6qnZ2wIIegVYdKL4k3kOaz7F61WS2y3WzIMw1UhDFU8HqdyuWxoEe12OyoWi+R2GiGs3W7rO0JsNhtaLpfariAqkUi4a53f76dUKnVN1CEDUSwWo/l8rj8Mh8OBLMui6XRKwWCQk8PhMDuMRCIPuFgs+DvkHI9HfUcgggus8XhMg8GARqMRPw+HwweEm06nQ41Gg3O1HUEVikSjUUqn04yFQoFdOSFc5fP5q0hXrUPARbPZpFAoxMrRnmfomQiKoTQQCFAmk+EhuUXsicJsNuudCATYHxRW2O/3GXu9Hvl8Pt4bYLfb5Zz9fu+eSClFIYW5XI5M06RSqUTJZJIqlQpjrVZz70ipgnLbtpnwFkE4m814aHAEgJPJ5E9HPJ63q16vC8R6vXbE1WrFKM8RozxHQsUll5zWwwvZBuE1LrmORJZD6+xqtfp1Op34A5ypZ6iuKbRUPtu/Xrr3t7RM+pTw4fG38yPrfWsRvX/l/5foLMAA7uaVNsqpn+YAAAAASUVORK5CYII=');
+    background-position:right 5px center;
+    background-repeat:no-repeat;
+}
+
+.is-left-column input[type=text],
+.is-left-column input[type=date],
+.is-left-column input[type=color],
+.is-left-column input[type=number],
+.is-left-column input[type=tel],
+.is-left-column input[type=url],
+.is-left-column input[type=search],
+.is-left-column input[type=password],
+.is-left-column input[type=email],
+.is-left-column select,
+.is-left-column textarea,
+.is-right-column input[type=text],
+.is-right-column input[type=date],
+.is-right-column input[type=color],
+.is-right-column input[type=number],
+.is-right-column input[type=tel],
+.is-right-column input[type=url],
+.is-right-column input[type=search],
+.is-right-column input[type=password],
+.is-right-column input[type=email],
+.is-right-column select,
+.is-right-column textarea
+{
+	border:none;
+}
+
+.fieldset{
+	background:transparent;
+	border:none;
+}
+	
+fieldset{
+	margin:0px;
+	margin-top:10px;
+	margin-bottom:0px;
+	margin-right:0px;
+	margin-left:0px;
+	position:relative;
+	background:#ffffff;
+	border:1px solid #e7e7e7;
+}
+	
+fieldset:first-child{
+	margin:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-right:0px;
+	margin-left:0px;
+}
+
+.is-content-full > span:first-child:empty + fieldset,
+.is-content-left > span:first-child:empty + fieldset,
+.is-content-right > span:first-child:empty + fieldset,
+.is-left-column > span:first-child:empty + fieldset,
+.is-right-column > span:first-child:empty + fieldset
+{
+	margin-top:0px;
+}
+
+fieldset legend{
+	color:#999999;
+	background:#ffffff;
+	font-weight:normal;
+	font-size:14px;
+}
+
+fieldset input[type=text], 
+fieldset input[type=date],
+fieldset input[type=color],
+fieldset input[type=number],
+fieldset input[type=tel],
+fieldset input[type=url],
+fieldset input[type=search],
+fieldset input[type=password], 
+fieldset input[type=email], 
+fieldset textarea
+{
+	background-color:#f5f5f5;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+
+fieldset select{
+	background:#f5f5f5;
+	-webkit-appearance:none;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIZJREFUeNpiNDY23sLAwODNgB9EnzlzZhk+BUxAXADEv/CoOUXIELBBQEV3gHQfHjXFDEQAJijdCsSvscgvA1p0hGiDgIq/AKl6NDmQWBkDkYAJiT0LiC8g8VuBFjwl2SCgpr9AKhfKJRRumOD///8oGJgclgJxFLo4IYzNICFSDQFhgAADAMnMiPKfi/Z/AAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:right 5px;
+	background-size:10px;
+	padding-right:1.5em;
+}
+
+fieldset:not(.is-fieldset-options) *:last-child{
+	margin-bottom:0px;	
+}
+
+.is-fieldset-options{
+	text-align:right;
+	padding:5px;
+	background:#f5f5f5;
+	margin-top:-1px !important;
+}
+
+.is-fieldset-options label{
+	float:left;
+	padding:6px;
+}
+
+.is-form-item{
+	color:#333333;
+}
+
+.is-form-item .is-form-label{
+	font-size:12px;
+	line-height:20px;
+	font-weight:normal;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	padding:7px;
+}
+
+.is-form-item .is-form-field{
+	
+}
+
+.is-form-item .is-form-field input[type=text],
+.is-form-item .is-form-field input[type=date],
+.is-form-item .is-form-field input[type=color],
+.is-form-item .is-form-field input[type=number],
+.is-form-item .is-form-field input[type=tel],
+.is-form-item .is-form-field input[type=url],
+.is-form-item .is-form-field input[type=search],
+.is-form-item .is-form-field input[type=password],
+.is-form-item .is-form-field input[type=email],
+.is-form-item .is-form-field select
+{
+	font-size:14px;
+	line-height:16px;
+	padding:8px;
+	height:34px;
+}
+	
+.is-form-item .is-form-field textarea{
+	font-size:14px;
+	line-height:16px;
+	padding:12px;
+	width:70%;
+}
+
+.is-form-item .is-form-field-icon input[type=text],
+.is-form-item .is-form-field-icon input[type=date],
+.is-form-item .is-form-field-icon input[type=color],
+.is-form-item .is-form-field-icon input[type=number],
+.is-form-item .is-form-field-icon input[type=tel],
+.is-form-item .is-form-field-icon input[type=url],
+.is-form-item .is-form-field-icon input[type=search],
+.is-form-item .is-form-field-icon input[type=password],
+.is-form-item .is-form-field-icon input[type=email],
+.is-form-item .is-form-field-icon select
+{
+	padding-left:52px;
+}
+
+.is-form-item .is-form-field-icon a:last-child,
+.is-form-item .is-form-field-icon a:first-child
+{
+	width:42px;
+	height:42px;
+}
+
+.is-form-item.submit .is-form-field input[type=button],
+.is-form-item.submit .is-form-field input[type=submit]
+{
+	padding:12px;
+	font-size:14px;
+}
+
+.is-form-item-highlight{
+	background:#f5f5f5;
+    border:none;
+	color:#333333;
+}
+
+.is-form-item-highlight .is-form-item-highlight-title{
+	color:#7caee6;
+	text-align:left;
+	margin-bottom:10px;
+	font-weight:normal;
+}
+
+.is-form-item-highlight span{
+	color:#333333;
+	font-size:14px;
+}
+
+.is-form-item-highlight input[type=text],
+.is-form-item-highlight input[type=date],
+.is-form-item-highlight input[type=color],
+.is-form-item-highlight input[type=number],
+.is-form-item-highlight input[type=tel],
+.is-form-item-highlight input[type=url],
+.is-form-item-highlight input[type=search],
+.is-form-item-highlight input[type=password],
+.is-form-item-highlight input[type=email],
+.is-form-item-highlight select
+{
+	background:#ffffff;
+	border-color:#ffffff;
+}
+
+.is-form-item-highlight input[type=text]:focus,
+.is-form-item-highlight input[type=date]:focus,
+.is-form-item-highlight input[type=color]:focus,
+.is-form-item-highlight input[type=number]:focus,
+.is-form-item-highlight input[type=tel]:focus,
+.is-form-item-highlight input[type=url]:focus,
+.is-form-item-highlight input[type=search]:focus,
+.is-form-item-highlight input[type=password]:focus,
+.is-form-item-highlight input[type=email]:focus,
+.is-form-item-highlight select:focus,
+.is-form-item-highlight input[type=text]:active,
+.is-form-item-highlight input[type=date]:active,
+.is-form-item-highlight input[type=color]:active,
+.is-form-item-highlight input[type=number]:active,
+.is-form-item-highlight input[type=tel]:active,
+.is-form-item-highlight input[type=url]:active,
+.is-form-item-highlight input[type=search]:active,
+.is-form-item-highlight input[type=password]:active,
+.is-form-item-highlight input[type=email]:active,
+.is-form-item-highlight select:active
+{
+	border-color:#999999;
+}
+
+.is-form-item-highlight .is-form-item-highlight-body{
+	text-align:left;
+	margin-bottom:10px;
+}
+
+.is-form-item-highlight .is-form-label{
+	
+}
+
+.is-form-item-highlight .is-form-field{
+	
+}
+
+@media all and (max-width:1024px){	
+	/* extra styles for iPad landscape*/
+	
+}
+
+@media all and (max-width:924px){
+	/* extra styles for iPad portrait*/
+	
+}
+
+@media all and (max-width:896px){
+	/* extra styles for iPhone landscape*/
+	
+}
+
+@media all and (max-width:414px){
+	/* extra styles for iPhone portrait*/
+	
+}
