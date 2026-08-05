@@ -1,264 +1,521 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Isaac Shalaan's MSc Artificial Intelligence e-portfolio.">
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/root/CSS/CSS.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/root/CSS/CSS-iPad.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/root/CSS/CSS-iPhone.css" />
 
-    <title>Isaac Shalaan | MSc AI E-Portfolio</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/libraries/animated-css/animate.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/libraries/prolocus/is-gallery-fotorama.css" />
 
-    <link rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/CSS.css" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/CSS-iPad.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/CSS-iPhone.css?8eb067fe2a6279ec7dfc9d7ec8e22aba" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-custom.css?c0c7435b8ab9294e4175b8214f9aa69a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list-grid.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list-grid-icon.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list-bullet.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list-box.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list-lookup.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-form.css?774d7980a39f59eb57bacb75f543fc00" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-table.css?52f92d33a2455a48f1ddd9319b5a7509" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-breadcrumbs.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-prompt.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-tabs-vertical.css?70d2bd69c4709dc6e040faa6e822c83a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-tabs-horizontal.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-login.css?fa2326b04ffb910c31c8e934cdeb94d2" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-button-large.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-button.css?9aee6a525294ea044b65e03b3405f790" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-slider.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-fader.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-gallery.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-modal.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list-split-text.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-h1.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-h2.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-h3.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-h4.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-h5.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-hr.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-middle.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-content-full.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-content-grid.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-list-grid-image.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-gallery-fotorama.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-html.css?3e23362c1b7cda0b96f5b73de8824b2a" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+
+	<link rel="shortcut icon" href="assets/page/images/favicon.png" />
+	<link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png?481aff3d58008543c8d9594d2ff79f06" />
+	<link rel="apple-touch-startup-image" href="assets/page/images/apple-touch-startup-ios-iphone11.png?09de960aef12c64a6af504a7785eae53" media="(device-width:828px) and (device-height:1792px)" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS.css?2cd3e684d4431ca454d313898e31ad45" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css?efe40cfd265f5d8c4f31179da5e2a3a3" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css?7b822479c975392f956e462c6dedade7" />
+	<style>
+		#is-middle{
+			min-height: 875px;
+		}
+
+		#is-middle .is-thumbnail {
+			position:relative;
+			clear:both;
+			margin: 63px auto;
+			width: 50%;
+			aspect-ratio: 1 / 1;
+			height: auto;
+			max-width:300px;
+			min-width:200px;
+			background:#ffffff url(assets/page/images/IsaacShalaan.png) center center no-repeat;
+			background-size:cover;
+			border:4px solid #999999;
+			border-radius:50%;
+			box-shadow:0 0 50px 22px rgba(91, 19, 19, 0.7), inset 0 0 32px 40px rgba(0, 0, 0, 0.6);
+			transform-origin: center;
+			transition: transform 2s ease, width 2s ease, height 2s ease, box-shadow 1s ease, border-color 1s ease;
+			animation: float 4s ease-in-out infinite;
+		}
+
+		#is-middle .is-thumbnail:hover {
+			border-color:#ffffff;
+			box-shadow:0 0 100px 44px rgba(91, 19, 19, 0.9), inset 0 0 32px 40px rgba(0, 0, 0, 0.6);
+		}
+
+		@keyframes float {
+			0% {
+				transform: translateY(0px);
+			}
+			50% {
+				transform: translateY(-18px);
+			}
+			100% {
+				transform: translateY(0px);
+			}
+		}
+
+		@media all and (max-width:1024px){
+			/* extra styles for iPad landscape*/
+			
+			#is-middle{
+				min-height: 775px;
+			}
+		}
+
+		@media all and (max-width:924px){
+			/* extra styles for iPad portrait*/
+
+		}
+
+		@media all and (max-width:896px){
+			/* extra styles for iPhone landscape*/
+
+		}
+
+		@media all and (max-width:414px){
+			/* extra styles for iPhone portrait*/
+
+		}
+	</style>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	<meta name="apple-mobile-web-app-title" content="Shalaan.ai" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="noindex" />
+	<meta name="theme-color" content="" />
+
+	<title>MSc Artificial Intelligence - Isaac Shalaan</title>
+
+	<script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
+	<script type="text/javascript" src="assets/libraries/apexcharts/apexcharts.js"></script>
+	<script type="text/javascript" src="assets/libraries/prolocus/is-webapp.js"></script>
+	<script type="text/javascript" src="assets/libraries/prolocus/is-video.js"></script>
+	<script type="text/javascript" src="assets/libraries/prolocus/is-fader.js"></script>
+	<script type="text/javascript" src="assets/libraries/prolocus/is-gallery-fotorama.js"></script>
+	<script type="text/javascript" src="assets/libraries/prolocus/is-aniview.js"></script>
+
+	<script language="javascript" type="text/javascript" src="assets/template/551476373cccacc500841628379/Javascripts/JS.js"></script>
+	<script language="javascript" type="text/javascript" src="assets/page/Javascripts/JS.js"></script>
+
 </head>
-
 <body>
+<div id="is-screen-protector"><div>...loading page, please wait.</div></div>
 
-<header class="site-header">
-    <div class="nav-shell">
+<div class="is-header" id="is-header">
+	<div class="is-fixed">
+		<a href="." class="is-logo" id="is-header-logo" onclick="javascript:is_switch();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-logo.png" border="0" title="Back to Home" alt="Back to Home" /></a>
+	</div>
+</div>
 
-        <a class="brand" href="index.html" aria-label="Isaac Shalaan home">
-            <span class="brand-mark">IS</span>
-            <span>
-                <strong>Isaac Shalaan</strong>
-                <small>MSc AI E-Portfolio</small>
-            </span>
-        </a>
+<div class="is-menu" id="is-menu">
+	<ul class="is-fixed is-menu-list">
+		<li class="is-logo" id="is-menu-logo"><a href="." onclick="javascript:is_switch();return false;"></a></li>
 
-        <nav aria-label="Primary navigation">
-            <ul class="nav-links">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="intelligent-agents.html">Intelligent Agents</a></li>
-            </ul>
-        </nav>
+		<div class="is-menu-mobile" id="is-menu-mobile">
+			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
+			<li class="is-menu-active" id=""><a href=".">Home</a></li>
+			<li class="" id=""><a href="about">About</a></li>
+		</div>
 
-    </div>
-</header>
+		<li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
+		<br class="is-clear" />
+	</ul>
+</div>
 
-<main>
+<div class="is-middle" id="is-middle">
+	<div class="is-fixed">
+		<div class="is-eyebrow" style="padding-left:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>Home</div>
+		<br />
 
-<section class="hero">
-    <div class="hero-grid">
+		<h1 class="animated fadeInDown"><span>University of Essex</span>MSc Artificial Intelligence <span>E-Portfolio</span>.</h1>
+		<div class="is-thumbnail animated pulse"></div>
+	</div>
+</div>
 
-        <div class="hero-copy">
-            <p class="eyebrow">University of Essex</p>
+<div class="is-middle" id="is-middle-2">
+	<div class="is-fixed">
+		<h2 class="animated fadeIn">Select a Module</h2>
 
-            <h1>
-                MSc Artificial Intelligence
-                <span>E-Portfolio</span>
-            </h1>
+		<div class="is-cap-grid is-cap-grid-2col animated fadeInUp">
+			<a class="is-cap-card" href="module-4-machine-learning">
+				<span class="is-cap-card-num">/ 04</span>
+				<h3>Machine Learning</h3>
+				<p>Discussions, practical exercises and critical reflections concerning datasets, model development and evaluation.</p>
+			</a>
+			<a class="is-cap-card" href="module-5-intelligent-agents">
+				<span class="is-cap-card-num">/ 05</span>
+				<h3>Intelligent Agents</h3>
+				<p>Practical activities, assessed work and reflections focused on autonomous systems, agent behaviour and intelligent decision-making.</p>
+			</a>
+			<a class="is-cap-card" href="module-6-research-methods-and-professional-practices">
+				<span class="is-cap-card-num">/ 06</span>
+				<h3>Research Methods & Professional Practice</h3>
+				<p>Future work covering research design, academic practice, professional development and preparation for independent study.</p>
+			</a>
+			<a class="is-cap-card" href="module-7-msc-computing-project">
+				<span class="is-cap-card-num">/ 07</span>
+				<h3>MSc Computing Project</h3>
+				<p>A future record of the planning, implementation, evaluation and critical review of my dissertation project.</p>
+			</a>
+		</div>
 
-            <p class="hero-text">
-                A curated record of my academic development, technical practice
-                and reflective learning throughout the MSc Artificial Intelligence
-                programme.
-            </p>
+		<div class="is-cta-band animated fadeInUp" id="contact">
+			<h2>Say hello and connect with me.</h2>
+			<p>I would love to hear your thoughts, ideas, or what you are working on.</p>
+			<a href="about" class="is-button-primary">About Me</a>
+			<a href="https://www.linkedin.com/in/ishalaan/" class="is-button-primary is-button-linkedin" target="_blank">Connect on LinkedIn</a
+		</div>
+	</div>
+</div>
 
-            <div class="hero-actions">
-                <a class="button button-primary" href="#portfolio-sections">
-                    Explore my work
-                </a>
+<div class="is-footer" id="is-footer">
+	<ul class="is-fixed is-footer-list">
+		<li style="float:left;">
+			Copyright © 2026 <a href="https://isaacshalaan.com/" target="_blank">Isaac Shalaan</a>. All rights reserved.<br /><br />
+			<div class="is-footer-social">
+				<a href="https://www.linkedin.com/in/ishalaan/" target="_blank" style="background-image:url(assets/template/551476373cccacc500841628379/images/is-footer-linkedin.png);"></a>
+			</div>
+		</li>
+		<li><a href="https://www.linkedin.com/in/ishalaan/">Say Hello</a></li>
 
-                <a class="button button-secondary" href="about.html">
-                    About me
-                </a>
-            </div>
-        </div>
+		<div class="is-clear"></div>
+		<li>
+			<div class="is-footer-cards"></div>
+		</li>
+		<div class="is-clear"></div>
+	</ul>
+</div>
 
-        <div class="hero-panel" aria-label="Portfolio summary">
-            <div class="orb orb-one"></div>
-            <div class="orb orb-two"></div>
+<script language="javascript" type="text/javascript">
+	function is_toggle_all(cb,Form,InputName,Type){
+		var val = cb.checked;
+		var FormName = Form.name;
+		var frm = document.forms[FormName];
+		var len = frm.elements.length;
+		var i=0;
+		for( i=0 ; i<len ; i++){
+			if(Type=='id'){
+				if (frm.elements[i].id==InputName){
+					frm.elements[i].checked=val;
+				}
+			}else{
+				if (frm.elements[i].name==InputName){
+					frm.elements[i].checked=val;
+				}
+			}
+		}
+	}
 
-            <div class="hero-card">
-                <p>Current focus</p>
-                <h2>Artificial intelligence in practice</h2>
-                <span>
-                    Machine learning, intelligent systems, research and reflection.
-                </span>
-            </div>
+	function is_print_content(id){
+		is_print_document(document.getElementById(id).innerHTML);
+	}
 
-            <div class="mini-card mini-card-one">
-                <strong>03</strong>
-                <span>Active sections</span>
-            </div>
+	function is_reload_src(id){
+		var obj = document.getElementById(id);
+		var src = obj.src;
+		var date = new Date();
+		obj.src = src + '?v=' + date.getTime();
+		return false;
+	}
 
-            <div class="mini-card mini-card-two">
-                <strong>2026</strong>
-                <span>Portfolio year</span>
-            </div>
-        </div>
+	function is_change_src(id,url){
+		var obj = document.getElementById(id);
+		var src = obj.src;
+		var pos = src.indexOf('?');
+		if (pos >= 0){
+			src = src.substr(0, pos);
+		}
+		var date = new Date();
+		obj.src = url + '?v=' + date.getTime();
+		return false;
+	}
 
-    </div>
-</section>
+	function is_file_uploader(PHP_Script,element,param,preview,Call_Function){
+		var uploader = new qq.FileUploader({
+			element: document.getElementById(element),
+			action: PHP_Script,
+			debug: false,
+			params: {
+				Param: param
+			},
+			onComplete: function(id, fileName, responseJSON){
+				if(preview!="" && preview!=undefined){
+					is_reload_src(preview);
+				}
+				if(Call_Function!="" && Call_Function!=undefined){
+					setTimeout(function(){window[Call_Function]();},250);
+				}
+			}
+		});
+	}
 
-<section class="intro-section">
-    <div class="section-shell intro-grid">
+	function is_change_class(ID,class_name){
+		if(document.getElementById(ID)==null){
+			$(ID).attr('class',class_name);
+		}else{
+			$("#"+ID).attr('class',class_name);
+		}
+	}
 
-        <div>
-            <p class="section-kicker">Portfolio overview</p>
-            <h2>A space for learning, evidence and reflection</h2>
-        </div>
+	function is_go_to(URL){
+		window.location = URL;
+	}
 
-        <div class="intro-copy">
-            <p>
-                This portfolio brings together selected activities from my postgraduate
-                studies. It documents how my technical understanding, analytical
-                approach and professional perspective develop across the programme.
-            </p>
+	function is_loader(toggle){
+		if(toggle=='on' || toggle==1){
+			is_change_text('is-loading-text','Please Wait');
+			is_show('is-loading-screen');
+		}else{
+			is_hide('is-loading-screen');
+		}
+	}
 
-            <p>
-                Each section contains relevant coursework, practical outputs and
-                reflections on the decisions, challenges and lessons arising from my work.
-            </p>
-        </div>
+	function is_ajax_call_post(Form,Method,Button,Result,Target,Progress_Bar,Processing_Message,Disable_Scroll,Disable_Loader,Call_Function,Silent){
 
-    </div>
-</section>
+		if(Disable_Loader!=1){
+			is_loader(1);
+		}
 
-<section id="portfolio-sections" class="portfolio-section">
-    <div class="section-shell">
+		if(Progress_Bar!=''){
+			is_show(Progress_Bar);
+		}
 
-        <div class="section-heading">
-            <div>
-                <p class="section-kicker">Explore</p>
-                <h2>Portfolio Sections</h2>
-            </div>
+		if(Button!=''){
+			var Button = document.getElementById(Button);
+			var Button_Before = Button.value;
+			Button.value = Processing_Message;
+		}
 
-            <p>
-                Select a section to view module work, practical evidence and
-                reflective commentary.
-            </p>
-        </div>
+		$.ajax({
+			url: Target,
+			type: "POST",
+			data: $('#'+Form).serialize(),
+			dataType: "html",
+			timeout: 0,
+			success: function(returnData){
+				if(Silent!=1){
+					if (document.getElementById(Result)==null){
+						$(Result).html(returnData);
+					}else{
+						$('#'+Result).html(returnData);
+					}
+				}
 
-        <div class="card-grid">
+				if(Progress_Bar!=''){
+					is_hide(Progress_Bar);
+				}
 
-            <article class="portfolio-card featured-card">
-                <div class="card-top">
-                    <span class="card-index">01</span>
-                    <span class="card-status live">Available</span>
-                </div>
+				if(Button!=''){
+					Button.value = Button_Before;
+				}
 
-                <div>
-                    <p class="card-category">Profile</p>
-                    <h3>About Me</h3>
-                    <p>
-                        My academic background, professional interests and reasons
-                        for pursuing postgraduate study in artificial intelligence.
-                    </p>
-                </div>
+				if(Disable_Scroll!=true){
+					setTimeout(function(){
+						if(document.getElementById(Result)){
+							is_scroll_to(Result);
+						}
+					}, 1000);
+				}
 
-                <a class="card-link" href="about.html">
-                    Open section <span aria-hidden="true">↗</span>
-                </a>
-            </article>
+				if(Disable_Loader!=1){
+					is_loader(0);
+				}
 
-            <article class="portfolio-card">
-                <div class="card-top">
-                    <span class="card-index">02</span>
-                    <span class="card-status live">Available</span>
-                </div>
+				if(Call_Function!="" && Call_Function!=undefined){
+					setTimeout(function(){window[Call_Function]();},250);
+				}
+			},
+			error: function(e){
+				//alert('Couldn\'t request the page');
+			}
+		});
+	}
 
-                <div>
-                    <p class="card-category">Module</p>
-                    <h3>Intelligent Agents</h3>
-                    <p>
-                        Practical activities, assessed work and reflections focused
-                        on autonomous systems, agent behaviour and intelligent decision-making.
-                    </p>
-                </div>
+	function is_ajax_call_get(Result,Target,Disable_Scroll,Disable_Loader,Call_Function,Silent){
+		if(Disable_Loader!=1){
+			is_loader(1);
+		}
 
-                <a class="card-link" href="intelligent-agents.html">
-                    Open section <span aria-hidden="true">↗</span>
-                </a>
-            </article>
+		$.ajax({
+			url: Target,
+			type: "get",
+			dataType: "html",
+			timeout: 0,
+			success: function(returnData){
+				if(Silent!=1){
+					if (document.getElementById(Result)==null){
+						$(Result).html(returnData);
+					}else{
+						$('#'+Result).html(returnData);
+					}
+				}
 
-            <article class="portfolio-card">
-                <div class="card-top">
-                    <span class="card-index">03</span>
-                    <span class="card-status live">Available</span>
-                </div>
+				if(Disable_Scroll!=true){
+					setTimeout(function(){
+						if(document.getElementById(Result)){
+							is_scroll_to(Result);
+						}
+					}, 1000);
+				}
 
-                <div>
-                    <p class="card-category">Module</p>
-                    <h3>Machine Learning</h3>
-                    <p>
-                        Discussions, practical exercises and critical reflections
-                        concerning datasets, model development and evaluation.
-                    </p>
-                </div>
+				if(Disable_Loader!=1){
+					is_loader(0);
+				}
 
-                <a class="card-link" href="machine-learning.html">
-                    Open section <span aria-hidden="true">↗</span>
-                </a>
-            </article>
+				if(Call_Function!="" && Call_Function!=undefined){
+					setTimeout(function(){window[Call_Function]();},250);
+				}
+			},
+			error: function(e){
+				//alert('Couldn\'t request the page');
+			}
+		});
+	}
 
-            <article class="portfolio-card muted-card">
-                <div class="card-top">
-                    <span class="card-index">04</span>
-                    <span class="card-status">Planned</span>
-                </div>
+	function is_scroll_to(Result){
+		if (document.getElementById(Result)==null){
+			$('html,body').animate({scrollTop: ($(Result).offset().top-150)},'slow');
+		}else{
+			$('html,body').animate({scrollTop: ($("#"+Result).offset().top-150)},'slow');
+		}
+	}
 
-                <div>
-                    <p class="card-category">Module</p>
-                    <h3>Research Methods &amp; Professional Practice</h3>
-                    <p>
-                        Future work covering research design, academic practice,
-                        professional development and preparation for independent study.
-                    </p>
-                </div>
+	function is_sign_out(){
+		is_show('is-logout-screen');
+	}
 
-                <span class="card-link disabled-link">Coming soon</span>
-            </article>
+	function is_sign_in(){
+		is_show('is-login-screen');
+	}
 
-            <article class="portfolio-card muted-card">
-                <div class="card-top">
-                    <span class="card-index">05</span>
-                    <span class="card-status">Planned</span>
-                </div>
+	function is_admin(){
 
-                <div>
-                    <p class="card-category">Final project</p>
-                    <h3>MSc Dissertation</h3>
-                    <p>
-                        A future record of the planning, implementation, evaluation
-                        and critical review of my dissertation project.
-                    </p>
-                </div>
+		document.getElementById('is-modal-title').innerHTML='Select Portal';
+		is_ajax_call_get('is-modal-body','../../1/admin/Content/administration?page=239',1,0);
+		is_modal_open();
+	}
 
-                <span class="card-link disabled-link">Coming soon</span>
-            </article>
+	function is_switch(){
 
-        </div>
+		is_go_to('.');
+	}
 
-    </div>
-</section>
+	function is_modal_open(class_name){
+		if(class_name!=""){
+			class_name=' '+class_name;
+		}
+		is_change_class('is-modal','is-modal'+class_name);
+		is_show('is-modal');
+	}
 
-<section class="quote-section">
-    <div class="section-shell">
-        <div class="quote-card">
-            <p class="section-kicker">Development in progress</p>
-            <blockquote>
-                This portfolio will continue to evolve as new modules, practical work
-                and reflective evidence are completed.
-            </blockquote>
-        </div>
-    </div>
-</section>
+	function is_modal_close(){
+		is_hide('is-modal');
+		document.getElementById('is-modal-body').innerHTML='';
+		is_change_class('is-modal','');
+	}
 
-</main>
+	function is_show(Result){
+		if (document.getElementById(Result)==null){
+			$(Result).show();
+		}else{
+			$('#'+Result).show();
+		}
+	}
 
-<footer class="site-footer">
-    <div class="footer-shell">
+	function is_hide(Result){
+		if (document.getElementById(Result)==null){
+			$(Result).hide();
+		}else{
+			$('#'+Result).hide();
+		}
+	}
 
-        <div>
-            <strong>Isaac Shalaan</strong>
-            <p>MSc Artificial Intelligence · University of Essex</p>
-        </div>
+	function is_toggle(Result){
+		if (document.getElementById(Result)==null){
+			$(Result).fadeToggle('slow');
+		}else{
+			$('#'+Result).fadeToggle('slow');
+		}
+	}
 
-        <p>&copy; 2026 Isaac Shalaan</p>
+	function is_toggle_accordion(toggle,content,type,disable_scroll){
+		var menu=document.getElementById(content);
+		if(menu.style.display=="none"){
+			is_change_class(toggle,"is-title is-accordion-open");
+			is_show(content);
+		}else if(menu.style.display!="none"){
+			is_change_class(toggle,"is-title");
+			is_hide(content);
+		}
+		if(disable_scroll!=1){
+			is_scroll_to(toggle);
+		}
+	}
 
-    </div>
-</footer>
+	function is_change_text(Result,Text){
+		if (document.getElementById(Result)==null){
+			$(Result).html(Text);
+		}else{
+			$('#'+Result).html(Text);
+		}
+	}
 
+	function is_get_cookie(name){
+		const value = `; ${document.cookie}`;
+		const parts = value.split(`; ${name}=`);
+		if(parts.length===2){
+			return parts.pop().split(';').shift();
+		}else{
+			return false;
+		}
+	}
+</script>
 </body>
 </html>
