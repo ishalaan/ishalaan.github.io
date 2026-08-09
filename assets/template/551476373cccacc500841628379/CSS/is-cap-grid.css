@@ -82,7 +82,7 @@
 }
 
 .is-cap-grid .is-cap-card h3{
-	font-size:18px;
+	font-size:16px;
 	margin:0px !important;
 	margin-bottom:10px !important;	
 	padding:0px !important;
@@ -94,7 +94,7 @@
 .is-cap-grid .is-cap-card p{
 	font-size:14px;
 	color:var(--muted);
-	line-height:1.6;
+	line-height:1.5;
 	margin:0px !important;
 }
 

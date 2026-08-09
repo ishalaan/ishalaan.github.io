@@ -127,6 +127,8 @@
 .is-tabs-vertical .is-tabs-vertical-body p{
 	font-weight:normal;
 	text-align:left;
+	font-size:14px;
+	line-height:1.5;
 }
 
 .is-tabs-vertical .is-tabs-vertical-body > div > ul li,

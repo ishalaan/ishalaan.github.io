@@ -97,7 +97,7 @@ a:hover{
 }
 	
 .is-middle h2 {
-	font-size: clamp(22px, 4vw, 42px);
+	font-size: clamp(22px, 4vw, 38px);
 	font-family: 'subheading';
 	color: #ffffff;
 	text-align: left;
@@ -190,6 +190,7 @@ a:hover{
 	background-clip: unset;
 	-webkit-background-clip: unset;
 	-webkit-text-fill-color: unset;
+	text-decoration: none;
 }
 
 .is-fixed{
@@ -512,7 +513,7 @@ a:hover{
     background-size: contain !important;
     display: block;
     height: 64px;
-    width: 338px;
+    width: 100px;
 }
 
 .is-menu .is-menu-list .is-menu-button-processor{	

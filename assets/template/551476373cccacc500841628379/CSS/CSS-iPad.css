@@ -1,6 +1,6 @@
-@media all and (max-width:1024px){
+@media all and (max-width:1024px){	
 	/* extra styles for iPad landscape*/
-
+	
 	#is-middle{
 		min-height: 500px;
 	}
@@ -23,9 +23,5 @@
 
 	.is-menu .is-notification-popup .is-notification-popup-content:after{
 		border:none;
-	}
-
-	.is-menu .is-menu-list .is-logo a{
-		width:250px;
 	}
 }

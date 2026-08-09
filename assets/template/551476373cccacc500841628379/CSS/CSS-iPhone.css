@@ -33,8 +33,4 @@
 	.is-middle h3:not(.is-header-app){
 		font-size:14px;	
 	}
-
-	.is-menu .is-menu-list .is-logo a{
-		width:200px;
-	}
 }
