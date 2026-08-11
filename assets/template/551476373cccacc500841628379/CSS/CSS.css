@@ -780,6 +780,7 @@ a:hover{
     color: #ffffff;
     font-weight: normal;
     text-align: left;
+	font-family:'subheading';
 }
 
 .is-middle .is-left-column{	
