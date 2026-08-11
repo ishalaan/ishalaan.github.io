@@ -123,6 +123,30 @@
 	color:#999999;
 	border-color:#999999;
 }
+ 
+.is-cap-grid .is-cap-card .is-cap-card-tags span.is-cap-card-tags-orange,
+.is-cap-grid .is-cap-card:hover .is-cap-card-tags span.is-cap-card-tags-orange
+{
+	color:#ffffff;
+	background:#602c2c;
+	border-color:#a55201;
+}
+ 
+.is-cap-grid .is-cap-card .is-cap-card-tags span.is-cap-card-tags-green,
+.is-cap-grid .is-cap-card:hover .is-cap-card-tags span.is-cap-card-tags-green
+{
+	color:#ffffff;
+	background:#2b5225;
+	border-color:#009900;
+}
+ 
+.is-cap-grid .is-cap-card .is-cap-card-tags span.is-cap-card-tags-blue,
+.is-cap-grid .is-cap-card:hover .is-cap-card-tags span.is-cap-card-tags-blue
+{
+	color:#ffffff;
+    background:#254352;
+    border-color:#008299;
+}
 
 @media all and (max-width:1024px){	
 	/* extra styles for iPad landscape*/

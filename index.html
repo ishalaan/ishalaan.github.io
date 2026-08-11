@@ -55,6 +55,10 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
 	<style>
+		.is-menu .is-menu-list .is-logo a {
+			width: 270px;
+		}
+
 		#is-middle{
 			min-height: 875px;
 		}
@@ -186,10 +190,15 @@
 
 		<h2 class="animated fadeIn">Welcome to My E-Portfolio</h2>
 
-		<div class="is-cap-grid is-cap-grid-2col animated fadeInUp">
-			<div class="is-cap-card" style="grid-column: 1 / -1;">
-				<h3>Introduction</h3>
-				<p>This e-portfolio brings together selected activities from my postgraduate studies. It documents how my technical understanding, analytical approach and professional perspective develop across the programme. Each section contains relevant coursework, practical outputs and reflections on the decisions, challenges and lessons arising from my work.</p>
+		<div class="is-content-full animated fadeInUp">
+			<h3 class="is-title">Introduction</h3>
+			<p>This e-portfolio brings together selected activities from my postgraduate studies. It documents how my technical understanding, analytical approach and professional perspective develop across the programme. Each section contains relevant coursework, practical outputs and reflections on the decisions, challenges and lessons arising from my work.</p>
+		</div>
+
+		<div class="is-content-full is-accordion animated fadeInUp" style="margin-top:10px;">
+			<a href="#" class="is-title is-accordion-open" onclick="javascript:is_toggle_accordion(this,'Content_1',0);return false;">Contact Me</a>
+			<div id="Content_1" style="display:none;">
+				<p>Coming soon...</p>
 			</div>
 		</div>
 
@@ -201,7 +210,7 @@
 				<h3>Machine Learning</h3>
 				<p>Discussions, practical exercises and critical reflections concerning datasets, model development and evaluation.</p>
 				<div class="is-cap-card-tags">
-					<span style="color:#ffffff;background:#33602c;border-color:#008e00;">In Progress</span>
+					<span class="is-cap-card-tags-blue">In Progress</span>
 				</div>
 			</a>
 			<a class="is-cap-card" href="module-5-intelligent-agents">
@@ -209,7 +218,7 @@
 				<h3>Intelligent Agents</h3>
 				<p>Practical activities, assessed work and reflections focused on autonomous systems, agent behaviour and intelligent decision-making.</p>
 				<div class="is-cap-card-tags">
-					<span style="color:#ffffff;background:#33602c;border-color:#008e00;">In Progress</span>
+					<span class="is-cap-card-tags-blue">In Progress</span>
 				</div>
 			</a>
 			<a class="is-cap-card" href="module-6-research-methods-and-professional-practices">
@@ -217,7 +226,7 @@
 				<h3>Research Methods & Professional Practice</h3>
 				<p>Future work covering research design, academic practice, professional development and preparation for independent study.</p>
 				<div class="is-cap-card-tags">
-					<span style="color:#ffffff;background:#602c2c;border-color:#8e3c00;">Scheduled</span>
+					<span class="is-cap-card-tags-orange">Scheduled</span>
 				</div>
 			</a>
 			<a class="is-cap-card" href="module-7-msc-computing-project">
@@ -225,7 +234,7 @@
 				<h3>MSc Computing Project</h3>
 				<p>A future record of the planning, implementation, evaluation and critical review of my dissertation project.</p>
 				<div class="is-cap-card-tags">
-					<span style="color:#ffffff;background:#602c2c;border-color:#8e3c00;">Scheduled</span>
+					<span class="is-cap-card-tags-orange">Scheduled</span>
 				</div>
 			</a>
 		</div>

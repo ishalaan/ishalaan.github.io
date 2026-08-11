@@ -62,7 +62,7 @@ body{
 
 a,a:active,a:visited{
 	text-decoration:none;
-	color:#b3182b;
+	color:#e2273d;
 }
 
 a:hover{
@@ -75,6 +75,7 @@ a:hover{
 	-ms-transition: background-color .25s linear;
 	transition: background-color .25s linear;
 	color:#a81b0e;
+	text-decoration:none;
 }
 
 .is-middle h1{
@@ -151,7 +152,7 @@ a:hover{
 	
 .is-middle h3{
 	font-size:18px;
-	font-family:'body';
+	font-family:'subheading';
 	color:#666666;
 	text-align:center;
 	clear:both;
@@ -766,23 +767,19 @@ a:hover{
 	position: relative;
 }
 
-#is-middle .is-fixed .is-content-full{
-	border:2px dashed #dddddd;
-}
-
 #is-middle-2{
 	border:none;
 }
 
 .is-middle .is-title{
-	margin-bottom:12px;
-	margin-top:0px;
-    line-height:150%;
-    font-weight:bold;
-	font-family:'subheading';
-    padding-left:0px;
-    padding-top:0px;
     display:block;
+	font-size: 16px;
+	line-height:20px;
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    font-weight: normal;
+    text-align: left;
 }
 
 .is-middle .is-left-column{	
@@ -864,20 +861,15 @@ a:hover{
 .is-middle .is-content-full{
 	position:relative;
 	text-align:left;
-	border:0px solid transparent;
-	font-size:14px;
-	color:#333333;
-	background:#ffffff;
-	-webkit-border-radius:0px;
-	-moz-border-radius:0px;
-	border-radius:0px;
 	clear:both;
-	padding:20px;
-	min-height:0px;
-}
-
-.is-middle .is-content-full:not(.is-accordion):not(.is-tabs-horizontal){
-	border-top:2px dashed #7caee6;
+    padding: 20px;
+	font-size:14px;
+	color:#96959d;
+	line-height:1.5;
+	margin:0px;
+	background:#131215;
+    border:2px solid rgb(60 60 60);
+    border-radius:14px;
 }
 
 .is-middle .is-content-right{
@@ -940,7 +932,7 @@ a:hover{
 {
 	margin-top:12px;
 	margin-bottom:12px;
-	line-height:23px;
+	line-height:1.5;
 }
 
 .is-middle .is-content-left p:first-child, 
@@ -1016,6 +1008,16 @@ a:hover{
 .is-middle .is-right-column.is-accordion
 {
 	min-height:0px;
+    padding:0px;
+}
+
+.is-middle .is-content-left.is-accordion + .is-accordion,
+.is-middle .is-content-right.is-accordion + .is-accordion,
+.is-middle .is-content-full.is-accordion + .is-accordion,
+.is-middle .is-left-column.is-accordion + .is-accordion,
+.is-middle .is-right-column.is-accordion + .is-accordion
+{
+	margin-top:10px;
 }
 
 .is-middle .is-content-left.is-accordion .is-title,
@@ -1025,13 +1027,12 @@ a:hover{
 .is-middle .is-right-column.is-accordion .is-title
 {
 	margin:0px;
-	padding-top:0px;
-	padding-bottom:0px;
+    padding:20px;
+	padding-right:70px !important;
 	text-overflow:ellipsis;
 	white-space:nowrap;
 	overflow:hidden;
-	background:transparent url(../images/is-accordion-open.png) right center no-repeat;
-	background-size:contain;
+	background:transparent url(../images/is-accordion-open.png) right 18px top 18px no-repeat;
 }
 
 .is-middle .is-content-left.is-accordion .is-title.is-accordion-open,
@@ -1040,8 +1041,7 @@ a:hover{
 .is-middle .is-left-column.is-accordion .is-title.is-accordion-open,
 .is-middle .is-right-column.is-accordion .is-title.is-accordion-open
 {
-	background:transparent url(../images/is-accordion-close.png) right center no-repeat;
-	background-size:contain;
+	background: transparent url(../images/is-accordion-close.png) right 18px top 18px no-repeat;
 }
 
 .is-middle .is-content-left.is-accordion .is-title:hover,
@@ -1051,7 +1051,6 @@ a:hover{
 .is-middle .is-right-column.is-accordion .is-title:hover
 {
 	text-decoration:none;
-	color:var(--text-color-links,#7caee6);
 }
 
 .is-middle .is-content-left.is-accordion .is-title ~ *,
@@ -1060,7 +1059,37 @@ a:hover{
 .is-middle .is-left-column.is-accordion .is-title ~ *,
 .is-middle .is-right-column.is-accordion .is-title ~ *
 {
-	margin-top:17px;
+	margin-top:0px;
+}
+
+.is-middle .is-content-left.is-accordion .is-title + div,
+.is-middle .is-content-right.is-accordion .is-title + div,
+.is-middle .is-content-full.is-accordion .is-title + div,
+.is-middle .is-left-column.is-accordion .is-title + div,
+.is-middle .is-right-column.is-accordion .is-title + div
+{
+	padding-top:0px;
+}
+
+.is-middle .is-content-left.is-accordion > div, 
+.is-middle .is-content-right.is-accordion > div, 
+.is-middle .is-content-full.is-accordion > div, 
+.is-middle .is-content-left.is-accordion > div, 
+.is-middle .is-content-right.is-accordion > div, 
+.is-middle .is-content-full.is-accordion > div
+{
+	padding:20px;
+}
+
+
+.is-middle .is-content-left.is-accordion > div p:first-child, 
+.is-middle .is-content-right.is-accordion > div p:first-child, 
+.is-middle .is-content-full.is-accordion > div p:first-child, 
+.is-middle .is-content-left.is-accordion > div p:first-child, 
+.is-middle .is-content-right.is-accordion > div p:first-child, 
+.is-middle .is-content-full.is-accordion > div p:first-child
+{
+    margin-top: -5px;
 }
 
 .is-middle .is-content-left.is-accordion div > ul li, 
