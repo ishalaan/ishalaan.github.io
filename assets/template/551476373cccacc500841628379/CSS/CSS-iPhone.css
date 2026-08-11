@@ -1,9 +1,5 @@
 @media all and (max-width:896px){
 	/* extra styles for iPhone landscape*/
-	
-	.is-middle h3:not(.is-header-app){
-		font-size:16px;	
-	}
 
 	.is-menu .is-menu-list .is-menu-mobile{
 		backdrop-filter: blur(16px);
@@ -30,7 +26,4 @@
 @media all and (max-width:414px){
 	/* extra styles for iPhone portrait*/
 
-	.is-middle h3:not(.is-header-app){
-		font-size:14px;	
-	}
 }
