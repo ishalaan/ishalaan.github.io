@@ -125,7 +125,7 @@ a:hover{
 
 	background: linear-gradient(
 		to bottom,
-		#e2273d 0%,
+		#76000e 40%,
 		#000000 100%
 	);
 	background-clip: text;
@@ -133,7 +133,7 @@ a:hover{
 	color: transparent;
 	-webkit-text-fill-color: transparent;
 
-	animation: star-colour-pulse 1s linear infinite alternate;
+	animation: star-colour-pulse 2s linear infinite alternate;
 }
 
 @keyframes star-colour-pulse {
