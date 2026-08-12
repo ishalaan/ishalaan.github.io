@@ -2,7 +2,7 @@
 	backdrop-filter: blur(16px);
     -moz-backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: radial-gradient(circle at 50% 0%, rgba(179, 24, 43, 0.4), transparent 60%), rgba(19, 18, 21, 0.7) !important;
+	background: rgba(0, 0, 0, 0.7);
 }
 
 .is-login-screen .is-login-box{
@@ -203,7 +203,7 @@
 	backdrop-filter: blur(16px);
     -moz-backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: radial-gradient(circle at 50% 0%, rgba(179, 24, 43, 0.4), transparent 60%), rgba(19, 18, 21, 0.7) !important;
+	background: rgba(0, 0, 0, 0.7);
 }
 	
 .is-logout-screen .is-logout-box{

@@ -5,7 +5,7 @@
 		backdrop-filter: blur(16px);
 		-moz-backdrop-filter: blur(16px);
 		-webkit-backdrop-filter: blur(16px);
-		background: radial-gradient(circle at 50% 0%, rgba(179, 24, 43, 0.4), transparent 60%), rgba(19, 18, 21, 0.7);
+		background: rgba(0, 0, 0, 0.7);
 	}
 
 	.is-menu .is-menu-list .is-menu-mobile li{
