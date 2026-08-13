@@ -59,52 +59,9 @@
 			width: 270px;
 		}
 
-		#is-middle{
-			min-height: 875px;
-		}
-
-		#is-middle .is-thumbnail {
-			position:relative;
-			clear:both;
-			margin: 63px auto;
-			width: 50%;
-			aspect-ratio: 1 / 1;
-			height: auto;
-			max-width:300px;
-			min-width:200px;
-			background:#000000 url(assets/page/images/IsaacShalaan.png) center center no-repeat;
-			background-size:cover;
-			border:4px solid #999999;
-			border-radius:50%;
-			box-shadow:0 0 50px 22px rgba(91, 19, 19, 0.7), inset 0 0 32px 40px rgba(0, 0, 0, 0.6);
-			transform-origin: center;
-			transition: transform 2s ease, width 2s ease, height 2s ease, box-shadow 1s ease, border-color 1s ease;
-			animation: float 4s ease-in-out infinite;
-		}
-
-		#is-middle .is-thumbnail:hover {
-			border-color:#ffffff;
-			box-shadow:0 0 100px 44px rgba(91, 19, 19, 0.9), inset 0 0 32px 40px rgba(0, 0, 0, 0.6);
-		}
-
-		@keyframes float {
-			0% {
-				transform: translateY(0px);
-			}
-			50% {
-				transform: translateY(-18px);
-			}
-			100% {
-				transform: translateY(0px);
-			}
-		}
-
 		@media all and (max-width:1024px){
 			/* extra styles for iPad landscape*/
 			
-			#is-middle{
-				min-height: 775px;
-			}
 		}
 
 		@media all and (max-width:924px){
@@ -171,10 +128,19 @@
 
 <div class="is-middle" id="is-middle">
 	<div class="is-fixed">
-		<div class="is-eyebrow" style="padding-left:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>Home</div>
+		<a class="is-eyebrow" href="index.html" style="padding:7px;" title="Home">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
+		</a>
+		<a class="is-eyebrow" href="index.html" style="padding:7px;" title="Previous">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+		</a>
+		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>Intelligent Agents</div>
+		<a class="is-eyebrow" href="module-6-research-methods-and-professional-practices.html" style="padding:7px;" title="Next">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+		</a>
 		<br />
 
-		<h1 class="animated fadeInDown"><span>University of Essex</span>MSc Artificial Intelligence <span>E-Portfolio</span>.</h1>
+		<h1 class="animated fadeInDown">Intelligent Agents Module <span>Portfolio and Reflection</span>.</h1>
 		<div class="is-thumbnail animated pulse"></div>
 	</div>
 </div>
@@ -182,9 +148,60 @@
 <div class="is-middle" id="is-middle-2">
 	<div class="is-fixed">
 
-		<h2 class="animated fadeIn">Introduction</h2>
+		<div class="is-tabs-horizontal animated fadeInUp">
+			<div class="is-tabs-horizontal-menu">
+				<ul>
+					<li onclick="javascript:is_tabs_horizontal_menu_first(1); return false;" id="is-tabs-horizontal-button-1-first" class="is-tabs-horizontal-menu-current">Module Overview</li>
+					<li onclick="javascript:is_tabs_horizontal_menu_first(2); return false;" id="is-tabs-horizontal-button-2-first">Learning Outcomes</li>
+				</ul>
+			</div>
+
+			<div class="is-tabs-horizontal-body is-tabs-horizontal-body-expandable" id="is-tabs-horizontal-body-first">
+
+				<div id="is-tabs-horizontal-page-1-first">
+					<div class="is-title animated fadeInUp">Module Overview</div>
+					<p>Coming soon..</p>
+				
+					<fieldset class="is-fieldset-options">
+						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_horizontal_menu_first(2);" />
+					</fieldset>
+					<button class="is-tabs-horizontal-read-more" id="is-tabs-horizontal-read-more-1-first" onclick="is_expand_text(this,'is-tabs-horizontal-page-1-first','is-tabs-horizontal-body-expanded')">Read More</button>
+				</div>
+
+				<div id="is-tabs-horizontal-page-2-first" style="display:none;">
+					<div class="is-title animated fadeInUp">Learning Outcomes</div>
+					<p>Coming soon..</p>
+
+					<fieldset class="is-fieldset-options">
+						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_horizontal_menu_first(1);" style="margin-right:0px;">
+						<input type="submit" value="Start Over" class="is-button-primary" onclick="javascript:is_tabs_horizontal_menu_first(1);" />
+					</fieldset>
+					<button class="is-tabs-horizontal-read-more" id="is-tabs-horizontal-read-more-2-first" onclick="is_expand_text(this,'is-tabs-horizontal-page-2-first','is-tabs-horizontal-body-expanded')">Read More</button>
+				</div>
+
+			</div>
+					
+			<script>
+			function is_tabs_horizontal_menu_first(ID){
+				for(let i=1;i<=2;i++){
+					is_hide('is-tabs-horizontal-page-'+i+'-first');
+				}
+				is_show('is-tabs-horizontal-page-'+ID+'-first');
+				for(let i=1;i<=2;i++){
+					is_change_class('is-tabs-horizontal-button-'+i+'-first','');
+				}							 
+				is_change_class('is-tabs-horizontal-button-'+ID+'-first',document.getElementById('is-tabs-horizontal-button-'+ID+'-first').className+' is-tabs-horizontal-menu-current');
+				is_scroll_to('is-tabs-horizontal-body-first');
+			}
+			</script>
+				
+			<div class="is-clear"></div>
+		</div>
+
+		<h2 class="animated fadeIn">Welcome to My E-Portfolio</h2>
 
 		<div class="is-content-full animated fadeInUp">
+			<h3 class="is-title">Introduction</h3>
 			<p>This e-portfolio brings together selected activities from my postgraduate studies. It documents how my technical understanding, analytical approach and professional perspective develop across the programme. Each section contains relevant coursework, practical outputs and reflections on the decisions, challenges and lessons arising from my work.</p>
 		</div>
 
@@ -198,7 +215,7 @@
 		<h2 class="animated fadeIn">Select a Module</h2>
 
 		<div class="is-cap-grid is-cap-grid-2col animated fadeInUp">
-			<a class="is-cap-card" href="module-4-machine-learning.html">
+			<a class="is-cap-card" href="module-4-machine-learning">
 				<span class="is-cap-card-num">04</span>
 				<h3>Machine Learning</h3>
 				<p>Discussions, practical exercises and critical reflections concerning datasets, model development and evaluation.</p>
@@ -206,7 +223,7 @@
 					<span class="is-cap-card-tags-blue">In Progress</span>
 				</div>
 			</a>
-			<a class="is-cap-card" href="module-5-intelligent-agents.html">
+			<a class="is-cap-card" href="module-5-intelligent-agents">
 				<span class="is-cap-card-num">05</span>
 				<h3>Intelligent Agents</h3>
 				<p>Practical activities, assessed work and reflections focused on autonomous systems, agent behaviour and intelligent decision-making.</p>
@@ -214,7 +231,7 @@
 					<span class="is-cap-card-tags-blue">In Progress</span>
 				</div>
 			</a>
-			<a class="is-cap-card" href="module-6-research-methods-and-professional-practices.html">
+			<a class="is-cap-card" href="module-6-research-methods-and-professional-practices">
 				<span class="is-cap-card-num">06</span>
 				<h3>Research Methods & Professional Practice</h3>
 				<p>Future work covering research design, academic practice, professional development and preparation for independent study.</p>
@@ -222,7 +239,7 @@
 					<span class="is-cap-card-tags-orange">Scheduled</span>
 				</div>
 			</a>
-			<a class="is-cap-card" href="module-7-msc-computing-project.html">
+			<a class="is-cap-card" href="module-7-msc-computing-project">
 				<span class="is-cap-card-num">07</span>
 				<h3>MSc Computing Project</h3>
 				<p>A future record of the planning, implementation, evaluation and critical review of my dissertation project.</p>

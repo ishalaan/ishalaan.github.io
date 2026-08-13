@@ -116,12 +116,3 @@ function backgroundSequence(){
 		}
 	}
 }
-
-function is_expand_text(btn, contentid) {
-  const content = document.getElementById(contentid);
-  const isExpanded = content.classList.toggle('is-tabs-vertical-body-expanded');
-  
-  if (isExpanded) {
-    btn.remove();
-  }
-}
