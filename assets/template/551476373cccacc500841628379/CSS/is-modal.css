@@ -1,6 +1,6 @@
 .is-modal{
 	font-family:'body';
-	color:#333333;
+	color:#989898;
 	position:fixed;
 	right:0px;
 	left:0px;
@@ -15,18 +15,16 @@
 
 .is-modal .is-modal-container{
 	position:relative;
-	background:#ffffff;
-    border:1px solid #333333;
-   	-moz-box-shadow:0 0 10px #333333;
-    -webkit-box-shadow:0 0 10px #333333;
-    box-shadow:0 0 10px #333333;
-	-webkit-border-radius:0px;
-    -moz-border-radius:0px;
-    border-radius:0px;
 	margin:0px auto;
     margin-top:5%;
 	padding:10px;
 	max-width:600px;
+	-moz-box-shadow: 0 0 10px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+	box-shadow: 0 0 10px #000000;
+	border:2px solid #000000;
+	background:#131215;
+	border-radius:14px;
 }
 
 .is-modal .is-modal-container .is-modal-close{

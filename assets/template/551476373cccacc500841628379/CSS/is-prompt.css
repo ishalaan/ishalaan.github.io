@@ -4,11 +4,15 @@
 }
 
 .is-prompt{
-	
+	border-radius: 14px;
+    border-top-width:0px;
+    border-right-width:0px;
+    border-bottom-width:0px;
+	min-height:54px;
 }
 
 .is-prompt .is-prompt-title{
-	
+	padding: 7px 7px 1px 10px;
 }
 
 .is-prompt .is-prompt-title .is-prompt-close{
@@ -20,7 +24,7 @@
 }
 
 .is-prompt-image{
-	
+	background-size: 20px !important;
 }
 
 .is-prompt .is-prompt-body{

@@ -82,7 +82,7 @@ a:hover{
 	line-height:100%;
 	font-size:clamp(4rem, 10vw, 8rem);
 	font-family:'heading';
-	color:#999999;
+	color:#696969;
 	text-align:left;
 	font-weight:bold;
 	clear:both;
@@ -514,7 +514,7 @@ a:hover{
     background-size: contain !important;
     display: block;
     height: 64px;
-    width: 100px;
+    width: 220px;
 }
 
 .is-menu .is-menu-list .is-menu-button-processor{	
@@ -1239,7 +1239,7 @@ video#video.is-bg-images{
     height:250px;
     margin-top:0px;
     background:url(../images/is-loader.gif) center center no-repeat;
-	background-size:130px;
+	background-size:80px;
 	filter:opacity(80%);
 	clear:both;
 }

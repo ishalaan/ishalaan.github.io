@@ -69,8 +69,8 @@
 	padding:10px 15px;
 	margin-top:30px;
 	margin-bottom:20px;
-	border:3px solid rgba(226,39,61,0.4);
-	background-color:rgba(226,39,61,0.08);
+    border: 3px solid #701c27;
+    background-color:#241418;
 	line-height:150%;
 	max-width:100%;
 	font-weight:normal;

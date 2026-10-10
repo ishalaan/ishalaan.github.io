@@ -86,9 +86,10 @@ fieldset{
 	margin-bottom:0px;
 	margin-right:0px;
 	margin-left:0px;
-	position:relative;
-	background:#ffffff;
-	border:1px solid #e7e7e7;
+	position:relative;	
+	background: transparent;
+    border: 2px dashed rgb(60 60 60);
+    border-radius: 14px 14px 0 0;
 }
 	
 fieldset:first-child{
@@ -109,10 +110,14 @@ fieldset:first-child{
 }
 
 fieldset legend{
-	color:#999999;
-	background:#ffffff;
-	font-weight:normal;
 	font-size:14px;
+    border: 3px solid #701c27;
+    background-color:#241418;
+    line-height: 150%;
+    font-weight: normal;
+    color: #ffffff !important;
+    border-radius: 999px;
+	padding: 5px 14px;
 }
 
 fieldset input[type=text], 
@@ -126,10 +131,7 @@ fieldset input[type=password],
 fieldset input[type=email], 
 fieldset textarea
 {
-	background-color:#f5f5f5;
-	appearance:none;
-	-webkit-appearance:none;
-	-moz-appearance:none;
+	
 }
 
 fieldset select{
@@ -149,8 +151,10 @@ fieldset:not(.is-fieldset-options) *:last-child{
 .is-fieldset-options{
 	text-align:right;
 	padding:5px;
-	background:#f5f5f5;
+	background: transparent;
 	margin-top:-1px !important;
+	border-radius: 0 0 14px 14px;
+    border-top: none;
 }
 
 .is-fieldset-options label{
@@ -159,7 +163,7 @@ fieldset:not(.is-fieldset-options) *:last-child{
 }
 
 .is-form-item{
-	color:#333333;
+	color:#96959d;
 }
 
 .is-form-item .is-form-label{
@@ -189,8 +193,15 @@ fieldset:not(.is-fieldset-options) *:last-child{
 {
 	font-size:14px;
 	line-height:16px;
-	padding:8px;
+	padding: 10px 15px;
 	height:34px;
+	background-color:#333333;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-radius:999px;
+	border:none;
+	color:#ffffff;
 }
 	
 .is-form-item .is-form-field textarea{
@@ -198,6 +209,40 @@ fieldset:not(.is-fieldset-options) *:last-child{
 	line-height:16px;
 	padding:12px;
 	width:70%;
+	background-color:#333333;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-radius:999px;
+	border:none;
+	color:#ffffff;
+}
+
+.is-form-item .is-form-field input[type=text]:active,
+.is-form-item .is-form-field input[type=date]:active,
+.is-form-item .is-form-field input[type=color]:active,
+.is-form-item .is-form-field input[type=number]:active,
+.is-form-item .is-form-field input[type=tel]:active,
+.is-form-item .is-form-field input[type=url]:active,
+.is-form-item .is-form-field input[type=search]:active,
+.is-form-item .is-form-field input[type=password]:active, 
+.is-form-item .is-form-field input[type=email]:active, 
+.is-form-item .is-form-field textarea:active,
+.is-form-item .is-form-field select:active,
+.is-form-item .is-form-field input[type=text]:focus,
+.is-form-item .is-form-field input[type=date]:focus,
+.is-form-item .is-form-field input[type=color]:focus,
+.is-form-item .is-form-field input[type=number]:focus,
+.is-form-item .is-form-field input[type=tel]:focus,
+.is-form-item .is-form-field input[type=url]:focus,
+.is-form-item .is-form-field input[type=search]:focus,
+.is-form-item .is-form-field input[type=password]:focus, 
+.is-form-item .is-form-field input[type=email]:focus, 
+.is-form-item .is-form-field textarea:focus,
+.is-form-item .is-form-field select:focus
+{
+	border:none;
+	box-shadow: none;
 }
 
 .is-form-item .is-form-field-icon input[type=text],
@@ -311,9 +356,37 @@ fieldset:not(.is-fieldset-options) *:last-child{
 @media all and (max-width:896px){
 	/* extra styles for iPhone landscape*/
 	
+	.is-form-item .is-form-field{
+		width:100% !important;
+	}
+	
+	.is-form-item .is-form-label{
+		width:100% !important;
+		text-align:left !important;
+		padding-left:0px !important;
+		padding-right:0px !important;
+		padding-bottom:4px !important;
+		margin:0px !important;
+		text-align:left !important;
+	}
+
+	.is-form-item .is-form-field input[type=text], 
+	.is-form-item .is-form-field input[type=date],
+	.is-form-item .is-form-field input[type=color],
+	.is-form-item .is-form-field input[type=number],
+	.is-form-item .is-form-field input[type=tel],
+	.is-form-item .is-form-field input[type=url],
+	.is-form-item .is-form-field input[type=search],
+	.is-form-item .is-form-field input[type=password], 
+	.is-form-item .is-form-field input[type=email], 
+	.is-form-item .is-form-field select, 
+	.is-form-item .is-form-field textarea
+	{
+		width:100% !important;
+	}
+	
 }
 
 @media all and (max-width:414px){
 	/* extra styles for iPhone portrait*/
-	
 }
