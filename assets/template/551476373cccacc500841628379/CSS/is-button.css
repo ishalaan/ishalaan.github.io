@@ -59,13 +59,14 @@
 {
 	box-sizing:border-box;
 	color:#ffffff;
-	background-color:#b3182b;
+	background-color:#a92835;
 	border-radius: 999px;
-	border:2px solid #b3182b;
+	border:2px solid #a92835;
+	min-width:100px;
 }
 .is-button-primary:active{
-	background-color:#7b101d;
-	border:2px solid #7b101d;
+	background-color:#a92835;
+	border:2px solid #a92835;
 }
 
 .is-left-column .is-button-primary,
@@ -119,11 +120,12 @@
 	color:#ffffff;
 	background-color:rgba(226,39,61,0.08);
 	border-radius: 999px;
-	border:2px solid #b3182b;
+	border:2px solid #a92835;
+	min-width:100px;
 }
 .is-button-secondary:active{
 	color:#ffffff;
-	border:2px solid #7b101d;
+	border:2px solid #a92835;
 	background-color:rgba(226,39,61,0.08);
 }
 

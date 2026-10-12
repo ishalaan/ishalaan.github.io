@@ -120,14 +120,13 @@
 .is-table tr th a:visited,
 .is-table tr td a:visited
 {
-	color:#a81b0e;
+	
 }
 
 .is-table tr th a:hover,
 .is-table tr td a:hover
 {
-	color:#e2273d;
-	text-decoration:none;
+	
 }
 
 @media all and (max-width:1024px){	

@@ -16,7 +16,7 @@
 	text-transform:uppercase;
 	box-sizing:border-box;
 	color:#ffffff;
-	background-color:#b3182b;
+	background-color:#a92835;
 	border-radius: 999px;
 	border:none;
 	box-shadow: 0 8px 24px rgba(179, 24, 43, 0.35);
@@ -27,7 +27,7 @@
 .is-button-large:focus,
 .is-button-large:active
 {
-	background-color:#b3182b;
+	background-color:#a92835;
 	border:none;
 }
 

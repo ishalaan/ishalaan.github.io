@@ -21,7 +21,7 @@
 }
 		
 .is-tabs-vertical .is-tabs-vertical-body.is-tabs-vertical-body-expandable > div{
-	transition:max-height 0.3s ease;
+	transition:max-height 1s ease-in-out;
 	max-height:1087px;
 	overflow:hidden;
 	position:relative;
@@ -79,12 +79,16 @@
 	max-height:unset !important;
 }
 
+.is-tabs-vertical .is-tabs-vertical-body:not(.is-tabs-vertical-body-expandable) > div .is-tabs-vertical-read-more{
+	display: none;
+}
+
 .is-tabs-vertical .is-tabs-vertical-body.is-tabs-vertical-body-expandable > div .is-tabs-vertical-read-more{
 	display: block;
 	margin-top: 8px;
 	background: #131215;
 	border: none;
-	color: #e2273d;
+	color: #a92835;
 	cursor: pointer;
 	font-weight: normal;
 	font-size:14px;
@@ -99,7 +103,7 @@
 
 
 .is-tabs-vertical .is-tabs-vertical-body.is-tabs-vertical-body-expandable > div .is-tabs-vertical-read-more:hover{
-	color:#a81b0e;
+	color:#ce3141;
 }
 
 .is-tabs-vertical .is-tabs-vertical-body .is-title{
@@ -107,7 +111,7 @@
 	padding:10px 15px;
 	margin-top:30px;
 	margin-bottom:20px;
-    border: 3px solid #701c27;
+    border:2px solid #701c27;
     background-color:#241418;
 	line-height:150%;
 	max-width:100%;
@@ -317,7 +321,7 @@
 		
 .is-tabs-vertical .is-tabs-vertical-menu .is-tabs-vertical-menu-current:before{
 	content:"\279C ";
-	color:#e2273d;
+	color:#801d27;
 	margin-right:5px;
 }
 		

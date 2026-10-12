@@ -54,7 +54,7 @@
 .is-cap-grid .is-cap-card{
 	background:#131215;
     padding:20px;
-    transition: background 0.2s ease;
+    transition: background 0.3s ease-in-out, color 0s;
 }
 
 .is-cap-grid a.is-cap-card:hover{
@@ -75,7 +75,7 @@
     color:#ffffff;
     margin-bottom:18px;
     display:inline-block;
-    background:#76000e;
+    background:#3f141b;
     border-radius:50%;
     padding:5px;
     width:25px;
@@ -121,15 +121,15 @@
 .is-cap-grid .is-cap-card .is-cap-card-tags span{
 	font-size:10px;
 	color:var(--muted);
-	border:2px solid rgb(60 60 60);
+	border:none;
 	padding:5px 10px;
 	border-radius:999px;
 	text-transform:uppercase;
+	background:#1e1e1e;
 }
 
 .is-cap-grid .is-cap-card:hover .is-cap-card-tags span{
-	color:#999999;
-	border-color:#999999;
+	
 }
  
 .is-cap-grid .is-cap-card .is-cap-card-tags span.is-cap-card-tags-orange,

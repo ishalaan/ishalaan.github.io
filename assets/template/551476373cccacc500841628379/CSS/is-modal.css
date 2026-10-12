@@ -54,6 +54,7 @@
 	text-overflow:ellipsis;
 	white-space:nowrap;
 	overflow:hidden;
+	color:#ffffff;
 }
 
 .is-modal:not(.is-gallery-popup) .is-modal-container .is-modal-title{
