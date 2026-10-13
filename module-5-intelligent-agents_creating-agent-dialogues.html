@@ -165,7 +165,18 @@
 
 				<div id="is-tabs-vertical-page-1-agent-dialogue">
 					<div class="is-title animated fadeInUp">Activity Brief</div>
-					<p>[Include the original activity guidance, explaining the requirement to create a KQML and KIF dialogue between Alice, a stock procurement agent, and Bob, a warehouse stock management agent. Outline the queries concerning 50-inch television availability and HDMI slots, followed by the relevant learning outcomes.]</p>
+					<p>This activity explores communication between intelligent software agents using Knowledge Query and Manipulation Language (KQML) and Knowledge Interchange Format (KIF). The task involves constructing a structured dialogue between two agents, Alice and Bob, within a warehouse procurement scenario. Alice is responsible for procuring stock, while Bob manages warehouse inventory and provides information about product availability and specifications. The dialogue demonstrates how agents can exchange information through standardised communication messages and formal knowledge representations.</p>
+					<p>The scenario requires Alice to obtain two pieces of information from Bob to support procurement decisions. The dialogue must address the following requirements.</p>
+					<ol>
+						<li>Determine the number of 50-inch televisions currently available in the warehouse.</li>
+						<li>Identify the number of HDMI ports available on those televisions.</li>
+					</ol>
+					<p>The interaction consists of four messages, with Alice initiating each request and Bob providing the corresponding response. KQML is used to define the communicative purpose of each message, while KIF represents the information exchanged in a formal, machine-interpretable structure. The completed dialogue is documented in this e-Portfolio, supported by an explanation of the design approach, a critical evaluation of the communication method and a reflection on the learning achieved.</p>
+					<p>The activity addresses the following university learning outcomes.</p>
+					<ul>
+						<li>Understand the motivations for, and appropriate use of, agent-based computing.</li>
+						<li>Understand the main agent models in use today and their grounding in artificial intelligence research.</li>
+					</ul>
 
 					<fieldset class="is-fieldset-options">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(2);" autocomplete="off" autocapitalize="none">
@@ -175,8 +186,24 @@
 
 				<div id="is-tabs-vertical-page-2-agent-dialogue" style="display:none;">
 					<div class="is-title animated fadeInUp">Design &amp; Approach</div>
-					<p>[Explain the responsibilities of Alice and Bob, the purpose of KQML and KIF, and how they work together to support communication between intelligent agents. Describe the planned message sequence, the KQML performatives selected, the representation of information using KIF, and the reasoning behind your design decisions.]</p>
-
+					<p>The dialogue is designed as a simple information exchange between two autonomous software agents operating within a warehouse procurement environment. Alice represents the procurement function and requires accurate inventory information to support purchasing decisions, while Bob represents the warehouse management function and maintains knowledge of product availability and technical specifications. The agents have distinct responsibilities but must communicate effectively to achieve the shared objective of informing procurement activity. Rather than accessing Bob's internal inventory records directly, Alice submits structured queries and relies on Bob to interpret them and return the requested information.</p>
+					<p>The communication design combines Knowledge Query and Manipulation Language (KQML) with Knowledge Interchange Format (KIF). KQML provides the outer communication structure and specifies the intention behind each message through performatives. The <code>ask-one</code> performative is selected for Alice's requests because each question seeks a single value, while <code>tell</code> is used for Bob's responses because it communicates information held by the warehouse agent. KQML message parameters identify the sender, receiver, content language and message content, enabling the interaction to be interpreted consistently. KIF provides the representation of the information contained within these messages through logical predicates, variables and expressions. This separation distinguishes the communicative act from the knowledge being communicated.</p>
+					<p>The agents and their responsibilities are defined as follows.</p>
+					<ul>
+						<li>Alice acts as the procurement agent, initiating requests for inventory quantities and product specifications.</li>
+						<li>Bob acts as the warehouse agent, responding to queries using information maintained in the inventory knowledge base.</li>
+						<li>KQML specifies the purpose and routing of each communication message.</li>
+						<li>KIF expresses the requested inventory facts and corresponding responses in a structured logical form.</li>
+					</ul>
+					<p>The dialogue follows a sequential request-response pattern consisting of four messages. Alice first queries the quantity of available 50-inch televisions, and Bob responds with the relevant stock figure. Alice then requests the number of HDMI ports associated with the televisions, and Bob returns the corresponding specification. The KIF expressions use agreed predicates to represent stock quantities and product attributes. Variables allow Alice to request unknown values, while Bob's responses substitute those variables with specific information. The design assumes that both agents share the meaning of the predicates and refer to the same television product category.</p>
+					<ol>
+						<li>Alice sends an <code>ask-one</code> message requesting the available quantity of 50-inch televisions.</li>
+						<li>Bob sends a <code>tell</code> message stating the available stock quantity.</li>
+						<li>Alice sends a second <code>ask-one</code> message requesting the number of HDMI ports on the televisions.</li>
+						<li>Bob sends a second <code>tell</code> message providing the HDMI port count.</li>
+					</ol>
+					<p>As the activity does not supply actual warehouse inventory records, the dialogue will use illustrative values to demonstrate the communication process. These values are treated as assumed facts within the example rather than verified inventory data. The design also assumes that Bob possesses the requested information and that messages are delivered successfully. Although this simplified approach does not implement error handling, conflicting knowledge or asynchronous communication, it provides a controlled demonstration of how agents can exchange structured knowledge. These assumptions and limitations will be examined further in the analysis and evaluation section.</p>
+					
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(3);" autocomplete="off" autocapitalize="none">
@@ -186,20 +213,48 @@
 
 				<div id="is-tabs-vertical-page-3-agent-dialogue" style="display:none;">
 					<div class="is-title animated fadeInUp">Agent Dialogue</div>
-					<p>[Present the complete KQML and KIF dialogue between Alice and Bob. Organise the four messages into expandable accordion sections, including the original message syntax and a brief explanation of each exchange.]</p>
-
+					<p>The dialogue demonstrates a structured information exchange between Alice, the procurement agent, and Bob, the warehouse inventory agent. Knowledge Query and Manipulation Language (KQML) defines the communicative purpose of each message, while Knowledge Interchange Format (KIF) represents the information being requested and supplied. Alice initiates two queries concerning the stock availability and HDMI specifications of 50-inch televisions, with Bob responding to each request. The example assumes that the warehouse contains 12 televisions, each equipped with three HDMI ports. These figures are illustrative rather than verified inventory records. Both agents are assumed to share a common warehouse inventory ontology and interpret the product identifier consistently.</p>
 					<div class="is-title animated fadeInUp">Message 1: Stock Query</div>
-					<p>[Insert Alice's KQML message asking Bob about the available stock of 50-inch televisions, including the KIF expression and a brief explanation.]</p>
-
+					<blockquote>(<br>ask-one<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:sender Alice<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:receiver Bob<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:language KIF<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:ontology warehouse-inventory<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:reply-with stock-query-001<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:content (stock-quantity television-50-inch ?quantity)<br>
+					)</blockquote>
+					<p>Alice initiates the dialogue by sending an <code>ask-one</code> message requesting the quantity of 50-inch televisions currently available in the warehouse. The KQML parameters identify the sender, receiver, content language and shared ontology, while the <code>ask-one</code> performative indicates that a single answer is required. The embedded KIF expression uses the predicate <code>stock-quantity</code> to relate the television category to the variable <code>?quantity</code>, which represents the unknown stock level. The <code>reply-with</code> parameter assigns the identifier <code>stock-query-001</code> so that Bob can associate his response with the original request.</p>
 					<div class="is-title animated fadeInUp">Message 2: Stock Response</div>
-					<p>[Insert Bob's KQML response communicating the available stock quantity, including the KIF expression and a brief explanation.]</p>
-
+					<blockquote>(<br>tell<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:sender Bob<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:receiver Alice<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:language KIF<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:ontology warehouse-inventory<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:in-reply-to stock-query-001<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:content (stock-quantity television-50-inch 12)<br>
+					)</blockquote>
+					<p>Bob responds using the <code>tell</code> performative to communicate a fact from the assumed warehouse inventory. The KIF expression <code>(stock-quantity television-50-inch 12)</code> states that 12 units of the specified television category are available. Unlike Alice's query, which contains an unbound variable, Bob's response provides a ground fact containing a specific numerical value. The <code>in-reply-to</code> parameter references <code>stock-query-001</code>, establishing the relationship between the query and its response. This demonstrates how KQML supports message correlation while KIF provides a formal representation of the inventory information.</p>
 					<div class="is-title animated fadeInUp">Message 3: HDMI Query</div>
-					<p>[Insert Alice's KQML message asking Bob how many HDMI slots the televisions have, including the KIF expression and a brief explanation.]</p>
-
+					<blockquote>(<br>ask-one<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:sender Alice<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:receiver Bob<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:language KIF<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:ontology warehouse-inventory<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:reply-with hdmi-query-002<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:content (hdmi-port-count television-50-inch ?ports)<br>
+					)</blockquote>
+					<p>Following the stock enquiry, Alice submits a second <code>ask-one</code> message requesting the number of HDMI ports available on the 50-inch televisions. The embedded KIF expression uses the predicate <code>hdmi-port-count</code> to associate the television category with the variable <code>?ports</code>, representing the unknown number of HDMI ports per television. The product identifier <code>television-50-inch</code> is retained to maintain consistency with the earlier stock query. The message is assigned the identifier <code>hdmi-query-002</code>, allowing Bob to distinguish this request from the previous inventory enquiry. The example assumes that all televisions within the represented category have the same HDMI specification.</p>
 					<div class="is-title animated fadeInUp">Message 4: HDMI Response</div>
-					<p>[Insert Bob's KQML response communicating the number of HDMI slots, including the KIF expression and a brief explanation.]</p>
-
+					<blockquote>(<br>tell<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:sender Bob<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:receiver Alice<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:language KIF<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:ontology warehouse-inventory<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:in-reply-to hdmi-query-002<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;:content (hdmi-port-count television-50-inch 3)<br>
+					)</blockquote>
+					<p>Bob completes the dialogue by sending a <code>tell</code> message containing the KIF expression <code>(hdmi-port-count television-50-inch 3)</code>, which states that each television in the assumed product category has three HDMI ports. The <code>in-reply-to</code> parameter references <code>hdmi-query-002</code>, linking the response to Alice's second request. The result provides Alice with the product specification required alongside the previously supplied stock quantity. Together, the four messages demonstrate a consistent request-response communication pattern in which KQML specifies the interaction between agents and KIF represents the knowledge exchanged. The dialogue assumes successful message delivery and a shared interpretation of inventory predicates, while more complex conditions such as unavailable information, inconsistent product specifications and communication failures remain outside the scope of this simplified example.</p>
+					
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(4);" autocomplete="off" autocapitalize="none">
@@ -209,8 +264,22 @@
 
 				<div id="is-tabs-vertical-page-4-agent-dialogue" style="display:none;">
 					<div class="is-title animated fadeInUp">Analysis &amp; Evaluation</div>
-					<p>[Critically evaluate the completed dialogue, examining how effectively KQML and KIF support communication and information exchange between Alice and Bob. Discuss the suitability of the chosen performatives, the clarity of the message structure, potential limitations and possible improvements. Relate your evaluation to relevant intelligent agent concepts and academic literature.]</p>
-
+					<p>The dialogue demonstrates how KQML and KIF facilitate structured communication between autonomous agents. KQML distinguishes the intention of each message from its content, enabling Alice to request information without accessing Bob's internal inventory records. Finin et al. (1994) establish the importance of KQML performatives in supporting knowledge exchange between agents. The use of <code>ask-one</code> and <code>tell</code> is appropriate for the two information requests, while message identifiers maintain clear associations between queries and responses. However, the interaction remains a conceptual demonstration rather than a tested communication system.</p>
+					<p>KIF supports the representation of inventory information through predicates, variables and logical facts. Alice's queries specify unknown values, while Bob's responses provide corresponding stock quantities and product specifications. This structure promotes consistency but depends on both agents sharing the same interpretation of the inventory ontology. Singh (1998) highlights the limitations of communication approaches that do not adequately address interoperability between independently developed agents. Consequently, consistent message syntax alone cannot guarantee that agents interpret exchanged information correctly.</p>
+					<p>The dialogue also introduces several practical limitations.</p>
+					<ul>
+						<li>The stock quantity is illustrative and does not account for real-time inventory changes, reservations or outdated records.</li>
+						<li>The generic television identifier assumes that all 50-inch televisions share identical HDMI specifications, despite possible differences between models.</li>
+						<li>The interaction assumes successful communication and does not address missing information, malformed messages or unsuccessful requests.</li>
+						<li>The sequential exchange does not demonstrate more complex behaviours such as negotiation, concurrent communication or coordination involving additional agents.</li>
+					</ul>
+					<p>Labrou, Finin and Peng (1999) identify practical challenges in agent communication, including authentication, registration and supporting communication services. These considerations are absent from the simplified dialogue but would become important in an operational warehouse system. Improvements could include unique product identifiers, timestamped stock records, message validation and explicit handling of unsuccessful requests. Such extensions would improve accuracy and reliability without changing the underlying communication principles.</p>
+					<p>Overall, the dialogue successfully illustrates the fundamental roles of KQML and KIF in agent-based information exchange. Its strengths include clear agent responsibilities, appropriate performatives and consistent knowledge representation. Nevertheless, reliable implementation would require stronger semantic interoperability, more accurate inventory modelling and mechanisms for managing communication failures. The activity therefore demonstrates the foundations of intelligent agent communication while highlighting the distinction between a valid conceptual dialogue and a dependable multi-agent system.</p>
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Finin, T., Fritzson, R., McKay, D. and McEntire, R. (1994) 'KQML as an agent communication language', <i>Proceedings of the Third International Conference on Information and Knowledge Management</i>, pp. 456–463. Available at <a href="https://doi.org/10.1145/191246.191322" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/191246.191322</a> (Accessed 13 October 2026).</p>
+					<p>Labrou, Y., Finin, T. and Peng, Y. (1999) 'Agent communication languages: the current landscape', <i>IEEE Intelligent Systems and Their Applications</i>, 14(2), pp. 45–52. Available at <a href="https://doi.org/10.1109/5254.757631" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/5254.757631</a> (Accessed 13 October 2026).</p>
+					<p>Singh, M.P. (1998) 'Agent communication languages: rethinking the principles', <i>Computer</i>, 31(12), pp. 40–47. Available at <a href="https://doi.org/10.1109/2.735849" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/2.735849</a> (Accessed 13 October 2026).</p>
+					
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(5);" autocomplete="off" autocapitalize="none">
@@ -220,8 +289,15 @@
 
 				<div id="is-tabs-vertical-page-5-agent-dialogue" style="display:none;">
 					<div class="is-title animated fadeInUp">Reflection</div>
-					<p>[Reflect on what you learned from creating the agent dialogue, including your understanding of agent-based computing, communication protocols and knowledge representation. Discuss any challenges encountered, how you addressed them, and how this activity influenced your understanding of intelligent agent architectures and their practical applications.]</p>
-
+					<p>Developing the dialogue between Alice and Bob provided an opportunity to examine how intelligent agents communicate and exchange knowledge within a multi-agent environment. The activity clarified the distinction between KQML, which defines communication intentions, and KIF, which represents the information exchanged. Selecting the <code>ask-one</code> and <code>tell</code> performatives demonstrated how structured communication supports cooperation between agents with different responsibilities. Finin et al. (1994) establish the importance of agent communication languages in facilitating knowledge exchange, reinforcing the relevance of these concepts to practical agent-based computing.</p>
+					<p>One of the main challenges was ensuring consistency between the queries and their corresponding responses. Constructing the KIF predicates highlighted the importance of shared terminology, particularly when representing product categories and technical specifications. The assumption that all 50-inch televisions possess identical HDMI specifications illustrated how ambiguous knowledge representations could undermine communication accuracy. Singh (1998) examines interoperability challenges in agent communication, reinforcing the understanding that syntactically correct messages do not necessarily guarantee consistent interpretation between autonomous agents.</p>
+					<p>The activity also highlighted the limitations of simplified agent interactions. Although the four-message dialogue demonstrates a coherent information exchange, it assumes accurate inventory records, successful message delivery and shared knowledge between agents. Labrou, Finin and Peng (1999) identify broader implementation challenges associated with agent communication languages, emphasising the importance of supporting mechanisms for reliable interoperability. This helped distinguish the conceptual design of an agent dialogue from the additional requirements of an operational multi-agent system.</p>
+					<p>Overall, the activity strengthened my understanding of agent-based computing, communication protocols and formal knowledge representation. It demonstrated that effective collaboration between intelligent agents depends not only on appropriate message structures but also on consistent semantics and reliable information. Future improvements could include unique product identifiers, real-time inventory validation and explicit error handling to support more dependable communication in practical warehouse environments.</p>
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Finin, T., Fritzson, R., McKay, D. and McEntire, R. (1994) 'KQML as an agent communication language', <i>Proceedings of the Third International Conference on Information and Knowledge Management</i>, pp. 456–463. Available at <a href="https://doi.org/10.1145/191246.191322" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/191246.191322</a> (Accessed 13 October 2026).</p>
+					<p>Labrou, Y., Finin, T. and Peng, Y. (1999) 'Agent communication languages: the current landscape', <i>IEEE Intelligent Systems and Their Applications</i>, 14(2), pp. 45–52. Available at <a href="https://doi.org/10.1109/5254.757631" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/5254.757631</a> (Accessed 13 October 2026).</p>
+					<p>Singh, M.P. (1998) 'Agent communication languages: rethinking the principles', <i>Computer</i>, 31(12), pp. 40–47. Available at <a href="https://doi.org/10.1109/2.735849" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/2.735849</a> (Accessed 13 October 2026).</p>
+					
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(4);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Start Over" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_agent_dialogue(1);">

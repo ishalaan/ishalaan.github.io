@@ -165,7 +165,20 @@
 
 				<div id="is-tabs-vertical-page-1-parse-trees">
 					<div class="is-title animated fadeInUp">Activity Brief</div>
-					<p>[Include the original activity guidance and learning outcomes. Explain the requirement to create constituency-based parse trees for three sentences, demonstrating how grammatical structures can be represented hierarchically and interpreted by intelligent systems.]</p>
+					<p>This activity focuses on constituency-based parsing, a natural language processing technique used to represent the grammatical structure of sentences as hierarchical relationships between words and phrases. Constituency parse trees illustrate how individual words combine to form grammatical units, such as noun phrases, verb phrases and prepositional phrases. The task involves constructing parse trees for three sentences, demonstrating how syntactic structures can be analysed and represented in a form suitable for computational language processing.</p>
+					<p>The university activity guidance requires constituency-based parse trees for the following sentences.</p>
+					<ol>
+						<li>The government raised interest rates.</li>
+						<li>The internet gives everyone a voice.</li>
+						<li>The man saw the dog with the telescope.</li>
+					</ol>
+					<p>Each sentence presents a different grammatical structure. The first illustrates a subject and a transitive verb phrase containing a direct object. The second introduces a ditransitive construction involving an indirect object and a direct object. The third demonstrates structural ambiguity, as the prepositional phrase describing the telescope can be associated either with the action of seeing or with the dog. Constructing alternative parse trees for this final sentence illustrates how a single sequence of words can support different syntactic interpretations.</p>
+					<p>The completed parse trees will be presented in this e-Portfolio alongside explanations of their constituent structures and an analysis and reflection examining the strengths, limitations and relevance of constituency-based parsing to natural language processing and intelligent systems.</p>
+					<p>The activity addresses the following university learning outcomes.</p>
+					<ul>
+						<li>The knowledge and skills required to develop, deploy and evaluate the tools and techniques of intelligent systems to solve real-world problems.</li>
+						<li>An understanding of contemporary research issues in the area of intelligent agent systems.</li>
+					</ul>
 
 					<fieldset class="is-fieldset-options">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_parse_trees(2);" autocomplete="off" autocapitalize="none">
@@ -176,8 +189,57 @@
 				<div id="is-tabs-vertical-page-2-parse-trees" style="display:none;">
 					<div class="is-title animated fadeInUp">Parse Tree 1</div>
 					<p>The government raised interest rates.</p>
-
-					<p>[Insert the completed constituency-based parse tree diagram for this sentence. Explain how the sentence is divided into a noun phrase and verb phrase, identifying the grammatical categories and hierarchical relationships between its constituents.]</p>
+					<p>This sentence follows a subject-verb-object structure and can be represented using a constituency-based parse tree. The sentence (S) consists of a subject noun phrase (NP) and a verb phrase (VP), with the final punctuation represented separately. The subject identifies the entity performing the action, while the verb phrase describes the action and its direct object.</p>
+					<blockquote style="display:none;">S<br>
+					&nbsp;&nbsp;├── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── DT → The<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NN → government<br>
+					&nbsp;&nbsp;├── VP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── VBD → raised<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── NN → interest<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── NNS → rates<br>
+					&nbsp;&nbsp;└── . → .</blockquote>
+					<blockquote>
+						<img width="100%" border="0" src="assets/page/images/module-5-intelligent-agents_creating-parse-trees-1.png" />
+					</blockquote>
+					<p>The initial noun phrase <code>NP</code> contains the determiner <code>DT</code>, represented by "The", and the singular noun <code>NN</code>, represented by "government". Together, these form the grammatical subject. The verb phrase <code>VP</code> contains the past-tense verb <code>VBD</code>, represented by "raised", followed by a second noun phrase functioning as its direct object. Within this object, "interest" functions as a nominal modifier and "rates" is the plural head noun, labelled <code>NNS</code>.</p>
+					<p>The hierarchical structure demonstrates how words combine into meaningful grammatical constituents rather than functioning as independent elements. The subject noun phrase and predicate verb phrase form the principal sentence structure, while the nested noun phrase identifies what was raised. This representation illustrates how constituency-based parsing supports syntactic analysis by identifying phrase boundaries, grammatical categories and relationships within a sentence.</p>
+					<p>The grammatical categories used in the constituency-based parse tree are defined below.</p>
+					<table width="100%" cellpadding="cellspacing" class="is-table">
+						<tr>
+							<th class="is-table-divider">Label</th>
+							<th class="is-table-divider">Grammatical Category</th>
+						</tr>
+						<tr>
+							<td>S</td>
+							<td>Sentence</td>
+						</tr>
+						<tr>
+							<td>NP</td>
+							<td>Noun phrase</td>
+						</tr>
+						<tr>
+							<td>VP</td>
+							<td>Verb phrase</td>
+						</tr>
+						<tr>
+							<td>DT</td>
+							<td>Determiner</td>
+						</tr>
+						<tr>
+							<td>NN</td>
+							<td>Singular or mass noun</td>
+						</tr>
+						<tr>
+							<td>NNS</td>
+							<td>Plural noun</td>
+						</tr>
+						<tr>
+							<td>VBD</td>
+							<td>Past-tense verb</td>
+						</tr>
+					</table>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_parse_trees(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -189,8 +251,35 @@
 				<div id="is-tabs-vertical-page-3-parse-trees" style="display:none;">
 					<div class="is-title animated fadeInUp">Parse Tree 2</div>
 					<p>The internet gives everyone a voice.</p>
-
-					<p>[Insert the completed constituency-based parse tree diagram for this sentence. Explain how the subject, verb, indirect object and direct object are represented, highlighting the grammatical relationships and hierarchical structure of the sentence.]</p>
+					<p>This sentence contains a ditransitive verb construction in which the verb "gives" takes two objects. The sentence (S) consists of a subject noun phrase (NP) and a verb phrase (VP). The subject identifies the entity performing the action, while the verb phrase contains a present-tense verb, an indirect object representing the recipient and a direct object representing what is given. The constituency-based parse tree illustrates how these elements combine within a hierarchical grammatical structure.</p>
+					<blockquote style="display:none;">S<br>
+					&nbsp;&nbsp;├── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── DT → The<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NN → internet<br>
+					&nbsp;&nbsp;├── VP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── VBZ → gives<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NN → everyone<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── DT → a<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── NN → voice<br>
+					&nbsp;&nbsp;└── . → .</blockquote>
+					<blockquote>
+						<img width="100%" border="0" src="assets/page/images/module-5-intelligent-agents_creating-parse-trees-2.png" />
+					</blockquote>
+					<p>The subject noun phrase <code>NP</code> contains the determiner <code>DT</code>, represented by "The", and the singular noun <code>NN</code>, represented by "internet". The verb phrase <code>VP</code> begins with <code>VBZ</code>, identifying "gives" as a third-person singular present-tense verb. Two noun phrases follow the verb. The first contains the indefinite pronoun "everyone", labelled <code>NN</code> under the chosen Penn Treebank-style representation, and functions as the indirect object or recipient of the action. The second contains the determiner "a" and the singular noun "voice", forming the direct object. Although "everyone" refers collectively to multiple people, it is grammatically singular.</p>
+					<p>The hierarchical structure demonstrates how constituency-based parsing represents relationships between the subject, verb and two objects. Unlike the first sentence, which contains one direct object, this construction includes two noun phrase constituents within the verb phrase. Distinguishing the indirect object from the direct object is important for interpreting who receives something and what is being given. In natural language processing, recognising these grammatical relationships provides a foundation for identifying participants and their roles within expressed events.</p>
+					<p>The additional grammatical category introduced in this parse tree is defined below.</p>
+					<table width="100%" cellpadding="cellspacing" class="is-table">
+						<tr>
+							<th class="is-table-divider">Label</th>
+							<th class="is-table-divider">Grammatical Category</th>
+						</tr>
+						<tr>
+							<td>VBZ</td>
+							<td>Third-person singular present-tense verb</td>
+						</tr>
+					</table>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_parse_trees(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -202,8 +291,65 @@
 				<div id="is-tabs-vertical-page-4-parse-trees" style="display:none;">
 					<div class="is-title animated fadeInUp">Parse Tree 3</div>
 					<p>The man saw the dog with the telescope.</p>
-
-					<p>[Insert the completed constituency-based parse tree diagrams for both possible interpretations of this sentence. Demonstrate how the prepositional phrase "with the telescope" can modify either the verb phrase or the noun phrase. Explain the resulting structural ambiguity and its implications for natural language understanding.]</p>
+					<p>This sentence demonstrates structural ambiguity because the prepositional phrase "with the telescope" can attach to two different constituents, producing distinct interpretations. In the first interpretation, the telescope is the instrument used by the man to see the dog. In the second, the telescope is associated with the dog being observed. Although the sequence of words remains unchanged, the hierarchical relationships between constituents differ. Constituency-based parsing represents this ambiguity through alternative tree structures.</p>
+					<div class="is-title animated fadeInUp">Interpretation 1. Verb Phrase Attachment</div>
+					<p>In this interpretation, the prepositional phrase <code>PP</code> attaches to the verb phrase <code>VP</code>, indicating that the man used the telescope to see the dog. The prepositional phrase functions as an instrumental modifier of the action rather than describing the dog.</p>
+					<blockquote style="display:none;">S<br>
+					&nbsp;&nbsp;├── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── DT → The<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NN → man<br>
+					&nbsp;&nbsp;├── VP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── VBD → saw<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── DT → the<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NN → dog<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── PP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── IN → with<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── DT → the<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── NN → telescope<br>
+					&nbsp;&nbsp;└── . → .</blockquote>
+					<blockquote>
+						<img width="100%" border="0" src="assets/page/images/module-5-intelligent-agents_creating-parse-trees-3.png" />
+					</blockquote>
+					<p>The sentence consists of a subject noun phrase and a verb phrase containing the past-tense verb "saw", the direct object "the dog" and a prepositional phrase. Within the prepositional phrase, "with" is classified as <code>IN</code> and introduces the noun phrase "the telescope". Because the prepositional phrase is a constituent of the verb phrase rather than the object noun phrase, it modifies the seeing event. This structure supports the interpretation that the man used the telescope as an instrument.</p>
+					<div class="is-title animated fadeInUp">Interpretation 2. Noun Phrase Attachment</div>
+					<p>In the alternative interpretation, the prepositional phrase attaches to the object noun phrase, indicating that the dog is associated with the telescope. The prepositional phrase therefore describes the noun phrase rather than modifying the action of seeing.</p>
+					<blockquote style="display:none;">S<br>
+					&nbsp;&nbsp;├── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── DT → The<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NN → man<br>
+					&nbsp;&nbsp;├── VP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── VBD → saw<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── DT → the<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── NN → dog<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── PP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── IN → with<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── NP<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── DT → the<br>
+					&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── NN → telescope<br>
+					&nbsp;&nbsp;└── . → .</blockquote>
+					<blockquote>
+						<img width="100%" border="0" src="assets/page/images/module-5-intelligent-agents_creating-parse-trees-4.png" />
+					</blockquote>
+					<p>In this structure, the verb phrase contains the verb "saw" followed by a single complex noun phrase functioning as its direct object. The noun phrase contains the determiner "the", the head noun "dog" and the prepositional phrase "with the telescope". Because the prepositional phrase is embedded within the object noun phrase, it modifies "dog" rather than the seeing event. The resulting interpretation is that the man saw a dog associated with a telescope, without specifying whether the man used an instrument to observe it.</p>
+					<p>The two trees demonstrate that identical words and grammatical categories can produce different meanings when their constituent relationships change. A constituency parser can represent both structures, but selecting the intended interpretation requires additional contextual or semantic information. This illustrates an important challenge in natural language processing, where grammatical analysis alone may not be sufficient to resolve ambiguity.</p>
+					<p>The additional grammatical categories introduced in these parse trees are defined below.</p>
+					<table width="100%" cellpadding="cellspacing" class="is-table">
+						<tr>
+							<th class="is-table-divider">Label</th>
+							<th class="is-table-divider">Grammatical Category</th>
+						</tr>
+						<tr>
+							<td>PP</td>
+							<td>Prepositional phrase</td>
+						</tr>
+						<tr>
+							<td>IN</td>
+							<td>Preposition or subordinating conjunction, representing "with" in this sentence</td>
+						</tr>
+					</table>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_parse_trees(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -214,8 +360,15 @@
 
 				<div id="is-tabs-vertical-page-5-parse-trees" style="display:none;">
 					<div class="is-title animated fadeInUp">Analysis &amp; Reflection</div>
-					<p>[Critically evaluate the completed parse trees, examining the effectiveness of constituency-based parsing in representing grammatical structures. Discuss the challenges of identifying syntactic relationships, particularly when sentences contain ambiguity. Reflect on what you learned, any difficulties encountered, how you addressed them, and the relevance of syntactic parsing to natural language processing and intelligent agent systems. Consider limitations and potential improvements, supported by relevant academic literature.]</p>
-
+					<p>The three constituency-based parse trees demonstrate how grammatical structures can be represented through hierarchical relationships between phrases and individual words. The first sentence illustrates a transitive construction, while the second demonstrates a ditransitive verb phrase containing both indirect and direct objects. These representations make syntactic relationships explicit and provide a foundation for computational language analysis. Klein and Manning (2003) demonstrate that carefully designed grammatical representations can support accurate statistical parsing, highlighting the importance of syntactic structure in natural language processing.</p>
+					<p>The third sentence presents a more significant challenge because the prepositional phrase "with the telescope" can modify either the verb phrase or the object noun phrase. Both interpretations are grammatically valid but produce different meanings. Hindle and Rooth (1993) examine structural ambiguity and demonstrate how lexical relationships can support the resolution of alternative syntactic interpretations. This illustrates a fundamental limitation of constituency-based parsing, as grammatical structure alone may not establish the intended meaning without additional linguistic context.</p>
+					<p>Constructing the trees reinforced my understanding of how grammatical categories combine to form larger constituents. The main challenge was distinguishing the direct and indirect objects in the second sentence and identifying the alternative attachment positions of the prepositional phrase in the third. Comparing the hierarchical structures helped clarify these relationships and demonstrated why consistent grammatical labelling is essential. Collins (2003) explores statistical parsing models that incorporate lexical and structural information, illustrating how computational approaches can extend grammatical analysis beyond manually constructed trees.</p>
+					<p>Overall, the activity demonstrated both the value and limitations of constituency-based parsing. Its strengths include transparent grammatical representations and the identification of phrase boundaries, while its limitations concern ambiguity, dependence on grammatical assumptions and the need for contextual interpretation. Future improvements could involve probabilistic parsing and semantic analysis to distinguish competing interpretations more effectively. These techniques are relevant to intelligent systems that must interpret natural language instructions, questions and user intentions reliably.</p>
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Collins, M. (2003) 'Head-driven statistical models for natural language parsing', <i>Computational Linguistics</i>, 29(4), pp. 589–637. Available at <a href="https://aclanthology.org/J03-4003/" target="_blank" rel="noopener noreferrer">https://aclanthology.org/J03-4003/</a> (Accessed 13 October 2026).</p>
+					<p>Hindle, D. and Rooth, M. (1993) 'Structural ambiguity and lexical relations', <i>Computational Linguistics</i>, 19(1), pp. 103–120. Available at <a href="https://aclanthology.org/J93-1005/" target="_blank" rel="noopener noreferrer">https://aclanthology.org/J93-1005/</a> (Accessed 13 October 2026).</p>
+					<p>Klein, D. and Manning, C.D. (2003) 'Accurate unlexicalized parsing', <i>Proceedings of the 41st Annual Meeting of the Association for Computational Linguistics</i>, pp. 423–430. Available at <a href="https://aclanthology.org/P03-1054/" target="_blank" rel="noopener noreferrer">https://aclanthology.org/P03-1054/</a> (Accessed 13 October 2026).</p>
+					
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_parse_trees(4);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Start Over" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_parse_trees(1);">
