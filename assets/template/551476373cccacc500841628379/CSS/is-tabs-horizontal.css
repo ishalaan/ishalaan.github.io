@@ -198,8 +198,8 @@
 
 .is-tabs-horizontal .is-tabs-horizontal-body code{
     display: inline;
-    background: rgba(226,39,61,0.08);
-    border: 1px solid rgba(226,39,61,0.4);
+    background:#202020;
+    border-color:#313131;
     border-radius: 999px;
     padding: 1px 7px;
     font-size: 12px;
