@@ -150,20 +150,23 @@
 <div class="is-middle" id="is-middle-2">
 	<div class="is-fixed">
 
-		<div class="is-tabs-vertical is-tabs-vertical-3 animated fadeInUp">
+		
+<div class="is-tabs-vertical is-tabs-vertical-3 animated fadeInUp">
 			<div class="is-tabs-vertical-menu">
 				<ul>
-					<li onclick="javascript:is_tabs_vertical_menu_case_studies(1); return false;" id="is-tabs-vertical-button-1-case-studies" class="is-tabs-vertical-menu-current">Case Study 1</li>
-					<li onclick="javascript:is_tabs_vertical_menu_case_studies(2); return false;" id="is-tabs-vertical-button-2-case-studies">Case Study 2</li>
-					<li onclick="javascript:is_tabs_vertical_menu_case_studies(3); return false;" id="is-tabs-vertical-button-3-case-studies">Case Study 3</li>
+					<li onclick="javascript:is_tabs_vertical_menu_case_studies(1); return false;" id="is-tabs-vertical-button-1-case-studies" class="is-tabs-vertical-menu-current">Activity Brief</li>
+					<li onclick="javascript:is_tabs_vertical_menu_case_studies(2); return false;" id="is-tabs-vertical-button-2-case-studies">Case Study 1</li>
+					<li onclick="javascript:is_tabs_vertical_menu_case_studies(3); return false;" id="is-tabs-vertical-button-3-case-studies">Case Study 2</li>
+					<li onclick="javascript:is_tabs_vertical_menu_case_studies(4); return false;" id="is-tabs-vertical-button-4-case-studies">Case Study 3</li>
 				</ul>
 			</div>
 
 			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-case-studies">
 
 				<div id="is-tabs-vertical-page-1-case-studies">
-					<div class="is-title animated fadeInUp">Case Study 1</div>
-					<p>[Select one of the five proposed themes and introduce the ethical, legal or safety issue being examined. Describe a relevant experience, observation or design decision from the module, linking it directly to an intelligent agent system you designed or implemented. Critically analyse what occurred, why the issue matters, the risks or limitations identified, and how the experience informed your understanding and future professional practice. Support your evaluation with relevant academic literature.]</p>
+					<div class="is-title animated fadeInUp">Activity Brief</div>
+					<p>This activity involves developing three formative reflective case studies exploring ethical, legal and safety considerations in intelligent agent systems. It requires selecting three themes from the areas of bias in autonomous decision-making, AI safety constraints, explainable decisions, legal and ethical frameworks, and responsible deployment. Each case study examines a relevant experience, observation or design decision made during the module, critically evaluating its implications for developing reliable and responsible intelligent agents.</p>
+					<p>The three reflective case studies are documented in this section of the e-Portfolio, connecting the selected themes to practical work undertaken during the module. Each study considers what occurred, why the issue matters, the challenges and limitations identified, and how the experience informs future professional practice in intelligent agent development.</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_case_studies(2);" autocomplete="off" autocapitalize="none">
@@ -172,8 +175,8 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-2-case-studies" style="display:none;">
-					<div class="is-title animated fadeInUp">Case Study 2</div>
-					<p>[Select a second theme and examine a different ethical, legal or safety consideration related to intelligent agents. Ground the discussion in your own practical work, observations or architectural decisions made during the module. Evaluate the effectiveness of any safeguards or approaches considered, identify potential weaknesses and trade-offs, and explain how this experience influenced your thinking about responsible agent development. Include relevant academic evidence and critical reflection.]</p>
+					<div class="is-title animated fadeInUp">Case Study 1</div>
+					<p>[Select one of the five proposed themes and introduce the ethical, legal or safety issue being examined. Describe a relevant experience, observation or design decision from the module, linking it directly to an intelligent agent system you designed or implemented. Critically analyse what occurred, why the issue matters, the risks or limitations identified, and how the experience informed your understanding and future professional practice. Support your evaluation with relevant academic literature.]</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_case_studies(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -183,14 +186,25 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-3-case-studies" style="display:none;">
+					<div class="is-title animated fadeInUp">Case Study 2</div>
+					<p>[Select a second theme and examine a different ethical, legal or safety consideration related to intelligent agents. Ground the discussion in your own practical work, observations or architectural decisions made during the module. Evaluate the effectiveness of any safeguards or approaches considered, identify potential weaknesses and trade-offs, and explain how this experience influenced your thinking about responsible agent development. Include relevant academic evidence and critical reflection.]</p>
+
+					<fieldset class="is-fieldset-options">
+						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_case_studies(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
+						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_case_studies(4);" autocomplete="off" autocapitalize="none">
+					</fieldset>
+					<button class="is-tabs-vertical-read-more" id="is-tabs-vertical-read-more-3-case-studies" onclick="is_expand_text(this,'is-tabs-vertical-page-3-case-studies')">Read More</button>
+				</div>
+
+				<div id="is-tabs-vertical-page-4-case-studies" style="display:none;">
 					<div class="is-title animated fadeInUp">Case Study 3</div>
 					<p>[Select a third theme and develop a reflective case study based on your experiences designing, evaluating or implementing intelligent agent systems. Explain the situation, relevant technical and ethical considerations, and any challenges or unexpected outcomes. Critically assess the implications for system reliability, accountability or responsible deployment, identifying lessons learned and specific improvements you would make in future projects. Support your conclusions with appropriate academic references.]</p>
 
 					<fieldset class="is-fieldset-options">
-						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_case_studies(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
+						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_case_studies(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Start Over" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_case_studies(1);">
 					</fieldset>
-					<button class="is-tabs-vertical-read-more" id="is-tabs-vertical-read-more-3-case-studies" onclick="is_expand_text(this,'is-tabs-vertical-page-3-case-studies')">Read More</button>
+					<button class="is-tabs-vertical-read-more" id="is-tabs-vertical-read-more-4-case-studies" onclick="is_expand_text(this,'is-tabs-vertical-page-4-case-studies')">Read More</button>
 				</div>
 
 			</div>
@@ -198,17 +212,18 @@
 
 		<script>
 		function is_tabs_vertical_menu_case_studies(ID){
-			for(let i=1;i<=3;i++){
+			for(let i=1;i<=4;i++){
 				is_hide('is-tabs-vertical-page-'+i+'-case-studies');
 			}
 			is_show('is-tabs-vertical-page-'+ID+'-case-studies');
-			for(let i=1;i<=3;i++){
+			for(let i=1;i<=4;i++){
 				is_change_class('is-tabs-vertical-button-'+i+'-case-studies','');
-			}							 
+			}
 			is_change_class('is-tabs-vertical-button-'+ID+'-case-studies',document.getElementById('is-tabs-vertical-button-'+ID+'-case-studies').className+' is-tabs-vertical-menu-current');
 			is_scroll_to('is-tabs-vertical-body-case-studies');
 		}
 		</script>
+
 	</div>
 	<div class="is-fixed" style="text-align:center;">
 		<a class="is-eyebrow" href="index.html" style="padding:7px;" title="Home">
