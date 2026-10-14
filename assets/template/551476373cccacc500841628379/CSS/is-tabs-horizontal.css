@@ -149,8 +149,8 @@
 }
 
 .is-tabs-horizontal .is-tabs-horizontal-body blockquote{
-	border-left:15px solid #2f2f2f;
-	background: #232323;
+	border-left:15px solid #232323;
+	background: #191919;
     color: #96959d;
 	padding:10px;
 	padding-top:20px;
@@ -168,7 +168,7 @@
 }
 
 .is-tabs-horizontal .is-tabs-horizontal-body blockquote:before{
-	content: "*";
+	content: '"';
 	color:#811724;
 	line-height:5px;
 	font-size:58px;
@@ -180,7 +180,9 @@
 	top:5px;
 }
 
-.is-tabs-horizontal .is-tabs-horizontal-body blockquote span:last-child{
+.is-tabs-horizontal .is-tabs-horizontal-body blockquote span:last-child,
+.is-tabs-horizontal .is-tabs-horizontal-body blockquote span:first-child
+{
 	color:#666666;
 	clear:both;
 	display:block;
@@ -188,6 +190,10 @@
 	padding:0px;
 	margin:0px;
 	line-height:14px;
+}
+
+.is-tabs-horizontal .is-tabs-horizontal-body blockquote span:first-child{
+	margin-top:10px;
 }
 
 .is-tabs-horizontal .is-tabs-horizontal-body code{
