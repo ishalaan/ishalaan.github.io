@@ -158,7 +158,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-final-project-evaluation">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-final-project-evaluation">
 
 				<div id="is-tabs-vertical-page-1-final-project-evaluation">
 					<div class="is-title animated fadeInUp">Design Phase</div>
@@ -185,14 +185,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_final_project_evaluation(ID) {
-			for (var i = 1; i <= 2; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-final-project-evaluation').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-final-project-evaluation').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_final_project_evaluation(ID){
+			for(let i=1;i<=2;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-final-project-evaluation');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-final-project-evaluation').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-final-project-evaluation').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-final-project-evaluation');
+			for(let i=1;i<=2;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-final-project-evaluation','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-final-project-evaluation',document.getElementById('is-tabs-vertical-button-'+ID+'-final-project-evaluation').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-final-project-evaluation');
 		}
 		</script>
 	</div>

@@ -147,7 +147,7 @@
 <div class="is-middle" id="is-middle-2">
 	<div class="is-fixed">
 
-		<h2 class="animated fadeIn">The 4th Industrial Revolution</h2>
+		<h2 class="animated fadeIn">The 4th Industrial Revolution</h2>s
 
 		<div class="is-tabs-vertical is-tabs-vertical-5 animated fadeInUp">
 			<div class="is-tabs-vertical-menu">
@@ -160,7 +160,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-discussion-1">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-discussion-1">
 
 				<div id="is-tabs-vertical-page-1-discussion-1">
 					<div class="is-title animated fadeInUp">Discussion Task</div>
@@ -175,6 +175,8 @@
 				<div id="is-tabs-vertical-page-2-discussion-1" style="display:none;">
 					<div class="is-title animated fadeInUp">Initial Post</div>
 					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(1);" style="margin-right:0px;">
@@ -184,8 +186,15 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-3-discussion-1" style="display:none;">
-					<div class="is-title animated fadeInUp">Peer Responses</div>
+					<div class="is-title animated fadeInUp">Peer Response</div>
 					<p></p>
+					<blockquote>
+					</blockquote>
+
+					<div class="is-title animated fadeInUp">Reply</div>
+					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(2);" style="margin-right:0px;">
@@ -195,8 +204,15 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-4-discussion-1" style="display:none;">
-					<div class="is-title animated fadeInUp">Peer Contributions</div>
+					<div class="is-title animated fadeInUp">First Peer Contribution</div>
 					<p></p>
+					<blockquote>
+					</blockquote>
+
+					<div class="is-title animated fadeInUp">Second Peer Contribution</div>
+					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(3);" style="margin-right:0px;">
@@ -206,8 +222,10 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-5-discussion-1" style="display:none;">
-					<div class="is-title animated fadeInUp">Discussion Summary</div>
+					<div class="is-title animated fadeInUp">Summary Post</div>
 					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(4);" style="margin-right:0px;">
@@ -220,14 +238,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_discussion_1(ID) {
-			for (var i = 1; i <= 5; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-discussion-1').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-discussion-1').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_discussion_1(ID){
+			for(let i=1;i<=5;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-discussion-1');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-discussion-1').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-discussion-1').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-discussion-1');
+			for(let i=1;i<=5;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-discussion-1','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-discussion-1',document.getElementById('is-tabs-vertical-button-'+ID+'-discussion-1').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-discussion-1');
 		}
 		</script>
 		
@@ -244,7 +264,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-discussion-2">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-discussion-2">
 
 				<div id="is-tabs-vertical-page-1-discussion-2">
 					<div class="is-title animated fadeInUp">Discussion Task</div>
@@ -259,6 +279,8 @@
 				<div id="is-tabs-vertical-page-2-discussion-2" style="display:none;">
 					<div class="is-title animated fadeInUp">Initial Post</div>
 					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(1);" style="margin-right:0px;">
@@ -268,8 +290,15 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-3-discussion-2" style="display:none;">
-					<div class="is-title animated fadeInUp">Peer Responses</div>
+					<div class="is-title animated fadeInUp">Peer Response</div>
 					<p></p>
+					<blockquote>
+					</blockquote>
+
+					<div class="is-title animated fadeInUp">Reply</div>
+					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(2);" style="margin-right:0px;">
@@ -279,8 +308,15 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-4-discussion-2" style="display:none;">
-					<div class="is-title animated fadeInUp">Peer Contributions</div>
+					<div class="is-title animated fadeInUp">First Peer Contribution</div>
 					<p></p>
+					<blockquote>
+					</blockquote>
+
+					<div class="is-title animated fadeInUp">Second Peer Contribution</div>
+					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(3);" style="margin-right:0px;">
@@ -290,8 +326,10 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-5-discussion-2" style="display:none;">
-					<div class="is-title animated fadeInUp">Discussion Summary</div>
+					<div class="is-title animated fadeInUp">Summary Post</div>
 					<p></p>
+					<blockquote style="margin-bottom:14px;">
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(4);" style="margin-right:0px;">
@@ -304,14 +342,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_discussion_2(ID) {
-			for (var i = 1; i <= 5; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-discussion-2').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-discussion-2').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_discussion_2(ID){
+			for(let i=1;i<=5;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-discussion-2');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-discussion-2').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-discussion-2').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-discussion-2');
+			for(let i=1;i<=5;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-discussion-2','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-discussion-2',document.getElementById('is-tabs-vertical-button-'+ID+'-discussion-2').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-discussion-2');
 		}
 		</script>
 	</div>

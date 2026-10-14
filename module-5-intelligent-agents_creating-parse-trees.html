@@ -161,7 +161,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-parse-trees">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-parse-trees">
 
 				<div id="is-tabs-vertical-page-1-parse-trees">
 					<div class="is-title animated fadeInUp">Activity Brief</div>
@@ -181,7 +181,9 @@
 
 				<div id="is-tabs-vertical-page-2-parse-trees" style="display:none;">
 					<div class="is-title animated fadeInUp">Parse Tree 1</div>
-					<p>The government raised interest rates.</p>
+					<blockquote>
+						<p>The government raised interest rates.</p>
+					</blockquote>
 					<p>This sentence follows a subject-verb-object structure and can be represented using a constituency-based parse tree. The sentence (S) consists of a subject noun phrase (NP) and a verb phrase (VP), with the final punctuation represented separately. The subject identifies the entity performing the action, while the verb phrase describes the action and its direct object.</p>
 					<blockquote style="display:none;">S<br>
 					&nbsp;&nbsp;├── NP<br>
@@ -243,7 +245,9 @@
 
 				<div id="is-tabs-vertical-page-3-parse-trees" style="display:none;">
 					<div class="is-title animated fadeInUp">Parse Tree 2</div>
-					<p>The internet gives everyone a voice.</p>
+					<blockquote>
+						<p>The internet gives everyone a voice.</p>
+					</blockquote>
 					<p>This sentence contains a ditransitive verb construction in which the verb "gives" takes two objects. The sentence (S) consists of a subject noun phrase (NP) and a verb phrase (VP). The subject identifies the entity performing the action, while the verb phrase contains a present-tense verb, an indirect object representing the recipient and a direct object representing what is given. The constituency-based parse tree illustrates how these elements combine within a hierarchical grammatical structure.</p>
 					<blockquote style="display:none;">S<br>
 					&nbsp;&nbsp;├── NP<br>
@@ -283,7 +287,9 @@
 
 				<div id="is-tabs-vertical-page-4-parse-trees" style="display:none;">
 					<div class="is-title animated fadeInUp">Parse Tree 3</div>
-					<p>The man saw the dog with the telescope.</p>
+					<blockquote>
+						<p>The man saw the dog with the telescope.</p>
+					</blockquote>
 					<p>This sentence demonstrates structural ambiguity because the prepositional phrase "with the telescope" can attach to two different constituents, producing distinct interpretations. In the first interpretation, the telescope is the instrument used by the man to see the dog. In the second, the telescope is associated with the dog being observed. Although the sequence of words remains unchanged, the hierarchical relationships between constituents differ. Constituency-based parsing represents this ambiguity through alternative tree structures.</p>
 					<div class="is-title animated fadeInUp">Interpretation 1. Verb Phrase Attachment</div>
 					<p>In this interpretation, the prepositional phrase <code>PP</code> attaches to the verb phrase <code>VP</code>, indicating that the man used the telescope to see the dog. The prepositional phrase functions as an instrumental modifier of the action rather than describing the dog.</p>
@@ -373,14 +379,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_parse_trees(ID) {
-			for (var i = 1; i <= 5; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-parse-trees').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-parse-trees').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_parse_trees(ID){
+			for(let i=1;i<=5;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-parse-trees');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-parse-trees').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-parse-trees').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-parse-trees');
+			for(let i=1;i<=5;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-parse-trees','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-parse-trees',document.getElementById('is-tabs-vertical-button-'+ID+'-parse-trees').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-parse-trees');
 		}
 		</script>
 	</div>

@@ -158,7 +158,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-deep-learning">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-deep-learning">
 
 				<div id="is-tabs-vertical-page-1-deep-learning">
 					<div class="is-title animated fadeInUp">Activity Brief</div>
@@ -211,14 +211,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_deep_learning(ID) {
-			for (var i = 1; i <= 2; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-deep-learning').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-deep-learning').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_deep_learning(ID){
+			for(let i=1;i<=2;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-deep-learning');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-deep-learning').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-deep-learning').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-deep-learning');
+			for(let i=1;i<=2;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-deep-learning','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-deep-learning',document.getElementById('is-tabs-vertical-button-'+ID+'-deep-learning').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-deep-learning');
 		}
 		</script>
 	</div>

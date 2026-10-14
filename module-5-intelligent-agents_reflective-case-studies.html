@@ -159,7 +159,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-case-studies">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-case-studies">
 
 				<div id="is-tabs-vertical-page-1-case-studies">
 					<div class="is-title animated fadeInUp">Case Study 1</div>
@@ -197,14 +197,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_case_studies(ID) {
-			for (var i = 1; i <= 3; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-case-studies').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-case-studies').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_case_studies(ID){
+			for(let i=1;i<=3;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-case-studies');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-case-studies').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-case-studies').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-case-studies');
+			for(let i=1;i<=3;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-case-studies','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-case-studies',document.getElementById('is-tabs-vertical-button-'+ID+'-case-studies').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-case-studies');
 		}
 		</script>
 	</div>
