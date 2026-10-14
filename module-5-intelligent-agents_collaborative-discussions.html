@@ -160,7 +160,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-discussion-1">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-discussion-1">
 
 				<div id="is-tabs-vertical-page-1-discussion-1">
 					<div class="is-title animated fadeInUp">Discussion Task</div>
@@ -180,8 +180,17 @@
 
 				<div id="is-tabs-vertical-page-2-discussion-1" style="display:none;">
 					<div class="is-title animated fadeInUp">Initial Post</div>
-					<p></p>
-
+					<p>by Isaac Shalaan - Sunday, 2 August 2026, 10:14 PM</p>
+					<blockquote style="margin-bottom:14px;">
+						<p>Agent-based systems have risen because organisations increasingly operate across interconnected applications, unstructured information and rapidly changing conditions. Conventional automation works well when rules and inputs are stable, but it is less suitable when software must interpret context, select tools, revise plans and pursue a broader objective. Advances in machine learning, reinforcement learning and large language models have made these capabilities more practical. Cloud services, application programming interfaces and a growing open-source ecosystem have also reduced development barriers. Frameworks such as LangChain and AutoGen provide reusable support for memory, tool use and workflow orchestration, making it easier for organisations to develop and test agent-based applications (Chowa <i>et al</i>., 2026; Wang <i>et al</i>., 2024).</p>
+						<p>The approach is grounded in several traditions of artificial intelligence. Reactive agents respond directly to environmental changes and are useful when speed and predictable behaviour matter. Deliberative agents reason about objectives and plans, while learning agents adapt through data or feedback. Hybrid agents combine rapid responses with planning or learning. These models are grounded in established AI research on planning, reinforcement learning, memory and tool use (Wang <i>et al</i>., 2024). Recent patterns include ReAct, which connects reasoning with tool-based action, plan-and-execute approaches that divide longer tasks into stages, and Reflexion, which uses feedback from earlier attempts (Chowa <i>et al</i>., 2026). The most suitable model depends on the nature of the work. Multi-agent systems may be useful where distinct agents plan, retrieve information, evaluate evidence or execute actions, although coordination creates additional cost and complexity (Chowa <i>et al</i>., 2026).</p>
+						<p>For organisations, the main benefit is flexible, goal-directed automation across existing systems. Agents can investigate exceptions, coordinate multi-stage processes, personalise services and refer consequential decisions to a human. Deep-research and long-horizon agents may support due diligence, regulatory intelligence and complex case analysis by gathering evidence, comparing sources and revising their approach over several steps. This extends automation beyond repetitive transactions to work where the route to an outcome cannot be fully specified in advance (Chowa <i>et al.</i>, 2026).</p>
+						<p>However, greater autonomy does not automatically produce greater value. Long action sequences can accumulate errors, multi-agent systems may reproduce shared biases, and tool access can expose confidential data or enable unintended actions. Responsibility may also become unclear when decisions are distributed across models, developers and business owners. Stable processes may therefore remain better suited to deterministic software. Agent-based computing is most appropriate when adaptability and coordination justify the additional risks. Responsible adoption requires restricted permissions, audit trails, reliable evaluation, human approval for high-impact actions and clearly assigned accountability (Abou Ali, Dornaika and Charafeddine, 2026).</p>
+						<p>References:</p>
+						<p>Abou Ali, M., Dornaika, F. and Charafeddine, J. (2026) ‘Agentic AI: a comprehensive survey of architectures, applications, and future directions’, <i>Artificial Intelligence Review</i>, 59, article 11. Available at: <a href="https://doi.org/10.1007/s10462-025-11422-4" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s10462-025-11422-4</a> (Accessed: 1 August 2026).</p>
+						<p>Chowa, S.S., Alvi, R., Rahman, S.S., Rahman, M.A., Raiaan, M.A.K., Islam, M.R., Hussain, M. and Azam, S. (2026) ‘From language to action: a review of large language models as autonomous agents and tool users’, <i>Artificial Intelligence Review</i>, 59, article 71. Available at: <a href="https://doi.org/10.1007/s10462-025-11471-9" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s10462-025-11471-9</a> (Accessed: 1 August 2026).</p>
+						<p>Wang, L., Ma, C., Feng, X., Zhang, Z., Yang, H., Zhang, J., Chen, Z., Tang, J., Chen, X., Lin, Y., Zhao, W.X., Wei, Z. and Wen, J. (2024) ‘A survey on large language model based autonomous agents’, <i>Frontiers of Computer Science</i>, 18, article 186345. Available at: <a href="https://doi.org/10.1007/s11704-024-40231-1" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s11704-024-40231-1</a> (Accessed: 1 August 2026).</p>
+					</blockquote>
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(1);" style="margin-right:0px;">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_discussion_1(3);">
@@ -190,8 +199,32 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-3-discussion-1" style="display:none;">
-					<div class="is-title animated fadeInUp">Peer Responses</div>
-					<p></p>
+					<div class="is-title animated fadeInUp">Peer Response</div>
+					<p>by Lara Koller - Thursday, 6 August 2026, 1:41 AM</p>
+					<blockquote>
+						<p>Hi Isaac,</p>
+						<p>Your post provides a balanced overview of both the benefits and risks of agent-based systems. I particularly agree that greater autonomy does not necessarily produce greater value. However, I wonder whether adaptability and coordination provide a sufficiently clear basis for deciding when agent-based computing is appropriate.</p>
+						<p>Recent evidence suggests that the value of multi-agent coordination is highly task-dependent. Kim <i>et al.</i> (2026) found substantial performance gains for multi-agent systems in structured financial reasoning, but considerable deterioration in sequential planning tasks. They argue that coordination can become counterproductive when its complexity exceeds that of the underlying task. Similarly, Mandal <i>et al.</i> (2025) found that a multi-agent framework outperformed a single-agent configuration in laboratory automation. However, the LLM agents still struggled with basic tasks, sometimes deviated from instructions, and both configurations remained sensitive to minor changes in prompting. Improved relative performance therefore does not necessarily establish sufficient reliability for organisational deployment.</p>
+						<p>Tool use creates an additional challenge. Xu <i>et al.</i> (2025) explain that agents must determine whether a tool is needed, identify the appropriate tool and invoke it correctly across multiple steps. For simple tasks, errors in tool retrieval and parameter selection may even create more difficulty than completing the task directly.</p>
+						<p>I would therefore argue that organisations should not adopt agent-based systems primarily because a process is dynamic or requires coordination. They should first benchmark multi-agent, single-agent and deterministic alternatives using task-specific measures such as accuracy, robustness, cost and recoverability. How should organisations determine when agentic flexibility genuinely outweighs the additional coordination and reliability risks?</p>
+						<p>References:</p>
+						<p>Kim, Y. <i>et al.</i> (2026) ‘Capable language models can outgrow the benefits of collaboration’, <i>Nature Machine Intelligence</i>, 8, pp. 1157-1172. Available at: <a href="https://doi.org/10.1038/s42256-026-01268-y" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s42256-026-01268-y</a></p>
+						<p>Mandal, I. <i>et al.</i> (2025) ‘Evaluating large language model agents for automation of atomic force microscopy’, <i>Nature Communications</i>, 16, article 9104. Available at: <a href="https://doi.org/10.1038/s41467-025-64105-7" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41467-025-64105-7</a></p>
+						<p>Xu, W. <i>et al.</i> (2025) ‘LLM-based agents for tool learning: A survey’, <i>Data Science and Engineering</i>, 10, pp. 533-563. Available at: <a href="https://doi.org/10.1007/s41019-025-00296-9" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s41019-025-00296-9</a></p>
+					</blockquote>
+
+					<div class="is-title animated fadeInUp">Reply</div>
+					<p>by Isaac Shalaan - Friday, 14 August 2026, 7:32 PM</p>
+					<blockquote style="margin-bottom:14px;">
+						<p>Hi Lara,</p>
+						<p>Your point that adaptability and coordination are not sufficient criteria for adopting agent-based systems has made me reconsider how I framed this in my initial post. I argued that agentic computing is appropriate when these benefits justify the additional risks, but this leaves unanswered how an organisation should establish that justification. I now think comparison with simpler architectures should be part of the decision itself.</p>
+						<p>Kim <i>et al.</i> (2026) provide strong support for this approach. Their results show that multi-agent coordination can produce substantial gains in some tasks while significantly reducing performance in others. This suggests that architectural complexity should demonstrate task-specific value rather than being assumed to benefit complex work.</p>
+						<p>I also found your point that improved relative performance does not necessarily establish sufficient reliability for organisational deployment particularly useful. Mandal <i>et al</i>. (2025) found that their multi-agent configuration outperformed single-agent tool integration with GPT-4o, yet the agents still struggled with basic tasks, deviated from instructions and remained sensitive to minor changes in prompting. This has shifted my thinking from asking whether agents can improve a process to whether that improvement is sufficiently reliable for operational use.</p>
+						<p>I would therefore build on your proposed benchmarking by considering the consequences of failure alongside accuracy, robustness, cost and recoverability. Organisations should also consider whether errors can be detected, reversed or safely escalated to humans. Agentic flexibility may be worthwhile where measurable improvements outweigh these risks, whereas deterministic or single-agent approaches remain preferable when additional coordination does not demonstrate sufficient value.</p>
+						<p>References:</p>
+						<p>Kim, Y., Gu, K., Park, C., Park, C., Schmidgall, S., Heydari, A.A., Yan, Y., Zhang, Z., Zhuang, Y., Liu, Y., Malhotra, M., Liang, P.P., Park, H.W., Yang, Y., Xu, X., Du, Y., Patel, S., Althoff, T., McDuff, D. and Liu, X. (2026) ‘Capable language models can outgrow the benefits of collaboration’, <i>Nature Machine Intelligence</i>, 8, pp. 1157–1172. Available at: <a href="https://doi.org/10.1038/s42256-026-01268-y" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s42256-026-01268-y</a> (Accessed: 14 August 2026).</p>
+						<p>Mandal, I., Soni, J., Zaki, M., Smedskjaer, M.M., Wondraczek, K., Wondraczek, L., Gosvami, N.N. and Krishnan, N.M.A. (2025) ‘Evaluating large language model agents for automation of atomic force microscopy’, <i>Nature Communications</i>, 16, article 9104. Available at: <a href="https://doi.org/10.1038/s41467-025-64105-7" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41467-025-64105-7</a> (Accessed: 14 August 2026).</p>
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(2);" style="margin-right:0px;">
@@ -202,7 +235,12 @@
 
 				<div id="is-tabs-vertical-page-4-discussion-1" style="display:none;">
 					<div class="is-title animated fadeInUp">Peer Contributions</div>
-					<p></p>
+					<blockquote>
+						
+					</blockquote>
+					<blockquote style="margin-bottom:14px;">
+						
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(3);" style="margin-right:0px;">
@@ -212,8 +250,19 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-5-discussion-1" style="display:none;">
-					<div class="is-title animated fadeInUp">Discussion Summary</div>
-					<p></p>
+					<div class="is-title animated fadeInUp">Summary Post</div>
+					<p>by Isaac Shalaan - Friday, 14 August 2026, 8:14 PM</p>
+					<blockquote style="margin-bottom:14px;">
+						<p>Throughout the units, my understanding of agent-based computing has developed from seeing agents as autonomous software capable of interacting with an environment to recognising that their value depends on how well their reasoning and architecture fit a task. I have connected the rise of agents with broader trends in intelligent computing and with the shift towards systems that can act autonomously, use tools and interact with other agents. Recent work identifies reasoning, planning, memory and tool use as central capabilities of autonomous agents (Chowa <i>et al</i>., 2026).</p>
+						<p>My understanding was also broadened by considering how intelligent behaviour depends on the representation of knowledge and the ability to reason over it. First-order logic demonstrated how predicates and quantifiers can express relationships formally, helping me appreciate the foundations of symbolic reasoning and the relationship between natural-language statements and machine-interpretable representations.</p>
+						<p>I have also developed a more critical view of architecture selection. Reactive agents may be suitable when rapid responses to environmental changes are required, whereas agents with state or symbolic reasoning can support decisions requiring memory or explicit reasoning. I now better understand the distinction between desires and intentions, where having possible goals differs from committing to actions towards a selected goal.</p>
+						<p>Feedback from a peer further challenged my initial assumption that adaptability and coordination were sufficient reasons to justify agentic computing. Kim <i>et al</i>. (2026) show that multi-agent coordination can improve some tasks while harming others, while Mandal <i>et al</i>. (2025) demonstrate that stronger multi-agent performance can coexist with reliability limitations.</p>
+						<p>Overall, I now see appropriate agent-based computing as an alignment between environment, reasoning requirements, architecture and organisational risk across different organisational contexts and levels of potential impact. Autonomy and complexity should therefore be justified by measurable task-specific benefits, robustness, recoverability and clear accountability, rather than treated as objectives in themselves.</p>
+						<p>References:</p>
+						<p>Chowa, S.S., Alvi, R., Rahman, S.S., Rahman, M.A., Raiaan, M.A.K., Islam, M.R., Hussain, M. and Azam, S. (2026) ‘From language to action: a review of large language models as autonomous agents and tool users’, <i>Artificial Intelligence Review</i>, 59, article 71. Available at: <a href="https://doi.org/10.1007/s10462-025-11471-9" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s10462-025-11471-9</a> (Accessed: 14 August 2026).</p>
+						<p>Kim, Y., Gu, K., Park, C., Park, C., Schmidgall, S., Heydari, A.A., Yan, Y., Zhang, Z., Zhuang, Y., Liu, Y., Malhotra, M., Liang, P.P., Park, H.W., Yang, Y., Xu, X., Du, Y., Patel, S., Althoff, T., McDuff, D. and Liu, X. (2026) ‘Capable language models can outgrow the benefits of collaboration’, <i>Nature Machine Intelligence</i>, 8, pp. 1157–1172. Available at: <a href="https://doi.org/10.1038/s42256-026-01268-y" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s42256-026-01268-y</a> (Accessed: 14 August 2026).</p>
+						<p>Mandal, I., Soni, J., Zaki, M., Smedskjaer, M.M., Wondraczek, K., Wondraczek, L., Gosvami, N.N. and Krishnan, N.M.A. (2025) ‘Evaluating large language model agents for automation of atomic force microscopy’, <i>Nature Communications</i>, 16, article 9104. Available at: <a href="https://doi.org/10.1038/s41467-025-64105-7" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41467-025-64105-7</a> (Accessed: 14 August 2026).</p>
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_1(4);" style="margin-right:0px;">
@@ -226,14 +275,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_discussion_1(ID) {
-			for (var i = 1; i <= 5; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-discussion-1').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-discussion-1').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_discussion_1(ID){
+			for(let i=1;i<=5;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-discussion-1');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-discussion-1').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-discussion-1').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-discussion-1');
+			for(let i=1;i<=5;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-discussion-1','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-discussion-1',document.getElementById('is-tabs-vertical-button-'+ID+'-discussion-1').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-discussion-1');
 		}
 		</script>
 		
@@ -250,7 +301,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-discussion-2">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-discussion-2">
 
 				<div id="is-tabs-vertical-page-1-discussion-2">
 					<div class="is-title animated fadeInUp">Discussion Task</div>
@@ -271,7 +322,9 @@
 
 				<div id="is-tabs-vertical-page-2-discussion-2" style="display:none;">
 					<div class="is-title animated fadeInUp">Initial Post</div>
-					<p></p>
+					<blockquote style="margin-bottom:14px;">
+						
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(1);" style="margin-right:0px;">
@@ -282,7 +335,9 @@
 
 				<div id="is-tabs-vertical-page-3-discussion-2" style="display:none;">
 					<div class="is-title animated fadeInUp">Peer Responses</div>
-					<p></p>
+					<blockquote style="margin-bottom:14px;">
+						
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(2);" style="margin-right:0px;">
@@ -293,7 +348,12 @@
 
 				<div id="is-tabs-vertical-page-4-discussion-2" style="display:none;">
 					<div class="is-title animated fadeInUp">Peer Contributions</div>
-					<p></p>
+					<blockquote>
+						
+					</blockquote>
+					<blockquote style="margin-bottom:14px;">
+						
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(3);" style="margin-right:0px;">
@@ -303,8 +363,10 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-5-discussion-2" style="display:none;">
-					<div class="is-title animated fadeInUp">Discussion Summary</div>
-					<p></p>
+					<div class="is-title animated fadeInUp">Summary Post</div>
+					<blockquote style="margin-bottom:14px;">
+						
+					</blockquote>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_2(4);" style="margin-right:0px;">
@@ -317,14 +379,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_discussion_2(ID) {
-			for (var i = 1; i <= 5; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-discussion-2').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-discussion-2').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_discussion_2(ID){
+			for(let i=1;i<=5;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-discussion-2');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-discussion-2').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-discussion-2').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-discussion-2');
+			for(let i=1;i<=5;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-discussion-2','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-discussion-2',document.getElementById('is-tabs-vertical-button-'+ID+'-discussion-2').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-discussion-2');
 		}
 		</script>
 
@@ -341,7 +405,7 @@
 				</ul>
 			</div>
 
-			<div class="is-tabs-vertical-body is-tabs-vertical-body-expandable" id="is-tabs-vertical-body-discussion-3">
+			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-discussion-3">
 
 				<div id="is-tabs-vertical-page-1-discussion-3">
 					<div class="is-title animated fadeInUp">Discussion Task</div>
@@ -360,7 +424,9 @@
 
 				<div id="is-tabs-vertical-page-2-discussion-3" style="display:none;">
 					<div class="is-title animated fadeInUp">Initial Post</div>
-					<p></p>
+					<blockquote style="margin-bottom:14px;">
+						
+					</quoteblock>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_3(1);" style="margin-right:0px;">
@@ -371,7 +437,9 @@
 
 				<div id="is-tabs-vertical-page-3-discussion-3" style="display:none;">
 					<div class="is-title animated fadeInUp">Peer Responses</div>
-					<p></p>
+					<blockquote style="margin-bottom:14px;">
+						
+					</quoteblock>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_3(2);" style="margin-right:0px;">
@@ -382,7 +450,12 @@
 
 				<div id="is-tabs-vertical-page-4-discussion-3" style="display:none;">
 					<div class="is-title animated fadeInUp">Peer Contributions</div>
-					<p></p>
+					<quoteblock>
+						
+					</quoteblock>
+					<blockquote style="margin-bottom:14px;">
+						
+					</quoteblock>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_3(3);" style="margin-right:0px;">
@@ -392,8 +465,10 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-5-discussion-3" style="display:none;">
-					<div class="is-title animated fadeInUp">Discussion Summary</div>
-					<p></p>
+					<div class="is-title animated fadeInUp">Summary Post</div>
+					<blockquote style="margin-bottom:14px;">
+						
+					</quoteblock>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_discussion_3(4);" style="margin-right:0px;">
@@ -406,14 +481,16 @@
 		</div>
 
 		<script>
-		function is_tabs_vertical_menu_discussion_3(ID) {
-			for (var i = 1; i <= 5; i++) {
-				document.getElementById('is-tabs-vertical-page-' + i + '-discussion-3').style.display = 'none';
-				document.getElementById('is-tabs-vertical-button-' + i + '-discussion-3').classList.remove('is-tabs-vertical-menu-current');
+		function is_tabs_vertical_menu_discussion_3(ID){
+			for(let i=1;i<=5;i++){
+				is_hide('is-tabs-vertical-page-'+i+'-discussion-3');
 			}
-
-			document.getElementById('is-tabs-vertical-page-' + ID + '-discussion-3').style.display = 'block';
-			document.getElementById('is-tabs-vertical-button-' + ID + '-discussion-3').classList.add('is-tabs-vertical-menu-current');
+			is_show('is-tabs-vertical-page-'+ID+'-discussion-3');
+			for(let i=1;i<=5;i++){
+				is_change_class('is-tabs-vertical-button-'+i+'-discussion-3','');
+			}							 
+			is_change_class('is-tabs-vertical-button-'+ID+'-discussion-3',document.getElementById('is-tabs-vertical-button-'+ID+'-discussion-3').className+' is-tabs-vertical-menu-current');
+			is_scroll_to('is-tabs-vertical-body-discussion-3');
 		}
 		</script>
 	</div>
