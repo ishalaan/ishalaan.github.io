@@ -56,11 +56,23 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
 	<style>
-		#is-tabs-vertical-body-about .is-table th.is-table-divider:last-child
+		#is-tabs-vertical-body-about .is-table th.is-table-divider
 		{
-			min-width: 50%;
-			max-width: 50%;
-			width: 50%;
+			width: 100%;
+			text-align: left;
+		}
+		
+		#is-tabs-vertical-body-about .is-table th:not(.is-table-divider):first-child
+		{
+			min-width: 300px;
+			max-width: 300px;
+			text-align: left;
+		}
+
+		#is-tabs-vertical-body-about .is-table th:not(.is-table-divider):last-child
+		{
+			min-width: 200px;
+			max-width: 200px;
 			text-align: right;
 		}
 
@@ -142,7 +154,10 @@
 		<a class="is-eyebrow" href="index.html" style="padding:7px;" title="Home">
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
 		</a>
-		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>About</div>
+		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>About Me</div>
+		<a class="is-eyebrow" href="module-4-machine-learning.html" style="padding:7px;" title="Next">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+		</a>
 		<br />
 
 		<h1 class="animated fadeInDown">Learn More About My <span>Education and Career Journey</span>.</h1>
@@ -158,6 +173,8 @@
 			<p>My technical background includes PHP, JavaScript, Python, CSS, MySQL and SQL, supported by four to five years of experience implementing AI and machine learning in a professional setting. I combine hands-on development with a broader architectural perspective, considering maintainability, reliability and business value alongside technical performance.</p>
 			<p>I am currently studying for an MSc in Artificial Intelligence at the University of Essex, building on a Postgraduate Certificate awarded with Distinction. This complements my industry experience with deeper expertise in intelligent systems, rigorous evaluation and responsible AI development.</p>
 		</div>
+		
+		<h2>Professional Experience</h2>
 
 		<div class="is-tabs-vertical is-tabs-vertical-2 animated fadeInUp" style="margin-top:10px;">
 			<div class="is-tabs-vertical-menu">
@@ -171,90 +188,108 @@
 			<div class="is-tabs-vertical-body" id="is-tabs-vertical-body-about">
 
 				<div id="is-tabs-vertical-page-1-about">
-					<p>Group Technical Director</p>
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Automotive Insights &amp; Research Services</th>
-							<th class="is-table-divider">August 2026 - Present</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Automotive Insights &amp; Research Services (AIRS) is a British automotive market intelligence and research company specialising in consumer insights, industry analytics, data-driven decision-making and strategic business intelligence. Focused exclusively on the automotive sector, the company combines continuous consumer research, advanced data analytics, interactive dashboards and innovative audience segmentation tools to provide actionable intelligence to vehicle manufacturers, dealerships, automotive retailers, finance and insurance providers, and wider industry stakeholders. Supported by an experienced leadership and advisory team featuring former senior executives from Ford UK, Auto Trader and other prominent automotive organisations, Automotive Insights aims to transform how businesses understand consumer behaviour, market trends and commercial opportunities. In August 2026, the company expanded its capabilities through the strategic acquisition of Factor Sales, a specialist in UK automotive aftermarket intelligence, bringing together consumer sentiment, purchasing behaviour and real-world aftermarket transaction data. The acquisition forms part of the company's wider ambition to become the UK's leading independent automotive intelligence and insights partner, delivering comprehensive market visibility across the entire automotive ecosystem.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Group Technical Director</th>
+							</tr>
+							<tr>
+								<th>Automotive Insights &amp; Research Services</th>
+								<th>2026 - Present</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									Automotive Insights &amp; Research Services (AIRS) is a British automotive market intelligence and research company specialising in consumer insights, industry analytics, data-driven decision-making and strategic business intelligence. Focused exclusively on the automotive sector, the company combines continuous consumer research, advanced data analytics, interactive dashboards and innovative audience segmentation tools to provide actionable intelligence to vehicle manufacturers, dealerships, automotive retailers, finance and insurance providers, and wider industry stakeholders. Supported by an experienced leadership and advisory team featuring former senior executives from Ford UK, Auto Trader and other prominent automotive organisations, Automotive Insights aims to transform how businesses understand consumer behaviour, market trends and commercial opportunities. In August 2026, the company expanded its capabilities through the strategic acquisition of Factor Sales, a specialist in UK automotive aftermarket intelligence, bringing together consumer sentiment, purchasing behaviour and real-world aftermarket transaction data. The acquisition forms part of the company's wider ambition to become the UK's leading independent automotive intelligence and insights partner, delivering comprehensive market visibility across the entire automotive ecosystem.
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Senior Developer</p>
+					
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Pearson Ham Group | The Pricing Specialists</th>
-							<th class="is-table-divider">December 2022 - Present</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Pearson Ham Group is an award-winning international pricing consultancy specialising in pricing strategy, price optimisation, commercial models, discount management, revenue management and pricing capability development. Based in London, with offices across Europe including Paris, Barcelona, Düsseldorf and Stockholm, the group supports local and global clients across sectors such as consumer and retail, financial services and insurance, healthcare and life sciences, industrials, manufacturing, technology, media and private equity. In January 2026, Fintel, through Defaqto, acquired Pearson Ham Group's Market Pricing Business, a specialist provider of proprietary pricing data for the UK insurance market, strengthening Defaqto's financial services data and insight offering.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Senior Developer</th>
+							</tr>
+							<tr>
+								<th>Pearson Ham Group</th>
+								<th>2022 - 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									Pearson Ham Group is an award-winning international pricing consultancy specialising in pricing strategy, price optimisation, commercial models, discount management, revenue management and pricing capability development. Based in London, with offices across Europe including Paris, Barcelona, Düsseldorf and Stockholm, the group supports local and global clients across sectors such as consumer and retail, financial services and insurance, healthcare and life sciences, industrials, manufacturing, technology, media and private equity. In January 2026, Fintel, through Defaqto, acquired Pearson Ham Group's Market Pricing Business, a specialist provider of proprietary pricing data for the UK insurance market, strengthening Defaqto's financial services data and insight offering.
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Co-Founder and Technical Development Director</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Factor Sales</th>
-							<th class="is-table-divider">November 2010 - December 2022</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Factor Sales, formerly an independent UK automotive aftermarket market measurement and data intelligence company, specialises in analysing transaction, price and volume data across motor factors, suppliers, garages and automotive parts categories. The business provides market reporting on aftermarket size, revenue, price trends, product performance, regional performance and competitive positioning, helping companies make data-led pricing, sales and stock decisions. Pearson Ham Group acquired Factor Sales in 2023, bringing it into its pricing and market insights offering and strengthening its automotive aftermarket intelligence capabilities.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Co-Founder and Technical Development Director</th>
+							</tr>
+							<tr>
+								<th>Factor Sales</th>
+								<th>2010 - 2022</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									Factor Sales, formerly an independent UK automotive aftermarket market measurement and data intelligence company, specialises in analysing transaction, price and volume data across motor factors, suppliers, garages and automotive parts categories. The business provides market reporting on aftermarket size, revenue, price trends, product performance, regional performance and competitive positioning, helping companies make data-led pricing, sales and stock decisions. Pearson Ham Group acquired Factor Sales in 2023, bringing it into its pricing and market insights offering and strengthening its automotive aftermarket intelligence capabilities.
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Database Manager</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">EMAP</th>
-							<th class="is-table-divider">2009 - 2010</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								EMAP, formerly an independent British-based international media and business information company, specialised in publishing, trade media, business-to-business intelligence, exhibitions, events and digital information services. Originating from East Midland Allied Press, the company grew from regional publishing into a major media group, with well-known brands across sectors including Drapers, Retail Week, Nursing Times, Architects' Journal, Construction News, MEED, Health Service Journal, Local Government Chronicle, New Civil Engineer, Broadcast, Grazia and FHM. Following a series of restructures, parts of the business evolved into Ascential, which later became part of Informa through Informa's acquisition of Ascential in October 2024, strengthening Informa's global events, intelligence and advisory portfolio.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Database Manager</th>
+							</tr>
+							<tr>
+								<th>EMAP</th>
+								<th>2009 - 2010</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									EMAP, formerly an independent British-based international media and business information company, specialised in publishing, trade media, business-to-business intelligence, exhibitions, events and digital information services. Originating from East Midland Allied Press, the company grew from regional publishing into a major media group, with well-known brands across sectors including Drapers, Retail Week, Nursing Times, Architects' Journal, Construction News, MEED, Health Service Journal, Local Government Chronicle, New Civil Engineer, Broadcast, Grazia and FHM. Following a series of restructures, parts of the business evolved into Ascential, which later became part of Informa through Informa's acquisition of Ascential in October 2024, strengthening Informa's global events, intelligence and advisory portfolio.
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Coding Manager</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Synovate</th>
-							<th class="is-table-divider">2008 - 2009</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Synovate, formerly an independent international market research company owned by Aegis Group, became part of Ipsos following its acquisition in October 2011. The acquisition expanded Ipsos’s international research network and created the third largest market research company in the world at the time. Synovate specialised in consumer insight, brand and communications research, product development, customer experience, and market strategy, supporting organisations with data-driven understanding of customers, markets and business opportunities across multiple sectors and regions.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Coding Manager</th>
+							</tr>
+							<tr>
+								<th>Synovate</th>
+								<th>2008 - 2009</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									Synovate, formerly an independent international market research company owned by Aegis Group, became part of Ipsos following its acquisition in October 2011. The acquisition expanded Ipsos’s international research network and created the third largest market research company in the world at the time. Synovate specialised in consumer insight, brand and communications research, product development, customer experience, and market strategy, supporting organisations with data-driven understanding of customers, markets and business opportunities across multiple sectors and regions.
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Data Analyst</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Synovate</th>
-							<th class="is-table-divider">2004 - 2008</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Market research and data analysis within an international consumer and business research organisation.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Data Analyst</th>
+							</tr>
+							<tr>
+								<th>Synovate</th>
+								<th>2004 - 2008</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									Market research and data analysis within an international consumer and business research organisation.
+								</td>
+							</tr>
+						</table>
 					</div>
+
 					<fieldset class="is-fieldset-options">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_about(2);" autocomplete="off" autocapitalize="none">
 					</fieldset>
@@ -262,82 +297,110 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-2-about" style="display:none;">
-					<p>MSc Artificial Intelligence</p>
+					
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">University of Essex</th>
-							<th class="is-table-divider">July 2026 - July 2027</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								In progress
-								Postgraduate study in artificial intelligence, covering machine learning, intelligent agents, research methods and professional practice, and an MSc computing project.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">MSc Artificial Intelligence</th>
+							</tr>
+							<tr>
+								<th>University of Essex</th>
+								<th>July 2026 - July 2027</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li><strong>MSc Computing Project:</strong><br />(Scheduled)</li>
+										<li><strong>Research Methods and Professional Practice:</strong><br />(Scheduled)</li>
+										<li><strong>Machine Learning:</strong><br />(In Progress)</li>
+										<li><strong>Intelligent Agents:</strong><br />(In Progress)</li>
+										<li><strong>Numerical Analysis:</strong><br />(Distinction)<br />Developed mathematical and statistical skills essential for data science and AI, with a focus on analytical thinking and solving complex problems.</li>
+										<li><strong>Understanding Artificial Intelligence:</strong><br />(Distinction)<br />Studied the history, development and practical applications of artificial intelligence, with a focus on its real-world relevance and evolving role across industries.</li>
+										<li><strong>Launch into Computing:</strong><br />(Distinction)<br />Built a foundation in fundamental computing concepts, including systems design, software principles, implementation and support in modern enterprise settings.</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Postgraduate Certificate in Artificial Intelligence</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">University of Essex</th>
-							<th class="is-table-divider">October 2025 - July 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Distinction
-								<ul>
-									<li>Numerical Analysis - Distinction, 20 credits. Developed mathematical and statistical skills for data science and AI, with a focus on analytical thinking and solving complex problems.</li>
-									<li>Understanding Artificial Intelligence - Distinction, 20 credits. Explored the history, development and practical applications of AI, including its relevance across industries.</li>
-									<li>Launch into Computing - Distinction, 20 credits. Covered fundamental computing concepts, systems design, software principles, implementation and support in enterprise settings.</li>
-								</ul>
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Postgraduate Certificate in Artificial Intelligence</th>
+							</tr>
+							<tr>
+								<th>University of Essex</th>
+								<th>October 2025 - July 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li><strong>Numerical Analysis:</strong><br />(Distinction)<br />Developed mathematical and statistical skills essential for data science and AI, with a focus on analytical thinking and solving complex problems.</li>
+										<li><strong>Understanding Artificial Intelligence:</strong><br />(Distinction)<br />Studied the history, development and practical applications of artificial intelligence, with a focus on its real-world relevance and evolving role across industries.</li>
+										<li><strong>Launch into Computing:</strong><br />(Distinction)<br />Built a foundation in fundamental computing concepts, including systems design, software principles, implementation and support in modern enterprise settings.</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AVCE Double Award in Information Communication Technology</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Chelmsford College</th>
-							<th class="is-table-divider">June 2004 - June 2005</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Grade BB
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AVCE Double Award in Information Communication Technology</th>
+							</tr>
+							<tr>
+								<th>Chelmsford College</th>
+								<th>June 2004 - June 2005</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li><strong>Grade BB</strong></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AVCE Single Award in Information Communication Technology</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Chelmsford College</th>
-							<th class="is-table-divider">June 2003 - June 2004</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Grade B
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AVCE Single Award in Information Communication Technology</th>
+							</tr>
+							<tr>
+								<th>Chelmsford College</th>
+								<th>June 2003 - June 2004</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li><strong>Grade B</strong></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>GNVQ in Information Communication Technology</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Chelmsford College</th>
-							<th class="is-table-divider">June 2002 - June 2003</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Distinction
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">GNVQ in Information Communication Technology</th>
+							</tr>
+							<tr>
+								<th>Chelmsford College</th>
+								<th>June 2002 - June 2003</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li><strong>Distinction</strong></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
 					</div>
+
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_about(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_about(3);">
@@ -346,272 +409,330 @@
 				</div>
 
 				<div id="is-tabs-vertical-page-3-about" style="display:none;">
-					<p>RAG and Agentic AI Professional Certificate</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued June 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Covers retrieval-augmented generation, multimodal applications and agent orchestration, combining language models with external data and tools.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">RAG and Agentic AI Professional Certificate</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>June 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-18.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Build AI Agents using MCP</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued June 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Explores Model Context Protocol architecture, server and client development, tool integration and permission controls for agent workflows.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Build AI Agents using MCP</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>June 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-17.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued June 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Examines framework selection, workflow design and collaboration between agents using graph-based, task-based and conversational approaches.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>June 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-16.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Agentic AI with LangChain and LangGraph</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued June 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Covers agent memory, conditional routing, reflection and retrieval, using LangChain and LangGraph to coordinate iterative reasoning workflows.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Agentic AI with LangChain and LangGraph</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>June 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-15.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Fundamentals of Building AI Agents</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued May 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Introduces tool calling and agent workflows for tasks including data analysis, visualisation and database querying.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Fundamentals of Building AI Agents</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>May 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-14.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Build Multimodal Generative AI Applications</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued May 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Explores applications that combine text, images, speech and video, including model integration and interactive interfaces.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Build Multimodal Generative AI Applications</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>May 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-13.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Advanced RAG with Vector Databases and Retrievers</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued May 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Covers advanced retrieval, vector indexing and application integration using FAISS, Chroma, LangChain and LlamaIndex.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Advanced RAG with Vector Databases and Retrievers</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>May 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-12.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Vector Databases for RAG</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued May 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Introduces embeddings, similarity search and Chroma database operations, explaining how vector storage supports retrieval and recommendations.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Vector Databases for RAG</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>May 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-11.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Build RAG Applications</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued May 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Covers retrieval-augmented application development with LangChain and LlamaIndex, alongside interactive interfaces built with Gradio.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Build RAG Applications</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>May 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-10.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Develop Generative AI Applications</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">IBM</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Introduces prompting, LangChain components, model comparison and Flask applications, including structured output handling.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Develop Generative AI Applications</th>
+							</tr>
+							<tr>
+								<th>IBM</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-9.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI Professional Certificate</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Develops practical AI skills for workplace research, planning, communication, content creation, data analysis and application building, alongside responsible use.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI Professional Certificate</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-8.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI for App Building</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Explores identifying workplace problems and turning natural-language instructions into functional web applications using AI development tools.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI for App Building</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-7.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI for Data Analysis</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Covers using AI to organise data, generate spreadsheet formulas, select performance measures and create visualisations that communicate findings.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI for Data Analysis</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-6.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI for Content Creation</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Explores generating images, videos and presentations, maintaining consistent design guidelines and using AI feedback to improve creative work.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI for Content Creation</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-5.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI for Writing and Communicating</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Covers adapting messages for different audiences, summarising meetings, refining written work and practising workplace conversations with AI.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI for Writing and Communicating</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-4.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI for Research and Insights</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Explores combining information from multiple sources, identifying themes and checking AI-generated findings against supporting material.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI for Research and Insights</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-3.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI for Brainstorming and Planning</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Covers developing and prioritising ideas, identifying project risks and dependencies, and organising planning information with AI assistance.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI for Brainstorming and Planning for Brainstorming and Planning</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-2.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>AI Fundamentals</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Google</th>
-							<th class="is-table-divider">Issued April 2026</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Introduces generative AI concepts, effective prompting and critical evaluation of outputs, including accuracy, bias and responsible workplace use.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">AI Fundamentals</th>
+							</tr>
+							<tr>
+								<th>Google</th>
+								<th>April 2026</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<img border="0" width="100%" src="assets/page/images/about_certificates-1.png" />
+								</td>
+							</tr>
+						</table>
 					</div>
-					<p>Microsoft Certified Professional</p>
+
 					<div class="fieldset">
-					<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
-						<tr>
-							<th class="is-table-divider">Microsoft</th>
-							<th class="is-table-divider">January 2006</th>
-						</tr>
-						<tr>
-							<td colspan="2">
-								A Microsoft credential recognising technical knowledge demonstrated through certification examinations. The programme supported professional development across Microsoft technologies.
-							</td>
-						</tr>
-					</table>
+						<table cellpadding="0" cellspacing="0" class="is-table" width="100%">
+							<tr>
+								<th colspan="2" class="is-table-divider">Microsoft Certified Professional</th>
+							</tr>
+							<tr>
+								<th>Microsoft</th>
+								<th>January 2006</th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									A Microsoft credential recognising technical knowledge demonstrated through certification examinations. The programme supported professional development across Microsoft technologies.
+								</td>
+							</tr>
+						</table>
 					</div>
+
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_about(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
 						<input type="submit" value="Start Over" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_about(1);">
@@ -639,7 +760,10 @@
 		<a class="is-eyebrow" href="index.html" style="padding:7px;" title="Home">
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
 		</a>
-		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>About</div>
+		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>About Me</div>
+		<a class="is-eyebrow" href="module-4-machine-learning.html" style="padding:7px;" title="Next">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+		</a>
 	</div>
 </div>
 

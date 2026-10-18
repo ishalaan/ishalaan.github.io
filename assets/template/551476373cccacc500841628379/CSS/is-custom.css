@@ -308,6 +308,6 @@ a.is-eyebrow:hover {
     /* extra styles for iPhone portrait */
 
     .is-eyebrow {
-        max-width: 180px;
+        max-width: 120px;
     }
 }

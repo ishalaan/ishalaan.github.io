@@ -28,6 +28,7 @@
 
 .is-table th:not(.is-table-divider){
 	font-weight:normal;
+	background:#8d8d8d;
 }
 
 .is-table td{
@@ -42,10 +43,11 @@
 .is-table th.is-table-divider,
 .is-table td.is-table-divider
 {
-	color:#000000;
+	font-size:14px;
+	color:#a9a9a9;
 	font-weight:normal;
 	text-align:left;
-	text-shadow:0 1px 1px rgb(133 133 133 / 55%);
+	text-shadow:0 1px 1px rgb(0 0 0 / 55%);
 	background-color:#373737;
 	background-image:-moz-linear-gradient(top, #717171, #373737);
 	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#717171), to(#373737));
@@ -127,6 +129,25 @@
 .is-table tr td a:hover
 {
 	
+}
+
+.is-table tr td ul li,
+.is-table tr td ol li
+{
+	margin-top: 10px;
+}
+
+.is-table tr td ul li strong,
+.is-table tr td ol li strong
+{
+	font-weight:normal;
+	color:#c0c0c0;
+}
+
+.is-table tr td img{
+	margin-top: 7px;
+	padding:0px;
+	box-sizing:border-box;
 }
 
 @media all and (max-width:1024px){	
