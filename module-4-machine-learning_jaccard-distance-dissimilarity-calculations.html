@@ -48,6 +48,7 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
     <link rel="shortcut icon" href="assets/page/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -56,6 +57,13 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
     <style>
+		#is-tabs-vertical-page-2-jaccard-distance .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-3-jaccard-distance .is-table :is(td, th):nth-child(n+2):nth-child(-n+4)
+		{
+			min-width: 100px;
+			text-align: center;
+		}
+
         .is-menu .is-menu-list .is-logo a {
             width: 270px;
         }
@@ -94,7 +102,7 @@
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="" />
 
-    <title>Machine Learning by Isaac Shalaan</title>
+    <title>Machine Learning: Jaccard Distance by Isaac Shalaan</title>
 
     <script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
     <script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script>
@@ -116,11 +124,13 @@
     <ul class="is-fixed is-menu-list">
         <li class="is-logo" id="is-menu-logo"><a href="index.html"></a></li>
 
-        <div class="is-menu-mobile" id="is-menu-mobile">
-            <li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-            <li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-            <li class="" id=""><a href="about.html">About</a></li>
-        </div>
+		<div class="is-menu-mobile" id="is-menu-mobile">
+			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
+			<li class="is-menu-active"><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class=""><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
+		</div>
 
         <li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
         <br class="is-clear" />
@@ -144,14 +154,14 @@
         </a>
         <br />
 
-        <h1 class="animated fadeInDown">Machine Learning Module: <span>Jaccard Distance / Dissimilarity</span>.</h1>
+        <h1 class="animated fadeInDown">Machine Learning Module <span>Jaccard Distance</span>.</h1>
     </div>
 </div>
 
 <div class="is-middle" id="is-middle-2">
     <div class="is-fixed">
 
-        <div class="is-tabs-vertical is-tabs-vertical-5 animated fadeInUp">
+        <div class="is-tabs-vertical is-tabs-vertical-4 animated fadeInUp">
 
             <div class="is-tabs-vertical-menu">
                 <ul>
@@ -182,8 +192,116 @@
 
                 <div id="is-tabs-vertical-page-2-jaccard-distance" style="display:none;">
                     <div class="is-title animated fadeInUp">Test Results</div>
-                    <p>The comparison uses six binary indicators: Fever, Cough and Test-1 to Test-4. The question is how much the recorded positive indicators differ between each pair of individuals. Gender is retained in the source table for completeness but excluded from this calculation; it is a nominal category, not an indicator of a symptom or positive test.</p><div class="is-title animated fadeInUp">Original Pathological Test Results</div><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Attribute</th><th class="is-table-divider">Jack</th><th class="is-table-divider">Mary</th><th class="is-table-divider">Jim</th></tr><tr><td>Gender</td><td>M</td><td>F</td><td>M</td></tr><tr><td>Fever</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Cough</td><td>N</td><td>N</td><td>P</td></tr><tr><td>Test-1</td><td>P</td><td>P</td><td>N</td></tr><tr><td>Test-2</td><td>N</td><td>A</td><td>N</td></tr><tr><td>Test-3</td><td>N</td><td>P</td><td>N</td></tr><tr><td>Test-4</td><td>A</td><td>N</td><td>A</td></tr></tbody></table><div class="is-title animated fadeInUp">Binary Conversion</div><p>The specified encoding is <code>Y or P = 1</code> and <code>N or A = 0</code>. The original labels are preserved above because the conversion merges categories. In particular, the meaning of <code>A</code> is not independently defined in the supplied table; its treatment as zero follows the stated encoding. An unknown or unrecorded result should not automatically be treated as a confirmed negative in another dataset.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Attribute</th><th class="is-table-divider">Jack</th><th class="is-table-divider">Mary</th><th class="is-table-divider">Jim</th></tr><tr><td>Fever</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Cough</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Test-1</td><td>1</td><td>1</td><td>0</td></tr><tr><td>Test-2</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Test-3</td><td>0</td><td>1</td><td>0</td></tr><tr><td>Test-4</td><td>0</td><td>0</td><td>0</td></tr></tbody></table><p>In the order Fever, Cough, Test-1, Test-2, Test-3, Test-4, the vectors are <code>Jack = [1, 0, 1, 0, 0, 0]</code>, <code>Mary = [1, 0, 1, 0, 1, 0]</code> and <code>Jim = [1, 1, 0, 0, 0, 0]</code>.</p><div class="is-title animated fadeInUp">Distance and Similarity</div><p>Jaccard distance measures mismatches as a proportion of attributes present in at least one record: <code>d_J = (f_01 + f_10) / (f_11 + f_01 + f_10)</code>. Jaccard similarity is its complement: <code>J = f_11 / (f_11 + f_01 + f_10) = 1 - d_J</code>. These are distinct quantities: lower distance means greater similarity.</p><p>For an ordered pair, <code>f_01</code> counts attributes present only in the second record, <code>f_10</code> counts those present only in the first, and <code>f_11</code> counts shared presences. Shared zeros, <code>f_00</code>, are excluded. “Asymmetric binary” refers to this unequal treatment of presence and absence; the distance itself is symmetric, so reversing the two individuals does not change the result.</p>
-
+                    <p>The comparison uses six binary indicators: Fever, Cough and Test-1 to Test-4. The question is how much the recorded positive indicators differ between each pair of individuals. Gender is retained in the source table for completeness but excluded from this calculation; it is a nominal category, not an indicator of a symptom or positive test.</p>
+                    <div class="is-title animated fadeInUp">Original Pathological Test Results</div>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Attribute</th>
+                                    <th class="is-table-divider">Jack</th>
+                                    <th class="is-table-divider">Mary</th>
+                                    <th class="is-table-divider">Jim</th>
+                                </tr>
+                                <tr>
+                                    <td>Gender</td>
+                                    <td>M</td>
+                                    <td>F</td>
+                                    <td>M</td>
+                                </tr>
+                                <tr>
+                                    <td>Fever</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>Cough</td>
+                                    <td>N</td>
+                                    <td>N</td>
+                                    <td>P</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-1</td>
+                                    <td>P</td>
+                                    <td>P</td>
+                                    <td>N</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-2</td>
+                                    <td>N</td>
+                                    <td>A</td>
+                                    <td>N</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-3</td>
+                                    <td>N</td>
+                                    <td>P</td>
+                                    <td>N</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-4</td>
+                                    <td>A</td>
+                                    <td>N</td>
+                                    <td>A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="is-title animated fadeInUp">Binary Conversion</div>
+                    <p>The specified encoding is <code>Y or P = 1</code> and <code>N or A = 0</code>. The original labels are preserved above because the conversion merges categories. In particular, the meaning of <code>A</code> is not independently defined in the supplied table; its treatment as zero follows the stated encoding. An unknown or unrecorded result should not automatically be treated as a confirmed negative in another dataset.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Attribute</th>
+                                    <th class="is-table-divider">Jack</th>
+                                    <th class="is-table-divider">Mary</th>
+                                    <th class="is-table-divider">Jim</th>
+                                </tr>
+                                <tr>
+                                    <td>Fever</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Cough</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-3</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Test-4</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>In the order Fever, Cough, Test-1, Test-2, Test-3, Test-4, the vectors are <code>Jack = [1, 0, 1, 0, 0, 0]</code>, <code>Mary = [1, 0, 1, 0, 1, 0]</code> and <code>Jim = [1, 1, 0, 0, 0, 0]</code>.</p>
+                    <div class="is-title animated fadeInUp">Distance and Similarity</div>
+                    <p>Jaccard distance measures mismatches as a proportion of attributes present in at least one record: <code>d_J = (f_01 + f_10) / (f_11 + f_01 + f_10)</code>. Jaccard similarity is its complement: <code>J = f_11 / (f_11 + f_01 + f_10) = 1 - d_J</code>. These are distinct quantities: lower distance means greater similarity.</p>
+                    <p>For an ordered pair, <code>f_01</code> counts attributes present only in the second record, <code>f_10</code> counts those present only in the first, and <code>f_11</code> counts shared presences. Shared zeros, <code>f_00</code>, are excluded. "Asymmetric binary" refers to this unequal treatment of presence and absence; the distance itself is symmetric, so reversing the two individuals does not change the result.</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_jaccard_distance(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -194,8 +312,79 @@
 
                 <div id="is-tabs-vertical-page-3-jaccard-distance" style="display:none;">
                     <div class="is-title animated fadeInUp">Jaccard Calculations</div>
-                    <p>Each comparison uses the six encoded indicators with equal weight. The numerator counts mismatches and the denominator counts the union of positive indicators. The counts below were checked against the encoded records and independently verified using SciPy’s Jaccard distance implementation.</p><div class="is-title animated fadeInUp">Jack and Mary</div><p>Fever and Test-1 are shared positives, giving <code>f_11 = 2</code>. Only Mary is positive for Test-3, so <code>f_01 = 1</code> and <code>f_10 = 0</code>. Cough, Test-2 and Test-4 are shared zeros, giving <code>f_00 = 3</code>.</p><p><code>d_J(Jack, Mary) = (1 + 0) / (2 + 1 + 0) = 1/3 ≈ 0.33</code>. The corresponding similarity is <code>2/3 ≈ 0.67</code>.</p><div class="is-title animated fadeInUp">Jack and Jim</div><p>Fever is the only shared positive, giving <code>f_11 = 1</code>. Jim alone is positive for Cough and Jack alone is positive for Test-1, so <code>f_01 = 1</code> and <code>f_10 = 1</code>. Test-2, Test-3 and Test-4 are shared zeros, giving <code>f_00 = 3</code>.</p><p><code>d_J(Jack, Jim) = (1 + 1) / (1 + 1 + 1) = 2/3 ≈ 0.67</code>. The corresponding similarity is <code>1/3 ≈ 0.33</code>.</p><div class="is-title animated fadeInUp">Jim and Mary</div><p>Fever is the only shared positive, giving <code>f_11 = 1</code>. Mary alone is positive for Test-1 and Test-3, while Jim alone is positive for Cough. Thus <code>f_01 = 2</code>, <code>f_10 = 1</code> and <code>f_00 = 2</code>, with Test-2 and Test-4 excluded as shared zeros.</p><p><code>d_J(Jim, Mary) = (2 + 1) / (1 + 2 + 1) = 3/4 = 0.75</code>. The corresponding similarity is <code>1/4 = 0.25</code>.</p><div class="is-title animated fadeInUp">Summary of Results</div><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Measure</th><th class="is-table-divider">Jack and Mary</th><th class="is-table-divider">Jack and Jim</th><th class="is-table-divider">Jim and Mary</th></tr><tr><td>f_01</td><td>1</td><td>1</td><td>2</td></tr><tr><td>f_10</td><td>0</td><td>1</td><td>1</td></tr><tr><td>f_11</td><td>2</td><td>1</td><td>1</td></tr><tr><td>f_00</td><td>3</td><td>3</td><td>2</td></tr><tr><td>Positive union</td><td>3</td><td>3</td><td>4</td></tr><tr><td>Distance (exact)</td><td>1/3</td><td>2/3</td><td>3/4</td></tr><tr><td>Distance (rounded)</td><td>0.33</td><td>0.67</td><td>0.75</td></tr><tr><td>Similarity (rounded)</td><td>0.67</td><td>0.33</td><td>0.25</td></tr></tbody></table><p>Jack and Mary have the lowest distance and Jim and Mary the highest. These values describe differences among the positive indicators in each pair’s union; they are not the proportion of all six attributes that differ, nor probabilities of different diagnoses. The fractions are retained to distinguish exact results from two-decimal rounding.</p><p>Test-2 and Test-4 are zero for all three individuals, so removing those two columns would leave every Jaccard distance unchanged. Fever is positive for everyone and contributes a shared presence to every denominator. The result therefore depends on which indicators are included, even when an indicator is constant across these records.</p>
-
+                    <p>Each comparison uses the six encoded indicators with equal weight. The numerator counts mismatches and the denominator counts the union of positive indicators. The counts below were checked against the encoded records and independently verified using SciPy's Jaccard distance implementation.</p>
+                    <div class="is-title animated fadeInUp">Jack and Mary</div>
+                    <p>Fever and Test-1 are shared positives, giving <code>f_11 = 2</code>. Only Mary is positive for Test-3, so <code>f_01 = 1</code> and <code>f_10 = 0</code>. Cough, Test-2 and Test-4 are shared zeros, giving <code>f_00 = 3</code>.</p>
+                    <p><code>d_J(Jack, Mary) = (1 + 0) / (2 + 1 + 0) = 1/3 ≈ 0.33</code>. The corresponding similarity is <code>2/3 ≈ 0.67</code>.</p>
+                    <div class="is-title animated fadeInUp">Jack and Jim</div>
+                    <p>Fever is the only shared positive, giving <code>f_11 = 1</code>. Jim alone is positive for Cough and Jack alone is positive for Test-1, so <code>f_01 = 1</code> and <code>f_10 = 1</code>. Test-2, Test-3 and Test-4 are shared zeros, giving <code>f_00 = 3</code>.</p>
+                    <p><code>d_J(Jack, Jim) = (1 + 1) / (1 + 1 + 1) = 2/3 ≈ 0.67</code>. The corresponding similarity is <code>1/3 ≈ 0.33</code>.</p>
+                    <div class="is-title animated fadeInUp">Jim and Mary</div>
+                    <p>Fever is the only shared positive, giving <code>f_11 = 1</code>. Mary alone is positive for Test-1 and Test-3, while Jim alone is positive for Cough. Thus <code>f_01 = 2</code>, <code>f_10 = 1</code> and <code>f_00 = 2</code>, with Test-2 and Test-4 excluded as shared zeros.</p>
+                    <p><code>d_J(Jim, Mary) = (2 + 1) / (1 + 2 + 1) = 3/4 = 0.75</code>. The corresponding similarity is <code>1/4 = 0.25</code>.</p>
+                    <div class="is-title animated fadeInUp">Summary of Results</div>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Measure</th>
+                                    <th class="is-table-divider">Jack and Mary</th>
+                                    <th class="is-table-divider">Jack and Jim</th>
+                                    <th class="is-table-divider">Jim and Mary</th>
+                                </tr>
+                                <tr>
+                                    <td>f_01</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>f_10</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>f_11</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>f_00</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Positive union</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Distance (exact)</td>
+                                    <td>1/3</td>
+                                    <td>2/3</td>
+                                    <td>3/4</td>
+                                </tr>
+                                <tr>
+                                    <td>Distance (rounded)</td>
+                                    <td>0.33</td>
+                                    <td>0.67</td>
+                                    <td>0.75</td>
+                                </tr>
+                                <tr>
+                                    <td>Similarity (rounded)</td>
+                                    <td>0.67</td>
+                                    <td>0.33</td>
+                                    <td>0.25</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Jack and Mary have the lowest distance and Jim and Mary the highest. These values describe differences among the positive indicators in each pair's union; they are not the proportion of all six attributes that differ, nor probabilities of different diagnoses. The fractions are retained to distinguish exact results from two-decimal rounding.</p>
+                    <p>Test-2 and Test-4 are zero for all three individuals, so removing those two columns would leave every Jaccard distance unchanged. Fever is positive for everyone and contributes a shared presence to every denominator. The result therefore depends on which indicators are included, even when an indicator is constant across these records.</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_jaccard_distance(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -206,8 +395,13 @@
 
                 <div id="is-tabs-vertical-page-4-jaccard-distance" style="display:none;">
                     <div class="is-title animated fadeInUp">Reflection</div>
-                    <p>The calculations show that a distance is meaningful only in relation to its encoding and feature selection. Excluding shared zeros focuses the comparison on recorded presences, while the distinction between similarity and distance prevents the ranking from being reversed. Jaccard distance is a metric on sets, including the triangle inequality (Kosub, 2019), but this mathematical property does not establish clinical relevance. The values compare encoded records, not diagnoses or disease severity.</p><p>The most consequential assumption is the mapping of both N and A to zero. If those labels distinguish a negative result from an unavailable result, merging them would discard information. Equal weighting also treats every symptom and test as equally relevant. If nominal or other variable types were included, a measure designed for mixed data, such as Gower’s coefficient, would provide a more appropriate starting point than adding arbitrary category codes to the binary vectors (Gower, 1971).</p><p>With three records, the analysis demonstrates the method rather than supporting conclusions about a wider population. Bender and Friedman (2018) link dataset documentation to clearer limits on generalisation in language technology; the same documentation principle is useful here for category definitions, sampling and intended use. Any application to identifiable health records would also require appropriate data-use permissions, privacy safeguards and justified feature selection. A low distance alone would not support a clinical decision.</p><div class="is-title animated fadeInUp">References</div><p>Bender, E.M. and Friedman, B. (2018) ‘Data statements for natural language processing: toward mitigating system bias and enabling better science’, <i>Transactions of the Association for Computational Linguistics</i>, 6, pp. 587–604. Available at: <a href="https://doi.org/10.1162/tacl_a_00041" target="_blank" rel="noopener noreferrer">https://doi.org/10.1162/tacl_a_00041</a> (Accessed: 14 October 2026).</p><p>Gower, J.C. (1971) ‘A general coefficient of similarity and some of its properties’, <i>Biometrics</i>, 27(4), pp. 857–871. Available at: <a href="https://doi.org/10.2307/2528823" target="_blank" rel="noopener noreferrer">https://doi.org/10.2307/2528823</a> (Accessed: 14 October 2026).</p><p>Kosub, S. (2019) ‘A note on the triangle inequality for the Jaccard distance’, <i>Pattern Recognition Letters</i>, 120, pp. 36–38. Available at: <a href="https://doi.org/10.1016/j.patrec.2018.12.007" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.patrec.2018.12.007</a> (Accessed: 14 October 2026).</p>
-
+                    <p>The calculations show that a distance is meaningful only in relation to its encoding and feature selection. Excluding shared zeros focuses the comparison on recorded presences, while the distinction between similarity and distance prevents the ranking from being reversed. Jaccard distance is a metric on sets, including the triangle inequality (Kosub, 2019), but this mathematical property does not establish clinical relevance. The values compare encoded records, not diagnoses or disease severity.</p>
+                    <p>The most consequential assumption is the mapping of both N and A to zero. If those labels distinguish a negative result from an unavailable result, merging them would discard information. Equal weighting also treats every symptom and test as equally relevant. If nominal or other variable types were included, a measure designed for mixed data, such as Gower's coefficient, would provide a more appropriate starting point than adding arbitrary category codes to the binary vectors (Gower, 1971).</p>
+                    <p>With three records, the analysis demonstrates the method rather than supporting conclusions about a wider population. Bender and Friedman (2018) link dataset documentation to clearer limits on generalisation in language technology; the same documentation principle is useful here for category definitions, sampling and intended use. Any application to identifiable health records would also require appropriate data-use permissions, privacy safeguards and justified feature selection. A low distance alone would not support a clinical decision.</p>
+                    <div class="is-title animated fadeInUp">References</div>
+                    <p>Bender, E.M. and Friedman, B. (2018) 'Data statements for natural language processing: toward mitigating system bias and enabling better science', <i>Transactions of the Association for Computational Linguistics</i>, 6, pp. 587–604. Available at: <a href="https://doi.org/10.1162/tacl_a_00041" target="_blank" rel="noopener noreferrer">https://doi.org/10.1162/tacl_a_00041</a> (Accessed: 14 October 2026).</p>
+                    <p>Gower, J.C. (1971) 'A general coefficient of similarity and some of its properties', <i>Biometrics</i>, 27(4), pp. 857–871. Available at: <a href="https://doi.org/10.2307/2528823" target="_blank" rel="noopener noreferrer">https://doi.org/10.2307/2528823</a> (Accessed: 14 October 2026).</p>
+                    <p>Kosub, S. (2019) 'A note on the triangle inequality for the Jaccard distance', <i>Pattern Recognition Letters</i>, 120, pp. 36–38. Available at: <a href="https://doi.org/10.1016/j.patrec.2018.12.007" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.patrec.2018.12.007</a> (Accessed: 14 October 2026).</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_jaccard_distance(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">

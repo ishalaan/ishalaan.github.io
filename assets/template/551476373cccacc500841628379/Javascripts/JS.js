@@ -128,13 +128,14 @@ function backgroundSequence(){
 
 
 
+/*
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
-
 document.addEventListener('copy', function(event) {
     event.preventDefault();
 });
+*/
 
 function is_toggle_all(cb,Form,InputName,Type){
 		var val = cb.checked;

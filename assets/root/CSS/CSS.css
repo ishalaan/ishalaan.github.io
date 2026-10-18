@@ -17,11 +17,13 @@ body{
     display:flex;
     flex-direction:column;
     min-width:300px;
+    /*
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     -webkit-touch-callout: none;
+    */
 }
 *{
     -webkit-transition:color .25s linear,background-color .25s linear;

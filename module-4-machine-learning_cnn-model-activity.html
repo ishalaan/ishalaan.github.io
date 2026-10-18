@@ -48,6 +48,7 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+    <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
     <link rel="shortcut icon" href="assets/page/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -56,6 +57,15 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
     <style>
+		#is-tabs-vertical-page-2-cnn-model-activity .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-3-cnn-model-activity .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-4-cnn-model-activity .is-table :is(td, th):nth-child(n+2):nth-child(-n+5),
+		#is-tabs-vertical-page-5-cnn-model-activity .is-table :is(td, th):nth-child(n+2):nth-child(-n+5)
+		{
+			min-width: 100px;
+			text-align: center;
+		}
+
         .is-menu .is-menu-list .is-logo a {
             width: 270px;
         }
@@ -94,7 +104,7 @@
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="" />
 
-    <title>Machine Learning by Isaac Shalaan</title>
+    <title>Machine Learning: CNN Model Activity by Isaac Shalaan</title>
 
     <script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
     <script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script>
@@ -116,11 +126,13 @@
     <ul class="is-fixed is-menu-list">
         <li class="is-logo" id="is-menu-logo"><a href="index.html"></a></li>
 
-        <div class="is-menu-mobile" id="is-menu-mobile">
-            <li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-            <li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-            <li class="" id=""><a href="about.html">About</a></li>
-        </div>
+		<div class="is-menu-mobile" id="is-menu-mobile">
+			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
+			<li class="is-menu-active"><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class=""><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
+		</div>
 
         <li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
         <br class="is-clear" />
@@ -144,14 +156,14 @@
         </a>
         <br />
 
-        <h1 class="animated fadeInDown">Machine Learning Module: <span>CNN Model Activity</span>.</h1>
+        <h1 class="animated fadeInDown">Machine Learning Module <span>CNN Model Activity</span>.</h1>
     </div>
 </div>
 
 <div class="is-middle" id="is-middle-2">
     <div class="is-fixed">
 
-        <div class="is-tabs-vertical is-tabs-vertical-5 animated fadeInUp">
+        <div class="is-tabs-vertical is-tabs-vertical-7 animated fadeInUp">
 
             <div class="is-tabs-vertical-menu">
                 <ul>
@@ -185,7 +197,62 @@
 
                 <div id="is-tabs-vertical-page-2-cnn-model-activity" style="display:none;">
                     <div class="is-title animated fadeInUp">Dataset &amp; Preprocessing</div>
-                    <p>CIFAR-10 contains 60,000 colour images measuring 32 × 32 pixels across ten object classes: airplane, automobile, bird, cat, deer, dog, frog, horse, ship and truck. The official split contains 50,000 training images and 10,000 test images. Each test class contains 1,000 images. The data are retrieved through the Keras CIFAR-10 loader; <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener noreferrer">the dataset documentation</a> describes their composition and origin.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Partition</th><th class="is-table-divider">Images</th><th class="is-table-divider">Role</th></tr><tr><td>Training</td><td>40,000</td><td>Parameter updates</td></tr><tr><td>Validation</td><td>10,000</td><td>Early-stopping decisions</td></tr><tr><td>Test</td><td>10,000</td><td>Final evaluation</td></tr></tbody></table><p>The first 10,000 records of the official training set form the validation set; the remaining 40,000 are used for training. This preserves the reference split and is not a stratified sampling procedure. Images are converted to float32 and divided by 255, mapping channel values to [0, 1]. Labels are encoded as ten-element categorical vectors. Image tensors retain shape <code>(n, 32, 32, 3)</code>; flattening occurs inside the network after convolution and pooling.</p><p>No augmentation or per-channel standardisation is applied. The low resolution and restricted class vocabulary make this a useful benchmark, but they do not represent the range of lighting, backgrounds, camera quality or unfamiliar objects encountered in deployment. The first training image is labelled frog; the reference notebook’s automobile caption is corrected in the analysis.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer">Download the executed CNN notebook</a> — training history, evaluation, confusion matrix and image predictions.</p>
+                    <p>CIFAR-10 contains 60,000 colour images measuring 32 × 32 pixels across ten object classes: airplane, automobile, bird, cat, deer, dog, frog, horse, ship and truck. The official split contains 50,000 training images and 10,000 test images. Each test class contains 1,000 images. The data are retrieved through the Keras CIFAR-10 loader; <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener noreferrer">the dataset documentation</a> describes their composition and origin.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Partition</th>
+                                    <th class="is-table-divider">Images</th>
+                                    <th class="is-table-divider">Role</th>
+                                </tr>
+                                <tr>
+                                    <td>Training</td>
+                                    <td>40,000</td>
+                                    <td>Parameter updates</td>
+                                </tr>
+                                <tr>
+                                    <td>Validation</td>
+                                    <td>10,000</td>
+                                    <td>Early-stopping decisions</td>
+                                </tr>
+                                <tr>
+                                    <td>Test</td>
+                                    <td>10,000</td>
+                                    <td>Final evaluation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The first 10,000 records of the official training set form the validation set; the remaining 40,000 are used for training. This preserves the reference split and is not a stratified sampling procedure. Images are converted to float32 and divided by 255, mapping channel values to [0, 1]. Labels are encoded as ten-element categorical vectors. Image tensors retain shape <code>(n, 32, 32, 3)</code>; flattening occurs inside the network after convolution and pooling.</p>
+                    <p>No augmentation or per-channel standardisation is applied. The low resolution and restricted class vocabulary make this a useful benchmark, but they do not represent the range of lighting, backgrounds, camera quality or unfamiliar objects encountered in deployment. The first training image is labelled frog; the reference notebook's automobile caption is corrected in the analysis.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring CNN training, evaluation and predictions.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_cnn_model_activity(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -196,7 +263,92 @@
 
                 <div id="is-tabs-vertical-page-3-cnn-model-activity" style="display:none;">
                     <div class="is-title animated fadeInUp">CNN Architecture &amp; Training</div>
-                    <p>Two convolution–pooling blocks extract spatial features before a dense classifier assigns one of ten labels. Each convolution uses 32 filters, a 4 × 4 kernel, stride one, valid padding and ReLU activation. Each max-pooling layer uses a 2 × 2 window. Shared convolutional weights reduce the number of parameters compared with connecting every input pixel directly to every hidden unit (LeCun et al., 1998).</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Layer</th><th class="is-table-divider">Output shape per image</th><th class="is-table-divider">Trainable parameters</th></tr><tr><td>Input</td><td>32 × 32 × 3</td><td>0</td></tr><tr><td>Convolution + ReLU</td><td>29 × 29 × 32</td><td>1,568</td></tr><tr><td>Max pooling</td><td>14 × 14 × 32</td><td>0</td></tr><tr><td>Convolution + ReLU</td><td>11 × 11 × 32</td><td>16,416</td></tr><tr><td>Max pooling</td><td>5 × 5 × 32</td><td>0</td></tr><tr><td>Flatten</td><td>800</td><td>0</td></tr><tr><td>Dense + ReLU</td><td>256</td><td>205,056</td></tr><tr><td>Dense + softmax</td><td>10</td><td>2,570</td></tr><tr><td>Total</td><td>10 class scores</td><td>225,610</td></tr></tbody></table><p>Training uses Adam with learning rate 0.001, categorical cross-entropy, batches of 32 and a maximum of 25 epochs. Early stopping monitors validation loss with patience two. As in the reference implementation, <code>restore_best_weights=False</code>: evaluation uses the final epoch’s weights, not automatically the weights with the lowest validation loss. No dropout, augmentation or weight regularisation is introduced.</p><p>The fresh run completed 7 epochs. Its lowest validation loss was 1.0770 at epoch 5. TensorFlow 2.20.0 and Keras 3.15.1 were used. Python and TensorFlow seeds were set to 112 and the NumPy seed to 888. Modern Keras imports and an explicit input layer replace obsolete API calls; float32 reduces memory use. Library and numerical differences mean this run is not expected to reproduce the historical weights exactly.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer">Download the executed CNN notebook</a> — training history, evaluation, confusion matrix and image predictions.</p>
+                    <p>Two convolution–pooling blocks extract spatial features before a dense classifier assigns one of ten labels. Each convolution uses 32 filters, a 4 × 4 kernel, stride one, valid padding and ReLU activation. Each max-pooling layer uses a 2 × 2 window. Shared convolutional weights reduce the number of parameters compared with connecting every input pixel directly to every hidden unit (LeCun et al., 1998).</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Layer</th>
+                                    <th class="is-table-divider">Output shape per image</th>
+                                    <th class="is-table-divider">Trainable parameters</th>
+                                </tr>
+                                <tr>
+                                    <td>Input</td>
+                                    <td>32 × 32 × 3</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Convolution + ReLU</td>
+                                    <td>29 × 29 × 32</td>
+                                    <td>1,568</td>
+                                </tr>
+                                <tr>
+                                    <td>Max pooling</td>
+                                    <td>14 × 14 × 32</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Convolution + ReLU</td>
+                                    <td>11 × 11 × 32</td>
+                                    <td>16,416</td>
+                                </tr>
+                                <tr>
+                                    <td>Max pooling</td>
+                                    <td>5 × 5 × 32</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Flatten</td>
+                                    <td>800</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Dense + ReLU</td>
+                                    <td>256</td>
+                                    <td>205,056</td>
+                                </tr>
+                                <tr>
+                                    <td>Dense + softmax</td>
+                                    <td>10</td>
+                                    <td>2,570</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>10 class scores</td>
+                                    <td>225,610</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Training uses Adam with learning rate 0.001, categorical cross-entropy, batches of 32 and a maximum of 25 epochs. Early stopping monitors validation loss with patience two. As in the reference implementation, <code>restore_best_weights=False</code>: evaluation uses the final epoch's weights, not automatically the weights with the lowest validation loss. No dropout, augmentation or weight regularisation is introduced.</p>
+                    <p>The fresh run completed 7 epochs. Its lowest validation loss was 1.0770 at epoch 5. TensorFlow 2.20.0 and Keras 3.15.1 were used. Python and TensorFlow seeds were set to 112 and the NumPy seed to 888. Modern Keras imports and an explicit input layer replace obsolete API calls; float32 reduces memory use. Library and numerical differences mean this run is not expected to reproduce the historical weights exactly.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring CNN training and validation performance.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_cnn_model_activity(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -207,7 +359,144 @@
 
                 <div id="is-tabs-vertical-page-4-cnn-model-activity" style="display:none;">
                     <div class="is-title animated fadeInUp">Model Evaluation</div>
-                    <p>The test set is evaluated after training, without using test labels to choose the stopping epoch. Accuracy measures the proportion of correct top-one predictions; cross-entropy also reflects the probability assigned to the correct class. The supplied notebook’s saved outputs are retained as a historical reference and are distinguished from the fresh run below.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Run</th><th class="is-table-divider">Test accuracy</th><th class="is-table-divider">Test cross-entropy</th><th class="is-table-divider">Epochs</th></tr><tr><td>Supplied notebook (saved outputs)</td><td>67.03%</td><td>1.0768</td><td>9</td></tr><tr><td>Fresh execution</td><td>63.04%</td><td>1.1195</td><td>7</td></tr></tbody></table><p>Final training accuracy was 72.40%, compared with validation accuracy of 63.70%. Validation loss reached 1.0770 at epoch five, then increased to 1.1177 by epoch seven while training loss fell from 0.9409 to 0.7956. This divergence is consistent with overfitting: fitting the training data more closely no longer improved validation cross-entropy. Stopping after two non-improving epochs limits further fitting but does not itself restore the best model or establish robust generalisation.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Class</th><th class="is-table-divider">Precision</th><th class="is-table-divider">Recall</th><th class="is-table-divider">F1-score</th><th class="is-table-divider">Test support</th></tr><tr><td>airplane</td><td>0.767</td><td>0.654</td><td>0.706</td><td>1000</td></tr><tr><td>automobile</td><td>0.775</td><td>0.708</td><td>0.740</td><td>1000</td></tr><tr><td>bird</td><td>0.512</td><td>0.552</td><td>0.531</td><td>1000</td></tr><tr><td>cat</td><td>0.383</td><td>0.612</td><td>0.471</td><td>1000</td></tr><tr><td>deer</td><td>0.594</td><td>0.544</td><td>0.568</td><td>1000</td></tr><tr><td>dog</td><td>0.588</td><td>0.386</td><td>0.466</td><td>1000</td></tr><tr><td>frog</td><td>0.714</td><td>0.739</td><td>0.726</td><td>1000</td></tr><tr><td>horse</td><td>0.701</td><td>0.694</td><td>0.697</td><td>1000</td></tr><tr><td>ship</td><td>0.818</td><td>0.668</td><td>0.735</td><td>1000</td></tr><tr><td>truck</td><td>0.652</td><td>0.747</td><td>0.697</td><td>1000</td></tr></tbody></table><p>The highest class recall was for truck (74.7%) and the lowest for dog (38.6%). The largest directed confusion was dog predicted as cat, affecting 355 images. The notebook includes the full confusion matrix, with actual classes in rows and predicted classes in columns. These patterns identify errors for closer inspection; they do not establish why a particular feature caused a prediction.</p><p>All classes have equal test support, so macro-average recall equals overall accuracy here. A single seeded run does not measure variability across initialisations. Evaluation on this benchmark also provides no evidence about unfamiliar classes, image corruption or demographic fairness. Further model selection should use validation data and repeated runs before a final test evaluation.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer">Download the executed CNN notebook</a> — training history, evaluation, confusion matrix and image predictions.</p>
+                    <p>The test set is evaluated after training, without using test labels to choose the stopping epoch. Accuracy measures the proportion of correct top-one predictions; cross-entropy also reflects the probability assigned to the correct class. The supplied notebook's saved outputs are retained as a historical reference and are distinguished from the fresh run below.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Run</th>
+                                    <th class="is-table-divider">Test accuracy</th>
+                                    <th class="is-table-divider">Test cross-entropy</th>
+                                    <th class="is-table-divider">Epochs</th>
+                                </tr>
+                                <tr>
+                                    <td>Supplied notebook (saved outputs)</td>
+                                    <td>67.03%</td>
+                                    <td>1.0768</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>Fresh execution</td>
+                                    <td>63.04%</td>
+                                    <td>1.1195</td>
+                                    <td>7</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Final training accuracy was 72.40%, compared with validation accuracy of 63.70%. Validation loss reached 1.0770 at epoch five, then increased to 1.1177 by epoch seven while training loss fell from 0.9409 to 0.7956. This divergence is consistent with overfitting: fitting the training data more closely no longer improved validation cross-entropy. Stopping after two non-improving epochs limits further fitting but does not itself restore the best model or establish robust generalisation.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Class</th>
+                                    <th class="is-table-divider">Precision</th>
+                                    <th class="is-table-divider">Recall</th>
+                                    <th class="is-table-divider">F1-score</th>
+                                    <th class="is-table-divider">Test support</th>
+                                </tr>
+                                <tr>
+                                    <td>airplane</td>
+                                    <td>0.767</td>
+                                    <td>0.654</td>
+                                    <td>0.706</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>automobile</td>
+                                    <td>0.775</td>
+                                    <td>0.708</td>
+                                    <td>0.740</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>bird</td>
+                                    <td>0.512</td>
+                                    <td>0.552</td>
+                                    <td>0.531</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>cat</td>
+                                    <td>0.383</td>
+                                    <td>0.612</td>
+                                    <td>0.471</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>deer</td>
+                                    <td>0.594</td>
+                                    <td>0.544</td>
+                                    <td>0.568</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>dog</td>
+                                    <td>0.588</td>
+                                    <td>0.386</td>
+                                    <td>0.466</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>frog</td>
+                                    <td>0.714</td>
+                                    <td>0.739</td>
+                                    <td>0.726</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>horse</td>
+                                    <td>0.701</td>
+                                    <td>0.694</td>
+                                    <td>0.697</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>ship</td>
+                                    <td>0.818</td>
+                                    <td>0.668</td>
+                                    <td>0.735</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>truck</td>
+                                    <td>0.652</td>
+                                    <td>0.747</td>
+                                    <td>0.697</td>
+                                    <td>1000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The highest class recall was for truck (74.7%) and the lowest for dog (38.6%). The largest directed confusion was dog predicted as cat, affecting 355 images. The notebook includes the full confusion matrix, with actual classes in rows and predicted classes in columns. These patterns identify errors for closer inspection; they do not establish why a particular feature caused a prediction.</p>
+                    <p>All classes have equal test support, so macro-average recall equals overall accuracy here. A single seeded run does not measure variability across initialisations. Evaluation on this benchmark also provides no evidence about unfamiliar classes, image corruption or demographic fairness. Further model selection should use validation data and repeated runs before a final test evaluation.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring CNN accuracy and classification errors.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_cnn_model_activity(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -218,7 +507,175 @@
 
                 <div id="is-tabs-vertical-page-5-cnn-model-activity" style="display:none;">
                     <div class="is-title animated fadeInUp">Image Prediction</div>
-                    <p>The prediction check compares index 16 with every alternative index from 1 to 15 in the test set. A single index variable selects both the displayed image and the model input, preventing an image from being presented alongside a prediction made for a different record. The class is obtained with <code>argmax(model.predict(x_test[index:index+1]), axis=1)</code>, replacing the removed <code>predict_classes</code> method.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Test index</th><th class="is-table-divider">Actual class</th><th class="is-table-divider">Predicted class</th><th class="is-table-divider">Top softmax score</th><th class="is-table-divider">Outcome</th></tr><tr><td>16</td><td>dog</td><td>dog</td><td>0.726</td><td>Correct</td></tr><tr><td>1</td><td>ship</td><td>ship</td><td>0.735</td><td>Correct</td></tr><tr><td>2</td><td>ship</td><td>truck</td><td>0.608</td><td>Incorrect</td></tr><tr><td>3</td><td>airplane</td><td>airplane</td><td>0.967</td><td>Correct</td></tr><tr><td>4</td><td>frog</td><td>deer</td><td>0.685</td><td>Incorrect</td></tr><tr><td>5</td><td>frog</td><td>frog</td><td>0.947</td><td>Correct</td></tr><tr><td>6</td><td>automobile</td><td>automobile</td><td>0.622</td><td>Correct</td></tr><tr><td>7</td><td>frog</td><td>frog</td><td>0.992</td><td>Correct</td></tr><tr><td>8</td><td>cat</td><td>cat</td><td>0.709</td><td>Correct</td></tr><tr><td>9</td><td>automobile</td><td>automobile</td><td>0.611</td><td>Correct</td></tr><tr><td>10</td><td>airplane</td><td>airplane</td><td>0.567</td><td>Correct</td></tr><tr><td>11</td><td>truck</td><td>truck</td><td>0.995</td><td>Correct</td></tr><tr><td>12</td><td>dog</td><td>dog</td><td>0.338</td><td>Correct</td></tr><tr><td>13</td><td>horse</td><td>horse</td><td>0.996</td><td>Correct</td></tr><tr><td>14</td><td>truck</td><td>truck</td><td>0.922</td><td>Correct</td></tr><tr><td>15</td><td>ship</td><td>frog</td><td>0.344</td><td>Incorrect</td></tr></tbody></table><p>The fresh model classified 12 of the 15 alternative images correctly. The notebook displays all sixteen selected images with their actual and predicted classes. Index 16 was correctly identified as dog. The alternative-image errors were ship predicted as truck (index 2), frog as deer (index 4), and ship as frog (index 15). These examples were selected by index rather than by outcome; they illustrate individual decisions but are too few to estimate general performance. The full test-set result provides the stronger assessment.</p><p>A softmax score is a model output, not a verified probability that a prediction is correct. No calibration analysis is performed here. A high score can accompany an error, and this closed-set classifier always selects a known class even when an input may not belong to any of them.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer">Download the executed CNN notebook</a> — training history, evaluation, confusion matrix and image predictions.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.keras" target="_blank" rel="noopener noreferrer">Download the trained model</a> — final-epoch weights and model configuration from the fresh run.</p>
+                    <p>The prediction check compares index 16 with every alternative index from 1 to 15 in the test set. A single index variable selects both the displayed image and the model input, preventing an image from being presented alongside a prediction made for a different record. The class is obtained with <code>argmax(model.predict(x_test[index:index+1]), axis=1)</code>, replacing the removed <code>predict_classes</code> method.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Test index</th>
+                                    <th class="is-table-divider">Actual class</th>
+                                    <th class="is-table-divider">Predicted class</th>
+                                    <th class="is-table-divider">Top softmax score</th>
+                                    <th class="is-table-divider">Outcome</th>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>dog</td>
+                                    <td>dog</td>
+                                    <td>0.726</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ship</td>
+                                    <td>ship</td>
+                                    <td>0.735</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ship</td>
+                                    <td>truck</td>
+                                    <td>0.608</td>
+                                    <td>Incorrect</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>airplane</td>
+                                    <td>airplane</td>
+                                    <td>0.967</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>frog</td>
+                                    <td>deer</td>
+                                    <td>0.685</td>
+                                    <td>Incorrect</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>frog</td>
+                                    <td>frog</td>
+                                    <td>0.947</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>automobile</td>
+                                    <td>automobile</td>
+                                    <td>0.622</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>frog</td>
+                                    <td>frog</td>
+                                    <td>0.992</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>cat</td>
+                                    <td>cat</td>
+                                    <td>0.709</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>automobile</td>
+                                    <td>automobile</td>
+                                    <td>0.611</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>airplane</td>
+                                    <td>airplane</td>
+                                    <td>0.567</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>truck</td>
+                                    <td>truck</td>
+                                    <td>0.995</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>dog</td>
+                                    <td>dog</td>
+                                    <td>0.338</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>horse</td>
+                                    <td>horse</td>
+                                    <td>0.996</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>truck</td>
+                                    <td>truck</td>
+                                    <td>0.922</td>
+                                    <td>Correct</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>ship</td>
+                                    <td>frog</td>
+                                    <td>0.344</td>
+                                    <td>Incorrect</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The fresh model classified 12 of the 15 alternative images correctly. The notebook displays all sixteen selected images with their actual and predicted classes. Index 16 was correctly identified as dog. The alternative-image errors were ship predicted as truck (index 2), frog as deer (index 4), and ship as frog (index 15). These examples were selected by index rather than by outcome; they illustrate individual decisions but are too few to estimate general performance. The full test-set result provides the stronger assessment.</p>
+                    <p>A softmax score is a model output, not a verified probability that a prediction is correct. No calibration analysis is performed here. A high score can accompany an error, and this closed-set classifier always selects a known class even when an input may not belong to any of them.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring CNN predictions and classification results.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_cnn-model-activity.keras" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">Keras</span>
+                                <span class="is-resources-info">
+                                    <strong>Trained CNN Model</strong>
+                                    <span>Download the trained CNN model with final weights and configuration.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_cnn_model_activity(4);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -229,7 +686,10 @@
 
                 <div id="is-tabs-vertical-page-6-cnn-model-activity" style="display:none;">
                     <div class="is-title animated fadeInUp">Ethical &amp; Social Implications</div>
-                    <p>Wall (2019) describes concerns about false facial matches, unequal performance and surveillance without meaningful public consent. The consequences of an error depend on its use: confusing two animal images in a benchmark differs substantially from wrongly identifying a person as a suspect. The article is a historical account of the debate in 2019, rather than a statement of current law or current system accuracy.</p><p>The CNN analysed here classifies objects; it does not identify people. Its differences in class recall cannot establish demographic bias in facial recognition. Wall also discusses research on gender classification, which is distinct from identity matching. A responsible assessment must define the actual task, affected population and consequences of both false positives and false negatives before choosing performance measures.</p><p>Class balance alone does not ensure representative data. Collection conditions, labelling practices and intended uses should be documented, including restrictions on reuse (Gebru et al., 2021). Where people are involved, an assessment should examine privacy, meaningful consent, data minimisation and the possibility that surveillance discourages lawful participation. Better accuracy would not by itself resolve those concerns.</p><p>Responsibility extends across development and deployment. Raji et al. (2020) propose auditing throughout the system lifecycle; practical safeguards include documented decisions, assessment of affected groups, review of failures and a clear route to challenge harmful outcomes. Human review must have the information and authority to reject an automated recommendation. Some proposed uses may remain inappropriate even after technical improvements. Full references appear in the Reflection tab.</p>
+                    <p>Wall (2019) describes concerns about false facial matches, unequal performance and surveillance without meaningful public consent. The consequences of an error depend on its use: confusing two animal images in a benchmark differs substantially from wrongly identifying a person as a suspect. The article is a historical account of the debate in 2019, rather than a statement of current law or current system accuracy.</p>
+                    <p>The CNN analysed here classifies objects; it does not identify people. Its differences in class recall cannot establish demographic bias in facial recognition. Wall also discusses research on gender classification, which is distinct from identity matching. A responsible assessment must define the actual task, affected population and consequences of both false positives and false negatives before choosing performance measures.</p>
+                    <p>Class balance alone does not ensure representative data. Collection conditions, labelling practices and intended uses should be documented, including restrictions on reuse (Gebru et al., 2021). Where people are involved, an assessment should examine privacy, meaningful consent, data minimisation and the possibility that surveillance discourages lawful participation. Better accuracy would not by itself resolve those concerns.</p>
+                    <p>Responsibility extends across development and deployment. Raji et al. (2020) propose auditing throughout the system lifecycle; practical safeguards include documented decisions, assessment of affected groups, review of failures and a clear route to challenge harmful outcomes. Human review must have the information and authority to reject an automated recommendation. Some proposed uses may remain inappropriate even after technical improvements. Full references appear in the Reflection tab.</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_cnn_model_activity(5);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -240,7 +700,13 @@
 
                 <div id="is-tabs-vertical-page-7-cnn-model-activity" style="display:none;">
                     <div class="is-title animated fadeInUp">Reflection</div>
-                    <p>This analysis shows the value of examining the complete prediction pipeline. Correct image selection, consistent preprocessing and an explicit stopping policy are essential to interpreting the result. Convolutional feature learning provides a compact spatial model (LeCun et al., 1998), but the class-level errors demonstrate how much an aggregate accuracy figure can conceal. A useful next comparison would evaluate restored-best weights and augmentation under a fixed validation protocol, with several seeds to assess variability.</p><p>The ethical lesson is that benchmark performance is only one part of judging a system’s suitability. Wall’s (2019) examples show how recognition errors can become consequential when attached to surveillance or policing. Dataset documentation (Gebru et al., 2021) and lifecycle auditing (Raji et al., 2020) offer concrete ways to examine assumptions, intended uses and responsibility. The CIFAR-10 results support a bounded claim about object classification; they provide no basis for approving identification systems used on people.</p><div class="is-title animated fadeInUp">References</div><p>Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J.W., Wallach, H., Daumé III, H. and Crawford, K. (2021) ‘Datasheets for datasets’, <i>Communications of the ACM</i>, 64(12), pp. 86–92. Available at: <a href="https://doi.org/10.1145/3458723" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3458723</a> (Accessed: 14 October 2026).</p><p>LeCun, Y., Bottou, L., Bengio, Y. and Haffner, P. (1998) ‘Gradient-based learning applied to document recognition’, <i>Proceedings of the IEEE</i>, 86(11), pp. 2278–2324. Available at: <a href="https://doi.org/10.1109/5.726791" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/5.726791</a> (Accessed: 14 October 2026).</p><p>Raji, I.D., Smart, A., White, R.N., Mitchell, M., Gebru, T., Hutchinson, B., Smith-Loud, J., Theron, D. and Barnes, P. (2020) ‘Closing the AI accountability gap: defining an end-to-end framework for internal algorithmic auditing’, <i>Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</i>. New York: ACM, pp. 33–44. Available at: <a href="https://doi.org/10.1145/3351095.3372873" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3351095.3372873</a> (Accessed: 14 October 2026).</p><p>Wall, M. (2019) ‘Biased and wrong? Facial recognition tech in the dock’, <i>BBC News</i>, 8 July. Available at: <a href="https://www.bbc.co.uk/news/business-48842750" target="_blank" rel="noopener noreferrer">https://www.bbc.co.uk/news/business-48842750</a> (Accessed: 14 October 2026).</p>
+                    <p>This analysis shows the value of examining the complete prediction pipeline. Correct image selection, consistent preprocessing and an explicit stopping policy are essential to interpreting the result. Convolutional feature learning provides a compact spatial model (LeCun et al., 1998), but the class-level errors demonstrate how much an aggregate accuracy figure can conceal. A useful next comparison would evaluate restored-best weights and augmentation under a fixed validation protocol, with several seeds to assess variability.</p>
+                    <p>The ethical lesson is that benchmark performance is only one part of judging a system's suitability. Wall's (2019) examples show how recognition errors can become consequential when attached to surveillance or policing. Dataset documentation (Gebru et al., 2021) and lifecycle auditing (Raji et al., 2020) offer concrete ways to examine assumptions, intended uses and responsibility. The CIFAR-10 results support a bounded claim about object classification; they provide no basis for approving identification systems used on people.</p>
+                    <div class="is-title animated fadeInUp">References</div>
+                    <p>Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J.W., Wallach, H., Daumé III, H. and Crawford, K. (2021) 'Datasheets for datasets', <i>Communications of the ACM</i>, 64(12), pp. 86–92. Available at: <a href="https://doi.org/10.1145/3458723" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3458723</a> (Accessed: 14 October 2026).</p>
+                    <p>LeCun, Y., Bottou, L., Bengio, Y. and Haffner, P. (1998) 'Gradient-based learning applied to document recognition', <i>Proceedings of the IEEE</i>, 86(11), pp. 2278–2324. Available at: <a href="https://doi.org/10.1109/5.726791" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/5.726791</a> (Accessed: 14 October 2026).</p>
+                    <p>Raji, I.D., Smart, A., White, R.N., Mitchell, M., Gebru, T., Hutchinson, B., Smith-Loud, J., Theron, D. and Barnes, P. (2020) 'Closing the AI accountability gap: defining an end-to-end framework for internal algorithmic auditing', <i>Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</i>. New York: ACM, pp. 33–44. Available at: <a href="https://doi.org/10.1145/3351095.3372873" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3351095.3372873</a> (Accessed: 14 October 2026).</p>
+                    <p>Wall, M. (2019) 'Biased and wrong? Facial recognition tech in the dock', <i>BBC News</i>, 8 July. Available at: <a href="https://www.bbc.co.uk/news/business-48842750" target="_blank" rel="noopener noreferrer">https://www.bbc.co.uk/news/business-48842750</a> (Accessed: 14 October 2026).</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_cnn_model_activity(6);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">

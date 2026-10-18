@@ -47,6 +47,7 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
 	<link rel="shortcut icon" href="assets/page/images/favicon.png" />
 	<link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -93,7 +94,7 @@
 	<meta name="robots" content="noindex" /> 
 	<meta name="theme-color" content="" /> 
 
-	<title>Intelligent Agents by Isaac Shalaan</title>
+	<title>Intelligent Agents: Reflective Case Studies by Isaac Shalaan</title>
 
 	<script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
 	<script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script> 
@@ -117,8 +118,10 @@
 
 		<div class="is-menu-mobile" id="is-menu-mobile">
 			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-			<li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-			<li class="" id=""><a href="about.html">About</a></li>
+			<li class=""><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class="is-menu-active"><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
 		</div>
 
 		<li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
@@ -143,7 +146,7 @@
 		</a>
 		<br />
 
-		<h1 class="animated fadeInDown">Intelligent Agents Module: <span>Reflective Case Studies</span>.</h1>
+		<h1 class="animated fadeInDown">Intelligent Agents Module <span>Reflective Case Studies</span>.</h1>
 	</div>
 </div>
 
@@ -151,7 +154,7 @@
 	<div class="is-fixed">
 
 		
-<div class="is-tabs-vertical is-tabs-vertical-3 animated fadeInUp">
+<div class="is-tabs-vertical is-tabs-vertical-4 animated fadeInUp">
 			<div class="is-tabs-vertical-menu">
 				<ul>
 					<li onclick="javascript:is_tabs_vertical_menu_case_studies(1); return false;" id="is-tabs-vertical-button-1-case-studies" class="is-tabs-vertical-menu-current">Activity Brief</li>
@@ -176,7 +179,15 @@
 
 				<div id="is-tabs-vertical-page-2-case-studies" style="display:none;">
 					<div class="is-title animated fadeInUp">Case Study 1</div>
-					<p>[Select one of the five proposed themes and introduce the ethical, legal or safety issue being examined. Describe a relevant experience, observation or design decision from the module, linking it directly to an intelligent agent system you designed or implemented. Critically analyse what occurred, why the issue matters, the risks or limitations identified, and how the experience informed your understanding and future professional practice. Support your evaluation with relevant academic literature.]</p>
+					<p>Bounding Repeated Searches.</p>
+					<p>While developing the Academic Evidence Investigator, I had to decide how much freedom the Critic should have to request further searches. Re-planning could improve the evidence, but repeated requests would not necessarily resolve unavailable sources or service failures. The implementation therefore limits the search to three cycles and retains earlier evidence between attempts. This gives the agent room to revise its approach while keeping the feedback loop predictable.</p>
+					<p>Reviewing the routing logic made the boundary particularly clear. Once the limit is reached, the workflow proceeds to the Reporter even if the Critic still considers the evidence insufficient. The integration tests explicitly cover this condition. The safeguard successfully bounds repeated searching, but reaching the limit is not evidence that the research question has been answered. This distinction helped me separate operational control from output quality, especially given the hallucination risks discussed by Ji et al. (2023).</p>
+					<p>Parasuraman, Sheridan and Wickens (2000) frame automation as a choice about which functions to delegate and to what extent. In this project, allowing another search and accepting the resulting briefing are different decisions. Review notes and the audit trail help the researcher inspect unresolved concerns, although a completed report could still suggest more certainty than the evidence warrants.</p>
+					<p>In future work, I would make budget exhaustion a distinct completion status and test whether users recognise it as a reason to inspect the evidence. I would also assess whether the final briefing preserves the Critic's unresolved concerns. Following the behavioural testing approach discussed by Ribeiro et al. (2020), this would test the consequence of the stopping rule as well as whether the loop terminates.</p>
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y.J., Madotto, A. and Fung, P. (2023) 'Survey of hallucination in natural language generation', <i>ACM Computing Surveys</i>, 55(12), article 248, pp. 1-38. Available at: <a href="https://doi.org/10.1145/3571730" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3571730</a> (Accessed: 17 October 2026).</p>
+					<p>Parasuraman, R., Sheridan, T.B. and Wickens, C.D. (2000) 'A model for types and levels of human interaction with automation', <i>IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans</i>, 30(3), pp. 286-297. Available at: <a href="https://doi.org/10.1109/3468.844354" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/3468.844354</a> (Accessed: 17 October 2026).</p>
+					<p>Ribeiro, M.T., Wu, T., Guestrin, C. and Singh, S. (2020) 'Beyond accuracy: behavioral testing of NLP models with CheckList', <i>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</i>. Online: Association for Computational Linguistics, pp. 4902-4912. Available at: <a href="https://doi.org/10.18653/v1/2020.acl-main.442" target="_blank" rel="noopener noreferrer">https://doi.org/10.18653/v1/2020.acl-main.442</a> (Accessed: 17 October 2026).</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_case_studies(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -187,7 +198,15 @@
 
 				<div id="is-tabs-vertical-page-3-case-studies" style="display:none;">
 					<div class="is-title animated fadeInUp">Case Study 2</div>
-					<p>[Select a second theme and examine a different ethical, legal or safety consideration related to intelligent agents. Ground the discussion in your own practical work, observations or architectural decisions made during the module. Evaluate the effectiveness of any safeguards or approaches considered, identify potential weaknesses and trade-offs, and explain how this experience influenced your thinking about responsible agent development. Include relevant academic evidence and critical reflection.]</p>
+					<p>Making Agent Activity Understandable.</p>
+					<p>Developing the Academic Evidence Investigator raised a practical explainability question. A finished briefing showed the result, but did not make every change in the evidence-gathering process apparent. I introduced a live activity view and persistent audit log so that users could follow the investigation and revisit its recorded decisions. The interface distinguishes events such as unavailable full text, abstract fallback and further searching, helping users understand the conditions under which a report was produced.</p>
+					<p>I chose to build the activity messages from known workflow events rather than ask the language model to narrate its actions. This made the messages traceable to application behaviour. The public feed also excludes raw prompts and private diagnostic details. Functional tests check that brief stages and re-planning remain visible without exposing those details. This attention to specific behaviours reflects the testing approach advocated by Ribeiro et al. (2020).</p>
+					<p>The distinction that mattered was between visibility and understanding. A message confirming passage selection explains a workflow step, but does not establish why a particular passage supports the final conclusion. Miller (2019) emphasises the human and contextual nature of explanation. The useful question for the researcher is therefore not simply whether the system progressed, but what the recorded event means for the evidence available. Kaur et al. (2020) found that practitioners could over-trust interpretability tools, reinforcing the need to evaluate understanding rather than assume that more visible information creates it.</p>
+					<p>This experience shifted my focus towards explanations that help users act. In future, I would test whether researchers can identify abstract-only evidence, recognise service-related gaps and locate supporting passages from the report. The existing activity view and audit trail provide a strong basis for this evaluation, while user testing would establish how effectively they support informed review.</p>
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Kaur, H., Nori, H., Jenkins, S., Caruana, R., Wallach, H. and Wortman Vaughan, J. (2020) 'Interpreting interpretability: understanding data scientists' use of interpretability tools for machine learning', <i>Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems</i>. New York: Association for Computing Machinery, pp. 1-14. Available at: <a href="https://doi.org/10.1145/3313831.3376219" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3313831.3376219</a> (Accessed: 17 October 2026).</p>
+					<p>Miller, T. (2019) 'Explanation in artificial intelligence: insights from the social sciences', <i>Artificial Intelligence</i>, 267, pp. 1-38. Available at: <a href="https://doi.org/10.1016/j.artint.2018.07.007" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.artint.2018.07.007</a> (Accessed: 17 October 2026).</p>
+					<p>Ribeiro, M.T., Wu, T., Guestrin, C. and Singh, S. (2020) 'Beyond accuracy: behavioral testing of NLP models with CheckList', <i>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</i>. Online: Association for Computational Linguistics, pp. 4902-4912. Available at: <a href="https://doi.org/10.18653/v1/2020.acl-main.442" target="_blank" rel="noopener noreferrer">https://doi.org/10.18653/v1/2020.acl-main.442</a> (Accessed: 17 October 2026).</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_case_studies(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -198,7 +217,15 @@
 
 				<div id="is-tabs-vertical-page-4-case-studies" style="display:none;">
 					<div class="is-title animated fadeInUp">Case Study 3</div>
-					<p>[Select a third theme and develop a reflective case study based on your experiences designing, evaluating or implementing intelligent agent systems. Explain the situation, relevant technical and ethical considerations, and any challenges or unexpected outcomes. Critically assess the implications for system reliability, accountability or responsible deployment, identifying lessons learned and specific improvements you would make in future projects. Support your conclusions with appropriate academic references.]</p>
+					<p>Bias in Evidence Selection.</p>
+					<p>In the Academic Evidence Investigator, I used deterministic relevance rules to keep evidence selection inspectable and reduce unnecessary model calls. Title matches receive more weight than abstract matches, and domain-specific terms receive additional weight to prevent generic AI papers from dominating a focused question. These rules provide useful control over relevance, but reviewing them highlighted how my own design choices influence which research reaches the agents.</p>
+					<p>A relevant paper can describe the same idea using different terminology. For example, a question about university teaching might overlap less directly with a paper framed around tertiary pedagogy. This is a potential failure mode rather than a measured result from the project. Papers below the relevance threshold are filtered before passage selection, so semantic matching later in the workflow cannot recover a paper already excluded. This illustrates the importance of examining the full processing chain, consistent with Suresh and Guttag (2021), rather than attributing every bias to the language model.</p>
+					<p>The distinction changed how I viewed reproducibility. Applying the same rule consistently makes a decision repeatable, but does not establish that different research traditions are represented fairly. Mehrabi et al. (2021) describe multiple sources of bias across AI systems, while Baeza-Yates (2018) highlights how retrieval and ranking can shape information exposure. In this project, terminology-based exclusions could narrow the evidence and make the final briefing appear more comprehensive than it is. Retaining the broader ranked source list supports inspection but does not remove that risk.</p>
+					<p>In future, I would compare equivalent questions with different wording against a small, independently reviewed set of relevant papers. I would inspect exclusions and measure changes in coverage before adjusting thresholds or introducing synonym expansion. The aim would be to preserve the precision of the current filtering while checking that useful alternative perspectives remain discoverable.</p>
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Baeza-Yates, R. (2018) 'Bias on the web', <i>Communications of the ACM</i>, 61(6), pp. 54-61. Available at: <a href="https://doi.org/10.1145/3209581" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3209581</a> (Accessed: 17 October 2026).</p>
+					<p>Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K. and Galstyan, A. (2021) 'A survey on bias and fairness in machine learning', <i>ACM Computing Surveys</i>, 54(6), pp. 1-35. Available at: <a href="https://doi.org/10.1145/3457607" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3457607</a> (Accessed: 17 October 2026).</p>
+					<p>Suresh, H. and Guttag, J. (2021) 'A framework for understanding sources of harm throughout the machine learning life cycle', <i>Equity and Access in Algorithms, Mechanisms, and Optimization</i>. New York: Association for Computing Machinery, pp. 1-9. Available at: <a href="https://doi.org/10.1145/3465416.3483305" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3465416.3483305</a> (Accessed: 17 October 2026).</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_case_studies(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">

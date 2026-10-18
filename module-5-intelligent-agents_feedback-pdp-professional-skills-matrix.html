@@ -47,6 +47,7 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
 	<link rel="shortcut icon" href="assets/page/images/favicon.png" />
 	<link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -55,6 +56,28 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
 	<style>
+		#is-tabs-vertical-body-pdp .is-table :is(td, th){
+			min-width: 200px;
+			max-width: 200px;
+			width: 200px;
+			text-align: left;
+		}
+
+		#is-tabs-vertical-body-pdp .is-table :is(td, th):nth-child(2){
+			text-align: center;
+			min-width: 50px;
+			max-width: 50px;
+			width: 50px;
+			text-align: center;
+		}
+
+		#is-tabs-vertical-body-pdp .is-table :is(td, th):nth-child(3){
+			min-width: 450px;
+			max-width: 450px;
+			width: 450px;
+			text-align: left;
+		}
+		
 		.is-menu .is-menu-list .is-logo a {
 			width: 270px;
 		}
@@ -93,7 +116,7 @@
 	<meta name="robots" content="noindex" /> 
 	<meta name="theme-color" content="" /> 
 
-	<title>Intelligent Agents by Isaac Shalaan</title>
+	<title>Intelligent Agents: Feedback, PDP and Skills Matrix by Isaac Shalaan</title>
 
 	<script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
 	<script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script> 
@@ -117,8 +140,10 @@
 
 		<div class="is-menu-mobile" id="is-menu-mobile">
 			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-			<li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-			<li class="" id=""><a href="about.html">About</a></li>
+			<li class=""><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class="is-menu-active"><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
 		</div>
 
 		<li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
@@ -143,7 +168,7 @@
 		</a>
 		<br />
 
-		<h1 class="animated fadeInDown">Intelligent Agents Module: <span>Feedback, PDP and Skills Matrix</span>.</h1>
+		<h1 class="animated fadeInDown">Intelligent Agents Module <span>Feedback, PDP and Skills Matrix</span>.</h1>
 	</div>
 </div>
 
@@ -163,7 +188,15 @@
 
 				<div id="is-tabs-vertical-page-1-pdp">
 					<div class="is-title animated fadeInUp">Tutor Feedback</div>
-					<p>[Include feedback received from your tutor throughout the module, highlighting strengths, areas requiring improvement and recommendations for professional development. Explain how this feedback informed your self-assessment and influenced the objectives established in your Personal Development Plan.]</p>
+					<p>Tutor feedback across the module recognised strong conceptual understanding, well-judged technical decisions and thoughtful critical reflection. The following summary brings together the main strengths and development priorities.</p>
+					<div class="is-title animated fadeInUp">Recognised Strengths</div>
+					<p>The work connected intelligent agent concepts, including BDI, ReAct and Critic-led re-planning, with a coherent practical architecture. Clear separation between the interface, agent workflow and data layers supported maintainability, while deterministic validation and cleaning complemented the language model components. Multi-format retrieval, semantic passage selection and source traceability were highlighted as particular strengths.</p>
+					<p>Critical reflection was especially well received. The discussion addressed hallucination, service availability, retrieval failures and context limitations, with careful attention to identifying and correcting evidence attribution problems. Documentation, workflow diagrams and familiarity with implementation decisions helped communicate a complex system clearly. Relevant academic literature supported the technical choices, and the reported growth in automated tests demonstrated a systematic approach to development.</p>
+					<div class="is-title animated fadeInUp">Development Priorities</div>
+					<p>The clearest recurring priority was stronger empirical evaluation. Fixed research questions, explicit precision and recall targets, independent checks of generated claims and assessment of Critic decisions would provide more convincing evidence of research quality. Comparisons with alternative planning and retrieval approaches would strengthen the justification for the chosen design. Extensive software testing was acknowledged, while the code and reported results had not been independently verified by the tutor.</p>
+					<p>Further depth was recommended in the treatment of autonomy, including self-governance, decentralised interaction and clear human review points after planning or evidence selection. More explicit agent contracts, data structures and interface specifications, supported by a UML class diagram, would improve technical precision. Deployment requirements and resource assumptions also needed clearer explanation. Presentation feedback favoured fewer dense tables, larger text and more selective references, with greater emphasis on the main demonstration results.</p>
+					<div class="is-title animated fadeInUp">Implications for Professional Development</div>
+					<p>This feedback helps me distinguish strengths in building and explaining an agent system from the further work needed to validate its outputs. My development priorities are independent evaluation, clearer oversight and interface contracts, and more concise communication of results. These priorities will guide my skills self-assessment and Personal Development Plan.</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_pdp(2);" autocomplete="off" autocapitalize="none">
@@ -171,9 +204,123 @@
 					<button class="is-tabs-vertical-read-more" id="is-tabs-vertical-read-more-1-pdp" onclick="is_expand_text(this,'is-tabs-vertical-page-1-pdp')">Read More</button>
 				</div>
 
+				
 				<div id="is-tabs-vertical-page-2-pdp" style="display:none;">
 					<div class="is-title animated fadeInUp">Professional Skills Matrix</div>
-					<p>[Present your completed Professional Skills Matrix, assessing your technical and transferable skills, including communication, teamwork, leadership, problem-solving, critical thinking, time management and ethical awareness. Provide evidence from module activities and project contributions to support your self-assessment, identifying key strengths and areas for further development.]</p>
+					<p>My professional skills assessment draws primarily on the knowledge, practical experience and tutor feedback gained through my MSc in Artificial Intelligence, particularly the Intelligent Agents module. It reflects my development in intelligent agent design, implementation, critical analysis and technical communication. This academic experience is complemented by 18 years of professional software development, my current technical leadership position and approximately four to five years of applying artificial intelligence and machine learning in professional practice.</p>
+					<p>The matrix uses a five-point self-assessment scale.</p>
+					<ul>
+						<li>1 indicates limited experience.</li>
+						<li>2 indicates developing capability.</li>
+						<li>3 indicates working competence.</li>
+						<li>4 indicates advanced capability.</li>
+						<li>5 indicates extensive professional experience.</li>
+					</ul>
+					<p>These ratings represent my assessment of current strengths and development needs rather than independently verified competency measurements.</p>
+
+					<div class="is-title animated fadeInUp">Technical and Analytical Skills</div>
+					<div class="fieldset">
+						<table width="100%" cellpadding="cellspacing" class="is-table">
+							<tr>
+								<th class="is-table-divider">Professional Skill</th>
+								<th class="is-table-divider">Rating</th>
+								<th class="is-table-divider">Evidence and Development Focus</th>
+							</tr>
+							<tr>
+								<td>Software Engineering</td>
+								<td>5/5</td>
+								<td>18 years of professional development experience across PHP, JavaScript, Python, CSS, MySQL and SQL. Established strengths in software implementation, debugging, integration and maintainable development practices.</td>
+							</tr>
+							<tr>
+								<td>Solution Architecture</td>
+								<td>5/5</td>
+								<td>Extensive experience designing interconnected systems and making technical design decisions. Tutor feedback recognised the separation of interface, agent workflow and data layers, alongside maintainability and coherent architectural choices.</td>
+							</tr>
+							<tr>
+								<td>Analytical Thinking and Problem-Solving</td>
+								<td>5/5</td>
+								<td>Strong analytical capabilities developed through software engineering, automotive data systems and technical leadership. The Intelligent Agents project demonstrated structured problem decomposition, failure analysis and practical consideration of alternative solutions.</td>
+							</tr>
+							<tr>
+								<td>Applied Artificial Intelligence and Machine Learning</td>
+								<td>4/5</td>
+								<td>Approximately four to five years of professional involvement in AI and ML implementation. The MSc extends this applied experience through deeper examination of algorithms, model behaviour, research methods and evaluation techniques.</td>
+							</tr>
+							<tr>
+								<td>Intelligent Agent Design</td>
+								<td>4/5</td>
+								<td>Practical application of BDI, ReAct and Critic-led re-planning concepts, supported by retrieval, semantic passage selection and source traceability. Further development is needed in explicit agent contracts, bounded autonomy and formal human oversight.</td>
+							</tr>
+							<tr>
+								<td>Software Testing and Quality Assurance</td>
+								<td>4/5</td>
+								<td>Experience with deterministic validation, data cleaning and automated testing. Tutor feedback recognised systematic testing while identifying the need for stronger independent verification of generated outputs and reported experimental results.</td>
+							</tr>
+							<tr>
+								<td>Empirical Evaluation and Research Methods</td>
+								<td>3/5</td>
+								<td>Established analytical and technical evaluation skills, with a development need in formal experimental design, reproducible benchmarks, precision and recall targets, independent claim verification and comparisons against alternative approaches.</td>
+							</tr>
+							<tr>
+								<td>Deployment and Operational Governance</td>
+								<td>4/5</td>
+								<td>Broad professional experience with operational systems and technical dependencies. Future academic and agent-based projects would benefit from more explicit deployment assumptions, resource requirements, interface specifications and monitoring arrangements.</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="is-title animated fadeInUp">Professional and Transferable Skills</div>
+					<div class="fieldset">
+						<table width="100%" cellpadding="cellspacing" class="is-table">
+							<tr>
+								<th class="is-table-divider">Professional Skill</th>
+								<th class="is-table-divider">Rating</th>
+								<th class="is-table-divider">Evidence and Development Focus</th>
+							</tr>
+							<tr>
+								<td>Leadership and Strategic Decision-Making</td>
+								<td>5/5</td>
+								<td>Recent progression into a Group Technology Director role, building on extensive senior development experience. Strengths include technical judgement, architectural direction and alignment of technology with business requirements.</td>
+							</tr>
+							<tr>
+								<td>Teamwork and Collaboration</td>
+								<td>4/5</td>
+								<td>Professional experience in senior technical and leadership roles requiring collaboration across different responsibilities. Further development will focus on explicitly documenting team contributions, decision-making processes and effectiveness in virtual project environments.</td>
+							</tr>
+							<tr>
+								<td>Technical Communication and Documentation</td>
+								<td>4/5</td>
+								<td>Tutor feedback recognised clear technical documentation, workflow diagrams and an ability to explain complex implementations. Improvement is needed in presenting findings more concisely, reducing dense tables and prioritising the most important evidence.</td>
+							</tr>
+							<tr>
+								<td>Critical Thinking and Reflective Practice</td>
+								<td>4/5</td>
+								<td>Strong tutor feedback on critical reflection, including the identification of hallucination risks, retrieval failures, context limitations and evidence attribution problems. The next step is connecting these observations to more rigorous empirical evaluation.</td>
+							</tr>
+							<tr>
+								<td>Time Management and Prioritisation</td>
+								<td>4/5</td>
+								<td>Balancing a senior technology leadership role with concurrent MSc modules in Intelligent Agents and Machine Learning requires careful prioritisation and sustained independent study. A development priority is protecting sufficient time for experimentation, validation and refinement rather than focusing primarily on implementation.</td>
+							</tr>
+							<tr>
+								<td>Ethical Awareness and Professional Judgement</td>
+								<td>4/5</td>
+								<td>Demonstrated awareness of AI reliability, hallucinations, data quality, accountability and responsible deployment. Future work should formalise human review points, autonomy constraints, auditability and measurable safety controls within intelligent agent systems.</td>
+							</tr>
+							<tr>
+								<td>Continuous Learning and Adaptability</td>
+								<td>5/5</td>
+								<td>Ongoing professional progression from software development into technology leadership, combined with several years of practical AI and ML implementation and further postgraduate study. The MSc provides an opportunity to integrate research-led methods with established industry experience.</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="is-title animated fadeInUp">Strengths and Development Priorities</div>
+					<p>The assessment identifies software engineering, solution architecture, analytical problem-solving and technology leadership as my strongest capabilities. These have developed through extensive professional experience and are supported by tutor feedback recognising sound technical design, maintainable system organisation and clear understanding of intelligent agent concepts. My practical AI and ML experience provides a strong foundation for extending these skills into more advanced autonomous systems.</p>
+					<p>The most significant development opportunity is moving from demonstrating that a system works towards providing independently verifiable evidence of how reliably it works. This includes establishing measurable evaluation criteria, designing repeatable experiments, assessing generated claims and comparing architectural alternatives. Although my professional experience supports rapid problem-solving and implementation, academic research requires a more explicit account of methodology, assumptions, limitations and reproducibility.</p>
+					<p>A second priority concerns the governance of intelligent agents. Tutor feedback identified opportunities to strengthen agent contracts, interface specifications, human approval points and the treatment of autonomy. These considerations are particularly relevant to my leadership responsibilities, where technical decisions must account for reliability, accountability, maintainability and wider operational consequences.</p>
+					<p>Finally, I intend to improve the efficiency of my academic communication and the balance between implementation and evaluation. Studying Intelligent Agents and Machine Learning concurrently while fulfilling senior professional responsibilities makes prioritisation especially important. Allocating protected time for testing, critical analysis and concise presentation will help ensure that technical depth is supported by convincing evidence and clear communication.</p>
+					<p>The findings of this matrix form the basis of my Personal Development Plan, with particular emphasis on empirical evaluation, responsible agent governance, technical communication and sustainable time management.</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_pdp(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -184,7 +331,60 @@
 
 				<div id="is-tabs-vertical-page-3-pdp" style="display:none;">
 					<div class="is-title animated fadeInUp">Personal Development Plan</div>
-					<p>[Present your Personal Development Plan based on the findings of your Professional Skills Matrix and tutor feedback. Identify specific development objectives using the SMART framework, outlining the actions required, available resources, target completion dates and measurable success criteria. Explain how these objectives will support your continued professional development and future career aspirations.]</p>
+					<p>My Personal Development Plan (PDP) builds on the self-assessment presented in my Professional Skills Matrix and the formative feedback received during the MSc in Artificial Intelligence. The Intelligent Agents module, running from 28 July to 19 October 2026, has strengthened my understanding of agent architectures, reasoning, autonomous workflows and the challenges associated with developing reliable AI systems. Tutor feedback also identified opportunities to improve the empirical evaluation of my work, formalise safety and oversight mechanisms, and communicate technical findings more effectively.</p>
+					<p>With extensive professional software development experience and a current technical leadership position, my priority is not simply to extend my implementation skills, but to develop a more rigorous, research-informed approach to designing, evaluating and governing intelligent systems. The following objectives use the SMART framework to establish specific, measurable, achievable, relevant and time-bound development goals aligned with the module's completion date of 19 October 2026. They also identify areas for continued development throughout the remainder of the MSc and my professional practice.</p>
+
+					<div class="is-title animated fadeInUp">Objective 1: Strengthen Empirical Evaluation and Research Rigour</div>
+					<p>Although I have substantial experience designing and implementing software systems, tutor feedback highlighted the need to support architectural decisions with stronger independent and reproducible evaluation. This is my highest academic development priority, particularly when assessing agent reasoning, retrieval quality and the effectiveness of Critic-led re-planning.</p>
+					<ul>
+						<li>Development objective: Establish a structured evaluation framework for my Intelligent Agents project, using clearly defined research questions, measurable performance criteria and an approach to comparing alternative configurations.</li>
+						<li>Actions: Review the existing automated tests and project results, define at least three measurable evaluation criteria, and identify a representative set of test scenarios covering successful behaviour, retrieval failures and limitations in generated responses. Document how retrieval precision and recall, source attribution and Critic decisions could be assessed systematically.</li>
+						<li>Resources: Intelligent Agents project code, existing automated tests, Python evaluation libraries, relevant academic literature, MSc learning materials and tutor feedback.</li>
+						<li>Target completion: 19 October 2026.</li>
+						<li>Success criteria: Produce a documented evaluation framework containing defined research questions, at least three performance measures, representative test scenarios and a clear plan for reproducible comparison and independent verification.</li>
+					</ul>
+					<p>This objective will help me move beyond demonstrating technical functionality towards establishing evidence of reliability and explaining why one approach may be preferable to another. The framework developed during the module will provide a foundation for more extensive experiments in subsequent MSc work and future professional AI projects.</p>
+
+					<div class="is-title animated fadeInUp">Objective 2: Develop Responsible Agent Design and Governance Practices</div>
+					<p>The Intelligent Agents module has increased my awareness of the distinction between implementing autonomous behaviour and demonstrating that such behaviour is appropriately constrained, transparent and accountable. Tutor feedback identified the need for greater clarity around agent contracts, autonomy, self-governance, human intervention and deployment assumptions.</p>
+					<ul>
+						<li>Development objective: Define a practical set of design principles and safeguards for responsible agent operation, focusing on component responsibilities, decision boundaries, human oversight and failure handling.</li>
+						<li>Actions: Review the existing agent architecture and workflow documentation, clarify the responsibilities and interfaces of the principal components, and identify appropriate human review points. Document at least five relevant operational or safety risks, including unsupported conclusions, insufficient evidence, retrieval failures, service unavailability and unintended autonomous behaviour.</li>
+						<li>Resources: Intelligent Agents project architecture, existing workflow diagrams, academic research on AI safety and explainability, professional AI governance guidance and tutor recommendations.</li>
+						<li>Target completion: 19 October 2026.</li>
+						<li>Success criteria: Produce an agent governance checklist identifying at least five risks, their potential consequences and proposed safeguards, supported by clearer descriptions of agent responsibilities, interface contracts and human oversight requirements.</li>
+					</ul>
+					<p>This objective will strengthen my understanding of the broader responsibilities involved in agent development. Beyond the module, I intend to apply these principles to more formal design reviews, risk assessments and deployment processes, particularly where intelligent systems influence operational or business decisions.</p>
+
+					<div class="is-title animated fadeInUp">Objective 3: Improve Academic and Technical Communication</div>
+					<p>Tutor feedback recognised the quality of my technical documentation, architectural explanations and critical reflection. However, it also recommended a more selective presentation of supporting material, particularly through less crowded tables, more readable visualisations and clearer emphasis on the most important findings. I recognise that communicating a complex implementation effectively requires prioritising evidence rather than presenting every technical detail.</p>
+					<ul>
+						<li>Development objective: Improve the clarity, conciseness and accessibility of my Intelligent Agents e-Portfolio and supporting technical documentation before the conclusion of the module.</li>
+						<li>Actions: Review at least two key sections of the e-Portfolio, simplify overly detailed tables or explanations, improve the presentation of architectural diagrams where necessary, and ensure that the principal implementation outcomes, evaluation limitations and lessons learned are clearly identifiable.</li>
+						<li>Resources: Tutor feedback, existing e-Portfolio material, project documentation, diagramming tools and academic writing guidance.</li>
+						<li>Target completion: 19 October 2026.</li>
+						<li>Success criteria: Complete a review and revision of at least two technical sections, with improvements to readability, the presentation of evidence and the clarity of the conclusions. Record the principal changes made in response to tutor feedback.</li>
+					</ul>
+					<p>This objective will strengthen my ability to communicate technical evidence to academic assessors and professional stakeholders with different levels of technical knowledge. The lessons learned will also inform how I present research findings and architectural recommendations in future MSc assessments and professional work.</p>
+
+					<div class="is-title animated fadeInUp">Objective 4: Strengthen Time Management and Research Prioritisation</div>
+					<p>Studying Intelligent Agents and Machine Learning concurrently between 28 July and 19 October 2026, alongside the responsibilities of a senior technical leadership role, has required careful management of competing priorities. My professional experience supports the efficient delivery of complex technical work, but the MSc has reinforced the importance of reserving adequate time for academic reading, experimentation, evaluation and reflection rather than concentrating primarily on implementation.</p>
+					<ul>
+						<li>Development objective: Evaluate how effectively I managed the demands of concurrent MSc modules and professional responsibilities, and identify practical improvements to my approach to independent study.</li>
+						<li>Actions: Review the distribution of time and effort across implementation, research, testing, evaluation and portfolio preparation during the module. Identify at least three challenges encountered when balancing competing academic and professional priorities, and develop a practical scheduling approach for future MSc modules that includes protected time for research and critical evaluation.</li>
+						<li>Resources: Module schedules, assessment briefs, personal task-management tools, digital calendar and existing e-Portfolio development records.</li>
+						<li>Target completion: 19 October 2026.</li>
+						<li>Success criteria: Complete a reflective review identifying at least three time-management challenges, the approaches used to address them and three specific improvements to apply in future MSc study.</li>
+					</ul>
+					<p>This objective recognises that sustainable academic progress depends on more than completing technical tasks. Maintaining a deliberate balance between implementation, theoretical understanding and critical evaluation will help me improve the quality of future assessments while continuing to fulfil my professional responsibilities.</p>
+
+					<div class="is-title animated fadeInUp">Monitoring Progress and Reviewing Development</div>
+					<p>The module's conclusion on 19 October 2026 provides the initial review point for these objectives. I will assess progress using the evaluation framework, governance checklist, revised technical documentation and time-management reflection as evidence. Where objectives remain incomplete, I will record the outstanding actions rather than treating planned work as completed.</p>
+					<p>The objectives are interconnected. More effective prioritisation creates opportunities for rigorous experimentation, which in turn provides stronger evidence for technical communication. Formalising agent safety and governance extends this process beyond functional performance to include reliability, accountability and the operational suitability of intelligent systems. I intend to revisit the Professional Skills Matrix during subsequent MSc modules to assess my development against these priorities.</p>
+
+					<div class="is-title animated fadeInUp">Long-Term Professional Development</div>
+					<p>My broader ambition is to combine the academic foundations gained through the MSc with my existing software engineering, solution architecture and technical leadership experience. In particular, I want to strengthen my ability to make AI-related decisions that are supported by empirical evidence, informed by current research and grounded in responsible engineering practice.</p>
+					<p>The Intelligent Agents module has highlighted that developing effective AI systems requires more than technical implementation. It also involves understanding the boundaries of autonomy, evaluating uncertainty, designing appropriate safeguards and maintaining accountability for system behaviour. Although the immediate objectives are aligned with the module's completion date, the skills they address will remain important throughout the MSc and in my continued professional development.</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_pdp(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">

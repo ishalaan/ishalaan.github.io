@@ -47,6 +47,7 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
 	<link rel="shortcut icon" href="assets/page/images/favicon.png" />
 	<link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -55,6 +56,14 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
 	<style>
+		#is-tabs-vertical-page-2-parse-trees .is-table :is(td, th),
+		#is-tabs-vertical-page-3-parse-trees .is-table :is(td, th),
+		#is-tabs-vertical-page-4-parse-trees .is-table :is(td, th)
+		{
+			width: 50%;
+			text-align: left;
+		}
+
 		.is-menu .is-menu-list .is-logo a {
 			width: 270px;
 		}
@@ -93,7 +102,7 @@
 	<meta name="robots" content="noindex" /> 
 	<meta name="theme-color" content="" /> 
 
-	<title>Intelligent Agents by Isaac Shalaan</title>
+	<title>Intelligent Agents: Creating Parse Trees by Isaac Shalaan</title>
 
 	<script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
 	<script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script> 
@@ -117,8 +126,10 @@
 
 		<div class="is-menu-mobile" id="is-menu-mobile">
 			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-			<li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-			<li class="" id=""><a href="about.html">About</a></li>
+			<li class=""><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class="is-menu-active"><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
 		</div>
 
 		<li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
@@ -143,7 +154,7 @@
 		</a>
 		<br />
 
-		<h1 class="animated fadeInDown">Intelligent Agents Module: <span>Creating Parse Trees</span>.</h1>
+		<h1 class="animated fadeInDown">Intelligent Agents Module <span>Creating Parse Trees</span>.</h1>
 	</div>
 </div>
 
@@ -201,7 +212,7 @@
 					<p>The initial noun phrase <code>NP</code> contains the determiner <code>DT</code>, represented by "The", and the singular noun <code>NN</code>, represented by "government". Together, these form the grammatical subject. The verb phrase <code>VP</code> contains the past-tense verb <code>VBD</code>, represented by "raised", followed by a second noun phrase functioning as its direct object. Within this object, "interest" functions as a nominal modifier and "rates" is the plural head noun, labelled <code>NNS</code>.</p>
 					<p>The hierarchical structure demonstrates how words combine into meaningful grammatical constituents rather than functioning as independent elements. The subject noun phrase and predicate verb phrase form the principal sentence structure, while the nested noun phrase identifies what was raised. This representation illustrates how constituency-based parsing supports syntactic analysis by identifying phrase boundaries, grammatical categories and relationships within a sentence.</p>
 					<p>The grammatical categories used in the constituency-based parse tree are defined below.</p>
-					<table width="100%" cellpadding="cellspacing" class="is-table">
+					<div class="fieldset"><table width="100%" cellpadding="cellspacing" class="is-table">
 						<tr>
 							<th class="is-table-divider">Label</th>
 							<th class="is-table-divider">Grammatical Category</th>
@@ -234,7 +245,7 @@
 							<td>VBD</td>
 							<td>Past-tense verb</td>
 						</tr>
-					</table>
+					</table></div>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_parse_trees(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -267,7 +278,7 @@
 					<p>The subject noun phrase <code>NP</code> contains the determiner <code>DT</code>, represented by "The", and the singular noun <code>NN</code>, represented by "internet". The verb phrase <code>VP</code> begins with <code>VBZ</code>, identifying "gives" as a third-person singular present-tense verb. Two noun phrases follow the verb. The first contains the indefinite pronoun "everyone", labelled <code>NN</code> under the chosen Penn Treebank-style representation, and functions as the indirect object or recipient of the action. The second contains the determiner "a" and the singular noun "voice", forming the direct object. Although "everyone" refers collectively to multiple people, it is grammatically singular.</p>
 					<p>The hierarchical structure demonstrates how constituency-based parsing represents relationships between the subject, verb and two objects. Unlike the first sentence, which contains one direct object, this construction includes two noun phrase constituents within the verb phrase. Distinguishing the indirect object from the direct object is important for interpreting who receives something and what is being given. In natural language processing, recognising these grammatical relationships provides a foundation for identifying participants and their roles within expressed events.</p>
 					<p>The additional grammatical category introduced in this parse tree is defined below.</p>
-					<table width="100%" cellpadding="cellspacing" class="is-table">
+					<div class="fieldset"><table width="100%" cellpadding="cellspacing" class="is-table">
 						<tr>
 							<th class="is-table-divider">Label</th>
 							<th class="is-table-divider">Grammatical Category</th>
@@ -276,7 +287,7 @@
 							<td>VBZ</td>
 							<td>Third-person singular present-tense verb</td>
 						</tr>
-					</table>
+					</table></div>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_parse_trees(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -335,7 +346,7 @@
 					<p>In this structure, the verb phrase contains the verb "saw" followed by a single complex noun phrase functioning as its direct object. The noun phrase contains the determiner "the", the head noun "dog" and the prepositional phrase "with the telescope". Because the prepositional phrase is embedded within the object noun phrase, it modifies "dog" rather than the seeing event. The resulting interpretation is that the man saw a dog associated with a telescope, without specifying whether the man used an instrument to observe it.</p>
 					<p>The two trees demonstrate that identical words and grammatical categories can produce different meanings when their constituent relationships change. A constituency parser can represent both structures, but selecting the intended interpretation requires additional contextual or semantic information. This illustrates an important challenge in natural language processing, where grammatical analysis alone may not be sufficient to resolve ambiguity.</p>
 					<p>The additional grammatical categories introduced in these parse trees are defined below.</p>
-					<table width="100%" cellpadding="cellspacing" class="is-table">
+					<div class="fieldset"><table width="100%" cellpadding="cellspacing" class="is-table">
 						<tr>
 							<th class="is-table-divider">Label</th>
 							<th class="is-table-divider">Grammatical Category</th>
@@ -348,7 +359,7 @@
 							<td>IN</td>
 							<td>Preposition or subordinating conjunction, representing "with" in this sentence</td>
 						</tr>
-					</table>
+					</table></div>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_parse_trees(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">

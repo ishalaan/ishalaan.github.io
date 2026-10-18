@@ -47,6 +47,7 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
 	<link rel="shortcut icon" href="assets/page/images/favicon.png" />
 	<link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -55,6 +56,15 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
 	<style>
+		#is-tabs-vertical-page-2-correlation-regression .is-table :is(td, th):nth-child(n+2):nth-child(-n+3),
+		#is-tabs-vertical-page-3-correlation-regression .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-4-correlation-regression .is-table :is(td, th):nth-child(n+2):nth-child(-n+3),
+		#is-tabs-vertical-page-5-correlation-regression .is-table :is(td, th):nth-child(n+2):nth-child(-n+4)
+		{
+			min-width: 100px;
+			text-align: center;
+		}
+
 		.is-menu .is-menu-list .is-logo a {
 			width: 270px;
 		}
@@ -93,7 +103,7 @@
 	<meta name="robots" content="noindex" /> 
 	<meta name="theme-color" content="" /> 
 
-	<title>Machine Learning by Isaac Shalaan</title>
+	<title>Machine Learning: Correlation and Regression by Isaac Shalaan</title>
 
 	<script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
 	<script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script> 
@@ -117,8 +127,10 @@
 
 		<div class="is-menu-mobile" id="is-menu-mobile">
 			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-			<li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-			<li class="" id=""><a href="about.html">About</a></li>
+			<li class="is-menu-active"><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class=""><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
 		</div>
 
 		<li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
@@ -137,20 +149,20 @@
 		<a class="is-eyebrow" href="module-4-machine-learning_collaborative-discussions.html" style="padding:7px;" title="Previous">
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
 		</a>
-		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>Correlation and Regression</div>
+		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>Correlation / Regression</div>
 		<a class="is-eyebrow" href="module-4-machine-learning_jaccard-distance-dissimilarity-calculations.html" style="padding:7px;" title="Next">
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
 		</a>
 		<br />
 
-		<h1 class="animated fadeInDown">Machine Learning Module: <span>Correlation and Regression</span>.</h1>
+		<h1 class="animated fadeInDown">Machine Learning Module <span>Correlation and Regression</span>.</h1>
 	</div>
 </div>
 
 <div class="is-middle" id="is-middle-2">
 	<div class="is-fixed">
 
-		<div class="is-tabs-vertical is-tabs-vertical-5 animated fadeInUp">
+		<div class="is-tabs-vertical is-tabs-vertical-6 animated fadeInUp">
 
             <div class="is-tabs-vertical-menu">
                 <ul>
@@ -183,8 +195,70 @@
 
                 <div id="is-tabs-vertical-page-2-correlation-regression" style="display:none;">
                     <div class="is-title animated fadeInUp">Covariance &amp; Pearson Correlation</div>
-                    <p>The covariance and Pearson correlation analysis was run with 1,000 observations and random seed 1. It generates <code>data1 = 20 * randn(1000) + 100</code> and <code>data2 = data1 + 10 * randn(1000) + 50</code>. The original means were 100.776 and 151.050, with population standard deviations of 19.620 and 22.358. Sample covariance was calculated using NumPy and Pearson r using SciPy.</p><p>For controlled comparisons, the same data1 values and standard-normal noise vector were retained. Only the noise multiplier, direction of the relationship or scale of data2 changed.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Experiment</th><th class="is-table-divider">Sample covariance</th><th class="is-table-divider">Pearson r</th></tr><tr><td>Original: noise SD 10</td><td>389.755</td><td>0.8876</td></tr><tr><td>Increase noise SD to 40</td><td>403.019</td><td>0.4459</td></tr><tr><td>Use -data1 + 10 * noise + 50</td><td>-380.911</td><td>-0.8832</td></tr><tr><td>Multiply original data2 by 10</td><td>3897.546</td><td>0.8876</td></tr></tbody></table><div class="is-title animated fadeInUp">Interpretation</div><p>The original scatter plot forms a clear upward band. Increasing noise broadens this band and reduces r from 0.8876 to 0.4459. Covariance nevertheless rises slightly in this finite sample: the fixed random noise vector has a small positive sample covariance with data1. Covariance alone therefore does not provide a normalised measure of association strength.</p><p>Reversing the data1 term creates a downward band and changes the sign of both statistics. Multiplying data2 by ten multiplies covariance by ten but leaves Pearson r unchanged. Covariance depends on measurement scale; Pearson r standardises covariance by the two sample standard deviations and lies between -1 and 1.</p><p>These data were constructed to have a relationship, so the findings illustrate statistical behaviour rather than evidence about a real population. Pearson r describes linear association: a value close to zero would not rule out a nonlinear relationship, and correlation alone would not establish causation.</p>
-                    <p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-covariance-pearson-correlation.ipynb" target="_blank" rel="noopener noreferrer">Download the executed covariance and pearson correlation notebook with results and plots</a>.</p>
+					<p>The covariance and Pearson correlation analysis was run with 1,000 observations and random seed 1. It generates <code>data1 = 20 * randn(1000) + 100</code> and <code>data2 = data1 + 10 * randn(1000) + 50</code>. The original means were 100.776 and 151.050, with population standard deviations of 19.620 and 22.358. Sample covariance was calculated using NumPy and Pearson r using SciPy.</p>
+					<p>For controlled comparisons, the same data1 values and standard-normal noise vector were retained. Only the noise multiplier, direction of the relationship or scale of data2 changed.</p>
+					<div class="fieldset">
+						<table width="100%" cellpadding="cellspacing" class="is-table">
+							<tbody>
+								<tr>
+									<th class="is-table-divider">Experiment</th>
+									<th class="is-table-divider">Sample Covariance</th>
+									<th class="is-table-divider">Pearson R</th>
+								</tr>
+								<tr>
+									<td>Original: noise SD 10</td>
+									<td>389.755</td>
+									<td>0.8876</td>
+								</tr>
+								<tr>
+									<td>Increase noise SD to 40</td>
+									<td>403.019</td>
+									<td>0.4459</td>
+								</tr>
+								<tr>
+									<td>Use -data1 + 10 * noise + 50</td>
+									<td>-380.911</td>
+									<td>-0.8832</td>
+								</tr>
+								<tr>
+									<td>Multiply original data2 by 10</td>
+									<td>3897.546</td>
+									<td>0.8876</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="is-title animated fadeInUp">Interpretation</div>
+					<p>The original scatter plot forms a clear upward band. Increasing noise broadens this band and reduces r from 0.8876 to 0.4459. Covariance nevertheless rises slightly in this finite sample: the fixed random noise vector has a small positive sample covariance with data1. Covariance alone therefore does not provide a normalised measure of association strength.</p>
+					<p>Reversing the data1 term creates a downward band and changes the sign of both statistics. Multiplying data2 by ten multiplies covariance by ten but leaves Pearson r unchanged. Covariance depends on measurement scale; Pearson r standardises covariance by the two sample standard deviations and lies between -1 and 1.</p>
+					<p>These data were constructed to have a relationship, so the findings illustrate statistical behaviour rather than evidence about a real population. Pearson r describes linear association: a value close to zero would not rule out a nonlinear relationship, and correlation alone would not establish causation.</p>
+					
+					<section class="is-resources">
+						<div class="is-resources-list">
+							<a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-covariance-pearson-correlation.ipynb" target="_blank" download>
+								<span class="is-resources-icon">
+									<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+										<path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="5" r="1" fill="currentColor"/>
+									</svg>
+								</span>
+								<span class="is-resources-info">
+									<strong>Jupyter Notebook</strong>
+									<span>Download the notebook exploring covariance and Pearson correlation with results and plots.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_correlation_regression(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -195,8 +269,68 @@
 
                 <div id="is-tabs-vertical-page-3-correlation-regression" style="display:none;">
                     <div class="is-title animated fadeInUp">Linear Regression</div>
-                    <p>The linear regression analysis uses 13 paired observations. Its first cell imports <code>stats</code> but calls <code>stat.linregress</code> and <code>stat.pearsonr</code>. These calls were corrected to <code>stats.linregress</code> and <code>stats.pearsonr</code> in the executed working copy; the supplied file was preserved. No measurement units were assumed for the x and y arrays.</p><p>The original fitted model is <code>y_hat = 103.105960 - 1.751288 * x</code>. Pearson r is -0.7586 and training R² is 0.5755. At x = 10, the prediction is 85.5931, reproducing the reference result. This is interpolation because x = 10 lies within the observed range of 2 to 17.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Experiment</th><th class="is-table-divider">Slope / intercept</th><th class="is-table-divider">Training R²</th><th class="is-table-divider">Prediction at x = 10</th></tr><tr><td>Original data</td><td>-1.7513 / 103.1060</td><td>0.5755</td><td>85.5931</td></tr><tr><td>Add 20 to every y</td><td>-1.7513 / 123.1060</td><td>0.5755</td><td>105.5931</td></tr><tr><td>Change (17, 86) to (17, 120)</td><td>-0.2252 / 94.0993</td><td>0.0055</td><td>91.8477</td></tr></tbody></table><div class="is-title animated fadeInUp">Effect of changing observations</div><p>Adding 20 to every response shifts the fitted line upwards by 20 without changing its slope, correlation or R². By contrast, changing the response at the largest x value from 86 to 120 makes the fitted line almost horizontal and reduces r to -0.0742. This point has substantial leverage because its x value is far from the sample mean; changing its y value strongly influences the fit.</p><p>The scatter plots and fitted lines demonstrate why a regression summary should be examined alongside the data. An unusual observation should be investigated for measurement error or a valid explanation, rather than removed simply to improve a score. The 13 observations are too limited to establish reliable performance on new data. Residual patterns, independence and changing error variance would need examination before using inferential results or making operational predictions.</p>
-                    <p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-linear-regression.ipynb" target="_blank" rel="noopener noreferrer">Download the executed linear regression notebook with results and plots</a>.</p>
+                    <p>The linear regression analysis uses 13 paired observations. Its first cell imports <code>stats</code> but calls <code>stat.linregress</code> and <code>stat.pearsonr</code>. These calls were corrected to <code>stats.linregress</code> and <code>stats.pearsonr</code> in the executed working copy; the supplied file was preserved. No measurement units were assumed for the x and y arrays.</p>
+					<p>The original fitted model is <code>y_hat = 103.105960 - 1.751288 * x</code>. Pearson r is -0.7586 and training R² is 0.5755. At x = 10, the prediction is 85.5931, reproducing the reference result. This is interpolation because x = 10 lies within the observed range of 2 to 17.</p>
+					<div class="fieldset">
+						<table width="100%" cellpadding="cellspacing" class="is-table">
+							<tbody>
+								<tr>
+									<th class="is-table-divider">Experiment</th>
+									<th class="is-table-divider">Slope / intercept</th>
+									<th class="is-table-divider">Training R²</th>
+									<th class="is-table-divider">Prediction at x = 10</th>
+								</tr>
+								<tr>
+									<td>Original data</td>
+									<td>-1.7513 / 103.1060</td>
+									<td>0.5755</td>
+									<td>85.5931</td>
+								</tr>
+								<tr>
+									<td>Add 20 to every y</td>
+									<td>-1.7513 / 123.1060</td>
+									<td>0.5755</td>
+									<td>105.5931</td>
+								</tr>
+								<tr>
+									<td>Change (17, 86) to (17, 120)</td>
+									<td>-0.2252 / 94.0993</td>
+									<td>0.0055</td>
+									<td>91.8477</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="is-title animated fadeInUp">Effect of changing observations</div>
+					<p>Adding 20 to every response shifts the fitted line upwards by 20 without changing its slope, correlation or R². By contrast, changing the response at the largest x value from 86 to 120 makes the fitted line almost horizontal and reduces r to -0.0742. This point has substantial leverage because its x value is far from the sample mean; changing its y value strongly influences the fit.</p>
+					<p>The scatter plots and fitted lines demonstrate why a regression summary should be examined alongside the data. An unusual observation should be investigated for measurement error or a valid explanation, rather than removed simply to improve a score. The 13 observations are too limited to establish reliable performance on new data. Residual patterns, independence and changing error variance would need examination before using inferential results or making operational predictions.</p>
+					
+					<section class="is-resources">
+						<div class="is-resources-list">
+							<a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-linear-regression.ipynb" target="_blank" download>
+								<span class="is-resources-icon">
+									<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+										<path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="5" r="1" fill="currentColor"/>
+									</svg>
+								</span>
+								<span class="is-resources-info">
+									<strong>Jupyter Notebook</strong>
+									<span>Download the notebook exploring linear regression with results and plots.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_correlation_regression(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -207,9 +341,107 @@
 
                 <div id="is-tabs-vertical-page-4-correlation-regression" style="display:none;">
                     <div class="is-title animated fadeInUp">Multiple Linear Regression</div>
-                    <p>The multiple regression analysis uses 36 vehicle observations, with Weight and Volume as predictors and CO2 as the response. The fitted coefficients and predictions reproduce the reference results. Weight is expressed in kg and Volume in cm³; CO2 is reported in dataset units because its measurement metadata are unspecified.</p><p>The fitted equation is <code>CO2_hat = 79.694719 + 0.007550947 * Weight + 0.007805258 * Volume</code>. Each coefficient describes the fitted change in CO2 for a one-unit increase in that predictor while holding the other predictor fixed. It does not establish a causal effect.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Prediction input</th><th class="is-table-divider">Predicted CO2</th><th class="is-table-divider">Change from baseline</th></tr><tr><td>Weight 2300; Volume 1300</td><td>107.2087</td><td>Baseline</td></tr><tr><td>Weight 3300; Volume 1300</td><td>114.7597</td><td>+7.5509</td></tr><tr><td>Weight 2300; Volume 2300</td><td>115.0140</td><td>+7.8053</td></tr></tbody></table><p>These input changes leave the fitted model unchanged. To test sensitivity to training data, the final row’s CO2 was increased from 120 to 150 and the model refitted. The Weight coefficient changed from 0.007551 to -0.003079, the Volume coefficient increased to 0.017827, and the prediction at (2300, 1300) fell to 94.2121. A coefficient sign reversal under one controlled change highlights instability; it does not demonstrate that heavier vehicles reduce emissions.</p><div class="is-title animated fadeInUp">Predictor comparison and limitations</div><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Predictors</th><th class="is-table-divider">Training R²</th><th class="is-table-divider">Leave-one-out RMSE</th></tr><tr><td>Weight only</td><td>0.3049</td><td>6.4960</td></tr><tr><td>Volume only</td><td>0.3506</td><td>6.3061</td></tr><tr><td>Weight and Volume</td><td>0.3766</td><td>6.5079</td></tr></tbody></table><p>Leave-one-out validation refits the model on 35 rows and predicts the remaining row, repeating this for all 36 observations. RMSE summarises these held-out errors in CO2 dataset units; lower is better. Adding Weight improves training R² but does not improve this validation result over Volume alone. The predictors are correlated (r = 0.7535), so their individual coefficients should be interpreted cautiously. Raw coefficients also depend on units and should not be used directly to rank feature importance.</p><p>Observed weights range from 790 to 1746 kg, while engine volumes range from 900 to 2500 cm³. Both the supplied 2300 kg example and the 3300 kg variation extrapolate beyond the observed weights. These predictions demonstrate the equation rather than validated emissions estimates. The small example dataset lacks the provenance, sampling detail and additional vehicle characteristics needed for operational use.</p>
-                    <p>Data file: <a href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-cars.csv" target="_blank" rel="noopener noreferrer">Download the accompanying car dataset</a>.</p>
-                    <p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-multiple-linear-regression.ipynb" target="_blank" rel="noopener noreferrer">Download the executed multiple linear regression notebook with results and plots</a>.</p>
+                	<p>The multiple regression analysis uses 36 vehicle observations, with Weight and Volume as predictors and CO2 as the response. The fitted coefficients and predictions reproduce the reference results. Weight is expressed in kg and Volume in cm³; CO2 is reported in dataset units because its measurement metadata are unspecified.</p>
+					<p>The fitted equation is <code>CO2_hat = 79.694719 + 0.007550947 * Weight + 0.007805258 * Volume</code>. Each coefficient describes the fitted change in CO2 for a one-unit increase in that predictor while holding the other predictor fixed. It does not establish a causal effect.</p>
+					<div class="fieldset">
+						<table width="100%" cellpadding="cellspacing" class="is-table">
+							<tbody>
+								<tr>
+									<th class="is-table-divider">Prediction input</th>
+									<th class="is-table-divider">Predicted CO2</th>
+									<th class="is-table-divider">Change from baseline</th>
+								</tr>
+								<tr>
+									<td>Weight 2300; Volume 1300</td>
+									<td>107.2087</td>
+									<td>Baseline</td>
+								</tr>
+								<tr>
+									<td>Weight 3300; Volume 1300</td>
+									<td>114.7597</td>
+									<td>+7.5509</td>
+								</tr>
+								<tr>
+									<td>Weight 2300; Volume 2300</td>
+									<td>115.0140</td>
+									<td>+7.8053</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>These input changes leave the fitted model unchanged. To test sensitivity to training data, the final row's CO2 was increased from 120 to 150 and the model refitted. The Weight coefficient changed from 0.007551 to -0.003079, the Volume coefficient increased to 0.017827, and the prediction at (2300, 1300) fell to 94.2121. A coefficient sign reversal under one controlled change highlights instability; it does not demonstrate that heavier vehicles reduce emissions.</p>
+					<div class="is-title animated fadeInUp">Predictor comparison and limitations</div>
+					<div class="fieldset">
+						<table width="100%" cellpadding="cellspacing" class="is-table">
+							<tbody>
+								<tr>
+									<th class="is-table-divider">Predictors</th>
+									<th class="is-table-divider">Training R²</th>
+									<th class="is-table-divider">Leave-one-out RMSE</th>
+								</tr>
+								<tr>
+									<td>Weight only</td>
+									<td>0.3049</td>
+									<td>6.4960</td>
+								</tr>
+								<tr>
+									<td>Volume only</td>
+									<td>0.3506</td>
+									<td>6.3061</td>
+								</tr>
+								<tr>
+									<td>Weight and Volume</td>
+									<td>0.3766</td>
+									<td>6.5079</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>Leave-one-out validation refits the model on 35 rows and predicts the remaining row, repeating this for all 36 observations. RMSE summarises these held-out errors in CO2 dataset units; lower is better. Adding Weight improves training R² but does not improve this validation result over Volume alone. The predictors are correlated (r = 0.7535), so their individual coefficients should be interpreted cautiously. Raw coefficients also depend on units and should not be used directly to rank feature importance.</p>
+					<p>Observed weights range from 790 to 1746 kg, while engine volumes range from 900 to 2500 cm³. Both the supplied 2300 kg example and the 3300 kg variation extrapolate beyond the observed weights. These predictions demonstrate the equation rather than validated emissions estimates. The small example dataset lacks the provenance, sampling detail and additional vehicle characteristics needed for operational use.</p>
+					<p>Data file: <a href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-cars.csv" target="_blank" rel="noopener noreferrer">Download the accompanying car dataset</a>.</p>
+					<p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-multiple-linear-regression.ipynb" target="_blank" rel="noopener noreferrer">Download the executed multiple linear regression notebook with results and plots</a>.</p>
+					
+					<section class="is-resources">
+						<div class="is-resources-list">
+							<a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-cars.csv" target="_blank" rel="noopener noreferrer" download>
+								<span class="is-resources-icon">CSV</span>
+								<span class="is-resources-info">
+									<strong>Cars Dataset</strong>
+									<span>Download the car dataset used for multiple linear regression analysis.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+									</svg>
+								</span>
+							</a>
+							<a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-multiple-linear-regression.ipynb" target="_blank" rel="noopener noreferrer" download>
+								<span class="is-resources-icon">
+									<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+										<path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="5" r="1" fill="currentColor"/>
+									</svg>
+								</span>
+								<span class="is-resources-info">
+									<strong>Jupyter Notebook</strong>
+									<span>Download the notebook exploring multiple linear regression with results and plots.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_correlation_regression(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -220,8 +452,75 @@
 
                 <div id="is-tabs-vertical-page-5-correlation-regression" style="display:none;">
                     <div class="is-title animated fadeInUp">Polynomial Regression</div>
-                    <p>The polynomial regression analysis uses 18 observations of time of day and vehicle speed. The original degree-three fit was reproduced using <code>numpy.poly1d(numpy.polyfit(x, y, 3))</code>. Training R² is 0.943215 and the predicted speed at 17:00 is 88.8733 in the supplied speed units. Since 17 lies inside the observed interval of 1 to 22, this prediction is interpolation.</p><p>Degrees 1, 2, 3 and 5 were fitted to the same observations. For validation, each observation was held out once and the polynomial was fitted again to the other 17 points. The resulting leave-one-out RMSE measures held-out prediction error, rather than fit to the training observations.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Degree</th><th class="is-table-divider">Training R²</th><th class="is-table-divider">Leave-one-out RMSE</th><th class="is-table-divider">Prediction at 17</th></tr><tr><td>1</td><td>0.1823</td><td>15.7576</td><td>83.9297</td></tr><tr><td>2</td><td>0.7598</td><td>9.4370</td><td>81.1757</td></tr><tr><td>3</td><td>0.9432</td><td>4.2348</td><td>88.8733</td></tr><tr><td>5</td><td>0.9568</td><td>6.3910</td><td>87.1374</td></tr></tbody></table><div class="is-title animated fadeInUp">Model complexity and sensitivity</div><p>The plotted data fall and then rise, which a straight line captures poorly. The cubic fits this pattern and has the lowest leave-one-out RMSE among the tested degrees. Degree five improves training R² only slightly while increasing held-out error, illustrating how additional flexibility can fit sample-specific variation. This small comparison favours the cubic for this dataset, but is not an independent estimate of performance after model selection.</p><p>To test sensitivity to a data point, the final observation was changed from (22, 100) to (22, 140), keeping degree three. Training R² decreased to 0.8701, while the prediction at 17 changed only slightly to 88.8018. At x = 30, however, the original cubic predicts 37.9539 and the modified cubic predicts 178.6810. These are mathematical stress tests outside the observed interval, not meaningful time-of-day forecasts. The original degree-five model even predicts -20.7985 there, demonstrating unsafe extrapolation.</p><p>R² measures improvement in squared error relative to predicting the mean; it is not the percentage of observations predicted correctly or proof of causality. R² can be negative when predictions are worse than the mean baseline. Training R² and held-out performance must be distinguished.</p>
-                    <p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-polynomial-regression.ipynb" target="_blank" rel="noopener noreferrer">Download the executed polynomial regression notebook with results and plots</a>.</p>
+                    <p>The polynomial regression analysis uses 18 observations of time of day and vehicle speed. The original degree-three fit was reproduced using <code>numpy.poly1d(numpy.polyfit(x, y, 3))</code>. Training R² is 0.943215 and the predicted speed at 17:00 is 88.8733 in the supplied speed units. Since 17 lies inside the observed interval of 1 to 22, this prediction is interpolation.</p>
+					<p>Degrees 1, 2, 3 and 5 were fitted to the same observations. For validation, each observation was held out once and the polynomial was fitted again to the other 17 points. The resulting leave-one-out RMSE measures held-out prediction error, rather than fit to the training observations.</p>
+					<div class="fieldset">
+						<table width="100%" cellpadding="cellspacing" class="is-table">
+							<tbody>
+								<tr>
+									<th class="is-table-divider">Degree</th>
+									<th class="is-table-divider">Training R²</th>
+									<th class="is-table-divider">Leave-one-out RMSE</th>
+									<th class="is-table-divider">Prediction at 17</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>0.1823</td>
+									<td>15.7576</td>
+									<td>83.9297</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>0.7598</td>
+									<td>9.4370</td>
+									<td>81.1757</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>0.9432</td>
+									<td>4.2348</td>
+									<td>88.8733</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>0.9568</td>
+									<td>6.3910</td>
+									<td>87.1374</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="is-title animated fadeInUp">Model complexity and sensitivity</div>
+					<p>The plotted data fall and then rise, which a straight line captures poorly. The cubic fits this pattern and has the lowest leave-one-out RMSE among the tested degrees. Degree five improves training R² only slightly while increasing held-out error, illustrating how additional flexibility can fit sample-specific variation. This small comparison favours the cubic for this dataset, but is not an independent estimate of performance after model selection.</p>
+					<p>To test sensitivity to a data point, the final observation was changed from (22, 100) to (22, 140), keeping degree three. Training R² decreased to 0.8701, while the prediction at 17 changed only slightly to 88.8018. At x = 30, however, the original cubic predicts 37.9539 and the modified cubic predicts 178.6810. These are mathematical stress tests outside the observed interval, not meaningful time-of-day forecasts. The original degree-five model even predicts -20.7985 there, demonstrating unsafe extrapolation.</p>
+					<p>R² measures improvement in squared error relative to predicting the mean; it is not the percentage of observations predicted correctly or proof of causality. R² can be negative when predictions are worse than the mean baseline. Training R² and held-out performance must be distinguished.</p>
+					
+					<section class="is-resources">
+						<div class="is-resources-list">
+							<a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_correlation-and-regression-polynomial-regression.ipynb" target="_blank" rel="noopener noreferrer" download>
+								<span class="is-resources-icon">
+									<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+										<path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+										<circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+										<circle cx="19" cy="5" r="1" fill="currentColor"/>
+									</svg>
+								</span>
+								<span class="is-resources-info">
+									<strong>Jupyter Notebook</strong>
+									<span>Download the notebook exploring polynomial regression with results and plots.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_correlation_regression(4);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -232,15 +531,13 @@
 
                 <div id="is-tabs-vertical-page-6-correlation-regression" style="display:none;">
                     <div class="is-title animated fadeInUp">Reflection</div>
-                    <p>The experiments distinguish linear association from predictive reliability. Increasing noise weakened Pearson correlation, while rescaling a variable changed covariance without changing correlation. Altering one observation also substantially changed the linear fit. The changed fit illustrates why a coefficient needs to be interpreted alongside the scatter plot and the data context (Schober, Boer and Schwarte, 2018).</p>
-                    <p>The polynomial comparison showed why training accuracy alone is insufficient: degree five achieved a higher training R², but the cubic had lower leave-one-out error. However, choosing the cubic using those validation results means they cannot also provide an independent final performance estimate. Cawley and Talbot (2010) show how model selection itself can overfit an evaluation criterion. A stronger evaluation would separate model selection from final testing and investigate influential observations before drawing conclusions.</p>
-                    <p>The vehicle analysis also demonstrates the limits of reproducibility as evidence of practical validity. Reproducing reference results does not establish that a small example dataset represents the wider vehicle population or supports reliable emissions predictions. Bender and Friedman (2018) advocate documenting dataset characteristics and limits to generalisation in language technology. For these regression analyses, that principle calls for records of provenance, units, intended use, sampling limitations and data-use permissions, alongside explicit uncertainty. This would help prevent small example datasets or extrapolated predictions from being presented as reliable evidence for wider decisions.</p>
-                    <div class="is-title animated fadeInUp">References</div>
-                    <p>Bender, E.M. and Friedman, B. (2018) ‘Data statements for natural language processing: toward mitigating system bias and enabling better science’, <i>Transactions of the Association for Computational Linguistics</i>, 6, pp. 587–604. Available at: <a href="https://doi.org/10.1162/tacl_a_00041" target="_blank" rel="noopener noreferrer">https://doi.org/10.1162/tacl_a_00041</a> (Accessed: 14 October 2026).</p>
-                    <p>Cawley, G.C. and Talbot, N.L.C. (2010) ‘On over-fitting in model selection and subsequent selection bias in performance evaluation’, <i>Journal of Machine Learning Research</i>, 11, pp. 2079–2107. Available at: <a href="https://www.jmlr.org/papers/v11/cawley10a.html" target="_blank" rel="noopener noreferrer">https://www.jmlr.org/papers/v11/cawley10a.html</a> (Accessed: 14 October 2026).</p>
-                    <p>Schober, P., Boer, C. and Schwarte, L.A. (2018) ‘Correlation coefficients: appropriate use and interpretation’, <i>Anesthesia &amp; Analgesia</i>, 126(5), pp. 1763–1768. Available at: <a href="https://doi.org/10.1213/ANE.0000000000002864" target="_blank" rel="noopener noreferrer">https://doi.org/10.1213/ANE.0000000000002864</a> (Accessed: 14 October 2026).</p>
-
-
+                	<p>The experiments distinguish linear association from predictive reliability. Increasing noise weakened Pearson correlation, while rescaling a variable changed covariance without changing correlation. Altering one observation also substantially changed the linear fit. The changed fit illustrates why a coefficient needs to be interpreted alongside the scatter plot and the data context (Schober, Boer and Schwarte, 2018).</p>
+					<p>The polynomial comparison showed why training accuracy alone is insufficient: degree five achieved a higher training R², but the cubic had lower leave-one-out error. However, choosing the cubic using those validation results means they cannot also provide an independent final performance estimate. Cawley and Talbot (2010) show how model selection itself can overfit an evaluation criterion. A stronger evaluation would separate model selection from final testing and investigate influential observations before drawing conclusions.</p>
+					<p>The vehicle analysis also demonstrates the limits of reproducibility as evidence of practical validity. Reproducing reference results does not establish that a small example dataset represents the wider vehicle population or supports reliable emissions predictions. Bender and Friedman (2018) advocate documenting dataset characteristics and limits to generalisation in language technology. For these regression analyses, that principle calls for records of provenance, units, intended use, sampling limitations and data-use permissions, alongside explicit uncertainty. This would help prevent small example datasets or extrapolated predictions from being presented as reliable evidence for wider decisions.</p>
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Bender, E.M. and Friedman, B. (2018) 'Data statements for natural language processing: toward mitigating system bias and enabling better science', <i>Transactions of the Association for Computational Linguistics</i>, 6, pp. 587–604. Available at: <a href="https://doi.org/10.1162/tacl_a_00041" target="_blank" rel="noopener noreferrer">https://doi.org/10.1162/tacl_a_00041</a> (Accessed: 14 October 2026).</p>
+					<p>Cawley, G.C. and Talbot, N.L.C. (2010) 'On over-fitting in model selection and subsequent selection bias in performance evaluation', <i>Journal of Machine Learning Research</i>, 11, pp. 2079–2107. Available at: <a href="https://www.jmlr.org/papers/v11/cawley10a.html" target="_blank" rel="noopener noreferrer">https://www.jmlr.org/papers/v11/cawley10a.html</a> (Accessed: 14 October 2026).</p>
+					<p>Schober, P., Boer, C. and Schwarte, L.A. (2018) 'Correlation coefficients: appropriate use and interpretation', <i>Anesthesia &amp; Analgesia</i>, 126(5), pp. 1763–1768. Available at: <a href="https://doi.org/10.1213/ANE.0000000000002864" target="_blank" rel="noopener noreferrer">https://doi.org/10.1213/ANE.0000000000002864</a> (Accessed: 14 October 2026).</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_correlation_regression(5);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -276,7 +573,7 @@
 		<a class="is-eyebrow" href="module-4-machine-learning_collaborative-discussions.html" style="padding:7px;" title="Previous">
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
 		</a>
-		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>Correlation and Regression</div>
+		<div class="is-eyebrow"><span class="is-eyebrow-dot"></span>Correlation / Regression</div>
 		<a class="is-eyebrow" href="module-4-machine-learning_jaccard-distance-dissimilarity-calculations.html" style="padding:7px;" title="Next">
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
 		</a>

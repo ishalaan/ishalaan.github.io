@@ -48,6 +48,7 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+    <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
     <link rel="shortcut icon" href="assets/page/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -56,6 +57,14 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
     <style>
+		#is-tabs-vertical-page-2-gradient-cost-function .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-3-gradient-cost-function .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-4-gradient-cost-function .is-table :is(td, th):nth-child(n+2):nth-child(-n+4)
+		{
+			min-width: 100px;
+			text-align: center;
+		}
+
         .is-menu .is-menu-list .is-logo a {
             width: 270px;
         }
@@ -94,7 +103,7 @@
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="" />
 
-    <title>Machine Learning by Isaac Shalaan</title>
+    <title>Machine Learning: Gradient Cost Function by Isaac Shalaan</title>
 
     <script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
     <script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script>
@@ -116,11 +125,13 @@
     <ul class="is-fixed is-menu-list">
         <li class="is-logo" id="is-menu-logo"><a href="index.html"></a></li>
 
-        <div class="is-menu-mobile" id="is-menu-mobile">
-            <li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-            <li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-            <li class="" id=""><a href="about.html">About</a></li>
-        </div>
+		<div class="is-menu-mobile" id="is-menu-mobile">
+			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
+			<li class="is-menu-active"><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class=""><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
+		</div>
 
         <li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
         <br class="is-clear" />
@@ -144,7 +155,7 @@
         </a>
         <br />
 
-        <h1 class="animated fadeInDown">Machine Learning Module: <span>Gradient Cost Function</span>.</h1>
+        <h1 class="animated fadeInDown">Machine Learning Module <span>Gradient Cost Function</span>.</h1>
     </div>
 </div>
 
@@ -182,7 +193,69 @@
 
                 <div id="is-tabs-vertical-page-2-gradient-cost-function" style="display:none;">
                     <div class="is-title animated fadeInUp">Baseline Execution</div>
-                    <p>The analysis fits <code>ŷ = mx + b</code> to five observations: <code>x = [1, 2, 3, 4, 5]</code> and <code>y = [5, 7, 9, 11, 13]</code>. These points lie exactly on <code>y = 2x + 3</code>, providing a known solution against which to check optimisation. The cost is mean squared error, <code>J(m,b) = (1/n) Σ(y − ŷ)²</code>, with no factor of one-half.</p><p>The baseline starts from <code>m = 0</code> and <code>b = 0</code>, uses learning rate <code>α = 0.08</code> and performs 100 updates. Both gradients are calculated at the same parameter values before either parameter changes: <code>∂J/∂m = −(2/n) Σx(y − ŷ)</code> and <code>∂J/∂b = −(2/n) Σ(y − ŷ)</code>. Each update subtracts the learning rate multiplied by the respective gradient. All five observations contribute to every update, making this full-batch gradient descent.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Completed updates</th><th class="is-table-divider">Slope m</th><th class="is-table-divider">Intercept b</th><th class="is-table-divider">MSE</th></tr><tr><td>0</td><td>0</td><td>0</td><td>89</td></tr><tr><td>1</td><td>4.960000</td><td>1.440000</td><td>71.105600</td></tr><tr><td>100</td><td>2.040516</td><td>2.853600</td><td>0.003901</td></tr></tbody></table><p>Mayo (2017) explains how gradients guide weight updates and distinguishes batch, stochastic and mini-batch training. Here, the slope and intercept are updated using the full dataset. Their derivatives are calculated directly; there is no multilayer network requiring backpropagation. More precisely, backpropagation computes gradients through a network, while gradient descent uses those gradients to update parameters. The article’s discussion of local minima does not apply to this strictly convex quadratic.</p><div class="is-title animated fadeInUp">Reporting Accuracy</div><p>The reference programme prints updated parameters alongside cost calculated before that update. Its last printed line therefore reports <code>0.004120600</code> from 99 completed updates beside the parameters after 100 updates. Recomputing cost at those parameters gives <code>0.003900707</code>. The portfolio tables align every cost with the displayed parameters and use completed-update counts rather than zero-based loop indices.</p><p>The original code was replayed and its final parameters checked against the aligned implementation. Finite-difference checks confirm the gradients, and an independent least-squares calculation returns <code>m = 2</code>, <code>b = 3</code>. The cost is strictly convex in these two parameters, so this dataset has a unique global minimum of zero.</p><p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_gradient-cost-function.ipynb" target="_blank" rel="noopener noreferrer">Download the executed gradient descent notebook</a>. The notebook contains the baseline and both controlled comparisons.</p>
+                    <p>The analysis fits <code>ŷ = mx + b</code> to five observations: <code>x = [1, 2, 3, 4, 5]</code> and <code>y = [5, 7, 9, 11, 13]</code>. These points lie exactly on <code>y = 2x + 3</code>, providing a known solution against which to check optimisation. The cost is mean squared error, <code>J(m,b) = (1/n) Σ(y − ŷ)²</code>, with no factor of one-half.</p>
+                    <p>The baseline starts from <code>m = 0</code> and <code>b = 0</code>, uses learning rate <code>α = 0.08</code> and performs 100 updates. Both gradients are calculated at the same parameter values before either parameter changes: <code>∂J/∂m = −(2/n) Σx(y − ŷ)</code> and <code>∂J/∂b = −(2/n) Σ(y − ŷ)</code>. Each update subtracts the learning rate multiplied by the respective gradient. All five observations contribute to every update, making this full-batch gradient descent.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Completed updates</th>
+                                    <th class="is-table-divider">Slope m</th>
+                                    <th class="is-table-divider">Intercept b</th>
+                                    <th class="is-table-divider">MSE</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>89</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>4.960000</td>
+                                    <td>1.440000</td>
+                                    <td>71.105600</td>
+                                </tr>
+                                <tr>
+                                    <td>100</td>
+                                    <td>2.040516</td>
+                                    <td>2.853600</td>
+                                    <td>0.003901</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Mayo (2017) explains how gradients guide weight updates and distinguishes batch, stochastic and mini-batch training. Here, the slope and intercept are updated using the full dataset. Their derivatives are calculated directly; there is no multilayer network requiring backpropagation. More precisely, backpropagation computes gradients through a network, while gradient descent uses those gradients to update parameters. The article's discussion of local minima does not apply to this strictly convex quadratic.</p>
+                    <div class="is-title animated fadeInUp">Reporting Accuracy</div>
+                    <p>The reference programme prints updated parameters alongside cost calculated before that update. Its last printed line therefore reports <code>0.004120600</code> from 99 completed updates beside the parameters after 100 updates. Recomputing cost at those parameters gives <code>0.003900707</code>. The portfolio tables align every cost with the displayed parameters and use completed-update counts rather than zero-based loop indices.</p>
+                    <p>The original code was replayed and its final parameters checked against the aligned implementation. Finite-difference checks confirm the gradients, and an independent least-squares calculation returns <code>m = 2</code>, <code>b = 3</code>. The cost is strictly convex in these two parameters, so this dataset has a unique global minimum of zero.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_gradient-cost-function.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring gradient descent and cost functions.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_gradient_cost_function(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -193,7 +266,86 @@
 
                 <div id="is-tabs-vertical-page-3-gradient-cost-function" style="display:none;">
                     <div class="is-title animated fadeInUp">Iteration Experiments</div>
-                    <p>The iteration budget is varied while the learning rate remains 0.08. Every run starts from zero with the same data and gradient formulas. The costs below are evaluated after the stated number of updates.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Updates</th><th class="is-table-divider">Slope m</th><th class="is-table-divider">Intercept b</th><th class="is-table-divider">MSE</th></tr><tr><td>1</td><td>4.960000</td><td>1.440000</td><td>71.105600</td></tr><tr><td>10</td><td>1.630886</td><td>1.038341</td><td>9.691269</td></tr><tr><td>50</td><td>2.150586</td><td>2.420784</td><td>0.061598</td></tr><tr><td>100</td><td>2.040516</td><td>2.853600</td><td>0.003901</td></tr><tr><td>500</td><td>2.000001</td><td>2.999997</td><td>1.160e-12</td></tr><tr><td>1000</td><td>2.000000</td><td>3.000000</td><td>1.432e-24</td></tr></tbody></table><div class="is-title animated fadeInUp">Convergence Behaviour</div><p>Cost falls from 89 initially to 9.691269 after ten updates, then to 0.003901 after 100. At 500 updates it is approximately <code>1.160e−12</code>, with parameters close to the exact solution. At 1,000 updates the remaining error is negligible for this example. Values displayed as 2.000000 and 3.000000 are rounded, not claims of mathematically exact convergence.</p><p>The learning curve shows rapid initial improvement followed by progressively smaller reductions. Parameter values can alternate across the optimum while the cost still decreases. This distinction matters: overshooting in parameter space does not necessarily imply divergence. Further iterations are useful only while the update remains stable and the remaining optimisation error matters.</p><p>An iteration limit controls computation but does not establish convergence. A stronger stopping rule would combine a maximum budget with a gradient-norm or cost-change tolerance. These results describe fitting five noiseless points; reducing training cost does not demonstrate predictive performance on independent data.</p><p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_gradient-cost-function.ipynb" target="_blank" rel="noopener noreferrer">Download the notebook with iteration comparisons and learning curves</a>. The notebook contains the baseline and both controlled comparisons.</p>
+                    <p>The iteration budget is varied while the learning rate remains 0.08. Every run starts from zero with the same data and gradient formulas. The costs below are evaluated after the stated number of updates.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Updates</th>
+                                    <th class="is-table-divider">Slope m</th>
+                                    <th class="is-table-divider">Intercept b</th>
+                                    <th class="is-table-divider">MSE</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>4.960000</td>
+                                    <td>1.440000</td>
+                                    <td>71.105600</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>1.630886</td>
+                                    <td>1.038341</td>
+                                    <td>9.691269</td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>2.150586</td>
+                                    <td>2.420784</td>
+                                    <td>0.061598</td>
+                                </tr>
+                                <tr>
+                                    <td>100</td>
+                                    <td>2.040516</td>
+                                    <td>2.853600</td>
+                                    <td>0.003901</td>
+                                </tr>
+                                <tr>
+                                    <td>500</td>
+                                    <td>2.000001</td>
+                                    <td>2.999997</td>
+                                    <td>1.160e-12</td>
+                                </tr>
+                                <tr>
+                                    <td>1000</td>
+                                    <td>2.000000</td>
+                                    <td>3.000000</td>
+                                    <td>1.432e-24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="is-title animated fadeInUp">Convergence Behaviour</div>
+                    <p>Cost falls from 89 initially to 9.691269 after ten updates, then to 0.003901 after 100. At 500 updates it is approximately <code>1.160e−12</code>, with parameters close to the exact solution. At 1,000 updates the remaining error is negligible for this example. Values displayed as 2.000000 and 3.000000 are rounded, not claims of mathematically exact convergence.</p>
+                    <p>The learning curve shows rapid initial improvement followed by progressively smaller reductions. Parameter values can alternate across the optimum while the cost still decreases. This distinction matters: overshooting in parameter space does not necessarily imply divergence. Further iterations are useful only while the update remains stable and the remaining optimisation error matters.</p>
+                    <p>An iteration limit controls computation but does not establish convergence. A stronger stopping rule would combine a maximum budget with a gradient-norm or cost-change tolerance. These results describe fitting five noiseless points; reducing training cost does not demonstrate predictive performance on independent data.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_gradient-cost-function.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring gradient descent convergence and learning curves.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_gradient_cost_function(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -204,7 +356,84 @@
 
                 <div id="is-tabs-vertical-page-4-gradient-cost-function" style="display:none;">
                     <div class="is-title animated fadeInUp">Learning Rate Experiments</div>
-                    <p>Learning rates are compared with a fixed budget of 100 updates. All runs use the same zero initialisation, dataset and cost definition, isolating the effect of step size.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Learning rate</th><th class="is-table-divider">MSE after 100 updates</th><th class="is-table-divider">Observed behaviour</th></tr><tr><td>0.001</td><td>1.610466</td><td>Slow progress</td></tr><tr><td>0.01</td><td>0.477164</td><td>Convergent</td></tr><tr><td>0.05</td><td>0.031042</td><td>Convergent</td></tr><tr><td>0.08</td><td>0.003901</td><td>Lowest cost among tested rates at 100 updates</td></tr><tr><td>0.084</td><td>7.263861</td><td>Stable but weakly damped</td></tr><tr><td>0.085</td><td>827.000245</td><td>Divergent</td></tr><tr><td>0.1</td><td>1.114e+29</td><td>Strongly divergent</td></tr></tbody></table><div class="is-title animated fadeInUp">Why Larger Steps Can Fail</div><p>Rate 0.08 gives the lowest cost among the tested rates at this budget. Increasing the rate to 0.084 produces a much higher cost despite remaining within the convergence range: the iterates alternate with weak damping. At 0.085 the cost exceeds its initial value and grows; at 0.1 it reaches approximately <code>1.114e29</code>. Extra iterations cannot repair an unstable fixed step size.</p><p>For this quadratic cost, the curvature matrix is <code>H = [[22, 6], [6, 2]]</code>, with eigenvalues approximately <code>0.338096</code> and <code>23.661904</code>. The parameter error evolves as <code>e_next = (I − αH)e</code>. Convergence from any starting parameters requires <code>0 &lt; α &lt; 2 / λ_max(H)</code>, giving a strict upper limit of approximately <code>0.084524</code>. This explains the observed difference between 0.084 and 0.085.</p><p>The bound is specific to these features and this MSE normalisation. Rescaling the predictor, changing the dataset or using a half-MSE objective changes the gradients and the permissible step sizes. The experiment therefore supports checking the cost trajectory and curvature rather than treating a particular rate as universally appropriate.</p><p>Analysis notebook: <a href="assets/page/Notebooks/module-4-machine-learning_gradient-cost-function.ipynb" target="_blank" rel="noopener noreferrer">Download the notebook with learning-rate comparisons and stability checks</a>. The notebook contains the baseline and both controlled comparisons.</p>
+                    <p>Learning rates are compared with a fixed budget of 100 updates. All runs use the same zero initialisation, dataset and cost definition, isolating the effect of step size.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Learning rate</th>
+                                    <th class="is-table-divider">MSE after 100 updates</th>
+                                    <th class="is-table-divider">Observed behaviour</th>
+                                </tr>
+                                <tr>
+                                    <td>0.001</td>
+                                    <td>1.610466</td>
+                                    <td>Slow progress</td>
+                                </tr>
+                                <tr>
+                                    <td>0.01</td>
+                                    <td>0.477164</td>
+                                    <td>Convergent</td>
+                                </tr>
+                                <tr>
+                                    <td>0.05</td>
+                                    <td>0.031042</td>
+                                    <td>Convergent</td>
+                                </tr>
+                                <tr>
+                                    <td>0.08</td>
+                                    <td>0.003901</td>
+                                    <td>Lowest cost among tested rates at 100 updates</td>
+                                </tr>
+                                <tr>
+                                    <td>0.084</td>
+                                    <td>7.263861</td>
+                                    <td>Stable but weakly damped</td>
+                                </tr>
+                                <tr>
+                                    <td>0.085</td>
+                                    <td>827.000245</td>
+                                    <td>Divergent</td>
+                                </tr>
+                                <tr>
+                                    <td>0.1</td>
+                                    <td>1.114e+29</td>
+                                    <td>Strongly divergent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="is-title animated fadeInUp">Why Larger Steps Can Fail</div>
+                    <p>Rate 0.08 gives the lowest cost among the tested rates at this budget. Increasing the rate to 0.084 produces a much higher cost despite remaining within the convergence range: the iterates alternate with weak damping. At 0.085 the cost exceeds its initial value and grows; at 0.1 it reaches approximately <code>1.114e29</code>. Extra iterations cannot repair an unstable fixed step size.</p>
+                    <p>For this quadratic cost, the curvature matrix is <code>H = [[22, 6], [6, 2]]</code>, with eigenvalues approximately <code>0.338096</code> and <code>23.661904</code>. The parameter error evolves as <code>e_next = (I − αH)e</code>. Convergence from any starting parameters requires <code>0 &lt; α &lt; 2 / λ_max(H)</code>, giving a strict upper limit of approximately <code>0.084524</code>. This explains the observed difference between 0.084 and 0.085.</p>
+                    <p>The bound is specific to these features and this MSE normalisation. Rescaling the predictor, changing the dataset or using a half-MSE objective changes the gradients and the permissible step sizes. The experiment therefore supports checking the cost trajectory and curvature rather than treating a particular rate as universally appropriate.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_gradient-cost-function.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring learning rates and gradient descent stability.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_gradient_cost_function(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -215,7 +444,14 @@
 
                 <div id="is-tabs-vertical-page-5-gradient-cost-function" style="display:none;">
                     <div class="is-title animated fadeInUp">Reflection</div>
-                    <p>Mayo’s (2017) account of step size provides a conceptual starting point; the experiments establish its effect for this particular cost function. Iteration count and learning rate address different aspects of optimisation. More updates reduce the remaining error for a stable run, but amplify divergence when the rate is too large. The contrast between 0.08, 0.084 and 0.085 also shows that the largest stable rate need not give the best finite-budget result. The explicit stability calculation makes these outcomes explainable rather than relying only on trial and error.</p><p>Accurate reporting is equally important: the parameter values and cost must refer to the same update. For problems where a safe fixed rate is unknown, a step-size procedure that checks sufficient decrease offers a principled alternative to accepting every proposed step (Armijo, 1966). Optimisation choices also depend on computational cost, curvature and data scale, which become more consequential in larger learning problems (Bottou, Curtis and Nocedal, 2018).</p><p>This example uses exact full-batch gradients on a noiseless, strictly convex problem. It does not test noisy estimates or stochastic updates, whose foundations and convergence conditions differ (Robbins and Monro, 1951). The near-zero cost confirms recovery of the known line, not real-world generalisation. A broader evaluation would examine scaling and noisy data, use explicit stopping criteria and assess predictions on independent observations.</p><div class="is-title animated fadeInUp">References</div><p>Armijo, L. (1966) ‘Minimization of functions having Lipschitz continuous first partial derivatives’, <i>Pacific Journal of Mathematics</i>, 16(1), pp. 1–3. Available at: <a href="https://doi.org/10.2140/pjm.1966.16.1" target="_blank" rel="noopener noreferrer">https://doi.org/10.2140/pjm.1966.16.1</a> (Accessed: 14 October 2026).</p><p>Bottou, L., Curtis, F.E. and Nocedal, J. (2018) ‘Optimization methods for large-scale machine learning’, <i>SIAM Review</i>, 60(2), pp. 223–311. Available at: <a href="https://doi.org/10.1137/16M1080173" target="_blank" rel="noopener noreferrer">https://doi.org/10.1137/16M1080173</a> (Accessed: 14 October 2026).</p><p>Mayo, M. (2017) ‘Neural network foundations, explained: updating weights with gradient descent &amp; backpropagation’, <i>KDnuggets</i>, 25 October. Available at: <a href="https://www.kdnuggets.com/2017/10/neural-network-foundations-explained-gradient-descent.html" target="_blank" rel="noopener noreferrer">https://www.kdnuggets.com/2017/10/neural-network-foundations-explained-gradient-descent.html</a> (Accessed: 14 October 2026).</p><p>Robbins, H. and Monro, S. (1951) ‘A stochastic approximation method’, <i>The Annals of Mathematical Statistics</i>, 22(3), pp. 400–407. Available at: <a href="https://doi.org/10.1214/aoms/1177729586" target="_blank" rel="noopener noreferrer">https://doi.org/10.1214/aoms/1177729586</a> (Accessed: 14 October 2026).</p>
+                    <p>Mayo's (2017) account of step size provides a conceptual starting point; the experiments establish its effect for this particular cost function. Iteration count and learning rate address different aspects of optimisation. More updates reduce the remaining error for a stable run, but amplify divergence when the rate is too large. The contrast between 0.08, 0.084 and 0.085 also shows that the largest stable rate need not give the best finite-budget result. The explicit stability calculation makes these outcomes explainable rather than relying only on trial and error.</p>
+                    <p>Accurate reporting is equally important: the parameter values and cost must refer to the same update. For problems where a safe fixed rate is unknown, a step-size procedure that checks sufficient decrease offers a principled alternative to accepting every proposed step (Armijo, 1966). Optimisation choices also depend on computational cost, curvature and data scale, which become more consequential in larger learning problems (Bottou, Curtis and Nocedal, 2018).</p>
+                    <p>This example uses exact full-batch gradients on a noiseless, strictly convex problem. It does not test noisy estimates or stochastic updates, whose foundations and convergence conditions differ (Robbins and Monro, 1951). The near-zero cost confirms recovery of the known line, not real-world generalisation. A broader evaluation would examine scaling and noisy data, use explicit stopping criteria and assess predictions on independent observations.</p>
+                    <div class="is-title animated fadeInUp">References</div>
+                    <p>Armijo, L. (1966) 'Minimization of functions having Lipschitz continuous first partial derivatives', <i>Pacific Journal of Mathematics</i>, 16(1), pp. 1–3. Available at: <a href="https://doi.org/10.2140/pjm.1966.16.1" target="_blank" rel="noopener noreferrer">https://doi.org/10.2140/pjm.1966.16.1</a> (Accessed: 14 October 2026).</p>
+                    <p>Bottou, L., Curtis, F.E. and Nocedal, J. (2018) 'Optimization methods for large-scale machine learning', <i>SIAM Review</i>, 60(2), pp. 223–311. Available at: <a href="https://doi.org/10.1137/16M1080173" target="_blank" rel="noopener noreferrer">https://doi.org/10.1137/16M1080173</a> (Accessed: 14 October 2026).</p>
+                    <p>Mayo, M. (2017) 'Neural network foundations, explained: updating weights with gradient descent &amp; backpropagation', <i>KDnuggets</i>, 25 October. Available at: <a href="https://www.kdnuggets.com/2017/10/neural-network-foundations-explained-gradient-descent.html" target="_blank" rel="noopener noreferrer">https://www.kdnuggets.com/2017/10/neural-network-foundations-explained-gradient-descent.html</a> (Accessed: 14 October 2026).</p>
+                    <p>Robbins, H. and Monro, S. (1951) 'A stochastic approximation method', <i>The Annals of Mathematical Statistics</i>, 22(3), pp. 400–407. Available at: <a href="https://doi.org/10.1214/aoms/1177729586" target="_blank" rel="noopener noreferrer">https://doi.org/10.1214/aoms/1177729586</a> (Accessed: 14 October 2026).</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_gradient_cost_function(4);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">

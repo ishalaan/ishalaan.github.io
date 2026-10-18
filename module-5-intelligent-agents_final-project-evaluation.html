@@ -47,6 +47,7 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
 	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+	<link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
 	<link rel="shortcut icon" href="assets/page/images/favicon.png" />
 	<link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -93,7 +94,7 @@
 	<meta name="robots" content="noindex" /> 
 	<meta name="theme-color" content="" /> 
 
-	<title>Intelligent Agents by Isaac Shalaan</title>
+	<title>Intelligent Agents: Final Project Evaluation by Isaac Shalaan</title>
 
 	<script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
 	<script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script> 
@@ -117,8 +118,10 @@
 
 		<div class="is-menu-mobile" id="is-menu-mobile">
 			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-			<li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-			<li class="" id=""><a href="about.html">About</a></li>
+			<li class=""><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class="is-menu-active"><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
 		</div>
 
 		<li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
@@ -143,7 +146,7 @@
 		</a>
 		<br />
 
-		<h1 class="animated fadeInDown">Intelligent Agents Module: <span>Final Project Evaluation</span>.</h1>
+		<h1 class="animated fadeInDown">Intelligent Agents Module <span>Final Project Evaluation</span>.</h1>
 	</div>
 </div>
 
@@ -162,7 +165,33 @@
 
 				<div id="is-tabs-vertical-page-1-final-project-evaluation">
 					<div class="is-title animated fadeInUp">Design Phase</div>
-					<p>[Present and critically evaluate the initial project design, including the proposed intelligent agent architecture, system requirements, UML diagrams and technical decisions. Explain your individual contributions, the rationale behind the chosen approach, collaboration with team members and the limitations or trade-offs identified during the design process.]</p>
+					<p>My contribution covered the initial team contract, the system design and the final review of the design report. The contract provided a starting point for organising the team's work, while the system design set out how a research question would move through evidence gathering, review and reporting. My priority was to give each part of the workflow a clear responsibility and make the proposed interactions understandable. Completing the final review brought these contributions together at the point of preparing the design report for submission.</p>
+					<p>The architecture separated Planner/Supervisor, Retrieval, Critic and Reporting responsibilities, drawing on the specialised agent roles discussed by Guo et al. (2024). I assigned duplicate removal and metadata cleaning to deterministic Python functions, reserving language interpretation for the LLM agents. LangGraph's shared state and conditional routing made the supervisor responsible for coordinating progress and re-planning. This favoured a controlled, inspectable workflow over unrestricted exchanges between agents. It limited their freedom to coordinate independently, but gave the design a clear route for handling evidence gaps and terminating repeated searches. The BDI mapping described the agents' knowledge, goals and plans at a conceptual level, with Archibald et al. (2024) providing a reference point for formal BDI modelling.</p>
+					<p>The Critic was designed to assess the retrieved evidence and request further searches within a fixed cycle limit. Research on self-reflection by Ji et al. (2023) provided context for including this review stage. Abstracts offered a manageable starting point for synthesis, while source links allowed the underlying publications to be consulted in greater depth. Structured JSON specified the information passed between stages, and SQLite persistence supported the planned audit trail. Together, these choices balanced agent flexibility with predictable coordination and traceability, establishing a practical specification for implementation.</p>
+					
+					<section class="is-resources">
+						<div class="is-resources-list">
+							<a class="is-resources-item" href="assets/page/Documents/module-5-intelligent-agents_academic-evidence-investigator-report.pdf" target="_blank" download>
+								<span class="is-resources-icon">PDF</span>
+								<span class="is-resources-info">
+									<strong>Design Report</strong>
+									<span>Download the report detailing the system architecture and design decisions.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</section>
+					
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Archibald, B., Calder, M., Sevegnani, M. and Xu, M. (2024) 'Quantitative modelling and analysis of BDI agents', <i>Software and Systems Modeling</i>, 23(2), pp. 343-367. Available at: <a href="https://doi.org/10.1007/s10270-023-01121-5" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s10270-023-01121-5</a> (Accessed: 16 October 2026).</p>
+					<p>Guo, T., Chen, X., Wang, Y., Chang, R., Pei, S., Chawla, N.V., Wiest, O. and Zhang, X. (2024) 'Large language model based multi-agents: a survey of progress and challenges', <i>Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence</i>, pp. 8048-8057. Available at: <a href="https://doi.org/10.24963/ijcai.2024/890" target="_blank" rel="noopener noreferrer">https://doi.org/10.24963/ijcai.2024/890</a> (Accessed: 16 October 2026).</p>
+					<p>Ji, Z., Yu, T., Xu, Y., Lee, N., Ishii, E. and Fung, P. (2023) 'Towards mitigating LLM hallucination via self reflection', <i>Findings of the Association for Computational Linguistics: EMNLP 2023</i>. Singapore: Association for Computational Linguistics, pp. 1827-1843. Available at: <a href="https://doi.org/10.18653/v1/2023.findings-emnlp.123" target="_blank" rel="noopener noreferrer">https://doi.org/10.18653/v1/2023.findings-emnlp.123</a> (Accessed: 16 October 2026).</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="submit" value="Next Tab" class="is-button-primary" onclick="javascript:is_tabs_vertical_menu_final_project_evaluation(2);" autocomplete="off" autocapitalize="none">
@@ -172,7 +201,64 @@
 
 				<div id="is-tabs-vertical-page-2-final-project-evaluation" style="display:none;">
 					<div class="is-title animated fadeInUp">Implemented Solution</div>
-					<p>[Present and critically evaluate the implemented intelligent agent system, explaining how the final solution compares with the original design. Include evidence of implementation, testing results, system behaviour, challenges encountered and any changes made during development. Assess the effectiveness of the solution, its limitations and the extent to which the original objectives and design expectations were achieved.]</p>
+					<p>The Academic Evidence Investigator develops the design into a working research-support application. It retains LangGraph coordination, the Flask interface and SQLite persistence, combining planning, retrieval, critical review and reporting. Crossref and Semantic Scholar searches produce validated, deduplicated records and structured briefings with traceable references.</p>
+					<p>The implementation extends the design by replacing Qwen2.5-7B-Instruct with Qwen3-8B through Hugging Face and expanding abstract-based synthesis to PDF and HTML full-text extraction, with abstract fallback. Local sentence-transformer embeddings and FAISS select relevant passages. Article identity checks, duplicate-version handling and source locations preserve evidence traceability, while bounded retries and provider diagnostics address service interruptions. Citation normalisation and targeted grounding checks strengthen reporting.</p>
+					<p>The live activity view shows workflow progress, while the persistent audit log records decisions alongside saved reports. These additions make the stages behind a briefing visible and reviewable, improving workflow explainability, troubleshooting and human oversight. Bounded re-planning manages further searches, while passage selection and context budgets address the long-document challenges highlighted by Liu et al. (2024).</p>
+					<p>The saved final results record 263 passing Python tests across unit, integration and functional checks, including failure handling and recovery. This attention to behaviour beyond successful inputs reflects the testing principles discussed by Ribeiro et al. (2020) and provides substantial evidence of implementation quality.</p>
+					<p>Limitations include database coverage, access restrictions, API rate limits and model availability, which can restrict retrieval to abstracts. PDF extraction lacks OCR for scanned documents, and unusual or JavaScript-only layouts may fail. Passage selection and context limits can omit detail, while database, language and model biases can affect representation. The evidence gathered is therefore not exhaustive.</p>
+					<p>Hallucinations can still produce misinterpreted findings, overstated conclusions or claims unsupported by their cited sources, as discussed by Ji et al. (2023). Grounding checks and audit records support investigation but cannot guarantee accuracy, and some quality concerns appear as review notes rather than blocking completion. Ranking scores and Critic decisions are not independently validated measures of research quality. Independent assessment of retrieval relevance and claim support would complement the software tests. Hosted inference also sends research questions and selected evidence outside the application, requiring appropriate arrangements for confidential material. Source checking and human judgement remain central to effective use.</p>
+					
+					<section class="is-resources">
+						<div class="is-resources-list">
+							<a class="is-resources-item" href="https://shalaan.ai/a/409246373cccac3351252073291/presentations/module-5-intelligent-agents_academic-evidence-investigator-presentation.pptx" target="_blank" download>
+								<span class="is-resources-icon">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="1.8"
+										stroke-linecap="round" stroke-linejoin="round"
+										aria-hidden="true">
+										<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+										<path d="M13 2v7h7"/>
+										<path d="M8 17v-5h2a1.5 1.5 0 0 1 0 3H8"/>
+									</svg>
+								</span>
+								<span class="is-resources-info">
+									<strong>Individual Presentation</strong>
+									<span>Download the final presentation showcasing the project's implementation and key outcomes.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+									</svg>
+								</span>
+							</a>
+							<a class="is-resources-item" href="https://github.com/ishalaan/academic-evidence-investigator" target="_blank" rel="noopener noreferrer">
+								<span class="is-resources-icon">
+									<svg viewBox="0 0 24 24" fill="currentColor"
+										aria-hidden="true">
+										<path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18A11 11 0 0 1 12 6.82c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.05.78 2.12v3.14c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+									</svg>
+								</span>
+								<span class="is-resources-info">
+									<strong>GitHub Repository</strong>
+									<span>Explore the project's source code, implementation details and development history on GitHub.</span>
+								</span>
+								<span class="is-resources-action" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M7 17 17 7M7 7h10v10"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</section>
+										
+					<div class="is-title animated fadeInUp">References</div>
+					<p>Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y.J., Madotto, A. and Fung, P. (2023) 'Survey of hallucination in natural language generation', <i>ACM Computing Surveys</i>, 55(12), article 248, pp. 1-38. Available at: <a href="https://doi.org/10.1145/3571730" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3571730</a> (Accessed: 16 October 2026).</p>
+					<p>Liu, N.F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F. and Liang, P. (2024) 'Lost in the middle: how language models use long contexts', <i>Transactions of the Association for Computational Linguistics</i>, 12, pp. 157-173. Available at: <a href="https://doi.org/10.1162/tacl_a_00638" target="_blank" rel="noopener noreferrer">https://doi.org/10.1162/tacl_a_00638</a> (Accessed: 16 October 2026).</p>
+					<p>Ribeiro, M.T., Wu, T., Guestrin, C. and Singh, S. (2020) 'Beyond accuracy: behavioral testing of NLP models with CheckList', <i>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</i>. Online: Association for Computational Linguistics, pp. 4902-4912. Available at: <a href="https://doi.org/10.18653/v1/2020.acl-main.442" target="_blank" rel="noopener noreferrer">https://doi.org/10.18653/v1/2020.acl-main.442</a> (Accessed: 16 October 2026).</p>
 
 					<fieldset class="is-fieldset-options">
 						<input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_final_project_evaluation(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">

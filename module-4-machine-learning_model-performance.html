@@ -48,6 +48,7 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-header-app.css?27f043a598e97d370d1a41313e64c9df" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cap-grid.css?1510d1104407e3abdab60331f61bff9b" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-cta-band.css?be7b38563b684eb07072d50918d32186" />
+    <link type="text/css" rel="stylesheet" media="screen" href="assets/template/551476373cccacc500841628379/CSS/is-resources.css?be7b38563b684eb07072d50918d32186" />
 
     <link rel="shortcut icon" href="assets/page/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/page/images/apple-touch-icon-ios.png" />
@@ -56,6 +57,16 @@
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPad.css" />
     <link type="text/css" rel="stylesheet" media="screen" href="assets/page/CSS/CSS-iPhone.css" />
     <style>
+		#is-tabs-vertical-page-2-model-performance .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-3-model-performance .is-table :is(td, th):nth-child(n+2):nth-child(-n+4),
+		#is-tabs-vertical-page-4-model-performance .is-table :is(td, th):nth-child(n+2):nth-child(-n+5),
+		#is-tabs-vertical-page-5-model-performance .is-table :is(td, th):nth-child(n+2):nth-child(-n+5),
+		#is-tabs-vertical-page-6-model-performance .is-table :is(td, th):nth-child(n+2):nth-child(-n+5)
+		{
+			min-width: 100px;
+			text-align: center;
+		}
+
         .is-menu .is-menu-list .is-logo a {
             width: 270px;
         }
@@ -94,7 +105,7 @@
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="" />
 
-    <title>Machine Learning by Isaac Shalaan</title>
+    <title>Machine Learning: Model Performance by Isaac Shalaan</title>
 
     <script type="text/javascript" src="assets/libraries/jquery/jquery.js"></script>
     <script type="text/javascript" src="assets/libraries/jquery-ui/js/jquery-ui.min.js"></script>
@@ -116,11 +127,13 @@
     <ul class="is-fixed is-menu-list">
         <li class="is-logo" id="is-menu-logo"><a href="index.html"></a></li>
 
-        <div class="is-menu-mobile" id="is-menu-mobile">
-            <li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
-            <li class="is-menu-active" id=""><a href="index.html">Home</a></li>
-            <li class="" id=""><a href="about.html">About</a></li>
-        </div>
+		<div class="is-menu-mobile" id="is-menu-mobile">
+			<li class="is-menu-mobile-close animated rotateIn" onclick="javascript:toggleMenu();return false;"></li>
+			<li class="is-menu-active"><a href="module-4-machine-learning.html">Machine Learning</a></li>
+			<li class=""><a href="module-5-intelligent-agents.html">Intelligent Agents</a></li>
+			<li class=""><a href="about.html">About</a></li>
+			<li class=""><a href="index.html">Home</a></li>
+		</div>
 
         <li class="is-menu-button-expand" onclick="javascript:toggleMenu();return false;"><img src="assets/template/551476373cccacc500841628379/images/is-menu-button-expand.png" border="0" height="19" /></li>
         <br class="is-clear" />
@@ -139,19 +152,19 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
         </a>
         <div class="is-eyebrow"><span class="is-eyebrow-dot"></span>Model Performance</div>
-        <a class="is-eyebrow" href="module-4-machine-wiki-entries.html" style="padding:7px;" title="Next">
+        <a class="is-eyebrow" href="module-4-machine_wiki-entries.html" style="padding:7px;" title="Next">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
         <br />
 
-        <h1 class="animated fadeInDown">Machine Learning Module: <span>Model Performance</span>.</h1>
+        <h1 class="animated fadeInDown">Machine Learning Module <span>Model Performance</span>.</h1>
     </div>
 </div>
 
 <div class="is-middle" id="is-middle-2">
     <div class="is-fixed">
 
-        <div class="is-tabs-vertical is-tabs-vertical-5 animated fadeInUp">
+        <div class="is-tabs-vertical is-tabs-vertical-7 animated fadeInUp">
 
             <div class="is-tabs-vertical-menu">
                 <ul>
@@ -184,7 +197,83 @@
 
                 <div id="is-tabs-vertical-page-2-model-performance" style="display:none;">
                     <div class="is-title animated fadeInUp">Classification Metrics</div>
-                    <p>The classification examples use several distinct sets of labels. Their scores describe separate calculations rather than one combined model assessment. In a binary confusion matrix, rows represent actual classes and columns predicted classes. With class 1 treated as positive, the four-record example gives <code>TN = 0, FP = 2, FN = 1, TP = 1</code>.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Reference example</th><th class="is-table-divider">Metric</th><th class="is-table-divider">Result</th></tr><tr><td>Six multiclass records</td><td>Macro F1</td><td>0.266667</td></tr><tr><td>Six multiclass records</td><td>Micro F1</td><td>0.333333</td></tr><tr><td>Six multiclass records</td><td>Weighted F1</td><td>0.266667</td></tr><tr><td>Six multiclass records</td><td>Macro precision</td><td>0.222222</td></tr><tr><td>Six multiclass records</td><td>Macro recall</td><td>0.333333</td></tr><tr><td>Four-record accuracy example</td><td>Accuracy</td><td>0.500000</td></tr><tr><td>Four ham/spam probability predictions</td><td>Log loss</td><td>0.216162</td></tr></tbody></table><p>Accuracy is the fraction of correct labels. Precision measures the fraction of predicted positives that are positive; recall measures the fraction of actual positives detected. F1 is the harmonic mean of precision and recall. Macro averages give each class equal weight, weighted averages use class support, and micro averages pool decisions. Macro and weighted F1 coincide here because all three classes have two records, not because the averaging methods are interchangeable.</p><p>The separate synthetic-data SVC uses 75 training and 25 test records. Its confusion matrix is <code>[[12, 1], [2, 10]]</code>, giving 22/25 correct predictions (88% accuracy). The notebook also reproduces the classification report and multilabel F1 example. In the all-zero binary case, <code>zero_division=1</code> assigns one to an otherwise undefined positive-class F1; this does not demonstrate an ability to detect positives.</p><p>Log loss assesses probabilities, with lower values preferred. The ham/spam example uses columns ordered as ham then spam and produces 0.216162. Unlike accuracy, log loss distinguishes confident and uncertain predictions, and strongly penalises confident errors.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer">Download the executed model-performance notebook</a> — reference calculations, controlled comparisons and plotted results.</p>
+                    <p>The classification examples use several distinct sets of labels. Their scores describe separate calculations rather than one combined model assessment. In a binary confusion matrix, rows represent actual classes and columns predicted classes. With class 1 treated as positive, the four-record example gives <code>TN = 0, FP = 2, FN = 1, TP = 1</code>.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Reference example</th>
+                                    <th class="is-table-divider">Metric</th>
+                                    <th class="is-table-divider">Result</th>
+                                </tr>
+                                <tr>
+                                    <td>Six multiclass records</td>
+                                    <td>Macro F1</td>
+                                    <td>0.266667</td>
+                                </tr>
+                                <tr>
+                                    <td>Six multiclass records</td>
+                                    <td>Micro F1</td>
+                                    <td>0.333333</td>
+                                </tr>
+                                <tr>
+                                    <td>Six multiclass records</td>
+                                    <td>Weighted F1</td>
+                                    <td>0.266667</td>
+                                </tr>
+                                <tr>
+                                    <td>Six multiclass records</td>
+                                    <td>Macro precision</td>
+                                    <td>0.222222</td>
+                                </tr>
+                                <tr>
+                                    <td>Six multiclass records</td>
+                                    <td>Macro recall</td>
+                                    <td>0.333333</td>
+                                </tr>
+                                <tr>
+                                    <td>Four-record accuracy example</td>
+                                    <td>Accuracy</td>
+                                    <td>0.500000</td>
+                                </tr>
+                                <tr>
+                                    <td>Four ham/spam probability predictions</td>
+                                    <td>Log loss</td>
+                                    <td>0.216162</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Accuracy is the fraction of correct labels. Precision measures the fraction of predicted positives that are positive; recall measures the fraction of actual positives detected. F1 is the harmonic mean of precision and recall. Macro averages give each class equal weight, weighted averages use class support, and micro averages pool decisions. Macro and weighted F1 coincide here because all three classes have two records, not because the averaging methods are interchangeable.</p>
+                    <p>The separate synthetic-data SVC uses 75 training and 25 test records. Its confusion matrix is <code>[[12, 1], [2, 10]]</code>, giving 22/25 correct predictions (88% accuracy). The notebook also reproduces the classification report and multilabel F1 example. In the all-zero binary case, <code>zero_division=1</code> assigns one to an otherwise undefined positive-class F1; this does not demonstrate an ability to detect positives.</p>
+                    <p>Log loss assesses probabilities, with lower values preferred. The ham/spam example uses columns ordered as ham then spam and produces 0.216162. Unlike accuracy, log loss distinguishes confident and uncertain predictions, and strongly penalises confident errors.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring model evaluation metrics and performance comparisons.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_model_performance(1);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -195,7 +284,82 @@
 
                 <div id="is-tabs-vertical-page-3-model-performance" style="display:none;">
                     <div class="is-title animated fadeInUp">ROC &amp; AUC</div>
-                    <p>A receiver operating characteristic (ROC) curve plots true-positive rate, <code>TP/(TP + FN)</code>, against false-positive rate, <code>FP/(FP + TN)</code>, as a score threshold changes. Binary AUC measures the probability that a randomly selected positive receives a higher score than a randomly selected negative, counting ties as one-half. An AUC of 0.5 indicates chance-level ranking, while one indicates perfect ranking on the evaluated records (Fawcett, 2006).</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Reference calculation</th><th class="is-table-divider">Evaluation data</th><th class="is-table-divider">AUC</th></tr><tr><td>Breast-cancer logistic regression</td><td>Same 569 records used for fitting</td><td>0.994741</td></tr><tr><td>Iris logistic regression, macro OvR</td><td>Same 150 records used for fitting</td><td>0.991333</td></tr><tr><td>Noisy Iris SVC: setosa versus rest</td><td>75 held-out records</td><td>0.912698</td></tr><tr><td>Noisy Iris SVC: versicolor versus rest</td><td>75 held-out records</td><td>0.603704</td></tr><tr><td>Noisy Iris SVC: virginica versus rest</td><td>75 held-out records</td><td>0.786765</td></tr><tr><td>Noisy Iris SVC: macro average</td><td>75 held-out records</td><td>0.767722</td></tr><tr><td>Noisy Iris SVC: micro average</td><td>75 held-out records</td><td>0.727733</td></tr></tbody></table><p>The two logistic results are resubstitution scores and should not be presented as evidence of performance on unseen data. In the breast-cancer dataset, label 1 is benign, so the original probability column evaluates benign as the positive class. A clinically meaningful assessment would need an explicitly chosen target and evaluation protocol; this example establishes neither.</p><p>The Iris SVC adds 800 Gaussian noise features to the original four measurements, then uses the reference 50:50 split. One-versus-rest (OvR) treats each class as positive against the other two. Macro AUC averages the three class AUCs; micro AUC pools all class–record scores and can depend on how score scales compare across classifiers. The executed notebook plots all three ROC curves. AUC measures discrimination, not probability calibration or the consequences of a particular operating threshold.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer">Download the executed model-performance notebook</a> — reference calculations, controlled comparisons and plotted results.</p>
+                    <p>A receiver operating characteristic (ROC) curve plots true-positive rate, <code>TP/(TP + FN)</code>, against false-positive rate, <code>FP/(FP + TN)</code>, as a score threshold changes. Binary AUC measures the probability that a randomly selected positive receives a higher score than a randomly selected negative, counting ties as one-half. An AUC of 0.5 indicates chance-level ranking, while one indicates perfect ranking on the evaluated records (Fawcett, 2006).</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Reference calculation</th>
+                                    <th class="is-table-divider">Evaluation data</th>
+                                    <th class="is-table-divider">AUC</th>
+                                </tr>
+                                <tr>
+                                    <td>Breast-cancer logistic regression</td>
+                                    <td>Same 569 records used for fitting</td>
+                                    <td>0.994741</td>
+                                </tr>
+                                <tr>
+                                    <td>Iris logistic regression, macro OvR</td>
+                                    <td>Same 150 records used for fitting</td>
+                                    <td>0.991333</td>
+                                </tr>
+                                <tr>
+                                    <td>Noisy Iris SVC: setosa versus rest</td>
+                                    <td>75 held-out records</td>
+                                    <td>0.912698</td>
+                                </tr>
+                                <tr>
+                                    <td>Noisy Iris SVC: versicolor versus rest</td>
+                                    <td>75 held-out records</td>
+                                    <td>0.603704</td>
+                                </tr>
+                                <tr>
+                                    <td>Noisy Iris SVC: virginica versus rest</td>
+                                    <td>75 held-out records</td>
+                                    <td>0.786765</td>
+                                </tr>
+                                <tr>
+                                    <td>Noisy Iris SVC: macro average</td>
+                                    <td>75 held-out records</td>
+                                    <td>0.767722</td>
+                                </tr>
+                                <tr>
+                                    <td>Noisy Iris SVC: micro average</td>
+                                    <td>75 held-out records</td>
+                                    <td>0.727733</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The two logistic results are resubstitution scores and should not be presented as evidence of performance on unseen data. In the breast-cancer dataset, label 1 is benign, so the original probability column evaluates benign as the positive class. A clinically meaningful assessment would need an explicitly chosen target and evaluation protocol; this example establishes neither.</p>
+                    <p>The Iris SVC adds 800 Gaussian noise features to the original four measurements, then uses the reference 50:50 split. One-versus-rest (OvR) treats each class as positive against the other two. Macro AUC averages the three class AUCs; micro AUC pools all class–record scores and can depend on how score scales compare across classifiers. The executed notebook plots all three ROC curves. AUC measures discrimination, not probability calibration or the consequences of a particular operating threshold.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring ROC curves and AUC evaluation.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_model_performance(2);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -206,7 +370,67 @@
 
                 <div id="is-tabs-vertical-page-4-model-performance" style="display:none;">
                     <div class="is-title animated fadeInUp">Regression Metrics</div>
-                    <p>The regression reference compares <code>y = [3, −0.5, 2, 7]</code> with <code>ŷ = [2.5, 0, 2, 8]</code>. These are fixed numerical examples, not predictions from a fitted regression model. The source heading “RMSE” is corrected: <code>mean_squared_error</code> returns MSE, whose square root gives RMSE.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Metric</th><th class="is-table-divider">Definition</th><th class="is-table-divider">Reference value</th></tr><tr><td>MSE</td><td>Mean squared residual</td><td>0.375000</td></tr><tr><td>RMSE</td><td>Square root of MSE</td><td>0.612372</td></tr><tr><td>MAE</td><td>Mean absolute residual</td><td>0.500000</td></tr><tr><td>R²</td><td>1 − SSE/SST</td><td>0.948608</td></tr></tbody></table><p>MSE gives greater weight to large residuals and has squared target units. RMSE and MAE have the same units as the target, making the magnitude of error easier to interpret. Here <code>SSE = 1.5</code> and <code>SST = Σ(y − mean(y))² = 29.1875</code>, giving <code>R² = 1 − 1.5/29.1875 = 0.948608</code>.</p><p>R² is a goodness-of-fit score, not an error to minimise. One denotes a perfect fit; zero matches the constant predictor equal to the evaluated targets’ mean; a negative value means greater squared error than that comparator. In this example, R² represents a 94.86% reduction in squared error relative to that mean. It does not establish causality or out-of-sample explanatory power. Constant targets have zero SST, so the ordinary formula is undefined and software conventions require care.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer">Download the executed model-performance notebook</a> — reference calculations, controlled comparisons and plotted results.</p>
+                    <p>The regression reference compares <code>y = [3, −0.5, 2, 7]</code> with <code>ŷ = [2.5, 0, 2, 8]</code>. These are fixed numerical examples, not predictions from a fitted regression model. The source heading "RMSE" is corrected: <code>mean_squared_error</code> returns MSE, whose square root gives RMSE.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Metric</th>
+                                    <th class="is-table-divider">Definition</th>
+                                    <th class="is-table-divider">Reference value</th>
+                                </tr>
+                                <tr>
+                                    <td>MSE</td>
+                                    <td>Mean squared residual</td>
+                                    <td>0.375000</td>
+                                </tr>
+                                <tr>
+                                    <td>RMSE</td>
+                                    <td>Square root of MSE</td>
+                                    <td>0.612372</td>
+                                </tr>
+                                <tr>
+                                    <td>MAE</td>
+                                    <td>Mean absolute residual</td>
+                                    <td>0.500000</td>
+                                </tr>
+                                <tr>
+                                    <td>R²</td>
+                                    <td>1 − SSE/SST</td>
+                                    <td>0.948608</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>MSE gives greater weight to large residuals and has squared target units. RMSE and MAE have the same units as the target, making the magnitude of error easier to interpret. Here <code>SSE = 1.5</code> and <code>SST = Σ(y − mean(y))² = 29.1875</code>, giving <code>R² = 1 − 1.5/29.1875 = 0.948608</code>.</p>
+                    <p>R² is a goodness-of-fit score, not an error to minimise. One denotes a perfect fit; zero matches the constant predictor equal to the evaluated targets' mean; a negative value means greater squared error than that comparator. In this example, R² represents a 94.86% reduction in squared error relative to that mean. It does not establish causality or out-of-sample explanatory power. Constant targets have zero SST, so the ordinary formula is undefined and software conventions require care.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring regression error metrics and R² evaluation.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_model_performance(3);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -217,7 +441,157 @@
 
                 <div id="is-tabs-vertical-page-5-model-performance" style="display:none;">
                     <div class="is-title animated fadeInUp">AUC Experiments</div>
-                    <p>The AUC comparisons preserve the same 75 training and 75 evaluation records, using split seed 0. The first experiment holds the linear OvR SVC at <code>C = 1</code> and changes only the number of irrelevant features. Noise is generated once using seed 0; each smaller feature set takes a prefix of the same 800-column matrix. No standardisation is introduced into this Iris comparison.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Added noise features</th><th class="is-table-divider">Setosa AUC</th><th class="is-table-divider">Versicolor AUC</th><th class="is-table-divider">Virginica AUC</th><th class="is-table-divider">Macro AUC</th></tr><tr><td>0</td><td>1.000000</td><td>0.721481</td><td>0.995098</td><td>0.905527</td></tr><tr><td>20</td><td>1.000000</td><td>0.660741</td><td>0.906046</td><td>0.855595</td></tr><tr><td>200</td><td>0.998236</td><td>0.637778</td><td>0.829248</td><td>0.821754</td></tr><tr><td>800</td><td>0.912698</td><td>0.603704</td><td>0.786765</td><td>0.767722</td></tr></tbody></table><p>Macro AUC falls from 0.905527 without added noise to 0.767722 with 800 irrelevant features. Versicolor remains the weakest one-versus-rest result. This controlled comparison shows reduced ranking performance for this particular noise draw and split; it does not imply that every additional feature or every dataset will behave similarly.</p><div class="is-title animated fadeInUp">Regularisation Strength</div><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">C</th><th class="is-table-divider">Noise features</th><th class="is-table-divider">Macro AUC</th><th class="is-table-divider">Micro AUC</th></tr><tr><td>0.001</td><td>800</td><td>0.752955</td><td>0.661244</td></tr><tr><td>0.01</td><td>800</td><td>0.767722</td><td>0.727733</td></tr><tr><td>0.1</td><td>800</td><td>0.767722</td><td>0.727733</td></tr><tr><td>1</td><td>800</td><td>0.767722</td><td>0.727733</td></tr><tr><td>10</td><td>800</td><td>0.767722</td><td>0.727733</td></tr></tbody></table><p>Smaller C applies stronger regularisation. Macro AUC rises from 0.752955 at C = 0.001 to 0.767722 at C = 0.01, then remains unchanged through C = 10. Increasing C therefore provides no further ranking improvement in these runs. Probability fitting is disabled for the comparisons because AUC uses SVC decision values; the C = 1 result is checked against the reference implementation.</p><div class="is-title animated fadeInUp">Decision Thresholds</div><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Threshold</th><th class="is-table-divider">Accuracy</th><th class="is-table-divider">Benign precision</th><th class="is-table-divider">Benign recall</th><th class="is-table-divider">Score AUC</th></tr><tr><td>0.2</td><td>0.964912</td><td>0.946903</td><td>1.000000</td><td>0.995619</td></tr><tr><td>0.5</td><td>0.959064</td><td>0.971698</td><td>0.962617</td><td>0.995619</td></tr><tr><td>0.8</td><td>0.947368</td><td>0.980392</td><td>0.934579</td><td>0.995619</td></tr></tbody></table><p>This separate comparison fits one standardised logistic model to a stratified 70% breast-cancer training split and evaluates the remaining 30%, using seed 0. Scaling is fitted only on training data. Raising the threshold reduces benign recall and increases benign precision in this run, while score AUC remains 0.995619. The probability ranking is unchanged: only the label decisions differ. These illustrative thresholds are not clinical recommendations.</p><p>Repeated comparison against the same held-out records makes them exploratory validation data. Selecting a configuration from these tables would require independent final testing. Repeated splits or cross-validation would also help quantify variability; neither is supplied by a single reported score.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer">Download the executed model-performance notebook</a> — reference calculations, controlled comparisons and plotted results.</p>
+                    <p>The AUC comparisons preserve the same 75 training and 75 evaluation records, using split seed 0. The first experiment holds the linear OvR SVC at <code>C = 1</code> and changes only the number of irrelevant features. Noise is generated once using seed 0; each smaller feature set takes a prefix of the same 800-column matrix. No standardisation is introduced into this Iris comparison.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Added noise features</th>
+                                    <th class="is-table-divider">Setosa AUC</th>
+                                    <th class="is-table-divider">Versicolor AUC</th>
+                                    <th class="is-table-divider">Virginica AUC</th>
+                                    <th class="is-table-divider">Macro AUC</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>1.000000</td>
+                                    <td>0.721481</td>
+                                    <td>0.995098</td>
+                                    <td>0.905527</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>1.000000</td>
+                                    <td>0.660741</td>
+                                    <td>0.906046</td>
+                                    <td>0.855595</td>
+                                </tr>
+                                <tr>
+                                    <td>200</td>
+                                    <td>0.998236</td>
+                                    <td>0.637778</td>
+                                    <td>0.829248</td>
+                                    <td>0.821754</td>
+                                </tr>
+                                <tr>
+                                    <td>800</td>
+                                    <td>0.912698</td>
+                                    <td>0.603704</td>
+                                    <td>0.786765</td>
+                                    <td>0.767722</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Macro AUC falls from 0.905527 without added noise to 0.767722 with 800 irrelevant features. Versicolor remains the weakest one-versus-rest result. This controlled comparison shows reduced ranking performance for this particular noise draw and split; it does not imply that every additional feature or every dataset will behave similarly.</p>
+                    <div class="is-title animated fadeInUp">Regularisation Strength</div>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">C</th>
+                                    <th class="is-table-divider">Noise features</th>
+                                    <th class="is-table-divider">Macro AUC</th>
+                                    <th class="is-table-divider">Micro AUC</th>
+                                </tr>
+                                <tr>
+                                    <td>0.001</td>
+                                    <td>800</td>
+                                    <td>0.752955</td>
+                                    <td>0.661244</td>
+                                </tr>
+                                <tr>
+                                    <td>0.01</td>
+                                    <td>800</td>
+                                    <td>0.767722</td>
+                                    <td>0.727733</td>
+                                </tr>
+                                <tr>
+                                    <td>0.1</td>
+                                    <td>800</td>
+                                    <td>0.767722</td>
+                                    <td>0.727733</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>800</td>
+                                    <td>0.767722</td>
+                                    <td>0.727733</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>800</td>
+                                    <td>0.767722</td>
+                                    <td>0.727733</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Smaller C applies stronger regularisation. Macro AUC rises from 0.752955 at C = 0.001 to 0.767722 at C = 0.01, then remains unchanged through C = 10. Increasing C therefore provides no further ranking improvement in these runs. Probability fitting is disabled for the comparisons because AUC uses SVC decision values; the C = 1 result is checked against the reference implementation.</p>
+                    <div class="is-title animated fadeInUp">Decision Thresholds</div>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Threshold</th>
+                                    <th class="is-table-divider">Accuracy</th>
+                                    <th class="is-table-divider">Benign precision</th>
+                                    <th class="is-table-divider">Benign recall</th>
+                                    <th class="is-table-divider">Score AUC</th>
+                                </tr>
+                                <tr>
+                                    <td>0.2</td>
+                                    <td>0.964912</td>
+                                    <td>0.946903</td>
+                                    <td>1.000000</td>
+                                    <td>0.995619</td>
+                                </tr>
+                                <tr>
+                                    <td>0.5</td>
+                                    <td>0.959064</td>
+                                    <td>0.971698</td>
+                                    <td>0.962617</td>
+                                    <td>0.995619</td>
+                                </tr>
+                                <tr>
+                                    <td>0.8</td>
+                                    <td>0.947368</td>
+                                    <td>0.980392</td>
+                                    <td>0.934579</td>
+                                    <td>0.995619</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>This separate comparison fits one standardised logistic model to a stratified 70% breast-cancer training split and evaluates the remaining 30%, using seed 0. Scaling is fitted only on training data. Raising the threshold reduces benign recall and increases benign precision in this run, while score AUC remains 0.995619. The probability ranking is unchanged: only the label decisions differ. These illustrative thresholds are not clinical recommendations.</p>
+                    <p>Repeated comparison against the same held-out records makes them exploratory validation data. Selecting a configuration from these tables would require independent final testing. Repeated splits or cross-validation would also help quantify variability; neither is supplied by a single reported score.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring classification thresholds and model performance.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_model_performance(4);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -228,7 +602,126 @@
 
                 <div id="is-tabs-vertical-page-6-model-performance" style="display:none;">
                     <div class="is-title animated fadeInUp">R² Experiments</div>
-                    <p>The residual experiment keeps the four observed targets fixed and sets <code>ŷ(k) = y + k(ŷ(reference) − y)</code>. Only the residual multiplier changes. This isolates how error magnitude affects the metrics without introducing changes in training or data splitting.</p><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Residual multiplier k</th><th class="is-table-divider">MSE</th><th class="is-table-divider">RMSE</th><th class="is-table-divider">MAE</th><th class="is-table-divider">R²</th></tr><tr><td>0</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>1.000000</td></tr><tr><td>0.5</td><td>0.093750</td><td>0.306186</td><td>0.250000</td><td>0.987152</td></tr><tr><td>1</td><td>0.375000</td><td>0.612372</td><td>0.500000</td><td>0.948608</td></tr><tr><td>2</td><td>1.500000</td><td>1.224745</td><td>1.000000</td><td>0.794433</td></tr><tr><td>4</td><td>6.000000</td><td>2.449490</td><td>2.000000</td><td>0.177730</td></tr><tr><td>8</td><td>24.000000</td><td>4.898979</td><td>4.000000</td><td>-2.289079</td></tr></tbody></table><p>Halving the residuals raises R² from 0.948608 to 0.987152. Doubling them quadruples MSE and reduces R² to 0.794433. At eight times the reference residuals, R² becomes −2.289079, meaning the squared error exceeds that of the observed-mean predictor. The relationship is exact for these fixed targets: <code>R²(k) = 1 − k² × 1.5/29.1875</code>.</p><div class="is-title animated fadeInUp">Additional Controls</div><table width="100%" cellpadding="cellspacing" class="is-table"><tbody><tr><th class="is-table-divider">Scenario</th><th class="is-table-divider">MSE</th><th class="is-table-divider">RMSE</th><th class="is-table-divider">MAE</th><th class="is-table-divider">R²</th></tr><tr><td>Observed-mean predictor</td><td>7.296875</td><td>2.701273</td><td>2.125000</td><td>0.000000</td></tr><tr><td>Reference predictions + 2</td><td>5.375000</td><td>2.318405</td><td>2.250000</td><td>0.263383</td></tr><tr><td>Both arrays multiplied by 10</td><td>37.500000</td><td>6.123724</td><td>5.000000</td><td>0.948608</td></tr></tbody></table><p>Predicting the observed mean gives R² = 0 by construction. Adding two to every reference prediction reduces R² to 0.263383, showing that systematic bias matters even when relative ordering is retained. Multiplying both targets and predictions by ten leaves R² unchanged but multiplies MAE and RMSE by ten and MSE by one hundred. Absolute error therefore needs a stated unit; R² needs the context of target variability. These four-point examples demonstrate metric behaviour rather than model generalisation.</p><p><a href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer">Download the executed model-performance notebook</a> — reference calculations, controlled comparisons and plotted results.</p>
+                    <p>The residual experiment keeps the four observed targets fixed and sets <code>ŷ(k) = y + k(ŷ(reference) − y)</code>. Only the residual multiplier changes. This isolates how error magnitude affects the metrics without introducing changes in training or data splitting.</p>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Residual multiplier k</th>
+                                    <th class="is-table-divider">MSE</th>
+                                    <th class="is-table-divider">RMSE</th>
+                                    <th class="is-table-divider">MAE</th>
+                                    <th class="is-table-divider">R²</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0.000000</td>
+                                    <td>0.000000</td>
+                                    <td>0.000000</td>
+                                    <td>1.000000</td>
+                                </tr>
+                                <tr>
+                                    <td>0.5</td>
+                                    <td>0.093750</td>
+                                    <td>0.306186</td>
+                                    <td>0.250000</td>
+                                    <td>0.987152</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0.375000</td>
+                                    <td>0.612372</td>
+                                    <td>0.500000</td>
+                                    <td>0.948608</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>1.500000</td>
+                                    <td>1.224745</td>
+                                    <td>1.000000</td>
+                                    <td>0.794433</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>6.000000</td>
+                                    <td>2.449490</td>
+                                    <td>2.000000</td>
+                                    <td>0.177730</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>24.000000</td>
+                                    <td>4.898979</td>
+                                    <td>4.000000</td>
+                                    <td>-2.289079</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Halving the residuals raises R² from 0.948608 to 0.987152. Doubling them quadruples MSE and reduces R² to 0.794433. At eight times the reference residuals, R² becomes −2.289079, meaning the squared error exceeds that of the observed-mean predictor. The relationship is exact for these fixed targets: <code>R²(k) = 1 − k² × 1.5/29.1875</code>.</p>
+                    <div class="is-title animated fadeInUp">Additional Controls</div>
+                    <div class="fieldset">
+                        <table width="100%" cellpadding="cellspacing" class="is-table">
+                            <tbody>
+                                <tr>
+                                    <th class="is-table-divider">Scenario</th>
+                                    <th class="is-table-divider">MSE</th>
+                                    <th class="is-table-divider">RMSE</th>
+                                    <th class="is-table-divider">MAE</th>
+                                    <th class="is-table-divider">R²</th>
+                                </tr>
+                                <tr>
+                                    <td>Observed-mean predictor</td>
+                                    <td>7.296875</td>
+                                    <td>2.701273</td>
+                                    <td>2.125000</td>
+                                    <td>0.000000</td>
+                                </tr>
+                                <tr>
+                                    <td>Reference predictions + 2</td>
+                                    <td>5.375000</td>
+                                    <td>2.318405</td>
+                                    <td>2.250000</td>
+                                    <td>0.263383</td>
+                                </tr>
+                                <tr>
+                                    <td>Both arrays multiplied by 10</td>
+                                    <td>37.500000</td>
+                                    <td>6.123724</td>
+                                    <td>5.000000</td>
+                                    <td>0.948608</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Predicting the observed mean gives R² = 0 by construction. Adding two to every reference prediction reduces R² to 0.263383, showing that systematic bias matters even when relative ordering is retained. Multiplying both targets and predictions by ten leaves R² unchanged but multiplies MAE and RMSE by ten and MSE by one hundred. Absolute error therefore needs a stated unit; R² needs the context of target variability. These four-point examples demonstrate metric behaviour rather than model generalisation.</p>
+                    
+                    <section class="is-resources">
+                        <div class="is-resources-list">
+                            <a class="is-resources-item" href="assets/page/Notebooks/module-4-machine-learning_model-performance.ipynb" target="_blank" rel="noopener noreferrer" download>
+                                <span class="is-resources-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M4 9.5C7 5.5 17 5.5 20 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 14.5C7 18.5 17 18.5 20 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="5" cy="5" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="19" r="1.7" fill="currentColor"/>
+                                        <circle cx="19" cy="5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="is-resources-info">
+                                    <strong>Jupyter Notebook</strong>
+                                    <span>Download the notebook exploring regression metrics and prediction sensitivity.</span>
+                                </span>
+                                <span class="is-resources-action" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_model_performance(5);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -239,7 +732,12 @@
 
                 <div id="is-tabs-vertical-page-7-model-performance" style="display:none;">
                     <div class="is-title animated fadeInUp">Reflection</div>
-                    <p>The experiments show why an evaluation needs more than a headline score. Additional noise reduced Iris macro AUC, but increasing C beyond 0.01 produced no improvement. Changing the binary threshold altered decisions while leaving AUC unchanged, reinforcing the distinction between ranking and an operating policy (Fawcett, 2006). For rare positive outcomes, precision–recall analysis would provide an important additional view (Saito and Rehmsmeier, 2015).</p><p>The regression results also depend on the comparison being made. R² supplies a variance-relative baseline (Chicco, Warrens and Jurman, 2021), while MAE and RMSE retain the scale of the errors. The negative-R² and unit-rescaling controls make that distinction explicit. A stronger evaluation would reserve independent final data, report variability and examine errors across relevant groups. Legal questions include permitted data use, privacy and discriminatory outcomes. Professional responsibility includes explaining which class is positive, protecting sensitive data and considering who bears the cost of mistakes; a high aggregate score alone cannot establish fairness or justify deployment.</p><div class="is-title animated fadeInUp">References</div><p>Chicco, D., Warrens, M.J. and Jurman, G. (2021) ‘The coefficient of determination R-squared is more informative than SMAPE, MAE, MAPE, MSE and RMSE in regression analysis evaluation’, <i>PeerJ Computer Science</i>, 7, e623. Available at: <a href="https://doi.org/10.7717/peerj-cs.623" target="_blank" rel="noopener noreferrer">https://doi.org/10.7717/peerj-cs.623</a> (Accessed: 14 October 2026).</p><p>Fawcett, T. (2006) ‘An introduction to ROC analysis’, <i>Pattern Recognition Letters</i>, 27(8), pp. 861–874. Available at: <a href="https://doi.org/10.1016/j.patrec.2005.10.010" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.patrec.2005.10.010</a> (Accessed: 14 October 2026).</p><p>Saito, T. and Rehmsmeier, M. (2015) ‘The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets’, <i>PLOS ONE</i>, 10(3), e0118432. Available at: <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pone.0118432</a> (Accessed: 14 October 2026).</p>
+                    <p>The experiments show why an evaluation needs more than a headline score. Additional noise reduced Iris macro AUC, but increasing C beyond 0.01 produced no improvement. Changing the binary threshold altered decisions while leaving AUC unchanged, reinforcing the distinction between ranking and an operating policy (Fawcett, 2006). For rare positive outcomes, precision–recall analysis would provide an important additional view (Saito and Rehmsmeier, 2015).</p>
+                    <p>The regression results also depend on the comparison being made. R² supplies a variance-relative baseline (Chicco, Warrens and Jurman, 2021), while MAE and RMSE retain the scale of the errors. The negative-R² and unit-rescaling controls make that distinction explicit. A stronger evaluation would reserve independent final data, report variability and examine errors across relevant groups. Legal questions include permitted data use, privacy and discriminatory outcomes. Professional responsibility includes explaining which class is positive, protecting sensitive data and considering who bears the cost of mistakes; a high aggregate score alone cannot establish fairness or justify deployment.</p>
+                    <div class="is-title animated fadeInUp">References</div>
+                    <p>Chicco, D., Warrens, M.J. and Jurman, G. (2021) 'The coefficient of determination R-squared is more informative than SMAPE, MAE, MAPE, MSE and RMSE in regression analysis evaluation', <i>PeerJ Computer Science</i>, 7, e623. Available at: <a href="https://doi.org/10.7717/peerj-cs.623" target="_blank" rel="noopener noreferrer">https://doi.org/10.7717/peerj-cs.623</a> (Accessed: 14 October 2026).</p>
+                    <p>Fawcett, T. (2006) 'An introduction to ROC analysis', <i>Pattern Recognition Letters</i>, 27(8), pp. 861–874. Available at: <a href="https://doi.org/10.1016/j.patrec.2005.10.010" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.patrec.2005.10.010</a> (Accessed: 14 October 2026).</p>
+                    <p>Saito, T. and Rehmsmeier, M. (2015) 'The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets', <i>PLOS ONE</i>, 10(3), e0118432. Available at: <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pone.0118432</a> (Accessed: 14 October 2026).</p>
 
                     <fieldset class="is-fieldset-options">
                         <input type="button" value="Previous Tab" class="is-button-secondary" onclick="javascript:is_tabs_vertical_menu_model_performance(6);" style="margin-right:0px;" autocomplete="off" autocapitalize="none">
@@ -278,7 +776,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
         </a>
         <div class="is-eyebrow"><span class="is-eyebrow-dot"></span>Model Performance</div>
-        <a class="is-eyebrow" href="module-4-machine-wiki-entries.html" style="padding:7px;" title="Next">
+        <a class="is-eyebrow" href="module-4-machine_wiki-entries.html" style="padding:7px;" title="Next">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
     </div>
