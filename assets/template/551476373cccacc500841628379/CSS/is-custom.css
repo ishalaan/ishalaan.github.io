@@ -243,7 +243,7 @@
     color: #ffffff !important;
     border: 3px solid #701c27;
     background: #1b0e11;
-    padding: 7px 14px;
+    padding:7px;
     border-radius: 999px;
     margin-top: 28px;
     margin-bottom: 28px;
@@ -257,6 +257,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
 	max-width:200px;
+	cursor:pointer;
+}
+
+div.is-eyebrow,
+div.is-eyebrow:hover
+{
+    padding:7px 14px;
 }
 
 .is-eyebrow + .is-eyebrow {
@@ -276,6 +283,10 @@ a.is-eyebrow:hover {
     background: #ffffff;
     margin-right: 10px;
     animation: dot-pulse 2s ease-in-out infinite;
+}
+
+.is-eyebrow-mobile{
+	display:none;
 }
 
 @keyframes dot-pulse {
@@ -304,10 +315,18 @@ a.is-eyebrow:hover {
 	
 }
 
-@media all and (max-width:414px) {
+@media all and (max-width:500px) {
     /* extra styles for iPhone portrait */
 
     .is-eyebrow {
         max-width: 120px;
     }
+
+	.is-eyebrow-mobile{
+		display:inline-block;
+	}
+
+	.is-eyebrow-desktop{
+		display:none;
+	}
 }
